@@ -1,0 +1,12 @@
+{
+  "name": "demiguise-ele",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Checklist Demiguise per Ele, pubblicabile su GitHub Pages senza compilazione",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check app.js && node --check progress.js && node --test"
+  },
+  "engines": { "node": ">=22" }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Controllo layout mobile · Demiguise</title>
+  <style>
+    body { margin: 16px; background: #f0f1f5; color: #202235; font: 16px system-ui; }
+    main { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+    section { margin: 0; }
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; }
+    iframe { display: block; border: 0; height: 820px; background: #111525; }
+  </style>
+</head>
+<body>
+  <h1>Controllo layout mobile</h1>
+  <p>La pagina reale in tre larghezze. Le spunte restano nel browser usato per il test.</p>
+  <main>
+    <section><h2>360 px</h2><iframe title="360 px" width="360" src="./index.html"></iframe></section>
+    <section><h2>390 px</h2><iframe title="390 px" width="390" src="./index.html"></iframe></section>
+    <section><h2>430 px</h2><iframe title="430 px" width="430" src="./index.html"></iframe></section>
+  </main>
+</body>
+</html>

@@ -148,3 +148,52 @@ contesto, ragionamento e strumenti influenzano l'uso della quota; i costi API
 non permettono di dedurre un consumo settimanale esatto per questa chat.
 Fonti verificate il 20/10/2026: [modelli Work](https://learn.chatgpt.com/docs/models),
 [quote e consumo](https://learn.chatgpt.com/docs/pricing).
+
+## Demiguise: filtro approvato e progressi condivisi
+
+- [x] Thomas sceglie B il 20/10/2026: le lune raccolte restano al loro posto,
+  spuntate; un filtro «Mostra solo quelle da raccogliere» permette di nasconderle.
+- [ ] Implementare il filtro nel futuro aggiornamento.
+- [x] Precisazione del 20/10/2026: entrambi i profili devono essere visibili e
+  aggiornabili sia dal telefono di Thomas sia da quello di Ele. La priorità
+  sono i due telefoni; un salvataggio soltanto locale non soddisfa il requisito.
+- [x] Thomas autorizza a gestire da qui la verifica Sites, senza chiedergli
+  di aprire Sites sul telefono o di creare un account Cloudflare.
+
+### Prova Sites separata, senza dati reali
+
+Creato e pubblicato un progetto **owner-private di sola prova**, distinto dalla
+guida: progetto `appgprj_6ad762d4349881919a160ba1dedc1b36`, sorgenti in
+`/workspace/sites/demiguise-progressi` e repository Sites sincronizzato dal
+workflow ufficiale. Identità persistita nel suo `.openai/hosting.json`.
+Non creare un altro progetto per ripetere questa prova.
+
+Deployment `appgdep_6ad763ba160881919662852e72a7506f`, versione
+`appgprj_6ad762d4349881919a160ba1dedc1b36~appgver_b764eb843e388191b2351e657a50296e`,
+sorgente `efef811827bf3311eb7ee91d62ac4696ddc71d89`: stato succeeded.
+URL tecnico privato: https://demiguise-progressi.leigan.chatgpt.site.
+Binding D1 `DB`, unica tabella applicativa `sync_probe`.
+
+Verifiche effettive: controllo TypeScript e build superati; POST di un UUID e
+booleano di prova; GET indipendente che ritrova il valore; rifiuto di un valore
+non booleano senza sovrascrittura; DELETE e successivo GET 404. Dati di prova
+rimossi. Una richiesta priva di accesso riceve HTTP 401. Il controllo integrato
+`tests/probe-live.mjs` è passato con exit 0. URL e token di servizio sono
+passati solo tramite stdin nascosto; nessun token nel repository o nei documenti.
+
+Nessun account Cloudflare o piano a pagamento attivato. Sites è incluso nei
+piani compatibili durante la beta; l'accesso e il provisioning D1 sono riusciti,
+ma il connettore non ha mostrato la quota residua esatta o garantito le condizioni
+future. Il vincolo di 0 € aggiuntivi rimane obbligatorio.
+
+**La prova non è il backend di produzione.** L'endpoint diagnostico deve restare
+privato. Restano da progettare e implementare i profili reali, la loro
+autorizzazione, la migrazione conservativa, il recupero offline e l'integrazione
+dal dominio GitHub Pages. Non è stata fatta una prova nei browser dei due
+telefoni o una verifica CORS di quel flusso. Non dichiarare già attiva la
+sincronizzazione Ele/Thom. La futura integrazione deve rispettare la specifica
+dei profili, aggiornata alle successive scelte, e i relativi passaggi di sviluppo.
+
+La guida pubblica non è stata modificata da questa prova: i quattro asset
+restituiscono HTTP 200 e restano complessivamente 27.575 byte, con hash invariati
+rispetto alla versione 1.0.3. Il link da condividere resta quello GitHub Pages.

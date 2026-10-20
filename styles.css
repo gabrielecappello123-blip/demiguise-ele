@@ -74,3 +74,23 @@
     .toast.show {opacity:1;transform:translate(-50%,0);}
     @media (max-width: 410px) { .hero {padding:25px 19px 20px;} .moon-art{width:112px;right:5px;top:28px;} h1{max-width:85%;} .subtitle{max-width:260px;} .item{padding:13px 12px 12px;} .item-top{gap:8px}.check-line{gap:9px}.chip{font-size:.6rem;padding:5px 5px}.details{margin-left:35px} }
     @media (prefers-reduced-motion:reduce) { *,*::before,*::after {scroll-behavior:auto!important;transition:none!important;} }
+
+    [hidden] { display: none !important; }
+    .profile-panel { margin: 0 0 16px; padding: 16px; border: 1px solid var(--line); border-radius: 18px; background: #22262b; }
+    .profile-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:4px 12px; margin-bottom:12px; }
+    .profile-heading strong { font-size: .98rem; }
+    .profile-hint { color:#c0c8d0; font-size:.75rem; }
+    .profile-buttons { display:flex; gap:10px; }
+    .profile-button { flex:1; min-width:0; min-height:52px; border:1px solid; border-radius:12px; padding:8px 12px; text-align:left; color:#f3eee5; }
+    .profile-button strong, .profile-button span { display:block; }
+    .profile-button span { font-size:.72rem; margin-top:1px; }
+    .profile-ele { background:#42242c; border-color:#846f43; }
+    .profile-thom { background:#24432f; border-color:#75818a; }
+    .profile-ele.active { border:2px solid #dbb65c; padding:7px 11px; color:#f0dca6; box-shadow:0 0 0 2px #dbb65c20; }
+    .profile-thom.active { border:2px solid #c4ccd2; padding:7px 11px; color:#f0f2f3; box-shadow:0 0 0 2px #c4ccd220; }
+    .sync-line { display:flex; align-items:center; flex-wrap:wrap; gap:8px 12px; margin-top:10px; }
+    #syncStatus { flex:1; min-width:180px; color:#c0c8d0; font-size:.77rem; margin:0; overflow-wrap:anywhere; }
+    #syncStatus[data-status="offline"], #syncStatus[data-status="error"], #syncStatus[data-status="storage-error"] { color:#ffcf9e; }
+    .retry-button { min-height:44px; border:1px solid #777b89; border-radius:10px; background:#181c21; color:#f3eee5; padding:8px 12px; font-size:.8rem; }
+    button:disabled, .moon-check:disabled { opacity:.5; cursor:default; }
+    .verification-notice { padding:12px 14px; border:1px dashed #f0cf87; border-radius:12px; color:#f0cf87; font-size:.8rem; }

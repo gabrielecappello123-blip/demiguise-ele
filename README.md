@@ -1,64 +1,74 @@
 # Guida Completa Hogwarts Legacy
 
-Guida in espansione per smartphone. La prima sezione contiene una checklist di
-8 lune Demiguise di Hogsmeade e dintorni, più una bonus.
-Grafica e contenuti derivano dall'HTML allegato da Thomas.
+Guida in espansione per smartphone: checklist di 8 lune Demiguise di Hogsmeade
+e dintorni, più una bonus. Grafica e contenuti derivano dall'HTML di Thomas.
 
 **Sito pubblico:** https://gabrielecappello123-blip.github.io/demiguise-ele/
 
-Condividere questo indirizzo su WhatsApp. Le modifiche al progetto si pubblicano
-automaticamente sullo stesso link, senza installazioni o nuovi file per Ele.
+Condividere questo indirizzo su WhatsApp. Gli aggiornamenti si pubblicano
+sullo stesso link, senza installazioni o nuovi file per Ele.
 
 ## Struttura
 
-- `index.html`: contenuti, etichette e struttura della pagina.
-- `styles.css`: grafica originale, estratta senza modificare le regole.
-- `app.js`: contatori, filtri, reset e collegamento con il salvataggio.
-- `progress.js`: salvataggio compatibile con l'HTML originale.
-- `progress.test.js`: test automatici di compatibilità e persistenza.
-- `app.test.js`: prova del codice interattivo con adattatore DOM simulato.
-- `AGENTS.md`: regole per le successive modifiche di ChatGPT/Codex.
-- `PUBBLICAZIONE.md`: configurazione e verifica GitHub Pages.
+- `index.html`: contenuti, etichette e struttura.
+- `styles.css`: grafica della checklist e controlli dei profili.
+- `app.js`: contatori, filtri, scelta del profilo e stato del salvataggio.
+- `profile-sync.js`: coda locale, cache e API Ele/Thom.
+- `profile-sync.test.js`: regressioni di sincronizzazione e migrazione.
+- `progress.js`: contratto originale, conservato per compatibilità.
+- `progress.test.js`: compatibilità dei vecchi dati.
+- `app.test.js`: interfaccia con adattatore DOM; non sostituisce il browser.
+- `verify-live.mjs`: prova facoltativa dell'API pubblicata con dati isolati.
+- `AGENTS.md`: istruzioni per ChatGPT/Codex; `PUBBLICAZIONE.md`: rilascio e verifiche.
 
-Non servono compilazione, dipendenze, account per Ele o abbonamenti.
+Il frontend non richiede compilazione, dipendenze o account per Ele. L'archivio
+online usa Sites/D1 già disponibile in ChatGPT. Nessun servizio a pagamento è
+stato attivato; Sites è incluso nei piani compatibili durante la beta, entro
+le quote applicabili. Non acquistare crediti o attivare addebiti automatici.
 
 ## Salvataggio delle spunte
 
-La chiave permanente è `ele-demiguise-hogsmeade-v1`, con un array JSON di ID.
-Gli ID esistenti sono `h1`–`h7`, `u1` e `b1`: non rinominarli e non riutilizzarli.
-Gli aggiornamenti conservano i progressi nello stesso browser e sullo stesso
-indirizzo HTTPS. Anche gli ID non presenti nella versione corrente restano salvati,
-così un ripristino temporaneo del codice non li elimina.
+Da 1.1.0 scegliere Ele o Thom: progressi separati, condivisi tra i dispositivi.
+La chiave originale `ele-demiguise-hogsmeade-v1`, array JSON di stringhe, resta
+intatta. Gli ID `h1`–`h7`, `u1`, `b1` non si rinominano né riutilizzano.
 
-Il salvataggio appartiene al browser, non al repository: non si sincronizza fra
-telefoni o browser e non viene trasferito automaticamente da vecchi file HTML
-o da altri indirizzi. La cancellazione dei dati del browser, l'uso della modalità
-privata o il cambio di dispositivo possono far perdere le spunte.
-Un aggiornamento normale non esegue cancellazioni o migrazioni dei dati.
+La prima importazione copia le vecchie spunte in entrambi, inserendo solo ID
+assenti senza annullare valori espliciti o azzeramenti successivi. Anche gli
+ID validi di contenuti futuri sono conservati. Dati malformati rimangono
+intatti: non azzerarli automaticamente per far sparire un errore.
+
+Prefisso locale stabile: `demiguise-profile-sync-v1:guide-v1:`. Contiene profilo
+scelto, marcatore di migrazione, operazioni immutabili e ultime copie del server.
+Le operazioni vengono rimosse dopo una conferma online salvata localmente.
+Senza rete compare «da sincronizzare»: non cancellare i dati del browser prima
+di «Salvato online». Nessun progresso personale è nel repository.
+
+Dataset permanente `guide-v1`, ID e identità del progetto Sites non cambiano
+agli aggiornamenti. Due profili senza password significano che chi ha il link
+può leggere e modificare entrambi; non sono account privati. Nessun token
+amministrativo di Sites/GitHub è esposto al browser.
 
 ## Modifiche e test
 
-Con Node.js 22 o successivo:
+Con Node.js 22 o successivo, senza `npm install`:
 
 ```sh
 npm run check
 ```
 
-I test non richiedono `npm install`. Per la prova manuale servire la cartella con
-un server HTTP locale; i moduli JavaScript non sono destinati all'apertura `file://`.
-Pubblicare modificando lo stesso repository e lo stesso ramo `main`.
-Le verifiche reali su telefono e sull'URL pubblicato sono descritte in
-`PUBBLICAZIONE.md`: i test Node non le sostituiscono.
+Per i moduli usare un server HTTP; non aprire la pagina come `file://`.
+Aggiornare il repository dedicato
+https://github.com/gabrielecappello123-blip/demiguise-ele,
+ramo `main`, cartella `/(root)`.
 
-## Repository
+`node verify-live.mjs` prova l'API HTTPS e due memorie client indipendenti:
+scrive soltanto in un nuovo dataset `verify-<UUID>`, mai nei progressi reali.
+Nel browser usare `?verifica=<UUID>` sul link della guida: memoria locale separata,
+nessuna importazione originale e avviso visibile.
 
-Il progetto è mantenuto in
-https://github.com/gabrielecappello123-blip/demiguise-ele.
-La pubblicazione GitHub Pages usa il ramo `main` e la cartella `/(root)`.
-
-Per il controllo del layout, `mobile-check.html` contiene tre anteprime della
-pagina reale con viewport da 360, 390 e 430 px. Non è un'emulazione di hardware
-Android/iOS: permette di controllare il layout responsive nel browser.
+`mobile-check.html` mostra la pagina in iframe con viewport 360/390/430 px,
+sempre su un archivio di prova separato. Verifica il layout responsive nel
+browser; non è una prova su hardware Android/iOS.
 
 ## Localizzazione italiana
 

@@ -197,3 +197,31 @@ dei profili, aggiornata alle successive scelte, e i relativi passaggi di svilupp
 La guida pubblica non è stata modificata da questa prova: i quattro asset
 restituiscono HTTP 200 e restano complessivamente 27.575 byte, con hash invariati
 rispetto alla versione 1.0.3. Il link da condividere resta quello GitHub Pages.
+
+## Rilascio profili sincronizzati 1.1.0
+
+Autorizzato esplicitamente da Thomas il 20/10/2026 con richiesta di procedere
+autonomamente fino al collegamento e alla pubblicazione, senza ulteriori
+conferme di routine. Questo rilascio aggiunge profili, sincronizzazione e filtro;
+la nuova struttura e lo stile completo della guida restano una fase separata.
+
+- [x] Piano e specifica aggiornati; copie di lavoro isolate, sorgenti originali conservati.
+- [x] Backend Sites pubblicato: sorgente `aedca2a1836e50e1ea7697c948ded568565d4095`,
+  deployment `appgdep_6ad76915df0081918a8a2d66bf015327`, stato succeeded.
+- [x] Accesso reso pubblico per i due profili senza account, come già concordato;
+  diagnostica rimossa, nuove migrazioni append-only, nessun token nel frontend.
+- [x] Backend: 15 test SQLite, TypeScript e build superati.
+- [x] Client/interfaccia/compatibilità: 51 test automatici superati.
+- [x] Revisione indipendente: corretti timeout delle richieste e compatibilità
+  delle importazioni con i limiti del server; regressioni riprodotte e superate.
+- [x] Verifica HTTPS reale: API pubblica, preflight CORS, profili distinti,
+  importazioni conservative, replay/reset, due memorie client indipendenti,
+  coda offline e riapertura. Dataset isolato `verify-3dfced97-aa70-45d2-b646-702bbedf66c8`;
+  zero scritture nei progressi di produzione.
+- [ ] Pubblicare il frontend sullo stesso link GitHub Pages.
+- [ ] Prove nel browser: selezione, riapertura, filtro e reset su archivio isolato.
+- [ ] Verifica viewport iframe 360/390/430 px e aggiornamento innocuo senza perdita.
+
+Restano distinte le verifiche HTTP/Node, quelle nel browser e quelle sui telefoni
+fisici. Non dichiarare una prova su hardware mobile se fatta soltanto in iframe.
+La chiave originale non è stata cancellata o modificata.

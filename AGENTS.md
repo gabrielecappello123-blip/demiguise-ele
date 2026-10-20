@@ -68,6 +68,28 @@ per modifiche semplici o per il solo fatto che sia disponibile.
 
 ## Prima di ogni pubblicazione
 
+### Profili sincronizzati
+
+- Frontend buildless; `profile-sync.js` usa l'API Sites del progetto
+  `appgprj_6ad762d4349881919a160ba1dedc1b36`, senza token amministrativi.
+- Dataset permanente `guide-v1`; profili fissi `ele` e `thom`. Non cambiare
+  progetto/dataset/prefisso `demiguise-profile-sync-v1:guide-v1:` agli aggiornamenti.
+- La chiave originale è sola lettura per la migrazione e rimane recuperabile.
+- Operazioni con UUID immutabile: ritentare lo stesso UUID dopo risposta persa;
+  non trasformare un errore in una nuova modifica. Cache e risposte hanno revisioni.
+- Non sostituire copie più recenti con GET precedenti; mantenere coda e profilo
+  catturato anche durante cambi di profilo o assenza di rete.
+- Il server conserva ricevute idempotenti e tombstone false/reset; una vecchia
+  importazione non ripristina elementi tolti o un profilo azzerato.
+- Le due identità sono intenzionalmente condivise, senza password. Non esporre
+  credenziali di Sites/GitHub. CORS non è autenticazione privata.
+- Backend gestito dal workflow Sites: aggiungere migrazioni, mai modificare SQL
+  già applicato. L'endpoint diagnostico `/api/probe` è rimosso dal rilascio.
+- Usare `?verifica=<UUID>` e `verify-live.mjs` per le prove; non azzerare mai
+  i dati personali per verificare un aggiornamento.
+
+### Verifiche
+
 1. Eseguire `npm run check` (Node >=22, nessuna installazione necessaria).
 2. Verificare il layout a 360, 390 e 430 px senza scorrimento orizzontale.
 3. Provare spunta, filtro, dettagli, contatori e azzeramento annullato/confermato.

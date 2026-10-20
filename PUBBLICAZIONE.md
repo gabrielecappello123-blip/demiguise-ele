@@ -1,62 +1,77 @@
 # Pubblicazione e verifica
 
-## Pubblicazione esistente
+## Configurazione permanente
 
 Repository: https://github.com/gabrielecappello123-blip/demiguise-ele.
-URL pubblico: https://gabrielecappello123-blip.github.io/demiguise-ele/.
-Il primo deployment Pages `39342179312` è terminato con successo sul commit
-`806e09f0b9563f8ef0c15746d287971e99a744c5`; HTML, CSS e moduli JavaScript
-rispondono via HTTPS con HTTP 200. Thomas ha confermato il 20/10/2026 che le
-spunte persistono dopo chiusura e riapertura sul proprio telefono.
+Guida: https://gabrielecappello123-blip.github.io/demiguise-ele/.
 
-La versione 1.0.2 corregge i nomi italiani verificati online e usa gli stessi
-identificativi delle lune. CSS e modulo di salvataggio sono identici alla prima
-pubblicazione. Il resoconto del rilascio è conservato in `PIANO.md`.
-Il deployment `39393040877` del commit
-`d9fae2a4d21f5440d88b10db9af45715bb43cb2d` è riuscito il 20/10/2026:
-HTML, CSS e moduli JS online coincidono con il codice verificato, via HTTPS
-con HTTP 200. Sedici test automatici sono passati prima della pubblicazione.
-Resta da confermare sul telefono la persistenza della spunta dopo questo
-aggiornamento; la precedente prova di chiusura e riapertura è stata confermata.
+GitHub Pages pubblica `main`, cartella `/(root)`, con `.nojekyll`.
+Non rinominare account/progetto, non spostare la cartella e non cambiare URL.
+Il frontend è statico senza compilazione; le versioni degli asset evitano
+che una vecchia cache JavaScript nasconda i nuovi controlli.
 
-## Configurazione per manutenzione
+Archivio: progetto Sites `appgprj_6ad762d4349881919a160ba1dedc1b36`,
+https://demiguise-progressi.leigan.chatgpt.site,
+binding D1 `DB`. Da 1.1.0 l'API è pubblica per i due profili condivisi senza
+password. Il repository GitHub contiene codice, mai credenziali o spunte.
+I dati sono nell'archivio e nella coda/cache del browser.
 
-Usare il repository dedicato `demiguise-ele` già esistente. Il repository
-pubblico contiene solo il sito e il codice, non le spunte di Ele. I progressi
-rimangono nel browser di chi usa la pagina.
+Il progetto di prova iniziale è stato riusato: non crearne un duplicato. Per
+modifiche del backend leggere il suo manifest, recuperare accesso al repository
+sorgente tramite Sites e seguire il workflow ufficiale. Preservare tutte le
+migrazioni già applicate e aggiungere SQL per gli aggiornamenti. Nessun servizio
+a pagamento è autorizzato; Sites resta entro le quote incluse durante la beta.
 
-Caricare il progetto sul ramo `main`. In **Settings → Pages → Build and
-deployment**, scegliere **Deploy from a branch**, ramo **main**, cartella
-**/(root)** e salvare. Il file `.nojekyll` disabilita la compilazione Jekyll.
-Usare l'URL HTTPS restituito da GitHub e verificare **Enforce HTTPS**.
+## Regole per aggiornare
 
-Conservare l'URL pubblico già assegnato e verificato: non creare un nuovo
-repository, non rinominare l'account o il progetto e non spostare la cartella.
+1. Conservare gli ID `h1`–`h7`, `u1`, `b1`, dataset `guide-v1`, progetto Sites
+   e prefisso `demiguise-profile-sync-v1:guide-v1:`.
+2. Non scrivere/cancellare la chiave originale `ele-demiguise-hogsmeade-v1`.
+3. Eseguire `npm run check`. Non richiede installazione di dipendenze.
+4. Se cambia l'API, pubblicare prima una versione compatibile del backend e
+   verificare `node verify-live.mjs` (solo dati di prova).
+5. Pubblicare il frontend sullo stesso ramo. Se si usa GitHub API, leggere
+   prima il genitore remoto e aggiornare il ref con confronto SHA; non forzare.
+6. Attendere GitHub Pages, verificare HTTPS, asset e versione realmente online.
+7. Ricaricare la guida dopo il rilascio; nessun nuovo file da scaricare per Ele.
 
-Per gli aggiornamenti successivi bastano commit nello stesso ramo; Ele apre
-sempre il medesimo link. Non serve scaricare nuovi file. Per ricevere una versione
-appena pubblicata può essere necessario ricaricare la pagina o attendere la cache.
-Non è presente un service worker che possa trattenere indefinitamente vecchi file.
+I tentativi ripetuti usano lo stesso UUID: non generarne uno nuovo per un
+errore di rete. Risposte obsolete non sovrascrivono copie più recenti, falsi
+espliciti o azzeramenti. Il nome del profilo è catturato quando nasce una modifica.
 
-## Collaudo obbligatorio dopo il primo rilascio
+## Collaudo senza toccare i vostri progressi
 
-- [x] GitHub conferma il primo deployment completato.
-- [x] HTML, CSS e moduli JS rispondono all'URL HTTPS (HTTP 200).
-- [ ] Prova a larghezza 360, 390 e 430 px, nessuno scorrimento orizzontale.
-- [ ] Spuntare `h2` e `b1`: il contatore principale mostra 1/8, bonus indipendente.
-- [ ] Con il filtro Da trovare, `h2` scompare; il bonus resta visibile.
-- [ ] Chiudere completamente la scheda e riaprire lo stesso URL nello stesso
-  profilo browser: entrambe le spunte e il contatore devono rimanere.
-- [ ] Pubblicare un aggiornamento innocuo su `main`, attendere il deployment,
-  ricaricare e controllare che entrambe le spunte siano ancora presenti.
-- [ ] Azzera spunte → Annulla: nessun cambiamento. Poi confermare: 0/8 e bonus
-  deselezionato. Non eseguire questa prova sul browser personale di Ele.
-- [ ] Aprire il link su un telefono reale o dichiarare esplicitamente che
-  la verifica è stata limitata a viewport mobile simulato.
+Aprire la guida con `?verifica=<UUID>`: l'avviso visibile conferma che memoria
+locale e dataset sono isolati. Nessuna importazione della chiave originale.
+`mobile-check.html?verifica=<UUID>` usa il medesimo archivio separato.
 
-## Fonti tecniche
+- Scegliere Ele; spuntare una luna e il bonus: contatore principale 1/8.
+- Passare a Thom: le spunte di Ele non devono apparire.
+- Tornare a Ele, ricaricare e riaprire una nuova scheda: progressi conservati.
+- Aprire lo stesso profilo da una seconda sessione/memoria e controllare la sincronizzazione.
+- Filtro «Da raccogliere»: nascondere le lune raccolte, compreso il bonus.
+- Azzera → Annulla: nessun cambiamento. Confermare: soltanto il profilo corrente.
+- Verificare «da sincronizzare» senza rete e recupero dopo la riapertura.
+- Pubblicare un aggiornamento innocuo, ricaricare e ricontrollare le spunte.
+- Nei viewport iframe 360/390/430 px nessuno scorrimento orizzontale.
 
-- https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+I test Node/SQLite e HTTP non sono prove di un browser. Gli iframe sono veri
+viewport del browser, ma non emulano hardware o comportamenti Android/iOS.
+Segnalare esplicitamente se manca una prova sui due telefoni fisici.
+
+## Evidenze e storia
+
+Prima pubblicazione: commit `806e09f0b9563f8ef0c15746d287971e99a744c5`,
+deployment Pages `39342179312`, HTTP 200. Thomas confermò la riapertura sul suo
+telefono il 20/10/2026. Versione 1.0.2: localizzazione verificata, deployment
+`39393040877`, stessi ID e 16 test automatici. La rinomina 1.0.3 mantiene il link.
+
+Il resoconto puntuale dei profili 1.1.x, commit, deployment, prove e limiti
+è in `PIANO.md`. Non confondere una prova del vecchio salvataggio locale
+con la verifica della nuova sincronizzazione.
+
+Fonti tecniche:
 - https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-- https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https
+- https://learn.chatgpt.com/docs/sites/data-and-connections
+- https://learn.chatgpt.com/docs/pricing
 

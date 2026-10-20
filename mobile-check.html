@@ -16,11 +16,16 @@
 </head>
 <body>
   <h1>Controllo layout mobile</h1>
-  <p>La pagina reale in tre larghezze. Le spunte restano nel browser usato per il test.</p>
+  <p>La pagina reale in tre finestre da 360, 390 e 430 px. Usa un archivio di prova separato, senza importare le spunte di Ele o Thom.</p>
   <main>
-    <section><h2>360 px</h2><iframe title="360 px" width="360" src="./index.html"></iframe></section>
-    <section><h2>390 px</h2><iframe title="390 px" width="390" src="./index.html"></iframe></section>
-    <section><h2>430 px</h2><iframe title="430 px" width="430" src="./index.html"></iframe></section>
+    <section><h2>360 px</h2><iframe title="360 px" width="360"></iframe></section>
+    <section><h2>390 px</h2><iframe title="390 px" width="390"></iframe></section>
+    <section><h2>430 px</h2><iframe title="430 px" width="430"></iframe></section>
   </main>
+  <script>
+    const requested = new URLSearchParams(location.search).get('verifica');
+    const id = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(requested || '') ? requested : crypto.randomUUID();
+    document.querySelectorAll('iframe').forEach(frame => { frame.src = './index.html?verifica=' + id; });
+  </script>
 </body>
 </html>

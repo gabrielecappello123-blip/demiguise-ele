@@ -12,6 +12,12 @@ spunte persistono dopo chiusura e riapertura sul proprio telefono.
 La versione 1.0.2 corregge i nomi italiani verificati online e usa gli stessi
 identificativi delle lune. CSS e modulo di salvataggio sono identici alla prima
 pubblicazione. Il resoconto del rilascio è conservato in `PIANO.md`.
+Il deployment `39393040877` del commit
+`d9fae2a4d21f5440d88b10db9af45715bb43cb2d` è riuscito il 20/10/2026:
+HTML, CSS e moduli JS online coincidono con il codice verificato, via HTTPS
+con HTTP 200. Sedici test automatici sono passati prima della pubblicazione.
+Resta da confermare sul telefono la persistenza della spunta dopo questo
+aggiornamento; la precedente prova di chiusura e riapertura è stata confermata.
 
 ## Configurazione per manutenzione
 

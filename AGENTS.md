@@ -7,6 +7,9 @@
 - Mantenere un unico URL HTTPS su GitHub Pages, condivisibile su WhatsApp.
 - Non rinominare account, repository o cartella pubblicata dopo il rilascio.
 - Mantenere la grafica esistente salvo esplicita richiesta.
+- Per il futuro aggiornamento della guida, lo stile approvato da Thomas il
+  20/10/2026 è descritto nella sezione «Stile approvato» di `PIANO.md`.
+  L'approvazione del progetto grafico è distinta dalla sua applicazione al sito.
 - Il sito deve funzionare da smartphone e senza account per Ele.
 - Niente compilazione o dipendenze runtime senza necessità concreta.
 - Non commettere credenziali, progressi personali o dati del browser.

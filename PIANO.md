@@ -218,9 +218,18 @@ la nuova struttura e lo stile completo della guida restano una fase separata.
   importazioni conservative, replay/reset, due memorie client indipendenti,
   coda offline e riapertura. Dataset isolato `verify-3dfced97-aa70-45d2-b646-702bbedf66c8`;
   zero scritture nei progressi di produzione.
-- [ ] Pubblicare il frontend sullo stesso link GitHub Pages.
-- [ ] Prove nel browser: selezione, riapertura, filtro e reset su archivio isolato.
-- [ ] Verifica viewport iframe 360/390/430 px e aggiornamento innocuo senza perdita.
+- [x] Frontend 1.1.0 pubblicato: commit `db89dfb4d4b65c2d0b7ab2aac6273bb3ec069d5b`,
+  Pages `39429353655` success. HTML/CSS/JS e modulo di salvataggio rispondono
+  HTTP 200 e coincidono byte per byte con i file verificati; totale runtime 48.487 byte.
+- [x] Browser reale Chrome su archivio `verify-7b596168-5b72-49e5-aa3e-b80b09657224`:
+  scelta obbligatoria, Ele h2+b1 con contatore 1/8 e bonus separato, Thom 0/8,
+  cambio profilo, filtro con bonus nascosto, ricaricamento e nuova scheda.
+  Azzeramento annullato conserva le spunte; confermato azzera solo il profilo.
+  Spunte h2+b1 ripristinate e confermate «Salvato online» per la prova di aggiornamento.
+- [x] Veri viewport iframe 360/390/430 px: nessuno scorrimento orizzontale,
+  misure clientWidth=scrollWidth 345/375/415 px (barra verticale desktop 15 px).
+  Istruzioni espanse e controlli leggibili. Non è una prova sui telefoni fisici.
+- [ ] Aggiornamento innocuo 1.1.1 (soli metadati/versione) e riapertura con progressi conservati.
 
 Restano distinte le verifiche HTTP/Node, quelle nel browser e quelle sui telefoni
 fisici. Non dichiarare una prova su hardware mobile se fatta soltanto in iframe.

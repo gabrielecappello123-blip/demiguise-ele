@@ -54,8 +54,8 @@ Struttura a file nella radice, adatta a questo sito statico di piccole dimension
 ## Stile approvato
 
 - [x] Stile della futura guida approvato esplicitamente da Thomas il 20/10/2026.
-- [ ] Applicare lo stile al sito nella successiva fase di implementazione e
-  verificarlo sul sito pubblicato. Le anteprime di progettazione non sono un rilascio.
+- [x] Stile applicato nella versione 1.2.0 e verificato nel browser sul sito
+  pubblicato a 360/390/430 px; le precedenti anteprime restano riferimenti grafici.
 
 Riferimento finale: variante **A — Oro o argento**, con i riquadri antracite.
 Lo stile si adatta al profilo: Ele / Grifondoro e Thom / Serpeverde.
@@ -109,7 +109,7 @@ casate; non sono una specifica ufficiale dei codici colore dei film.
 - [x] Thomas sceglie C il 20/10/2026: dopo la selezione di Ele o Thom,
   mostrare le tre sezioni Missioni, Sblocchi e potenziamenti, Guide pratiche,
   insieme a un piccolo riquadro «Riprendi» con le attività segnate «In corso».
-- [ ] Implementare questa pagina nella successiva fase di sviluppo.
+- [x] Home implementata e pubblicata nella versione 1.2.0.
 
 Gli stati sono espliciti, manuali e reversibili. Consultare una guida,
 effettuare una ricerca o aprire una sezione non segna un'attività in corso.
@@ -131,10 +131,10 @@ refusi; nessuna indicizzazione automatica dei testi spoiler.
 
 Piano operativo:
 - [x] Base isolata e pulita verificata: 51 test passati, main remoto 91074c9.
-- [ ] Catalogo e ricerca con prove su filtri, refusi, ordinamento e spoiler.
-- [ ] Ingresso B, navigazione, temi casata e Riprendi manuale.
-- [ ] Revisione e prove automatiche/browser mobile, conservazione progressi.
-- [ ] Pubblicazione sullo stesso URL e verifica della versione reale.
+- [x] Catalogo e ricerca con prove su filtri, refusi, ordinamento e spoiler.
+- [x] Ingresso B, navigazione, temi casata e Riprendi manuale.
+- [x] Revisione e prove automatiche/browser mobile, conservazione progressi.
+- [x] Pubblicazione sullo stesso URL e verifica della versione reale.
 
 Contratti: dataset e chiavi dei profili immutati; `progress.js` e
 `profile-sync.js` invariati; nessuna modifica backend. L'attività Demiguise
@@ -285,4 +285,29 @@ La chiave originale non è stata cancellata o modificata.
   RED→GREEN. Una luna raccolta aperta dalla ricerca ripristina «Tutte»; stato
   del salvataggio e Riprova precedono i contenuti e gli errori restano visibili
   durante lo scorrimento. Nessun problema minore rinviato.
-- Backend e moduli di salvataggio invariati. Prova browser e rilascio da completare.
+- Backend e moduli di salvataggio invariati. Suite finale: 75 test passati.
+
+
+### Rilascio home/ricerca verificato
+
+- Commit GitHub `a98ec19ecd4370d8c30bc9eb4d3f72b1a17a876d`, Pages
+  `39435323605` completato con successo. Versione 1.2.0 allo stesso URL.
+- Nove file runtime HTTP 200, identici byte per byte ai file controllati:
+  128.803 byte totali prima della compressione, incluse entrambe le immagini.
+- Browser reale su `verify-7b596168-5b72-49e5-aa3e-b80b09657224`: la versione
+  precedente aveva Ele h2+b1, 1/8. Dopo il nuovo rilascio, conferma profilo B,
+  home senza checklist, le stesse spunte ancora presenti e «Salvato online».
+- Ricerca globale «demigais» e locale «Tseta» riuscite; Missioni→«Tomi» senza
+  risultati locali, poi ricerca globale con risultato corretto. Aprire una
+  luna raccolta con «Da raccogliere» attivo la rende visibile, espande le
+  indicazioni e la porta sullo schermo.
+- Riprendi modificato soltanto esplicitamente; azzeramento delle nove lune
+  conserva l'attività. Thom rimane 0/8, bonus e attività assenti. Riapertura
+  ripropone la conferma; spunte di prova Ele h2+b1 ripristinate e salvate,
+  attività di prova lasciata in corso. Dati di produzione mai modificati.
+- Screenshot e dimensioni di veri viewport iframe 360/390/430 px verificati:
+  clientWidth=scrollWidth 345/375/415 px, nessuno scorrimento orizzontale anche
+  con ricerca. Header, menu e navigazione leggibili. Log applicativo senza errori.
+- Limiti: nessuna prova sui telefoni fisici o a 320 px. Le sezioni prive di
+  guide sono chiaramente in preparazione; non è ancora una guida completa
+  di tutte le missioni. Nessun nuovo account, abbonamento o servizio attivato.

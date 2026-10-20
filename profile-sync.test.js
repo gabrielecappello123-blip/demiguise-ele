@@ -40,7 +40,7 @@ class MemoryApi {
   loseResponse = false;
   entry(dataset, profile) {
     const key = `${dataset}:${profile}`;
-    if (!this.profiles.has(key)) this.profiles.set(key, { version: 1, profile, entries: [], revision: 0, resetRevision: 0 });
+    if (!this.profiles.has(key)) this.profiles.set(key, { version: 1, profile, entries: [], values: [], revision: 0, resetRevision: 0 });
     return this.profiles.get(key);
   }
   snapshot(dataset, profile) { return structuredClone(this.entry(dataset, profile)); }
@@ -71,8 +71,13 @@ class MemoryApi {
         value.revision++;
         value.resetRevision = value.revision;
         value.entries = [];
+        value.values = [];
       } else if (body.type === 'set') {
         this.remoteSet(profile, body.id, body.checked, dataset);
+      } else if (body.type === 'set-value') {
+        value.revision++;
+        value.values = value.values.filter(entry => entry.id !== body.id);
+        value.values.push({ id: body.id, value: body.value, revision: value.revision });
       } else if (body.type === 'seed' && value.resetRevision === 0) {
         for (const id of body.ids) {
           if (!value.entries.some(entry => entry.id === id)) this.remoteSet(profile, id, true, dataset);
@@ -542,4 +547,109 @@ test('an incompatible persisted operation is preserved and blocks posting instea
   assert.equal(storage.getItem(key), raw);
   assert.equal(api.calls.length, calls);
   assert.equal(storage.writes.length, writes);
+});
+
+
+test('three states and scalar zero survive reopen while moon flags stay independent', async () => {
+  const { client, storage, api } = setup();
+  await client.select('ele');
+  assert.deepEqual([...client.getState().values], []);
+  for (const value of ['doing', 'done', 'todo']) {
+    await client.setValue('status:quest', value);
+    assert.equal(client.getState().values.get('status:quest'), value);
+  }
+  await client.setValue('demiguise:handed-in', 0);
+  await client.setValue('demiguise:alohomora-level', 2);
+  const reopened = module.createProfileSync({ storage, fetchImpl: api.fetch, uuid });
+  assert.equal(reopened.getState().values.get('status:quest'), 'todo');
+  assert.equal(reopened.getState().values.get('demiguise:handed-in'), 0);
+  assert.equal(reopened.getState().values.get('demiguise:alohomora-level'), 2);
+  assert.deepEqual(completed(reopened), ['future:moon', 'h1']);
+  reopened.getState().values.set('status:quest', 'done');
+  assert.equal(reopened.getState().values.get('status:quest'), 'todo');
+});
+
+test('offline scalar edits survive reopen and same-ID transitions preserve the newest intent', async () => {
+  const { client, storage, api, changes } = setup();
+  await client.select('ele');
+  api.offline = true;
+  await client.setValue('status:quest', 'doing');
+  await client.setValue('status:quest', 'done');
+  const reopened = module.createProfileSync({ storage, fetchImpl: api.fetch, uuid });
+  assert.equal(reopened.getState().values.get('status:quest'), 'done');
+  assert.equal(reopened.getState().pending, 2);
+  assert.equal(reopened.getState().status, 'offline');
+  api.offline = false;
+  await reopened.retry();
+  assert.equal(reopened.getState().values.get('status:quest'), 'done');
+  assert.equal(reopened.getState().pending, 0);
+  assert.ok(changes.some(state => state.values.get('status:quest') === 'doing'));
+});
+
+test('scalar edits capture their profile during a rapid profile switch', async () => {
+  const { client, api } = setup();
+  await client.select('ele');
+  const gate = { started: deferred(), release: deferred() };
+  api.hold = gate;
+  const first = client.setValue('status:quest', 'doing');
+  await gate.started.promise;
+  const switchTask = client.select('thom');
+  const second = client.setValue('status:quest', 'done');
+  assert.equal(client.getState().values.get('status:quest'), 'done');
+  gate.release.resolve();
+  await Promise.all([first, switchTask, second]);
+  assert.equal(api.snapshot('guide-v1', 'ele').values[0].value, 'doing');
+  assert.equal(api.snapshot('guide-v1', 'thom').values[0].value, 'done');
+});
+
+test('scalar lost-response retry retains UUID and ignores newer remote value replay', async () => {
+  const { client, api } = setup();
+  await client.select('ele');
+  api.loseResponse = true;
+  await client.setValue('status:quest', 'doing');
+  const operation = api.calls.at(-1).body;
+  const remote = api.entry('guide-v1', 'ele');
+  remote.values[0] = { id: 'status:quest', value: 'done', revision: ++remote.revision };
+  await client.retry();
+  assert.equal(client.getState().values.get('status:quest'), 'done');
+  assert.equal(client.getState().pending, 0);
+  const posts = api.calls.filter(call => call.body?.type === 'set-value');
+  assert.ok(posts.every(call => call.body.requestId === operation.requestId));
+});
+
+test('old cache without scalar field remains readable and view never writes', () => {
+  const storage = new MemoryStorage();
+  storage.data.set(module.PREFERENCE_KEY, JSON.stringify({ version: 1, profile: 'ele' }));
+  storage.data.set(`${module.SYNC_PREFIX}guide-v1:cache:ele:7`, JSON.stringify({ version: 1, profile: 'ele', entries: [{ id: 'h1', checked: true, revision: 7 }], revision: 7, resetRevision: 0 }));
+  const client = module.createProfileSync({ storage, uuid });
+  assert.deepEqual(completed(client), ['h1']);
+  assert.deepEqual([...client.getState().values], []);
+  assert.equal(storage.writes.length, 0);
+});
+
+test('invalid scalar inputs and malformed scalar cache cannot overwrite existing data', async () => {
+  const { client, storage, api } = setup();
+  await client.select('ele');
+  for (const value of [true, {}, [], -1, 1.5, 1000001, 'started', undefined]) {
+    assert.throws(() => client.setValue('status:quest', value), TypeError);
+  }
+  const key = [...storage.data.keys()].find(key => key.includes('cache:ele:'));
+  const cache = JSON.parse(storage.getItem(key));
+  const raw = JSON.stringify({ ...cache, values: [{ id: 'status:quest', value: {}, revision: cache.revision }] });
+  storage.data.set(key, raw);
+  const before = api.calls.length;
+  await client.setValue('status:quest', 'done');
+  assert.equal(client.getState().status, 'storage-error');
+  assert.equal(storage.getItem(key), raw);
+  assert.equal(api.calls.length, before);
+});
+
+test('stale server snapshot cannot erase a newer scalar state', async () => {
+  const { client, storage, api } = setup();
+  await client.select('ele');
+  const stale = api.snapshot('guide-v1', 'ele');
+  await client.setValue('status:quest', 'done');
+  const reopened = module.createProfileSync({ storage, uuid, fetchImpl: async () => ({ ok: true, status: 200, json: async () => stale }) });
+  await reopened.refresh();
+  assert.equal(reopened.getState().values.get('status:quest'), 'done');
 });

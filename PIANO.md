@@ -311,3 +311,28 @@ La chiave originale non è stata cancellata o modificata.
 - Limiti: nessuna prova sui telefoni fisici o a 320 px. Le sezioni prive di
   guide sono chiaramente in preparazione; non è ancora una guida completa
   di tutte le missioni. Nessun nuovo account, abbonamento o servizio attivato.
+
+## Espansione 2.0.0 — autorizzazione e avanzamento
+
+Thomas ha dato il via esplicito dopo la definizione dell'ambito: tutte le tre
+sezioni, Demiguise da zero, soluzione C per enigmi ripetitivi, pubblicazione
+unica finale. Percorso100% e ricerca foto rimandati. Nessun nuovo costo.
+
+- [x] Catalogo e fonti: 353 schede, 140 voci missione comprese varianti, 95Merlino,
+  17enigmiHogwarts, 99pratiche/sblocchi; 30+3lune e 10metodi condivisi.
+- [x] Schede, filtri, ricerca per luogo, oggetti rapidi, immagini su richiesta.
+- [x] Stato atomico manuale e scalari, migrazione additiva, ID legacy conservati.
+- [x] 87 test frontend e 20 backend superati; build backend riuscita.
+- [x] Revisione indipendente UI e campione contenuti; correzioni registrate
+  in `docs/research/ui-review.md` e `content-review.md`.
+- [ ] Pubblicazione finale frontend e verifica smartphone sull'URL effettivo.
+- [ ] Verifica riapertura e conservazione dopo aggiornamento con dati isolati.
+
+Backend sorgente preparata `12f33aa70ec20b28ef8995f0788fbe0a79a4b4a7`.
+Il browser cloud non raggiunge il preview locale; le prove UI si eseguono
+sull'URL finale con dataset di verifica separato. Nessun dato personale usato.
+
+Backend pubblicato e verificato: versione3, deployment
+`appgdep_6ad78745e23c8191ab5cd99bd35e2515`, stato succeeded. GET mantiene
+h2/b1 del precedente dataset browser; POST/GET scalari e spunte verificati
+nel nuovo dataset isolato d8a9326a-66a4-418c-bcb9-2df24c1c01dc, profili separati.

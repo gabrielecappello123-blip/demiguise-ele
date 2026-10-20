@@ -46,15 +46,20 @@ confrontarne almeno due e registrare fonte e data nella sezione Localizzazione
 del README. Anche le etichette accessibili e i messaggi generati da app.js devono
 usare gli stessi nomi. Cambiare un nome visibile non deve cambiare il suo data-id.
 
-La struttura e il catalogo sono in `guide-data.js`: tre sezioni stabili
-`missioni`, `sblocchi`, `pratiche`. Aggiungere soltanto guide effettivamente
-disponibili in `GUIDES`; le categorie ancora vuote restano in preparazione.
-Per le lune, modificare `index.html` e aggiornare in `app.js` gli elenchi
-`zoneIds`, `mainIds`, conteggi e testi. La luna bonus resta indipendente.
-Non duplicare i nomi delle lune nell'indice di ricerca: derivano dal DOM.
-Indicizzare soltanto titoli, riassunti e alias sicuri; mai corpi narrativi,
-titoli spoiler o contenuti di pannelli chiusi. Verificare i nuovi nomi online.
-Non modificare nome, URL, rotte stabili o ID per pubblicare una nuova versione.
+La struttura è in `guide-data.js`, i contenuti nei moduli `content/`.
+Tre sezioni stabili: `missioni`, `sblocchi`, `pratiche`. Schede canoniche con ID
+immutabile, riferimenti tramite `related` e rotte hash. Il contratto editoriale
+è in `docs/EXPANSION.md`; fonti, divergenze e copertura in `docs/research/`.
+Le principali rispettano `order`; secondarie e attività si raggruppano per luogo.
+Le 30 lune del mondo e le 3 introduttive sono in `content/demiguise.js`.
+La vecchia luna b1 è ora una luna ordinaria di Hogwarts: conservarne l'ID.
+Non creare una voce «bonus» separata né ripristinare il vecchio percorso 8+1.
+Immagini reali caricate solo all'apertura del pannello, crediti leggibili.
+
+Indicizzare solo titoli/riassunti/alias/luoghi sicuri, mai passi o pannelli spoiler.
+Un titolo narrativo protetto può essere riconosciuto SOLO quando l'intera query
+coincide con `officialTitle`, restituendo comunque l'etichetta neutra.
+Non cambiare URL, rotte o ID per pubblicare una nuova versione.
 
 ## Ingresso e navigazione
 
@@ -63,8 +68,11 @@ Non modificare nome, URL, rotte stabili o ID per pubblicare una nuova versione.
 - Dopo l'ingresso compare solo il profilo attivo, nel menu personale.
 - Ricerca globale in home e contestuale in ogni sezione, estendibile a tutta
   la guida. Consultazione e ricerca non modificano i progressi.
-- Riprendi mostra attività marcate manualmente; `activity:demiguise:in-progress`
-  è indipendente da raccolte e missioni completate, e può essere rimosso.
+- Riprendi mostra soltanto gli stati manuali `doing`. `status:<guide-id>` è
+  un valore atomico todo/doing/done; `activity:demiguise:in-progress` è solo
+  fallback quando manca uno stato esplicito. Non migrare scrivendo all'apertura.
+- `demiguise:handed-in` e `demiguise:alohomora-level` sono valori manuali
+  indipendenti da raccolte e missioni. `setValue` non cambia le spunte.
 - Il reset della checklist deve modificare SOLO i relativi ID, catturando il
   profilo prima di attendere la rete. Non chiamare il reset globale del client
   per azzerare una sezione: distruggerebbe attività e progressi futuri.

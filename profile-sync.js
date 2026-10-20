@@ -8,6 +8,8 @@ const profiles = ['ele', 'thom'];
 const isProfile = value => profiles.includes(value);
 const isId = value => typeof value === 'string' && /^[A-Za-z0-9][A-Za-z0-9:_-]{0,119}$/.test(value);
 const isRevision = value => Number.isSafeInteger(value) && value >= 0;
+const isValue = value => value === null || ['todo', 'doing', 'done'].includes(value)
+  || (Number.isSafeInteger(value) && value >= 0 && value <= 1000000);
 const isUuid = value => typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value);
 const localLocks = new WeakMap();
 
@@ -28,10 +30,20 @@ function validateSnapshot(value, profile) {
   if (!value || value.version !== 1 || value.profile !== profile || !isRevision(value.revision)
       || !isRevision(value.resetRevision) || value.resetRevision > value.revision || !Array.isArray(value.entries)) return false;
   const ids = new Set();
-  return value.entries.every(entry => {
+  const validEntries = value.entries.every(entry => {
     if (!entry || !isId(entry.id) || typeof entry.checked !== 'boolean' || !isRevision(entry.revision)
         || entry.revision > value.revision || ids.has(entry.id)) return false;
     ids.add(entry.id);
+    return true;
+  });
+  // Older caches and older server snapshots have no values field. Preserve their
+  // existing meaning, while rejecting malformed future values without rewriting.
+  if (!validEntries || (value.values !== undefined && !Array.isArray(value.values))) return false;
+  const valueIds = new Set();
+  return (value.values ?? []).every(entry => {
+    if (!entry || !isId(entry.id) || !isValue(entry.value) || !isRevision(entry.revision)
+        || entry.revision > value.revision || valueIds.has(entry.id)) return false;
+    valueIds.add(entry.id);
     return true;
   });
 }
@@ -40,12 +52,13 @@ function validateOperation(value) {
   return value && value.version === 1 && isProfile(value.profile) && isUuid(value.requestId)
     && Number.isSafeInteger(value.order) && value.order >= 0
     && (value.type === 'reset' || (value.type === 'set' && isId(value.id) && typeof value.checked === 'boolean')
+      || (value.type === 'set-value' && isId(value.id) && isValue(value.value))
       || (value.type === 'seed' && Array.isArray(value.ids) && value.ids.length <= 128 && value.ids.every(isId)));
 }
 
 /**
  * Durable, guest-profile sync. No write or network request happens on creation.
- * Every returned Set is a copy. Methods resolve to the latest state, including
+ * Every returned Set and Map is a copy. Methods resolve to the latest state, including
  * honest storage/network failure states; only invalid caller arguments throw.
  */
 export function createProfileSync({
@@ -179,11 +192,13 @@ export function createProfileSync({
     catch (error) { storageFailure = error; current = remembered; }
     const cache = current.caches[selected];
     const entries = new Map((cache?.entries ?? []).map(entry => [entry.id, entry.checked]));
+    const values = new Map((cache?.values ?? []).map(entry => [entry.id, entry.value]));
     const operations = current.operations.filter(operation => operation.profile === selected);
     let reset = (cache?.resetRevision ?? 0) > 0;
     for (const operation of operations) {
-      if (operation.type === 'reset') { entries.clear(); reset = true; }
+      if (operation.type === 'reset') { entries.clear(); values.clear(); reset = true; }
       else if (operation.type === 'set') entries.set(operation.id, operation.checked);
+      else if (operation.type === 'set-value') values.set(operation.id, operation.value);
       else if (!reset) for (const id of operation.ids) if (!entries.has(id)) entries.set(id, true);
     }
     const completed = new Set([...entries].filter(([, checked]) => checked).map(([id]) => id));
@@ -199,7 +214,7 @@ export function createProfileSync({
     }
     if (transportFailure && selected) { status = transportFailure.status; error = transportFailure.message; }
     if (storageFailure) { status = 'storage-error'; error = storageFailure.message; }
-    return { profile: selected, completed, pending: operations.length, status, ...(error ? { error } : {}) };
+    return { profile: selected, completed, values, pending: operations.length, status, ...(error ? { error } : {}) };
   }
 
   function emit() {
@@ -365,6 +380,10 @@ export function createProfileSync({
     set(id, checked) {
       if (!isId(id) || typeof checked !== 'boolean') throw new TypeError('Spunta non valida.');
       return mutate('set', { id, checked });
+    },
+    setValue(id, value) {
+      if (!isId(id) || !isValue(value)) throw new TypeError('Valore di progresso non valido.');
+      return mutate('set-value', { id, value });
     },
     reset: () => mutate('reset'),
     refresh,

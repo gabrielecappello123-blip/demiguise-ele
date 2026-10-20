@@ -89,3 +89,15 @@ Fonti tecniche:
   delle lune. Nessun contenuto di una categoria vuota va indicato come disponibile.
 - Se la verifica browser precedente aveva spunte, controllarle dopo il rilascio
   prima di modificarle. Usare esclusivamente l'archivio `?verifica=<UUID>`.
+
+## Rilascio 2.0.0
+
+Il frontend usa gli stessi repository, URL e dataset. Include i moduli
+`content/*.js`, `guide-model.js` e le immagini in `assets/demiguise/`.
+Pubblicare tutto nello stesso commit runtime, senza distribuire cataloghi parziali.
+Il backend deve già supportare `set-value` e la migrazione additiva 0002.
+Backend 2.0 verificato e pubblicato dal commit
+`12f33aa70ec20b28ef8995f0788fbe0a79a4b4a7`, deployment
+`appgdep_6ad78745e23c8191ab5cd99bd35e2515`, succeeded.
+Non mettere file con progressi di verifica nel repository. Usare il parametro
+`?verifica=<UUID>` prima dell'hash, senza mai toccare il dataset personale.

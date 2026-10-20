@@ -1,3 +1,15 @@
+import { MAIN_MISSIONS } from './content/main-missions.js?v=2.0.0';
+import { ASSIGNMENTS } from './content/assignments.js?v=2.0.0';
+import { SIDE_MISSIONS } from './content/side-missions.js?v=2.0.0';
+import { PRACTICAL_GUIDES } from './content/practical.js?v=2.0.0';
+import { UNLOCK_GUIDES } from './content/unlocks.js?v=2.0.0';
+import { PUZZLES, PUZZLE_METHODS as MERLIN_METHODS } from './content/puzzles.js?v=2.0.0';
+import { HOGWARTS_PUZZLES, HOGWARTS_METHODS } from './content/hogwarts-puzzles.js?v=2.0.0';
+import { MOONS, INTRO_MOONS, DEMIGUISE_GUIDE } from './content/demiguise.js?v=2.0.0';
+import { guideRoute } from './guide-model.js?v=2.0.0';
+export { MOONS, INTRO_MOONS };
+export const PUZZLE_METHODS = [...MERLIN_METHODS, ...HOGWARTS_METHODS];
+
 // Editorial navigation, separate from the progress store. Keep these IDs and
 // canonical routes stable when adding content or changing a visible label.
 export const SECTIONS = [
@@ -33,14 +45,7 @@ export const SECTIONS = [
   }
 ];
 
-// Only published, usable guides belong here. Pending categories remain navigation
-// pages; do not pretend a walkthrough exists by adding an empty guide record.
-export const GUIDES = [
-  {
-    id: 'demiguise', title: 'Demiguise e Alohomora',
-    summary: 'Hogsmeade e dintorni, con una luna bonus a Hogwarts.',
-    section: 'sblocchi', category: 'demiguise', route: '#/sblocchi/demiguise',
-    // Search-only transcription variants; visible names remain the verified ones.
-    aliases: ['lune', 'luna', 'statuette', 'alohomora', 'demigais', 'dimigais', 'alomora']
-  }
-];
+
+export const GUIDES = [DEMIGUISE_GUIDE, ...MAIN_MISSIONS, ...ASSIGNMENTS, ...SIDE_MISSIONS,
+  ...UNLOCK_GUIDES, ...PRACTICAL_GUIDES, ...PUZZLES, ...HOGWARTS_PUZZLES]
+  .map(guide => ({...guide, route:guideRoute(guide)}));

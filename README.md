@@ -1,3 +1,51 @@
+# Guida Completa Hogwarts Legacy · versione 2.0.0
+
+Sito: https://gabrielecappello123-blip.github.io/demiguise-ele/
+
+Guida italiana per Nintendo Switch 2, con profili Ele/Grifondoro e
+Thom/Serpeverde. Stesso URL e stessi progressi delle versioni precedenti.
+
+## Contenuti e manutenzione attuali
+
+- 140 voci missione: 46 principali incluse le quattro varianti di casata,
+  58 secondarie, 24 dei compagni e 12 incarichi. Le varianti diverse dalla
+  casata scelta sono nascoste fino alla richiesta esplicita.
+- Demiguise completo: 30 lune del mondo e 3 introduttive, con gli ID storici
+  conservati e foto interne per tutte le 30 posizioni del mondo.
+- 95 prove di Merlino con istruzioni locali, immagini/mappe e 9 metodi comuni;
+  12 porte di Aritmanzia, 3 segreti e 2 stanze Depulso.
+- 99 schede pratiche e di sblocco: incantesimi, talenti, caratteristiche,
+  equipaggiamento, pozioni, piante, ingredienti, animali e Stanza delle Necessità.
+- 353 schede canoniche complessive, più le lune e i metodi condivisi.
+  Il percorso generale al 100% e il riconoscimento fotografico sono rimandati.
+
+`guide-data.js` compone i moduli di `content/`; `guide-model.js` contiene regole
+pure di rotte, casate, ricerca protetta e progressi. `app.js` renderizza la guida
+senza compilazione né dipendenze runtime. `styles.css` conserva lo stile
+approvato. Foto caricate solo all'apertura del relativo pannello.
+
+Stati manuali reversibili `todo/doing/done` sotto `status:<guide-id>`.
+Le lune restano booleani; consegne e livello Alohomora sono scalari indipendenti.
+API, dataset `guide-v1`, identità e chiave legacy non cambiano. Backend Sites
+con migrazione SQL additiva 0002, compatibile con il client precedente.
+
+Verifica locale: Node >=22, `npm run check` (nessuna installazione necessaria).
+Prove browser sempre con `?verifica=<UUID>`; mai alterare progressi personali.
+
+### Localizzazione, fonti e limiti
+
+Nomi confrontati con i dati localizzati italiani TH.GL e guide di gioco.
+I registri `docs/research/` documentano copertura, fonti, immagini e disaccordi.
+Non tradurre liberamente. Istruzioni originali e brevi; crediti fotografici
+separati. Le immagini di altre piattaforme non certificano i comandi Switch 2.
+Il percorso e i salvataggi sono verificati tramite test e browser; non è una
+partita completa su una console fisica. Il disaccordo Bainburgh I/II è
+registrato nella ricerca e gestito prudentemente col requisito II.
+
+---
+
+## Registro delle versioni precedenti
+
 # Guida Completa Hogwarts Legacy
 
 Guida in espansione per smartphone, con home a tre sezioni, ricerca locale

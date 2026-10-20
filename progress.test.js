@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { MOONS } from './content/demiguise.js';
 import { KEY, readProgress, setProgress, clearProgress } from './progress.js';
 
 // Implements the browser Storage contract; browser reopening still needs live QA.
@@ -12,9 +12,8 @@ class Storage {
 
 test('keeps the existing storage key and all nine stable identifiers', () => {
   assert.equal(KEY, 'ele-demiguise-hogsmeade-v1');
-  const html = readFileSync(new URL('./index.html', import.meta.url), 'utf8');
-  const ids = [...html.matchAll(/<article class="item" data-id="([^"]+)"/g)].map(x => x[1]);
-  assert.deepEqual(ids, ['h1','h2','h3','h4','h5','h6','h7','u1','b1']);
+  const ids = new Set(MOONS.map(moon => moon.id));
+  for (const id of ['h1','h2','h3','h4','h5','h6','h7','u1','b1']) assert.ok(ids.has(id), id);
 });
 
 test('restores existing checks without writing during page opening', () => {

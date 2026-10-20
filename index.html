@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#22262b">
-  <meta name="demiguise-release" content="1.2.0">
+  <meta name="demiguise-release" content="2.0.0">
   <meta name="description" content="La guida personale a Hogwarts Legacy: missioni, sblocchi e guide pratiche, con ricerca e progressi separati per Ele e Thom.">
   <title>Guida Completa Hogwarts Legacy</title>
-  <link rel="stylesheet" href="./styles.css?v=1.2.0">
+  <link rel="stylesheet" href="./styles.css?v=2.0.0">
 </head>
 <body data-profile="">
   <main class="shell">
@@ -66,64 +66,20 @@
       <section id="homeView" class="view" aria-label="Pagina iniziale">
         <div id="homeCards" class="section-grid"></div>
         <section id="resumePanel" class="resume-panel" aria-labelledby="resumeTitle"><h2 id="resumeTitle">Riprendi</h2><div id="resumeContent"></div></section>
-        <p class="tiny">La guida cresce con noi: le sezioni indicano quali contenuti sono già disponibili.</p>
+        <p class="tiny">Nintendo Switch 2 · Nomi italiani verificati. Le soluzioni sono consultabili; gli spoiler di trama si aprono solo quando vuoi.</p>
       </section>
       <section id="sectionView" class="view" hidden><p id="sectionIntro" class="view-intro"></p><div id="categoryGrid" class="category-grid"></div></section>
-      <section id="categoryView" class="view" hidden><p id="categoryIntro" class="view-intro"></p><div id="categoryContents"></div></section>
-      <section id="demiguiseView" class="view" hidden>
-      <header class="hero">
-        <div class="eyebrow">Percorso disponibile · Alohomora I</div>
-        <h2>Le lune, una alla volta</h2>
-        <p class="subtitle">Hogsmeade e dintorni, con una luna bonus a Hogwarts. Questa è la prima parte della guida Demiguise.</p>
-        <button type="button" id="activityBtn" class="activity-button" aria-pressed="false" disabled>Segna in corso</button>
-      <div class="progress-panel">
-        <div class="progress-top"><strong>Lune raccolte in zona</strong><span class="num-complete"><span id="totalDone">0</span> / 8</span></div>
-        <div id="progressTrack" class="progress-track" role="progressbar" aria-label="Progresso raccolta" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div class="progress-fill" id="progressFill"></div></div>
-        <p class="progress-note" id="progressMessage" aria-live="polite">7 a Hogsmeade + 1 a Upper Hogsfield.</p>
-      </div>
-    </header>
-    <aside class="info-strip"><div class="symbol" aria-hidden="true">☾</div><div><strong>Ricorda: si raccolgono soltanto di notte</strong><p>Apri la mappa del gioco e seleziona <b>Attendi</b> per cambiare orario. Questa lista esclude tutte le serrature di livello II.</p></div></aside>
-    <nav class="toolbar" aria-label="Opzioni checklist"><div class="tabs"><button type="button" class="tab active" data-filter="all" aria-pressed="true">Tutte</button><button type="button" class="tab" data-filter="todo" aria-label="Mostra solo quelle da raccogliere" aria-pressed="false">Da raccogliere</button></div><button type="button" class="reset-btn" id="resetBtn" disabled>Azzera queste lune</button></nav>
-
-    <p id="itemSearchEmpty" class="empty-state" hidden>Nessuna luna corrisponde alla ricerca e al filtro scelto.</p>
-    <section class="section" id="hogsmeadeSection" aria-labelledby="hogsmeadeTitle">
-      <div class="section-head"><div><small>Prima tappa · Il villaggio</small><h2 id="hogsmeadeTitle">Hogsmeade</h2></div><span class="count" id="hogsmeadeCount">0 / 7</span></div>
-      <p class="section-sub">Segui l'ordine da sud verso il centro e poi a nord.</p>
-      <div class="items">
-        <article class="item" data-id="h1" data-zone="hogsmeade"><div class="item-top"><span class="number">01</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="h1" aria-label="Raccolta Tomi e Pergamene"><span><span class="item-title">Tomi e Pergamene</span><span class="item-desc">A sud · Nel retro del negozio</span></span></label><span class="chip free">Libero</span></div><details class="details"><summary>Come trovarla</summary><p>Entra da <b>Tomi e Pergamene</b>, passa dietro il bancone e raggiungi la stanzetta sul retro. La luna è sopra un mobile, vicino al forziere con l'occhio.</p></details></article>
-        <article class="item" data-id="h2" data-zone="hogsmeade"><div class="item-top"><span class="number">02</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="h2" aria-label="Raccolta Testa di Porco"><span><span class="item-title">Testa di Porco</span><span class="item-desc">A sud-ovest · Dietro il bancone</span></span></label><span class="chip free">Libero</span></div><details class="details"><summary>Come trovarla</summary><p>Entra nella locanda <b>Testa di Porco</b>, vai oltre il bancone e guarda nel locale di servizio sul retro: la luna è su una superficie accanto alle casse.</p></details></article>
-        <article class="item" data-id="h3" data-zone="hogsmeade"><div class="item-top"><span class="number">03</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="h3" aria-label="Raccolta Tre Manici di Scopa"><span><span class="item-title">Tre Manici di Scopa</span><span class="item-desc">Al centro · Ultimo piano</span></span></label><span class="chip">Liv. I</span></div><details class="details"><summary>Come trovarla</summary><p>Sali tutte le scale dei <b>Tre Manici di Scopa</b>. Apri con Alohomora I la porta in cima alle scale: la statuetta è su un tavolo nella stanza privata.</p></details></article>
-        <article class="item" data-id="h4" data-zone="hogsmeade"><div class="item-top"><span class="number">04</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="h4" aria-label="Raccolta casa a est dei Tre Manici di Scopa"><span><span class="item-title">Casa a est dei Tre Manici di Scopa</span><span class="item-desc">Al centro · Casa vicina, piano superiore</span></span></label><span class="chip">Liv. I</span></div><details class="details"><summary>Come trovarla</summary><p>Cerca la casa <b>immediatamente a est/dietro</b> i Tre Manici di Scopa. Apri la porta d'ingresso di livello I e sali le scale: la luna si trova di sopra, accanto a una candela.</p></details></article>
-        <article class="item" data-id="h5" data-zone="hogsmeade"><div class="item-top"><span class="number">05</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="h5" aria-label="Raccolta Abbigliamento per maghi Stratchy &amp; Sons"><span><span class="item-title">Stratchy &amp; Sons</span><span class="item-desc">Abbigliamento per maghi · Bancone a destra</span></span></label><span class="chip free">Libero</span></div><details class="details"><summary>Come trovarla</summary><p>Entra da <b>Abbigliamento per maghi Stratchy &amp; Sons</b> e passa nella parte comunicante sulla destra. La statuetta è sul bancone, vicino al martello che batte da solo.</p></details></article>
-        <article class="item" data-id="h6" data-zone="hogsmeade"><div class="item-top"><span class="number">06</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="h6" aria-label="Raccolta casa dietro Mielandia"><span><span class="item-title">Casa dietro Mielandia</span><span class="item-desc">A nord-est · Collinetta verso il mulino</span></span></label><span class="chip">Liv. I</span></div><details class="details"><summary>Come trovarla</summary><p>Raggiungi la zona <b>dietro Mielandia</b>, sali la collinetta verso il mulino ad acqua ed entra nella casetta con la serratura di livello I. La luna è al <b>piano terra</b>, poco dopo l'ingresso.</p></details></article>
-        <article class="item" data-id="h7" data-zone="hogsmeade"><div class="item-top"><span class="number">07</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="h7" aria-label="Raccolta casa di fronte a Fiera delle Fiere"><span><span class="item-title">Casa di fronte a Fiera delle Fiere</span><span class="item-desc">A nord · Sopra il camino</span></span></label><span class="chip">Liv. I</span></div><details class="details"><summary>Come trovarla</summary><p>Vai al negozio <b>Fiera delle Fiere</b>, vicino al fiume. Entra nella casetta proprio <b>dall'altra parte della strada</b>, aprendo la serratura di livello I. La luna è sopra il camino.</p></details></article>
-      </div>
-      <p class="empty" id="hogsmeadeEmpty">Hai trovato tutte le lune di Hogsmeade!</p>
-    </section>
-
-    <section class="section" id="upperSection" aria-labelledby="upperTitle">
-      <div class="section-head"><div><small>Seconda tappa · I dintorni</small><h2 id="upperTitle">Upper Hogsfield</h2></div><span class="count" id="upperCount">0 / 1</span></div>
-      <p class="section-sub">Villaggio a nord di Hogsmeade, nella Valle di Hogsmeade.</p>
-      <div class="items">
-        <article class="item" data-id="u1" data-zone="upper"><div class="item-top"><span class="number">08</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="u1" aria-label="Raccolta Upper Hogsfield"><span><span class="item-title">Casa vicino al pozzo</span><span class="item-desc">A ovest del pozzo · Ruota appoggiata fuori</span></span></label><span class="chip">Liv. I</span></div><details class="details"><summary>Come trovarla</summary><p>Usa la Metropolvere di <b>Upper Hogsfield</b>. Cerca la casa <b>a ovest del pozzo</b>, con una ruota appoggiata all'esterno. Apri la porta con Alohomora I: la luna è all'interno, sopra uno sgabello o piccolo mobile.</p></details></article>
-      </div>
-      <p class="empty" id="upperEmpty">Anche la luna di Upper Hogsfield è stata trovata!</p>
-    </section>
-
-    <section class="bonus" aria-labelledby="bonusTitle"><span class="bonus-label">Una luna bonus · Facoltativa</span><h3 id="bonusTitle">Vuoi sbloccare Alohomora II?</h3><p>Per il livello II devi consegnare <b>9 lune</b> a Gladwin Moon. Le 8 qui sopra non bastano da sole: se ti manca una luna, puoi prenderla facilmente a Hogwarts, senza serrature superiori al livello I.</p>
-      <article class="item" data-id="b1" data-zone="bonus"><div class="item-top"><span class="number">＋</span><label class="check-line"><input class="moon-check" type="checkbox" disabled data-id="b1" aria-label="Raccolta bonus aula di Divinazione"><span><span class="item-title">Hogwarts · Aula di Divinazione</span><span class="item-desc">Luna bonus, non compresa nelle 8 della zona</span></span></label><span class="chip free">Libero</span></div><details class="details"><summary>Come trovarla</summary><p>Viaggia alla Metropolvere dell'<b>Aula di Divinazione</b> (sezione <b>Biblioteca</b> della mappa). Sali fino all'aula della professoressa Onai: la luna è sulla sua scrivania. Dopo aver raccolto 9 lune da consegnare, torna da Gladwin Moon.</p></details></article>
-      <p id="bonusMessage" class="tiny" aria-live="polite">Questa luna extra ha una spunta indipendente e non cambia il contatore 0/8 di Hogsmeade.</p>
-    </section>
-
-    <div class="demiguise-notes"><p><strong>Legenda:</strong> «Libero» = nessuna serratura; «Liv. I» = apribile con il tuo Alohomora attuale.</p><p class="fine">Posizioni controllate su <a href="https://www.powerpyx.com/hogwarts-legacy-all-demiguise-statue-locations/" target="_blank" rel="noopener noreferrer">PowerPyx</a> e <a href="https://www.pushsquare.com/guides/hogwarts-legacy-all-demiguise-statues-locations" target="_blank" rel="noopener noreferrer">Push Square</a>. Nomi italiani verificati su <a href="https://www.player.it/guide/504605-hogwarts-legacy-guida-alle-statuette-di-demiguise.html" target="_blank" rel="noopener noreferrer">Player.it</a> e <a href="https://multiplayer.it/soluzioni/hogwarts-legacy-dove-trovare-statuette-demiguise-potenziare-alohomora.html" target="_blank" rel="noopener noreferrer">Multiplayer.it</a>. Checklist indipendente, non affiliata agli autori del gioco.</p></div>
-      </section>
+      <section id="categoryView" class="view" hidden><p id="categoryIntro" class="view-intro"></p><div id="categoryFilters" class="catalogue-filters"></div><p id="categoryCount" class="tiny" role="status"></p><div id="categoryContents"></div></section>
+      <section id="guideView" class="view" hidden></section>
+      <section id="demiguiseView" class="view" hidden></section>
       <footer class="site-footer">
         <details><summary>Come vengono salvati i progressi</summary><p>Le modifiche si sincronizzano tra i telefoni. Senza rete rimangono sul telefono fino alla riconnessione. Attendi «Salvato online» prima di cancellare i dati del browser.</p><p>I due profili sono condivisi, senza password: chi conosce il link può consultarli e modificarli. Gli aggiornamenti della guida conservano i progressi.</p></details>
         <p class="fine">Guida indipendente, non affiliata agli autori del gioco. Emblemi delle casate: <a href="https://www.harrypotter.com/" target="_blank" rel="noopener noreferrer">HarryPotter.com</a>.</p>
       </footer>
     </div>
   </main>
+  <dialog id="objectDialog" aria-labelledby="objectDialogTitle"><button id="closeObjectDialog" class="dialog-close" type="button" aria-label="Chiudi scheda oggetto">✕</button><div id="objectDialogContent"></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=1.2.0"></script>
+  <script type="module" src="./app.js?v=2.0.0"></script>
 </body>
 </html>

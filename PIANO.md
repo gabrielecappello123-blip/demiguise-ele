@@ -114,6 +114,35 @@ casate; non sono una specifica ufficiale dei codici colore dei film.
 Gli stati sono espliciti, manuali e reversibili. Consultare una guida,
 effettuare una ricerca o aprire una sezione non segna un'attività in corso.
 
+### Implementazione home e ricerca — 20/10/2026
+
+Thomas ha confermato l'anteprima e scelto B: ad ogni riapertura, prima della
+guida, «Continua come Ele/Thom» oppure «Cambia profilo»; prima visita con
+scelta delle due identità. Nella guida compare solo il profilo attivo.
+Ha richiesto ricerca globale all'inizio del menu e contestuale in ogni
+sezione, e di procedere proattivamente con la struttura completa.
+
+Ambito: stile approvato, home a tre sezioni e Riprendi, sottosezioni
+navigabili, Demiguise spostato in Sblocchi e potenziamenti mantenendo tutte
+le spunte. Le guide non ancora scritte saranno segnalate in preparazione,
+senza inventare contenuti. Ricerca locale gratuita su titoli/descrizioni/
+sinonimi sicuri, con normalizzazione di accenti e tolleranza limitata ai
+refusi; nessuna indicizzazione automatica dei testi spoiler.
+
+Piano operativo:
+- [x] Base isolata e pulita verificata: 51 test passati, main remoto 91074c9.
+- [ ] Catalogo e ricerca con prove su filtri, refusi, ordinamento e spoiler.
+- [ ] Ingresso B, navigazione, temi casata e Riprendi manuale.
+- [ ] Revisione e prove automatiche/browser mobile, conservazione progressi.
+- [ ] Pubblicazione sullo stesso URL e verifica della versione reale.
+
+Contratti: dataset e chiavi dei profili immutati; `progress.js` e
+`profile-sync.js` invariati; nessuna modifica backend. L'attività Demiguise
+usa `activity:demiguise:in-progress`, indipendente dalle lune. L'azzeramento
+delle lune tocca soltanto i nove ID della checklist: conserva attività,
+elementi futuri e l'altro profilo. Le rotte interne usano hash, compatibili
+con GitHub Pages e senza cambiare l'indirizzo pubblico.
+
 ## Costi e scelta del modello
 
 Vincolo confermato da Thomas il 20/10/2026: **0 € di costi aggiuntivi per il
@@ -245,3 +274,15 @@ separata contro l'API pubblica, oltre ai test automatici.
 Restano distinte le verifiche HTTP/Node, quelle nel browser e quelle sui telefoni
 fisici. Non dichiarare una prova su hardware mobile se fatta soltanto in iframe.
 La chiave originale non è stata cancellata o modificata.
+
+### Verifica implementazione home/ricerca 1.2.0
+
+- Nuove prove UI osservate fallire sulla versione precedente e passare sulla
+  nuova: ingresso B, home, rotte, ricerca contestuale, Riprendi manuale,
+  azzeramento limitato e refresh soltanto dopo l'ingresso.
+- Ricerca/catalogo: 20 test; alias solo di ricerca per le grafie dettate.
+- Revisione indipendente: due problemi importanti corretti con regressioni
+  RED→GREEN. Una luna raccolta aperta dalla ricerca ripristina «Tutte»; stato
+  del salvataggio e Riprova precedono i contenuti e gli errori restano visibili
+  durante lo scorrimento. Nessun problema minore rinviato.
+- Backend e moduli di salvataggio invariati. Prova browser e rilascio da completare.

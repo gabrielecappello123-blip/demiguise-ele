@@ -1,7 +1,9 @@
 # Guida Completa Hogwarts Legacy
 
-Guida in espansione per smartphone: checklist di 8 lune Demiguise di Hogsmeade
-e dintorni, più una bonus. Grafica e contenuti derivano dall'HTML di Thomas.
+Guida in espansione per smartphone, con home a tre sezioni, ricerca locale
+e profili Ele/Thom. Il primo contenuto disponibile è la checklist di 8 lune
+Demiguise di Hogsmeade e dintorni, più una bonus; le altre categorie sono
+organizzate e segnalate in preparazione, non guide già complete.
 
 **Sito pubblico:** https://gabrielecappello123-blip.github.io/demiguise-ele/
 
@@ -11,8 +13,11 @@ sullo stesso link, senza installazioni o nuovi file per Ele.
 ## Struttura
 
 - `index.html`: contenuti, etichette e struttura.
-- `styles.css`: grafica della checklist e controlli dei profili.
-- `app.js`: contatori, filtri, scelta del profilo e stato del salvataggio.
+- `styles.css`: temi delle casate, ingresso, navigazione e checklist.
+- `app.js`: ingresso, navigazione a hash, ricerca, contatori e salvataggio.
+- `guide-data.js`: sezioni, sottosezioni e catalogo canonico delle guide disponibili.
+- `search.js`: ricerca locale con accenti, sinonimi sicuri e refusi limitati.
+- `assets/houses/`: i due emblemi approvati, serviti dallo stesso sito.
 - `profile-sync.js`: coda locale, cache e API Ele/Thom.
 - `profile-sync.test.js`: regressioni di sincronizzazione e migrazione.
 - `progress.js`: contratto originale, conservato per compatibilità.
@@ -47,6 +52,29 @@ Dataset permanente `guide-v1`, ID e identità del progetto Sites non cambiano
 agli aggiornamenti. Due profili senza password significano che chi ha il link
 può leggere e modificare entrambi; non sono account privati. Nessun token
 amministrativo di Sites/GitHub è esposto al browser.
+
+Da 1.2.0 ogni apertura richiede «Continua come…» o una scelta esplicita.
+Il profilo ricordato non mostra la guida prima della conferma. Cambia profilo
+è nel menu personale. `activity:demiguise:in-progress` è un segnalibro manuale
+per Riprendi, indipendente dalle lune. Cercare o aprire non lo modifica.
+«Azzera queste lune» tocca soltanto i nove ID attuali tramite operazioni
+individuali; non azzera l'intero profilo, le attività o i futuri contenuti.
+
+## Struttura e ricerca
+
+Rotte: `#/`, `#/missioni`, `#/sblocchi`, `#/pratiche`; categoria
+`#/<sezione>/<categoria>`, Demiguise `#/sblocchi/demiguise`, singola luna
+`#/sblocchi/demiguise/h2`. La query `?verifica=<UUID>` rimane prima dell'hash.
+Le rotte non richiedono configurazioni del server GitHub Pages.
+
+Aggiungere una guida reale una sola volta in `GUIDES`, collegandola alla
+categoria; la struttura in `SECTIONS` non prova che il contenuto esista.
+La ricerca globale è in home; nelle sezioni è limitata al contesto, con
+«Cerca in tutta la guida». Indicizza solo `title`, `summary`, `aliases`
+redatti senza spoiler, mai automaticamente il corpo di una missione o
+testi nascosti. I risultati simili sono etichettati; nessuna AI o API a pagamento.
+Le lune ereditano titoli e descrizioni dal DOM, evitando copie divergenti.
+I nomi dettati Demigais/Dimigais/Alomora sono solo sinonimi di ricerca.
 
 ## Modifiche e test
 

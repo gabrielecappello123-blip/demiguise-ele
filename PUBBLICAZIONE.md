@@ -75,3 +75,17 @@ Fonti tecniche:
 - https://learn.chatgpt.com/docs/sites/data-and-connections
 - https://learn.chatgpt.com/docs/pricing
 
+
+## Home e ricerca (1.2.0)
+
+- Pubblicare insieme `index.html`, `app.js`, `styles.css`, `guide-data.js`,
+  `search.js` e le immagini `assets/houses/gryffindor.png`/`slytherin.png`.
+  Cambiare i riferimenti di versione CSS/JS quando cambia il codice.
+- Conservare `profile-sync.js`, `progress.js`, progetto Sites, dataset e chiavi.
+- Verificare prima la scelta profilo, poi alla riapertura «Continua come…».
+- Verificare ricerca globale e locale, refusi, nessun risultato e una luna già
+  raccolta aperta dai risultati con «Da raccogliere» attivo: deve diventare visibile.
+- Riprendi si aggiorna solo con il pulsante manuale e resta dopo azzeramento
+  delle lune. Nessun contenuto di una categoria vuota va indicato come disponibile.
+- Se la verifica browser precedente aveva spunte, controllarle dopo il rilascio
+  prima di modificarle. Usare esclusivamente l'archivio `?verifica=<UUID>`.

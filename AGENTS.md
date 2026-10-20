@@ -46,10 +46,28 @@ confrontarne almeno due e registrare fonte e data nella sezione Localizzazione
 del README. Anche le etichette accessibili e i messaggi generati da app.js devono
 usare gli stessi nomi. Cambiare un nome visibile non deve cambiare il suo data-id.
 
-Modificare `index.html` e aggiornare in `app.js` gli elenchi `zoneIds` e
-`mainIds`, i conteggi e i testi pertinenti. La luna bonus resta indipendente.
-Aggiornare le verifiche del contenuto quando si aggiungono voci. Non modificare
-il nome o l'URL del progetto per pubblicare una nuova versione.
+La struttura e il catalogo sono in `guide-data.js`: tre sezioni stabili
+`missioni`, `sblocchi`, `pratiche`. Aggiungere soltanto guide effettivamente
+disponibili in `GUIDES`; le categorie ancora vuote restano in preparazione.
+Per le lune, modificare `index.html` e aggiornare in `app.js` gli elenchi
+`zoneIds`, `mainIds`, conteggi e testi. La luna bonus resta indipendente.
+Non duplicare i nomi delle lune nell'indice di ricerca: derivano dal DOM.
+Indicizzare soltanto titoli, riassunti e alias sicuri; mai corpi narrativi,
+titoli spoiler o contenuti di pannelli chiusi. Verificare i nuovi nomi online.
+Non modificare nome, URL, rotte stabili o ID per pubblicare una nuova versione.
+
+## Ingresso e navigazione
+
+- Scelta B: ogni nuova apertura mostra «Continua come…» per l'ultimo profilo
+  oppure «Cambia profilo»; la guida resta nascosta fino al tocco esplicito.
+- Dopo l'ingresso compare solo il profilo attivo, nel menu personale.
+- Ricerca globale in home e contestuale in ogni sezione, estendibile a tutta
+  la guida. Consultazione e ricerca non modificano i progressi.
+- Riprendi mostra attività marcate manualmente; `activity:demiguise:in-progress`
+  è indipendente da raccolte e missioni completate, e può essere rimosso.
+- Il reset della checklist deve modificare SOLO i relativi ID, catturando il
+  profilo prima di attendere la rete. Non chiamare il reset globale del client
+  per azzerare una sezione: distruggerebbe attività e progressi futuri.
 
 ## Scelta di modello e ragionamento
 

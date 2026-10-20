@@ -1,9 +1,9 @@
 {
   "name": "demiguise-ele",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "type": "module",
-  "description": "Checklist Demiguise per Ele, pubblicabile su GitHub Pages senza compilazione",
+  "description": "Guida Completa Hogwarts Legacy, pubblicabile su GitHub Pages senza compilazione",
   "scripts": {
     "test": "node --test",
     "check": "node --check app.js && node --check progress.js && node --test"

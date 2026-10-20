@@ -2,6 +2,8 @@
 
 ## Obiettivo e vincoli
 
+- Nome del sito: `Guida Completa Hogwarts Legacy`.
+
 - Mantenere un unico URL HTTPS su GitHub Pages, condivisibile su WhatsApp.
 - Non rinominare account, repository o cartella pubblicata dopo il rilascio.
 - Mantenere la grafica esistente salvo esplicita richiesta.

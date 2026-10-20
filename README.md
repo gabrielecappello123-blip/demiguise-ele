@@ -1,6 +1,7 @@
-# Le lune Demiguise · Il diario di Ele
+# Guida Completa Hogwarts Legacy
 
-Checklist statica per smartphone: 8 lune di Hogsmeade e dintorni, più una bonus.
+Guida in espansione per smartphone. La prima sezione contiene una checklist di
+8 lune Demiguise di Hogsmeade e dintorni, più una bonus.
 Grafica e contenuti derivano dall'HTML allegato da Thomas.
 
 **Sito pubblico:** https://gabrielecappello123-blip.github.io/demiguise-ele/

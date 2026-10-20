@@ -13,6 +13,12 @@
 - Il sito deve funzionare da smartphone e senza account per Ele.
 - Niente compilazione o dipendenze runtime senza necessità concreta.
 - Non commettere credenziali, progressi personali o dati del browser.
+- Budget aggiuntivo obbligatorio per il sito: 0 €. L'unico costo accettato da
+  Thomas è il normale uso della propria offerta ChatGPT Work/Codex durante
+  la realizzazione. Non acquistare domini, hosting, crediti o API per il sito.
+- Sincronizzazione e riconoscimento delle foto devono rispettare lo stesso
+  vincolo. Verificare quote gratuite e comportamento al loro esaurimento
+  prima di adottare un servizio; non attivare fatturazione o addebiti automatici.
 
 ## Compatibilità dei progressi
 
@@ -44,6 +50,21 @@ Modificare `index.html` e aggiornare in `app.js` gli elenchi `zoneIds` e
 `mainIds`, i conteggi e i testi pertinenti. La luna bonus resta indipendente.
 Aggiornare le verifiche del contenuto quando si aggiungono voci. Non modificare
 il nome o l'URL del progetto per pubblicare una nuova versione.
+
+## Scelta di modello e ragionamento
+
+Thomas richiede una raccomandazione proporzionata al compito, per qualità ed
+efficienza nell'uso della quota. Segnalare prima del lavoro un cambio di modello
+o livello di ragionamento soltanto quando offre un beneficio concreto, con
+una breve motivazione. Se l'impostazione corrente è adatta, proseguire senza
+avvisi ripetitivi. Non affermare di aver modificato il selettore dell'utente.
+
+Per la fase di progettazione della guida, la raccomandazione del 20/10/2026
+è GPT-6.1 Sol / High. Riconsiderarla per implementazione, sincronizzazione,
+migrazioni e revisioni impegnative, verificando le fonti ufficiali aggiornate.
+Max e Ultra non sono equivalenti: Max concede più ragionamento al modello;
+Ultra suddivide parti indipendenti fra più agenti. Non raccomandare Ultra
+per modifiche semplici o per il solo fatto che sia disponibile.
 
 ## Prima di ogni pubblicazione
 

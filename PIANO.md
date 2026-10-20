@@ -103,3 +103,48 @@ controlli scuri `#181c21`, testo principale `#f3eee5`, testo secondario
 
 Le tonalità sono le scelte grafiche approvate per questa guida, ispirate alle
 casate; non sono una specifica ufficiale dei codici colore dei film.
+
+## Pagina iniziale approvata
+
+- [x] Thomas sceglie C il 20/10/2026: dopo la selezione di Ele o Thom,
+  mostrare le tre sezioni Missioni, Sblocchi e potenziamenti, Guide pratiche,
+  insieme a un piccolo riquadro «Riprendi» con le attività segnate «In corso».
+- [ ] Implementare questa pagina nella successiva fase di sviluppo.
+
+Gli stati sono espliciti, manuali e reversibili. Consultare una guida,
+effettuare una ricerca o aprire una sezione non segna un'attività in corso.
+
+## Costi e scelta del modello
+
+Vincolo confermato da Thomas il 20/10/2026: **0 € di costi aggiuntivi per il
+sito**, oltre al normale uso della sua offerta ChatGPT Work/Codex per
+progettarlo e aggiornarlo. Anche profili sincronizzati e ricerca fotografica
+devono rientrare in questo budget. Nessun servizio a pagamento è autorizzato.
+La proposta di backend nel documento sui profili resta da verificare rispetto
+a questo vincolo prima di adottare una piattaforma.
+
+Controllo del 20/10/2026: i quattro file del sito pubblicato (`index.html`,
+`styles.css`, `app.js`, `progress.js`) restituiscono HTTP 200 e pesano in tutto
+27.575 byte, prima della compressione HTTP. Il sito attuale non effettua
+chiamate ad API AI. Il valore non è una stima della futura guida completa.
+Le foto future dovranno essere ottimizzate e caricate quando richieste.
+
+GitHub Pages è disponibile per repository pubblici con GitHub Free. Limiti
+ufficiali verificati alla stessa data: 1 GB per il sito pubblicato e 100 GB/mese
+di traffico come soglia flessibile. Le fatture personali dell'account non sono
+state verificate tramite il collegamento, che espone il solo progetto.
+Fonti: [disponibilità gratuita](https://docs.github.com/en/pages/quickstart),
+[limiti Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
+
+Preferenza operativa di Thomas: consigliare modello e livello di ragionamento
+prima del compito quando conviene cambiare; altrimenti continuare con
+l'impostazione adatta senza avvisi ripetitivi. Raccomandazione per la fase di
+progettazione attuale: **GPT-6.1 Sol / High**. Le indicazioni per compiti più
+impegnativi vanno rivalutate caso per caso; non sono classifiche universali.
+
+La documentazione OpenAI distingue Max, che dà più tempo di ragionamento al
+modello, da Ultra, che coordina più agenti per parti indipendenti. Modello,
+contesto, ragionamento e strumenti influenzano l'uso della quota; i costi API
+non permettono di dedurre un consumo settimanale esatto per questa chat.
+Fonti verificate il 20/10/2026: [modelli Work](https://learn.chatgpt.com/docs/models),
+[quote e consumo](https://learn.chatgpt.com/docs/pricing).

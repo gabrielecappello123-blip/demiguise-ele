@@ -1,6 +1,6 @@
 {
   "name": "demiguise-ele",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "type": "module",
   "description": "Checklist Demiguise per Ele, pubblicabile su GitHub Pages senza compilazione",

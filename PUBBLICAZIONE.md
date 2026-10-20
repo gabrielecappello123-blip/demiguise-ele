@@ -1,18 +1,31 @@
 # Pubblicazione e verifica
 
-## Configurazione prevista
+## Pubblicazione esistente
 
-Creare un repository dedicato `demiguise-ele` nell'account GitHub di Thomas.
-Con GitHub Free usare un repository pubblico; contiene solo il sito e il codice,
-non le spunte di Ele. I progressi rimangono nel browser di chi usa la pagina.
+Repository: https://github.com/gabrielecappello123-blip/demiguise-ele.
+URL pubblico: https://gabrielecappello123-blip.github.io/demiguise-ele/.
+Il primo deployment Pages `39342179312` è terminato con successo sul commit
+`806e09f0b9563f8ef0c15746d287971e99a744c5`; HTML, CSS e moduli JavaScript
+rispondono via HTTPS con HTTP 200. Thomas ha confermato il 20/10/2026 che le
+spunte persistono dopo chiusura e riapertura sul proprio telefono.
+
+La versione 1.0.2 corregge i nomi italiani verificati online e usa gli stessi
+identificativi delle lune. CSS e modulo di salvataggio sono identici alla prima
+pubblicazione. Il resoconto del rilascio è conservato in `PIANO.md`.
+
+## Configurazione per manutenzione
+
+Usare il repository dedicato `demiguise-ele` già esistente. Il repository
+pubblico contiene solo il sito e il codice, non le spunte di Ele. I progressi
+rimangono nel browser di chi usa la pagina.
 
 Caricare il progetto sul ramo `main`. In **Settings → Pages → Build and
 deployment**, scegliere **Deploy from a branch**, ramo **main**, cartella
 **/(root)** e salvare. Il file `.nojekyll` disabilita la compilazione Jekyll.
 Usare l'URL HTTPS restituito da GitHub e verificare **Enforce HTTPS**.
 
-Non è stato assegnato un URL definitivo in questa preparazione: non condividere
-un indirizzo calcolato prima che GitHub ne abbia confermato il rilascio.
+Conservare l'URL pubblico già assegnato e verificato: non creare un nuovo
+repository, non rinominare l'account o il progetto e non spostare la cartella.
 
 Per gli aggiornamenti successivi bastano commit nello stesso ramo; Ele apre
 sempre il medesimo link. Non serve scaricare nuovi file. Per ricevere una versione
@@ -21,8 +34,8 @@ Non è presente un service worker che possa trattenere indefinitamente vecchi fi
 
 ## Collaudo obbligatorio dopo il primo rilascio
 
-- [ ] GitHub conferma il deployment completato.
-- [ ] L'URL HTTPS risponde e mostra la checklist, con CSS e moduli JS caricati.
+- [x] GitHub conferma il primo deployment completato.
+- [x] HTML, CSS e moduli JS rispondono all'URL HTTPS (HTTP 200).
 - [ ] Prova a larghezza 360, 390 e 430 px, nessuno scorrimento orizzontale.
 - [ ] Spuntare `h2` e `b1`: il contatore principale mostra 1/8, bonus indipendente.
 - [ ] Con il filtro Da trovare, `h2` scompare; il bonus resta visibile.

@@ -3,6 +3,11 @@
 Checklist statica per smartphone: 8 lune di Hogsmeade e dintorni, più una bonus.
 Grafica e contenuti derivano dall'HTML allegato da Thomas.
 
+**Sito pubblico:** https://gabrielecappello123-blip.github.io/demiguise-ele/
+
+Condividere questo indirizzo su WhatsApp. Le modifiche al progetto si pubblicano
+automaticamente sullo stesso link, senza installazioni o nuovi file per Ele.
+
 ## Struttura
 
 - `index.html`: contenuti, etichette e struttura della pagina.
@@ -53,3 +58,32 @@ La pubblicazione GitHub Pages usa il ramo `main` e la cartella `/(root)`.
 Per il controllo del layout, `mobile-check.html` contiene tre anteprime della
 pagina reale con viewport da 360, 390 e 430 px. Non è un'emulazione di hardware
 Android/iOS: permette di controllare il layout responsive nel browser.
+
+## Localizzazione italiana
+
+Controllo online del 20 ottobre 2026, su guide italiane di Player.it,
+Multiplayer.it e NRSGamers. Verificare online anche i futuri nomi prima di
+pubblicarli. Queste sono correzioni dei testi: gli ID delle lune restano invariati.
+
+| Riferimento inglese o precedente | Nome usato nella checklist italiana | Verifica |
+| --- | --- | --- |
+| Tomes and Scrolls | Tomi e Pergamene | Player.it, Multiplayer.it |
+| Hog's Head | Testa di Porco | Player.it, Multiplayer.it |
+| The Three Broomsticks | Tre Manici di Scopa | Player.it, Multiplayer.it |
+| Gladrags Wizardwear / reparto Dervish and Banges | Abbigliamento per maghi Stratchy & Sons | Multiplayer.it, NRSGamers |
+| Honeydukes | Mielandia | Player.it, NRSGamers |
+| Brood & Peck | Fiera delle Fiere | Player.it, Multiplayer.it, NRSGamers |
+| Hogsfield Superiore | Upper Hogsfield | Player.it, Multiplayer.it, Tom's Hardware |
+| Divination Classroom / The Library Annex | Aula di Divinazione, sezione Biblioteca della mappa | Player.it, Multiplayer.it |
+
+Per la luna `h5`, il nome principale è il negozio rintracciabile sulla mappa,
+Stratchy & Sons. L'indicazione conduce al bancone nella parte comunicante sulla
+destra: non è stata aggiunta né sostituita una luna. Upper Hogsfield resta un
+nome proprio: le guide italiane consultate lo riportano senza tradurlo.
+
+Fonti consultate:
+
+- https://www.player.it/guide/504605-hogwarts-legacy-guida-alle-statuette-di-demiguise.html
+- https://multiplayer.it/soluzioni/hogwarts-legacy-dove-trovare-statuette-demiguise-potenziare-alohomora.html
+- https://www.nrsgamers.it/hogwarts-legacy-demiguise-hogsmeade/
+- https://www.tomshw.it/videogioco/hogwarts-legacy-statuette-di-demiguise

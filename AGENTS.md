@@ -26,6 +26,15 @@
 
 ## Aggiungere contenuti
 
+Prima di aggiungere o correggere nomi di luoghi, negozi, personaggi e voci
+della mappa, verificarli sempre online per la versione italiana di Hogwarts
+Legacy, come richiesto da Thomas il 20 ottobre 2026. Non tradurre liberamente
+i nomi inglesi e non sostituire la localizzazione del gioco con quella dei libri.
+Preferire schermate del gioco e guide italiane attendibili; se le fonti divergono,
+confrontarne almeno due e registrare fonte e data nella sezione Localizzazione
+del README. Anche le etichette accessibili e i messaggi generati da app.js devono
+usare gli stessi nomi. Cambiare un nome visibile non deve cambiare il suo data-id.
+
 Modificare `index.html` e aggiornare in `app.js` gli elenchi `zoneIds` e
 `mainIds`, i conteggi e i testi pertinenti. La luna bonus resta indipendente.
 Aggiornare le verifiche del contenuto quando si aggiungono voci. Non modificare

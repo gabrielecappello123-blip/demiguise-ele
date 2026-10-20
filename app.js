@@ -36,7 +36,7 @@ import { KEY, readProgress, setProgress, clearProgress } from './progress.js';
       document.querySelector('#totalDone').textContent = total;
       document.querySelector('#progressFill').style.width = (total / 8 * 100) + '%';
       document.querySelector('#progressTrack').setAttribute('aria-valuenow', String(total));
-      const msg = total === 8 ? 'Completato! Hai raccolto tutte le 8 lune della zona.' : total === 0 ? '7 a Hogsmeade + 1 a Hogsfield Superiore.' : `Ne mancano ${8 - total} per completare questa zona. Continua così!`;
+      const msg = total === 8 ? 'Completato! Hai raccolto tutte le 8 lune della zona.' : total === 0 ? '7 a Hogsmeade + 1 a Upper Hogsfield.' : `Ne mancano ${8 - total} per completare questa zona. Continua così!`;
       document.querySelector('#progressMessage').textContent = msg;
       document.querySelector('#hogsmeadeCount').textContent = `${zoneIds.hogsmeade.filter(id => completed.has(id)).length} / 7`;
       document.querySelector('#upperCount').textContent = `${zoneIds.upper.filter(id => completed.has(id)).length} / 1`;

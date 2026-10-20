@@ -229,7 +229,18 @@ la nuova struttura e lo stile completo della guida restano una fase separata.
 - [x] Veri viewport iframe 360/390/430 px: nessuno scorrimento orizzontale,
   misure clientWidth=scrollWidth 345/375/415 px (barra verticale desktop 15 px).
   Istruzioni espanse e controlli leggibili. Non è una prova sui telefoni fisici.
-- [ ] Aggiornamento innocuo 1.1.1 (soli metadati/versione) e riapertura con progressi conservati.
+- [x] Aggiornamento innocuo 1.1.1 pubblicato: commit
+  `2f61aaa1de0f80ace4a2fc25cf29d77e4eb9decf`, Pages `39429968204` success.
+  Ricaricamento dello stesso URL nel browser: metadato release 1.1.1,
+  profilo Ele, h2 e b1 ancora selezionati, contatore 1/8 e «Salvato online».
+  HTTP 200 sulla versione 1.1.1. JavaScript, CSS, chiavi e ID invariati rispetto a 1.1.0.
+
+Esito: profili sincronizzati pubblicati e verificati. Nessun nuovo account o
+servizio a pagamento attivato. Test automatici: 51 frontend/compatibilità e 15
+backend. Prove online e browser sui soli dataset isolati; progressi personali
+non modificati dai test. Limiti: nessuna prova su telefoni fisici o emulazione
+offline del browser; recupero offline verificato con client reale e memoria
+separata contro l'API pubblica, oltre ai test automatici.
 
 Restano distinte le verifiche HTTP/Node, quelle nel browser e quelle sui telefoni
 fisici. Non dichiarare una prova su hardware mobile se fatta soltanto in iframe.

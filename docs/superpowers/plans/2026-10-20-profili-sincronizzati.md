@@ -1,6 +1,6 @@
 # Profili sincronizzati Ele e Thom — Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** due profili sincronizzati fra i due telefoni, sul link GitHub Pages esistente.
 
@@ -32,32 +32,42 @@
 **Files:** `db/schema.ts`, nuove `drizzle/*.sql`, `app/api/progress/route.ts`, helper con SQL/API e test SQLite. Rimuovere `app/api/probe/route.ts`.
 **Interfaces:** contratto GET/POST della specifica, istantanee coerenti con revisioni monotone.
 
-- [ ] Scrivere test su SQLite reali per isolamento, importazioni, rimozioni, replay, reset, origine e input.
-- [ ] Osservare il fallimento prima dell'implementazione; implementare batch D1 atomici e ricevute.
-- [ ] Eseguire test, TypeScript e build; commettere sorgenti senza credenziali.
+- [x] Scrivere test su SQLite reali per isolamento, importazioni, rimozioni, replay, reset, origine e input.
+- [x] Osservare il fallimento prima dell'implementazione; implementare batch D1 atomici e ricevute.
+- [x] Eseguire test, TypeScript e build; commettere sorgenti senza credenziali.
 
 ### Task 2: coda e cache browser
 
 **Files:** `profile-sync.js`, `profile-sync.test.js`.
 **Interfaces:** `createProfileSync({storage,fetchImpl,baseUrl,dataset,onChange})` restituisce `select`, `set`, `reset`, `refresh`, `retry`, `getState`, `isRelevantStorageKey`. Stato con profilo, Set completed, pending e status.
 
-- [ ] Scrivere e osservare fallire test di migrazione, due istanze, richieste pendenti, riapertura/rete e storage bloccato.
-- [ ] Implementare operazioni locali immutabili, fusione delle risposte e coda senza perdita.
-- [ ] Verificare tutti i test e commettere i due file.
+- [x] Scrivere e osservare fallire test di migrazione, due istanze, richieste pendenti, riapertura/rete e storage bloccato.
+- [x] Implementare operazioni locali immutabili, fusione delle risposte e coda senza perdita.
+- [x] Verificare tutti i test e commettere i due file.
 
 ### Task 3: interfaccia attuale
 
 **Files:** `app.js`, `app.test.js`, `index.html`, `styles.css`, `mobile-check.html`, `package.json`.
 
-- [ ] Aggiungere test prima del codice per scelta obbligatoria, profili distinti, filtro, reset e messaggi di salvataggio.
-- [ ] Collegare i controlli Ele/Thom, recupero al ritorno online/focus e stato onesto delle modifiche in attesa.
-- [ ] Aggiornare spiegazioni del salvataggio, versione 1.1.0 e riquadri mobile con dataset isolato.
-- [ ] Eseguire `npm run check`; revisione indipendente dell'intero flusso.
+- [x] Aggiungere test prima del codice per scelta obbligatoria, profili distinti, filtro, reset e messaggi di salvataggio.
+- [x] Collegare i controlli Ele/Thom, recupero al ritorno online/focus e stato onesto delle modifiche in attesa.
+- [x] Aggiornare spiegazioni del salvataggio, versione 1.1.0 e riquadri mobile con dataset isolato.
+- [x] Eseguire `npm run check`; revisione indipendente dell'intero flusso.
 
 ### Task 4: rilascio e prova reale
 
-- [ ] Pubblicare prima API, verificare due profili e dataset separati su HTTPS.
-- [ ] Pubblicare frontend tramite commit GitHub con genitore remoto corrente, soltanto file previsti.
-- [ ] Verificare richiesta CORS, selezione e spunte nel browser, riapertura e aggiornamento innocuo con conservazione.
-- [ ] Verificare riquadri browser 360/390/430 px, filtri e azzeramento annullato/confermato su soli dati di prova.
-- [ ] Registrare risultati e limiti; restituire il link definitivo senza dichiarare prove sui telefoni fisici non effettuate.
+- [x] Pubblicare prima API, verificare due profili e dataset separati su HTTPS.
+- [x] Pubblicare frontend tramite commit GitHub con genitore remoto corrente, soltanto file previsti.
+- [x] Verificare richiesta CORS, selezione e spunte nel browser, riapertura e aggiornamento innocuo con conservazione.
+- [x] Verificare riquadri browser 360/390/430 px, filtri e azzeramento annullato/confermato su soli dati di prova.
+- [x] Registrare risultati e limiti; restituire il link definitivo senza dichiarare prove sui telefoni fisici non effettuate.
+
+## Esito del rilascio
+
+Completato il 20/10/2026: API Sites pubblicata, frontend 1.1.1 sul link permanente,
+51 test frontend e 15 backend superati, verifica API reale con due memorie client,
+browser con riapertura/nuova scheda/reset e aggiornamento innocuo senza perdita.
+Viewport iframe 360/390/430 px senza overflow; nessuna prova su telefoni fisici.
+Revisione indipendente: risolti timeout di rete e disallineamento della migrazione
+con la validazione server, entrambi coperti da regressioni osservate fallire e
+poi passare. Nessun problema importante lasciato aperto. Dettagli in PIANO.md.

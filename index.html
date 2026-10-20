@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#22262b">
-  <meta name="demiguise-release" content="2.1.0">
+  <meta name="demiguise-release" content="2.1.1">
   <meta name="description" content="La guida personale a Hogwarts Legacy: missioni, sblocchi e guide pratiche, con ricerca e progressi separati per Ele e Thom.">
   <title>Guida Completa Hogwarts Legacy</title>
   <link rel="icon" type="image/png" sizes="64x64" href="./assets/hogwarts-crest.png">
-  <link rel="stylesheet" href="./styles.css?v=2.1.0">
+  <link rel="stylesheet" href="./styles.css?v=2.1.1">
 </head>
 <body data-profile="">
   <main class="shell">
@@ -54,6 +54,10 @@
           </details>
         </div>
       </header>
+      <aside id="migrationBanner" class="migration-banner" aria-labelledby="migrationTitle" hidden>
+        <div><h2 id="migrationTitle">La guida ha un nuovo indirizzo</h2><p id="migrationMessage" role="status" aria-live="polite"></p></div>
+        <button id="migrationButton" class="migration-button" type="button">Passa al nuovo link</button>
+      </aside>
       <aside id="syncWarning" class="sync-warning" hidden><p id="syncAlert" role="status" aria-live="polite" hidden></p><button type="button" class="retry-button" id="syncAlertRetry" hidden>Riprova</button></aside>
       <section id="searchPanel" class="search-panel" aria-label="Ricerca nella guida">
         <label id="searchLabel" for="guideSearch">Cerca nella guida</label>
@@ -87,6 +91,6 @@
   </main>
   <dialog id="objectDialog" aria-labelledby="objectDialogTitle"><button id="closeObjectDialog" class="dialog-close" type="button" aria-label="Chiudi scheda oggetto">✕</button><div id="objectDialogContent"></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=2.1.0"></script>
+  <script type="module" src="./app.js?v=2.1.1"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@ import { createProfileSync } from './profile-sync.js?v=2.1.0';
 import { SECTIONS, GUIDES, MOONS, INTRO_MOONS, PUZZLE_METHODS } from './guide-data.js?v=2.1.0';
 import { searchGuide } from './search.js?v=2.1.0';
 import { STATUS_LABELS, guideRoute, parseRoute, forHouse, orderedCatalogue, guideNeighbours, guideStatus, makeGuideEntries, knownTitleResults, filterMoons, countMoons } from './guide-model.js?v=2.1.0';
+import { createHostMigration } from './migration.js?v=2.1.1';
 
 (() => {
   'use strict';
@@ -14,6 +15,10 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, orderedCatalogue, guid
   const viewStates=new Map(), photoDimensions=new Map(), photoLoaders=new WeakMap();let renderedHash=null, navigationSession='', entryCount=0, cancelledView=null;
   let current, route, allScope=false, showOtherHouses=false, categoryPlace='', categoryStatus='', moonLevel=1, moonTodo=false, toastTimer;
   const searchInput=$('guideSearch');
+  // Enabled only after the dedicated GitHub organization has been secured.
+  // The coordinator itself permits passage exclusively from the old origin.
+  const migration=createHostMigration({enabled:true,currentOrigin:window.location.origin,search:window.location.search});
+  let migrationBusy=false,migrationNotice='';
   const sync=createProfileSync({dataset,onChange:render});
   current=sync.getState(); rememberedProfile=current.profile; choosing=!rememberedProfile;
   $('verificationNotice').hidden=!isVerification;
@@ -390,6 +395,32 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, orderedCatalogue, guid
     if($('syncAlert'))$('syncAlert').hidden=!failed;
     if($('syncAlertRetry'))$('syncAlertRetry').hidden=!failed;
   }
+  function renderMigration() {
+    const state=migration.inspect(),banner=$('migrationBanner');
+    banner.hidden=!entered||current.profile!==desiredProfile||state.status==='inactive';if(banner.hidden)return;
+    banner.dataset.status=migrationBusy?'syncing':state.status;
+    const message=migrationBusy?'Salviamo i progressi di Ele e Thom. Resta qui fino al passaggio.':migrationNotice||state.error||
+      (state.canContinue?'I progressi sono pronti. Apri il nuovo link e salvalo nei preferiti.':'Ci sono progressi su questo telefono da salvare, anche dell’altro profilo. Puoi continuare a usare questa pagina.');
+    if($('migrationMessage').textContent!==message)$('migrationMessage').textContent=message;
+    $('migrationButton').disabled=migrationBusy;
+    $('migrationButton').textContent=migrationBusy?'Attendi…':state.status==='blocked'?'Ricontrolla':state.canContinue?'Passa al nuovo link':state.error?'Riprova il passaggio':'Sincronizza e passa';
+  }
+  async function passToNewSite() {
+    if(migrationBusy||!entered||current.profile!==desiredProfile)return;
+    migrationNotice='';const initial=migration.inspect();
+    if(initial.status==='inactive'||initial.status==='blocked'){renderMigration();return;}
+    const profile=current.profile,session=navigationSession;
+    migrationBusy=true;renderMigration();
+    try {
+      const outcome=initial.canContinue?initial:await migration.synchronize(profile);
+      if(!entered||current.profile!==profile||desiredProfile!==profile||navigationSession!==session){migrationNotice='Il profilo è cambiato. Tocca di nuovo per passare al nuovo link.';return;}
+      // destination() rechecks both queues immediately before navigation.
+      const destination=outcome.canContinue?migration.destination(window.location.hash):null;
+      if(destination)window.location.assign(destination);
+    } catch(error) {
+      migrationNotice='Passaggio non riuscito. I progressi restano su questa pagina. Riprova.';
+    } finally {migrationBusy=false;renderMigration();}
+  }
   function render(state) {
     current=state;const showing=entered&&state.profile===desiredProfile&&Boolean(state.profile);
     $('profileGate').hidden=showing;$('guideApp').hidden=!showing;$('welcomeBack').hidden=choosing||!rememberedProfile;
@@ -400,6 +431,7 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, orderedCatalogue, guid
     document.body.dataset.profile=showing?state.profile:choosing?'':rememberedProfile||'';
     const profile=profiles[state.profile];if(profile){$('profileName').textContent=profile.name+' · '+profile.house;$('houseEmblem').src='./assets/houses/'+profile.image+'.png';}
     renderSync(state);
+    renderMigration();
     const resume=forHouse(GUIDES,state.profile).filter(g=>g.tracking&&guideStatus(g.id,state)==='doing');
     $('resumeContent').replaceChildren(...(resume.length?resume.map(g=>card(g.title,'In corso · '+(g.location||g.summary),guideRoute(g))):[el('p','','Qui trovi le attività che segni «In corso».')]));
     document.querySelectorAll('[data-guide-status]').forEach(n=>{n.value=guideStatus(n.dataset.guideStatus,state);n.disabled=!canEdit();});
@@ -436,6 +468,7 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, orderedCatalogue, guid
   searchInput.addEventListener('input',renderSearch);$('clearSearch').addEventListener('click',()=>{clearSearch();searchInput.focus({preventScroll:true});});
   $('searchAll').addEventListener('click',()=>{allScope=!allScope;renderSearch();});$('retrySyncBtn').addEventListener('click',()=>sync.retry());
   if($('syncAlertRetry'))$('syncAlertRetry').addEventListener('click',()=>sync.retry());
+  $('migrationButton').addEventListener('click',passToNewSite);
   document.querySelectorAll('.nav-link').forEach(n=>n.addEventListener('click',event=>navigationClick(event,'#/'+n.dataset.section)));
   document.querySelectorAll('.brand').forEach(n=>n.addEventListener('click',event=>navigationClick(event,'#/')));
   window.addEventListener('popstate',historyChanged);window.addEventListener('hashchange',historyChanged);

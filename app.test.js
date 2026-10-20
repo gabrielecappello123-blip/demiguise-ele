@@ -6,6 +6,7 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 import * as model from './guide-model.js';
 import {searchGuide} from './search.js';
+import {safeDestination,OLD_ORIGIN,NEW_ORIGIN} from './migration.js';
 const source=readFileSync(new URL('./app.js',import.meta.url),'utf8').replace(/^import[^\n]*\n/gm,'');
 const SECTIONS=[{id:'missioni',title:'Missioni',summary:'Missioni',categories:[{id:'secondarie',title:'Secondarie',summary:'Per luogo'}]},
 {id:'sblocchi',title:'Sblocchi',summary:'Abilità',categories:[{id:'demiguise',title:'Demiguise',summary:'Lune'}]},
@@ -18,7 +19,7 @@ const MOONS=[{id:'h1',title:'Tomi e Pergamene',location:'Hogsmeade',group:'Hogsm
 {id:'b1',title:'Aula di Divinazione',location:'Hogwarts',group:'Biblioteca',lock:0,steps:['Sulla scrivania']},
 {id:'dm-new',title:'Serratura II',location:'Hogwarts',group:'Biblioteca',lock:2,steps:['Apri la porta']}];
 const INTRO_MOONS=[{id:'dm-intro',title:'Luna introduttiva',steps:['Segui Moon']}];
-function openApp({remembered=null,hash='#/',search=''}={}) {
+function openApp({remembered=null,hash='#/',search='',origin=NEW_ORIGIN}={}) {
   const roots=[],events={},docEvents={},calls=[],scrolls=[];let win;
   const key=s=>s.replace(/-([a-z])/g,(_,c)=>c.toUpperCase());
   class Element {
@@ -63,7 +64,8 @@ function openApp({remembered=null,hash='#/',search=''}={}) {
   const snap=()=>({profile:selected,status,pending,completed:new Set(completed[selected]||[]),values:new Map(values[selected]||[])});
   const controller={getState:snap,async select(p){calls.push(['select',p]);if(state.failSelect){status='storage-error';notify(snap());return snap();}selected=p;status='saved';notify(snap());return snap();},async set(id,checked){calls.push(['set',selected,id,checked]);if(state.failSet===true||state.failSet===id){status='storage-error';notify(snap());return snap();}checked?completed[selected].add(id):completed[selected].delete(id);notify(snap());return snap();},async setValue(id,value){calls.push(['setValue',selected,id,value]);values[selected].set(id,value);notify(snap());return snap();},async refresh(){calls.push(['refresh']);notify(snap());},async retry(){status='saved';pending=0;notify(snap());},isRelevantStorageKey:k=>!k||k.startsWith('demiguise-profile-sync-v1:')};
   const brand=new Element('a');brand.className='brand';brand.href='#/';roots.push(brand);
-  let options;const location={hash,search},state={confirm:false};
+  let options;const location={hash,search,origin,assign:href=>calls.push(['assign',href])},state={confirm:false,migration:{status:'ready',canContinue:true,pending:{ele:0,thom:0},legacyPending:0}};
+  const createHostMigration=options=>({inspect(){return options.enabled&&options.currentOrigin===OLD_ORIGIN?state.migration:{status:'inactive',canContinue:false};},async synchronize(profile){calls.push(['migration-sync',profile]);if(state.migrationWait)await state.migrationWait;state.migration=state.migrationResult||{status:'ready',canContinue:true,pending:{ele:0,thom:0},legacyPending:0};return state.migration;},destination(hash){if(state.blockDeparture){state.migration={status:'needs-sync',canContinue:false,pending:{ele:0,thom:1},legacyPending:0};return null;}return this.inspect().canContinue?safeDestination(hash,options.search):null;}});
   const historyEntries=[{hash,state:null}];let historyIndex=0;
   const history={scrollRestoration:'auto',get state(){return historyEntries[historyIndex].state;},
     pushState(value,unused,href){historyEntries.splice(++historyIndex);historyEntries.push({hash:href,state:value});location.hash=href;},
@@ -71,7 +73,7 @@ function openApp({remembered=null,hash='#/',search=''}={}) {
     back(){if(!historyIndex)return;const old=location.hash;historyIndex--;location.hash=historyEntries[historyIndex].hash;events.popstate?.({state:this.state});events.hashchange?.({oldURL:'https://example.org/'+old,newURL:'https://example.org/'+location.hash});},
     forward(){if(historyIndex>=historyEntries.length-1)return;const old=location.hash;historyIndex++;location.hash=historyEntries[historyIndex].hash;events.popstate?.({state:this.state});events.hashchange?.({oldURL:'https://example.org/'+old,newURL:'https://example.org/'+location.hash});}};
   win={location,history,scrollY:0,addEventListener:(t,f)=>events[t]=f,scrollTo(options){this.scrollY=options.top;scrolls.push({top:options.top,options});state.onScroll?.();}};
-  vm.runInNewContext(source,{document,window:win,URLSearchParams,Set,Map,Promise,URL,...model,searchGuide,SECTIONS,GUIDES,MOONS,INTRO_MOONS,PUZZLE_METHODS:[],createProfileSync:c=>{options=c;notify=c.onChange;return controller;},confirm:()=>state.confirm,setTimeout:()=>1,clearTimeout(){},requestAnimationFrame:f=>f()});
+  vm.runInNewContext(source,{document,window:win,URLSearchParams,Set,Map,Promise,URL,...model,searchGuide,createHostMigration,SECTIONS,GUIDES,MOONS,INTRO_MOONS,PUZZLE_METHODS:[],createProfileSync:c=>{options=c;notify=c.onChange;return controller;},confirm:()=>state.confirm,setTimeout:()=>1,clearTimeout(){},requestAnimationFrame:f=>f()});
   return {document,$,calls,state,completed,values,options:()=>options,events,scrolls,win,history,
     choose:async p=>profiles[p==='ele'?0:1].fire('click'),click:async id=>$(id).fire('click'),
     navigate:h=>{const old=location.hash;history.pushState(null,'',h);events.hashchange({oldURL:'https://example.org/'+old,newURL:'https://example.org/'+h});},
@@ -254,4 +256,34 @@ test('fresh Home starts at the header while a saved Home keeps its previous posi
  assert.equal(a.scrolls.at(-1).top,0);assert.equal(a.document.activeElement,a.$('viewTitle'));assert.equal(a.$('viewTitle').focusOptions.preventScroll,true);
  a.win.scrollY=310;await a.follow(a.document.querySelectorAll('.nav-link').find(n=>n.dataset.section==='missioni'));a.history.back();assert.equal(a.win.scrollY,310);
  await a.click('changeProfileBtn');await a.choose('thom');assert.equal(a.win.scrollY,0);assert.equal(a.scrolls.at(-1).top,0);
+});
+
+
+test('migration banner is old-origin only and never synchronizes or navigates on entry',async()=>{
+ for(const origin of [OLD_ORIGIN,NEW_ORIGIN,'https://unrelated.example']){
+  const a=openApp({origin});await a.choose('ele');assert.ok(a.$('migrationBanner'));
+  assert.equal(a.$('migrationBanner').hidden,origin!==OLD_ORIGIN);
+  assert.equal(a.calls.filter(c=>c[0]==='migration-sync'||c[0]==='assign').length,0);
+  if(origin===OLD_ORIGIN){await a.click('migrationButton');assert.equal(a.calls.filter(c=>c[0]==='migration-sync').length,0);assert.deepEqual(a.calls.find(c=>c[0]==='assign'),['assign',NEW_ORIGIN+'/#/']);}
+ }
+});
+test('explicit passage synchronizes the active profile and preserves safe route and QA UUID',async()=>{
+ const uuid='11111111-1111-4111-8111-111111111111',a=openApp({origin:OLD_ORIGIN,search:'?verifica='+uuid+'&secret=omit'});
+ a.state.migration={status:'needs-sync',canContinue:false,pending:{ele:0,thom:2},legacyPending:3};await a.choose('ele');a.navigate('#/sblocchi/demiguise');
+ assert.ok(a.$('migrationButton'));assert.match(a.$('migrationButton').textContent,/Sincronizza/);assert.equal(a.calls.filter(c=>c[0]==='migration-sync').length,0);
+ await a.click('migrationButton');assert.deepEqual(a.calls.find(c=>c[0]==='migration-sync'),['migration-sync','ele']);
+ assert.deepEqual(a.calls.find(c=>c[0]==='assign'),['assign',NEW_ORIGIN+'/?verifica='+uuid+'#/sblocchi/demiguise']);
+});
+test('migration keeps the old guide available on blocked, offline and newly pending state',async()=>{
+ const a=openApp({origin:OLD_ORIGIN});a.state.migration={status:'blocked',canContinue:false,error:'Memoria non leggibile.'};await a.choose('ele');assert.ok(a.$('migrationButton'));await a.click('migrationButton');
+ assert.equal(a.calls.filter(c=>c[0]==='migration-sync'||c[0]==='assign').length,0);assert.match(a.$('migrationMessage').textContent,/Memoria non leggibile/);assert.equal(a.$('guideApp').hidden,false);
+ a.state.migration={status:'needs-sync',canContinue:false,pending:{ele:1,thom:1},legacyPending:0};a.state.migrationResult={...a.state.migration,error:'Connessione non disponibile.'};await a.click('migrationButton');
+ assert.match(a.$('migrationMessage').textContent,/Connessione non disponibile/);assert.equal(a.calls.filter(c=>c[0]==='assign').length,0);assert.equal(a.$('migrationButton').disabled,false);
+ a.state.migrationResult={status:'ready',canContinue:true,pending:{ele:0,thom:0},legacyPending:0};a.state.blockDeparture=true;await a.click('migrationButton');assert.equal(a.calls.filter(c=>c[0]==='assign').length,0);assert.match(a.$('migrationMessage').textContent,/progressi.*salvare/i);
+});
+test('migration ignores repeated taps and does not leave after a profile change',async()=>{
+ const a=openApp({origin:OLD_ORIGIN});a.state.migration={status:'needs-sync',canContinue:false,pending:{ele:0,thom:1},legacyPending:0};await a.choose('ele');assert.ok(a.$('migrationButton'));
+ let release;a.state.migrationWait=new Promise(resolve=>release=resolve);const pending=a.click('migrationButton');assert.equal(a.$('migrationButton').disabled,true);await a.click('migrationButton');
+ await a.click('changeProfileBtn');await a.choose('thom');release();await pending;
+ assert.equal(a.calls.filter(c=>c[0]==='migration-sync').length,1);assert.equal(a.calls.filter(c=>c[0]==='assign').length,0);assert.equal(a.$('migrationButton').disabled,false);assert.match(a.$('profileName').textContent,/Thom/);
 });

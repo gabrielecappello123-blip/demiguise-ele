@@ -325,8 +325,9 @@ unica finale. Percorso100% e ricerca foto rimandati. Nessun nuovo costo.
 - [x] 87 test frontend e 20 backend superati; build backend riuscita.
 - [x] Revisione indipendente UI e campione contenuti; correzioni registrate
   in `docs/research/ui-review.md` e `content-review.md`.
-- [ ] Pubblicazione finale frontend e verifica smartphone sull'URL effettivo.
-- [ ] Verifica riapertura e conservazione dopo aggiornamento con dati isolati.
+- [x] Pubblicazione finale frontend e verifica a larghezze da smartphone
+  sull'URL effettivo, nel browser reale.
+- [x] Verifica riapertura e conservazione dopo aggiornamento con dati isolati.
 
 Backend sorgente preparata `12f33aa70ec20b28ef8995f0788fbe0a79a4b4a7`.
 Il browser cloud non raggiunge il preview locale; le prove UI si eseguono
@@ -336,3 +337,29 @@ Backend pubblicato e verificato: versione3, deployment
 `appgdep_6ad78745e23c8191ab5cd99bd35e2515`, stato succeeded. GET mantiene
 h2/b1 del precedente dataset browser; POST/GET scalari e spunte verificati
 nel nuovo dataset isolato d8a9326a-66a4-418c-bcb9-2df24c1c01dc, profili separati.
+
+Frontend 2.0.0 pubblicato: commit
+`93971a54dfce41e46e97df64d2e57cfe15d31cac`, GitHub Pages run `39450598001`
+completato con successo. Verifica HTTP sul sito HTTPS: 18 file runtime
+(HTML, CSS, JavaScript e due emblemi; 726.309 byte non compressi) e tutte le
+7 nuove foto interne Demiguise rispondono 200 e coincidono byte per byte
+con i file locali verificati. Le foto delle guide si caricano su richiesta.
+
+Browser reale sul precedente dataset isolato
+`verify-7b596168-5b72-49e5-aa3e-b80b09657224`: h2 e b1 conservati,
+ora correttamente 2/30, attività Demiguise ancora In corso. Stati della
+missione Astrolabio modificati esplicitamente, conservati dopo reload e
+riportati a Da iniziare. Ele mantiene livello I e 1 luna consegnata senza
+alterare il totale raccolto; Thom resta 0/30, livello non acquisito e 0
+consegnate. Gate di ingresso, cambio profilo, scheda rapida e pannelli
+scelte funzionanti. Tre fotografie Merlino inizialmente dubbie caricate
+correttamente, oltre alla nuova foto interna Demiguise da 1200×675.
+
+Viewport iframe reali 360/390/430 px: clientWidth=scrollWidth
+345/375/415 px, inclusi ricerca, missione e scheda oggetto nel caso 360 px.
+Nessuno scorrimento orizzontale; nessun errore o warning del sito nel log
+osservato. Rapporto in `docs/research/browser-release-2.0.md`.
+Non si tratta di una prova su telefoni fisici né di una partita su Switch 2.
+Dati di produzione non modificati. Nessun nuovo servizio a pagamento o
+chiamata AI aggiunta al sito. Il percorso generale al 100% e la ricerca
+tramite foto restano rinviati come concordato.

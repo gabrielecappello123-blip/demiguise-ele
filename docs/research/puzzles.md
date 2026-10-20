@@ -104,12 +104,14 @@ timeout/blocco anche al secondo tentativo:
 - `merlin-hogsmeade-03`
 - `merlin-poidsear-09`
 
-Il download diretto dall’ambiente shell è bloccato con HTTP 403. Non è quindi
-stata salvata una copia locale. Il caricamento sul sito pubblicato deve essere
-provato dal controller: il renderer deve mantenere il link alla fonte anche
-quando il browser non riceve l’immagine. Le tre schede hanno comunque la mappa
-regionale funzionante. Questo controllo non equivale a una verifica visiva di
-ogni immagine né a una partita su Switch 2.
+Il download diretto dall’ambiente shell era bloccato con HTTP 403. Non è quindi
+stata salvata una copia locale. Il controllo finale nel browser reale sul sito
+pubblicato 2.0.0 ha risolto il dubbio: tutte e tre le foto e le relative mappe
+si caricano correttamente, con dimensioni naturali 1024×576. Le schermate
+mostrano le fotografie, senza icone di immagine rotta. Il renderer mantiene
+comunque il link alla fonte in caso di errore futuro. Vedi anche
+`browser-release-2.0.md`. Questi controlli non equivalgono a una verifica visiva
+di tutte le 95 fotografie né a una partita su Switch 2.
 
 ## Precauzioni applicate e limiti
 

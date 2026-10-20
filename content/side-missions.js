@@ -1,4 +1,4 @@
-// Missioni secondarie e relazioni: istruzioni originali, fonti e localizzazione verificate.
+// Contenuti originali; localizzazione verificata e fonti per ogni scheda.
 export const SIDE_MISSIONS = [
   {
     "id": "q-ttr01-01",
@@ -11,7 +11,7 @@ export const SIDE_MISSIONS = [
     "aliases": [],
     "order": 1,
     "requirements": [
-      "Progredire oltre la seconda prova della storia",
+      "Prosegui oltre la seconda prova della storia",
       "Campo dell’evocatore: partita 2 completata",
       "Lumos"
     ],
@@ -40,7 +40,7 @@ export const SIDE_MISSIONS = [
   {
     "id": "q-com-07",
     "title": "Dolce Dissendium",
-    "summary": "Un passaggio segreto conduce agli ingredienti chiesti da Garreth.",
+    "summary": "Un passaggio segreto conduce all’ingrediente chiesto da Garreth.",
     "section": "missioni",
     "category": "secondarie",
     "location": "Hogwarts · Scalinata principale",
@@ -100,7 +100,7 @@ export const SIDE_MISSIONS = [
         "title": "Mostra le scelte e le conseguenze",
         "spoiler": false,
         "paragraphs": [
-          "Restituire l’oggetto conclude la commissione; trattenerlo cambia il dialogo con Nerida. Non è un potenziamento da equipaggiare."
+          "Puoi restituire l’oggetto oppure trattenerlo: entrambe le scelte completano la missione e cambiano il dialogo con Nerida. L’oggetto non è un potenziamento da equipaggiare."
         ]
       }
     ],
@@ -134,7 +134,7 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Parla con Evangeline Bardsley e raggiungi l’aula di musica.",
-      "Sali le scale: la prima campana mancante è lungo il percorso. Afferrala con Wingardium Leviosa e portala nello spazio libero della struttura.",
+      "Sali le scale: la prima campana mancante è lungo il percorso. Afferrala con Wingardium Leviosa e portala nel posto vuoto sul supporto delle campane.",
       "Continua verso l’alto: l’altra campana è appoggiata su una trave. Trasportala nell’incavo rimasto.",
       "Torna da Evangeline dopo aver collocato entrambe."
     ],
@@ -168,7 +168,7 @@ export const SIDE_MISSIONS = [
       "Accio"
     ],
     "steps": [
-      "Parla con Arthur Plummly, sopra l’aula del professor Fig.",
+      "Parla con Arthur Plummly, al piano sopra l’aula del professor Fig.",
       "Scendi fino allo scheletro di rinoceronte, poi raggiungi la fontana del Cortile di Trasfigurazione.",
       "Attraversa la porta dietro la fontana e sali la scala: cerca il quadro indicato dalla mappa.",
       "Usa Accio sul bordo superiore del quadro, apri il forziere e torna da Arthur."
@@ -218,7 +218,7 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Lucan Brattleby nel Cortile della Torre dell’Orologio e scegli il duello.",
       "Affronta due avversari: Levioso rompe gli scudi gialli; continua con attacchi base.",
-      "Rispondi agli avvisi con Protego o una schivata; concentra gli attacchi su un avversario alla volta. Il dialogo finale chiude il round."
+      "Rispondi agli avvisi con Protego o una schivata; concentra gli attacchi su un avversario alla volta. Dopo la vittoria parla con Lucan."
     ],
     "panels": [],
     "photos": [],
@@ -253,7 +253,7 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Lucan Brattleby nel Cortile della Torre dell’Orologio e scegli il duello.",
       "Affronta tre avversari: Levioso per gli scudi gialli, Accio per quelli viola. Scegli liberamente il compagno.",
-      "Rispondi agli avvisi con Protego o una schivata; concentra gli attacchi su un avversario alla volta. Il dialogo finale chiude il round."
+      "Rispondi agli avvisi con Protego o una schivata; concentra gli attacchi su un avversario alla volta. Dopo la vittoria parla con Lucan."
     ],
     "panels": [],
     "photos": [],
@@ -288,8 +288,8 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Parla con Lucan Brattleby nel Cortile della Torre dell’Orologio e scegli il duello.",
-      "Affronta quattro avversari: usa Levioso, Accio e Incendio contro gli scudi dello stesso colore. Puoi scegliere un compagno.",
-      "Rispondi agli avvisi con Protego o una schivata; concentra gli attacchi su un avversario alla volta. Il dialogo finale chiude il round."
+      "Affronta quattro avversari: rompi gli scudi gialli con Levioso, quelli viola con Accio e quelli rossi con Incendio. Puoi scegliere un compagno.",
+      "Rispondi agli avvisi con Protego o una schivata; concentra gli attacchi su un avversario alla volta. Dopo la vittoria parla con Lucan."
     ],
     "panels": [],
     "photos": [],
@@ -368,7 +368,7 @@ export const SIDE_MISSIONS = [
       "Parla con Tik. Con il Sacco acciuffatutto recupera un Thestral maschio e una femmina nella tana indicata; quelli già salvati vanno bene.",
       "Compra da Tomi e Pergamene l’evocazione del recinto per l’allevamento: costa 1.000 galeoni.",
       "Torna nel nuovo ambiente del vivario, evoca il recinto e scegli i Thestral dal libro davanti all’ingresso.",
-      "Attendi 30 minuti di gioco reale, poi nutri e spazzola il piccolo. Parla di nuovo con Tik."
+      "Attendi 30 minuti con il gioco in corso, poi nutri e spazzola il piccolo. Parla di nuovo con Tik."
     ],
     "panels": [],
     "photos": [],
@@ -402,11 +402,7 @@ export const SIDE_MISSIONS = [
       "Accio"
     ],
     "steps": [
-      "Parla con Zenobia Noke. Usa Accio su ciascuna gobbiglia: Revelio aiuta a distinguerle.",
-      "Cortile di Trasfigurazione: guarda sopra il porticato. Divinazione: guarda il lampadario sotto l’accesso all’aula.",
-      "Dalla Fiamma della Metropolvere di Divinazione passa la porta e guarda la trave a sinistra.",
-      "Torre di Corvonero: controlla il punto di ingresso indicato. Sala dei Trofei: una è nel corridoio esterno, l’ultima su uno scaffale interno.",
-      "Torna da Zenobia con tutte e sei."
+      "Parla con Zenobia Noke. Usa Accio su ciascuna gobbiglia: Revelio aiuta a distinguerle."
     ],
     "panels": [
       {
@@ -415,44 +411,6 @@ export const SIDE_MISSIONS = [
         "paragraphs": [
           "Puoi restituire o trattenere le gobbiglie. La decisione riguarda soprattutto la reazione di Zenobia; non ti concede una modalità giocabile di Gobbiglie."
         ]
-      }
-    ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-5.jpg",
-        "alt": "Prima Gobbiglia: guarda sopra il portico del Cortile di Trasfigurazione.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-6.jpg",
-        "alt": "Seconda Gobbiglia: sul lampadario vicino all’aula di Divinazione.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-8.jpg",
-        "alt": "Terza Gobbiglia: sulle travi accanto alla passerella di legno.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-9.jpg",
-        "alt": "Quarta Gobbiglia: sul supporto in alto lungo il corridoio della Torre di Corvonero.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-10.jpg",
-        "alt": "Quinta Gobbiglia: vicino all’accesso della Sala dei Trofei.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-11.jpg",
-        "alt": "Sesta Gobbiglia: sullo scaffale fra i trofei.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
       }
     ],
     "related": [],
@@ -467,7 +425,93 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "1 · Cortile di Trasfigurazione",
+        "steps": [
+          "Dal cortile guarda sopra il porticato: la gobbiglia è sul bordo del tetto. Richiamala con Accio."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-5.jpg",
+            "alt": "Prima Gobbiglia: guarda sopra il portico del Cortile di Trasfigurazione.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "2 · Sotto l’aula di Divinazione",
+        "steps": [
+          "Sali le scale verso Divinazione. Prima dell’accesso all’aula guarda il lampadario sospeso al centro: la gobbiglia è lì."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-6.jpg",
+            "alt": "Seconda Gobbiglia: sul lampadario vicino all’aula di Divinazione.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "3 · Travi di Divinazione",
+        "steps": [
+          "Dalla Fiamma della Metropolvere di Divinazione passa la porta e guarda le travi a sinistra della passerella."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-8.jpg",
+            "alt": "Terza Gobbiglia: sulle travi accanto alla passerella di legno.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "4 · Torre di Corvonero",
+        "steps": [
+          "Nel corridoio della Torre di Corvonero guarda in alto: la gobbiglia è su un piccolo supporto vicino a una finestra."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-9.jpg",
+            "alt": "Quarta Gobbiglia: sul supporto in alto lungo il corridoio della Torre di Corvonero.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "5 · Davanti alla Sala dei Trofei",
+        "steps": [
+          "Nel corridoio esterno alla Sala dei Trofei guarda sopra l’accesso alla sala."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-10.jpg",
+            "alt": "Quinta Gobbiglia: vicino all’accesso della Sala dei Trofei.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "6 · Dentro la Sala dei Trofei",
+        "steps": [
+          "Entra nella sala e guarda sullo scaffale fra le coppe. Recuperata anche questa gobbiglia, torna da Zenobia con tutte e sei."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-gobs-of-gobstones-11.jpg",
+            "alt": "Sesta Gobbiglia: sullo scaffale fra i trofei.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-gobs-of-gobstones-walkthrough/"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "q-zzi-01",
@@ -519,14 +563,16 @@ export const SIDE_MISSIONS = [
       "15 pietre di luna"
     ],
     "steps": [
-      "Parla con la professoressa Weasley. Procurati 15 pietre di luna: Evanesco sugli arredi recupera il materiale.",
+      "Parla con la professoressa Weasley. Procurati 15 pietre di luna: usa Evanesco sugli arredi per recuperarne il materiale.",
       "Evoca cinque decorazioni da parete e cinque da pavimento, anche ripetute.",
       "Impara l’incantesimo di alterazione e prova stile, colore e dimensione sugli arredi adatti.",
       "Modifica pavimento o balconata, poi chiedi a Tik di cambiare l’atmosfera."
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "stanza-postazioni"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_SNS_01",
@@ -557,7 +603,7 @@ export const SIDE_MISSIONS = [
       "Parla con Lenora Everleigh e accendi Lumos davanti al quadro vuoto.",
       "Raggiungi l’angolo rappresentato: dalla cornice gira a destra e scendi la scalinata.",
       "Avvicinati alla falena con Lumos acceso e torna al quadro. Spegni Lumos davanti alla cornice.",
-      "Raccogli la pagina e parla di nuovo con Lenora, sopra il quadro."
+      "Raccogli la pagina e parla di nuovo con Lenora, al piano superiore."
     ],
     "panels": [],
     "photos": [],
@@ -578,7 +624,7 @@ export const SIDE_MISSIONS = [
   {
     "id": "q-snc-05",
     "title": "L’ultimo salvataggio di Tik",
-    "summary": "Segui Tik in un ultimo incarico di salvataggio.",
+    "summary": "Accetta l’ultimo incarico di salvataggio di Tik.",
     "section": "missioni",
     "category": "secondarie",
     "location": "Hogwarts · Stanza delle Necessità",
@@ -637,7 +683,7 @@ export const SIDE_MISSIONS = [
       "Parla con il ritratto in fondo alla biblioteca, poi con Astoria Crickett ai Tre Manici di Scopa.",
       "Raggiungi le rovine segnate a sud. Cerca la scala che scende accanto alla Prova di Merlino.",
       "Apri la serratura di livello II e parla con il ritratto in fondo al passaggio.",
-      "Decidi come concludere dal dialogo. Se conservi la cornice, riportala a Hogsmeade nella locanda scelta."
+      "Nel dialogo scegli cosa fare della cornice. Se conservi la cornice, riportala a Hogsmeade nella locanda scelta."
     ],
     "panels": [
       {
@@ -721,7 +767,8 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Equipaggia Accio, Incendio e Levioso prima di parlare con Lucan.",
-      "Prima serie: Accio, Incendio, Levioso. Seconda: Levioso, tre attacchi base, Accio, Incendio.",
+      "Prima serie: Accio, Incendio, Levioso.",
+      "Seconda serie: Levioso, tre attacchi base, Accio, Incendio.",
       "Ultima serie: Accio, un attacco base, Incendio, tre attacchi base, Levioso, tre attacchi base, Accio, Incendio, quattro attacchi base.",
       "Mantieni il ritmo; Accio avvicina il manichino alla portata corta di Incendio."
     ],
@@ -757,8 +804,8 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Leander Prewett al campo sul prato e inizia la partita.",
       "Controlla il percorso prima di tirare: ostacoli e sfere già ferme possono deviare la tua.",
-      "Lascia Accio prima della fascia blu: la sfera continua a rotolare. Regola il rilascio dopo il primo tentativo.",
-      "Vinci il confronto sui tre tiri; puoi riprovare parlando di nuovo con l’avversario."
+      "Rilascia Accio prima della fascia blu: la sfera continua a rotolare. Regola il rilascio dopo il primo tentativo.",
+      "Ottieni più punti dell’avversario nei tre tiri; puoi riprovare parlando di nuovo con l’avversario."
     ],
     "panels": [],
     "photos": [],
@@ -793,8 +840,8 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Samantha Dale al campo sul prato e inizia la partita.",
       "Controlla il percorso prima di tirare: ostacoli e sfere già ferme possono deviare la tua.",
-      "Lascia Accio prima della fascia blu: la sfera continua a rotolare. Regola il rilascio dopo il primo tentativo.",
-      "Vinci il confronto sui tre tiri; puoi riprovare parlando di nuovo con l’avversario."
+      "Rilascia Accio prima della fascia blu: la sfera continua a rotolare. Regola il rilascio dopo il primo tentativo.",
+      "Ottieni più punti dell’avversario nei tre tiri; puoi riprovare parlando di nuovo con l’avversario."
     ],
     "panels": [],
     "photos": [],
@@ -830,7 +877,7 @@ export const SIDE_MISSIONS = [
       "Parla con Grace Pinch-Smedley al campo sul prato e inizia la partita.",
       "Controlla il percorso prima di tirare: ostacoli e sfere già ferme possono deviare la tua.",
       "Sfrutta le rampe: le zone rialzate valgono più punti. Allinea il tiro prima di richiamare la sfera.",
-      "Vinci il confronto sui tre tiri; puoi riprovare parlando di nuovo con l’avversario."
+      "Ottieni più punti dell’avversario nei tre tiri; puoi riprovare parlando di nuovo con l’avversario."
     ],
     "panels": [],
     "photos": [],
@@ -865,8 +912,8 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Charlotte Morrison al campo sul prato e inizia la partita.",
       "Controlla il percorso prima di tirare: ostacoli e sfere già ferme possono deviare la tua.",
-      "Lascia Accio prima della fascia blu: la sfera continua a rotolare. Regola il rilascio dopo il primo tentativo.",
-      "Vinci il confronto sui tre tiri; puoi riprovare parlando di nuovo con l’avversario."
+      "Rilascia Accio prima della fascia blu: la sfera continua a rotolare. Regola il rilascio dopo il primo tentativo.",
+      "Ottieni più punti dell’avversario nei tre tiri; puoi riprovare parlando di nuovo con l’avversario."
     ],
     "panels": [],
     "photos": [],
@@ -899,10 +946,10 @@ export const SIDE_MISSIONS = [
       "Campo dell’evocatore: partita 4 completata"
     ],
     "steps": [
-      "Parla con professor Ronen al campo sul prato e inizia la partita.",
+      "Parla con il professor Ronen al campo sul prato e inizia la partita.",
       "Controlla il percorso prima di tirare: ostacoli e sfere già ferme possono deviare la tua.",
       "Sfrutta le rampe: le zone rialzate valgono più punti. Allinea il tiro prima di richiamare la sfera.",
-      "Vinci il confronto sui tre tiri; puoi riprovare parlando di nuovo con l’avversario."
+      "Ottieni più punti dell’avversario nei tre tiri; puoi riprovare parlando di nuovo con l’avversario."
     ],
     "panels": [],
     "photos": [],
@@ -1001,38 +1048,9 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Parla con Sophronia Franklin vicino all’aula di Incantesimi. Usa Depulso sul pannello d’ingresso indicato.",
-      "Prima stanza: spingi i blocchi con Depulso verso l’uscita; sali e apri il forziere.",
-      "Seconda stanza: richiama i blocchi a destra verso quelli a sinistra, spingi il gruppo in fondo e richiama la scala così ottenuta verso il lato dell’uscita.",
-      "Terza stanza: porta il gruppo a destra, spingilo in fondo, sali sui blocchi fissi a sinistra e richiamalo per attraversare.",
-      "Dalla piattaforma fissa colpisci la sfera di ripristino; richiama il gruppo prima verso l’uscita e poi verso di te per completare il ponte. Apri il forziere e torna da Sophronia."
+      "Le direzioni destra e sinistra partono dall’ingresso di ogni stanza, guardando verso l’uscita. Non restare davanti ai blocchi quando li richiami con Accio."
     ],
     "panels": [],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-6.jpg",
-        "alt": "Prima stanza: il blocco doppio si spinge verso la parete dell’uscita.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-9.jpg",
-        "alt": "Seconda stanza: unisci i blocchi con Accio per creare una scala.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-16.jpg",
-        "alt": "Terza stanza: la coppia di blocchi permette di raggiungere la piattaforma fissa laterale.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-20.jpg",
-        "alt": "Terza stanza: dopo il ripristino, la coppia forma il ponte finale verso il forziere.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
-      }
-    ],
     "related": [
       "depulso-1",
       "depulso-2"
@@ -1045,10 +1063,71 @@ export const SIDE_MISSIONS = [
       {
         "url": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/",
         "title": "Percorso e obiettivi · PowerPyx"
+      },
+      {
+        "url": "https://www.gameclubz.com/hogwarts-legacy-hall-of-herodiana-puzzles-guide/",
+        "title": "GameClubz · disposizione dei blocchi nelle tre stanze"
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Prima stanza · il blocco doppio",
+        "steps": [
+          "Spingi il blocco doppio con Depulso fino alla parete in fondo.",
+          "Sali sui blocchi, raggiungi l’uscita e apri il forziere."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-6.jpg",
+            "alt": "Prima stanza: il blocco doppio si spinge verso la parete dell’uscita.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Seconda stanza · unire i blocchi",
+        "steps": [
+          "Con Accio sposta i due blocchi a destra verso il blocco singolo a sinistra: si uniscono in un gruppo a gradini.",
+          "Spingi il gruppo con Depulso verso la parete in fondo.",
+          "Spostati sul lato destro e richiama il gruppo con Accio fino alla parete sotto l’uscita. Sali sui gradini e apri il forziere."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-9.jpg",
+            "alt": "Seconda stanza: unisci i blocchi con Accio per creare una scala.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Terza stanza · il ponte e il ripristino",
+        "steps": [
+          "Richiama il blocco doppio verso destra, poi spingilo con Depulso verso il fondo, in direzione della sfera di ripristino.",
+          "Sali sui blocchi fissi a sinistra e richiama il blocco doppio verso di te: forma un ponte.",
+          "Attraversalo e fermati sul blocco fisso più lontano lungo la parete sinistra. Da lì colpisci la sfera con un attacco base per riportare i blocchi mobili all’inizio.",
+          "Richiama il blocco doppio prima verso la parete in fondo e poi verso di te. Attraversalo per raggiungere l’uscita.",
+          "Apri il forziere, esci e torna da Sophronia."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-16.jpg",
+            "alt": "Terza stanza: la coppia di blocchi permette di raggiungere la piattaforma fissa laterale.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
+          },
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hall-of-herodiana-20.jpg",
+            "alt": "Terza stanza: dopo il ripristino, la coppia forma il ponte finale verso il forziere.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-hall-of-herodiana-walkthrough/"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "q-dms-01",
@@ -1066,8 +1145,8 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Dopo l’incarico introduttivo di Moon, raccogli di notte le lune delle statue nel mondo.",
       "Porta nove lune a Gladwin Moon nella Torre del Corpo Docente: ricevi Alohomora II.",
-      "Raccogline e consegnane altre tredici per Alohomora III. Sono 22 lune aggiuntive, non 13 in totale.",
-      "Attendi la nuova posta, segui il colloquio indicato e torna da Moon per chiudere la missione."
+      "Raccogline e consegnane altre tredici per Alohomora III. Le due consegne richiedono 22 lune del mondo in tutto; le tre del tutorial non contano.",
+      "Attendi la nuova posta, segui il colloquio indicato e torna da Moon per completare la missione."
     ],
     "panels": [
       {
@@ -1153,7 +1232,7 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Parla con Adelaide Oakes. Nell’accampamento indicato sconfiggi i goblin e raccogli sia il diario sia la mappa.",
-      "Segui il fiume verso ovest fino alle rovine di Korrow. Supera l’avamposto e accedi al sotterraneo fuori dal combattimento.",
+      "Segui il fiume verso ovest fino alle rovine di Korrow. Elimina i nemici dell’avamposto prima di entrare nel sotterraneo.",
       "Raggiungi la cella e parla con Rowland. Per aprire il portone rotondo, sali la scala laterale e accendi la caldaia con Incendio.",
       "Supera i nemici, cerca la bacchetta sul tavolo della stanza laterale e riportala alla cella."
     ],
@@ -1273,7 +1352,9 @@ export const SIDE_MISSIONS = [
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "pozione-invisibilita"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_COM_37",
@@ -1309,7 +1390,9 @@ export const SIDE_MISSIONS = [
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "scopa-e-volo"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_COM_32",
@@ -1346,7 +1429,9 @@ export const SIDE_MISSIONS = [
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "scopa-e-volo"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_COM_33",
@@ -1378,12 +1463,14 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Acquista da Albie il secondo potenziamento, quando disponibile: costa 4.000 galeoni.",
       "Raggiungi Imelda sul tracciato costiero nel sud-est.",
-      "Mantieni il percorso attraverso le bolle gialle; salti e curve richiedono correzioni anticipate. Gli anelli mancati aggiungono penalità.",
-      "Superato il tempo, parla con Imelda e torna da Albie."
+      "Mantieni il percorso attraverso le bolle gialle; anticipa le curve e i cambi di quota. Gli anelli mancati aggiungono penalità.",
+      "Battuto il tempo richiesto, parla con Imelda e torna da Albie."
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "scopa-e-volo"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_COM_34",
@@ -1482,7 +1569,7 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Garnuff e raggiungi l’accampamento segnato.",
       "Elimina i bracconieri, poi apri la gabbia con Alohomora I.",
-      "Le creature si disperdono: controlla il nome di Biscottino quando la punti e catturala con il Sacco acciuffatutto.",
+      "Le creature si disperdono: controlla il nome mostrato mentre le punti. Individua Biscottino e catturala con il Sacco acciuffatutto.",
       "Torna da Garnuff dopo aver recuperato proprio Biscottino."
     ],
     "panels": [
@@ -1495,7 +1582,9 @@ export const SIDE_MISSIONS = [
       }
     ],
     "photos": [],
-    "related": [],
+    "related": [
+      "strumento-sacco"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_COM_23",
@@ -1609,7 +1698,9 @@ export const SIDE_MISSIONS = [
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "strumento-sacco"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_COM_40",
@@ -1642,37 +1733,9 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Parla con Penny davanti al negozio e con Cassandra Mason. Per acquistarlo servono 1.500 galeoni.",
-      "Rientra, ripara i tre arredi con Reparo e apri il baule indicato.",
-      "Nel percorso successivo usa Lumos quando gli ambienti cambiano. Le lanterne si spostano con Accio o Wingardium Leviosa verso le mani delle statue.",
-      "Dal salone centrale completa entrambe le ali, biblioteca e atrio: ciascuna richiede due lanterne per aprire il proprio portone.",
-      "Terminati i due percorsi, attraversa il portone centrale e completa lo scontro. Torna al negozio e segui il successivo obiettivo del diario."
+      "Rientra, ripara i tre arredi con Reparo e apri il baule indicato."
     ],
     "panels": [
-      {
-        "title": "Biblioteca: le due lanterne",
-        "steps": [
-          "Dal portone chiuso prendi il ramo sinistro, dietro la statua. Raggiunto il balcone, voltati e torna verso la scala: la stanza cambia orientamento.",
-          "Sali, richiama la lanterna con Accio e attraversa la porta appena aperta. Mettila nella mano della statua.",
-          "Ripercorri la scala e attraversa l’ambiente. Nella stanza successiva sposta la lanterna a sinistra sulla mano: compare un passaggio.",
-          "Oltrepassalo, voltati e recupera la stessa lanterna attraverso la finestra. Mettila nella mano vicina e continua fino alla lanterna da riportare al portone della biblioteca.",
-          "Prendi ora il ramo destro, oltre la statua dorata. Nella stanza delle tre porte esplora i passaggi ancora aperti: quelli già conclusi scompaiono.",
-          "Nel corridoio che sembra ripetersi voltati quando cambia, accendi Lumos e cerca la porta. Nella sala dei manichini interagisci con la scatola e difenditi.",
-          "Conclusi i passaggi, porta la seconda lanterna al portone. Oltre la porta proteggiti dagli oggetti scagliati; poi torna al salone centrale."
-        ]
-      },
-      {
-        "title": "Atrio: porte, lanterne e scacchiera",
-        "steps": [
-          "Dal portone dell’atrio prendi il ramo sinistro. Nel corridoio voltati se la strada scompare; rompi le assi della porta che compare.",
-          "Nella stanza con più porte richiama la lanterna oltre il vuoto, a sinistra. Mettila nella mano della piattaforma su cui ti trovi.",
-          "Attraversa la porta appena aperta. A sinistra scegli la prima delle due porte, rompi la nuova barricata e sposta la lanterna nella mano accanto a te.",
-          "Torna indietro, gira a sinistra e usa la seconda porta. Richiama la lanterna lontana alla tua sinistra e mettila nella mano vicina.",
-          "Oltrepassa il nuovo passaggio ed elimina i manichini. Nel corridoio buio usa Lumos; attraversata la porta, voltati subito e segui il percorso fino alla lanterna da riportare all’atrio.",
-          "Prendi il ramo destro. Nella sala con il camino metti la lanterna nella mano e attraversa la porta. Alla scacchiera usa Revelio e cammina sulle caselle non rosse.",
-          "Il percorso riporta alla sala del camino dall’altro lato: richiama la lanterna oltre il vuoto e posala nella mano sul tuo lato. Si alza un passaggio.",
-          "Attraversalo, entra nella porta a destra e porta la nuova lanterna al portone dell’atrio. Supera lo scontro con oggetti e manichini, quindi torna al salone centrale."
-        ]
-      },
       {
         "title": "Mostra il finale e le conseguenze — spoiler",
         "spoiler": true,
@@ -1680,32 +1743,6 @@ export const SIDE_MISSIONS = [
           "Durante il combattimento con il mostro di Fastidio, l’ultima fase rovescia visuale e comandi. Schiva prima di riprendere l’attacco.",
           "Dopo il ritorno, parla con l’agente Singer e affronta Cassandra. Protego seguito da Stupeficium rompe il suo scudo. Torna da Penny: liberarla non impedisce che continui a lavorare nel negozio; il nome scelto cambia l’insegna."
         ]
-      }
-    ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-29.jpg",
-        "alt": "Biblioteca: recupera la lanterna attraverso la finestra dopo avere attraversato la stanza.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-52.jpg",
-        "alt": "Atrio, ramo sinistro: le due porte da percorrere in sequenza per trasferire le lanterne.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-65.jpg",
-        "alt": "Atrio, ramo destro: Revelio evidenzia le caselle pericolose della scacchiera.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-67.jpg",
-        "alt": "Dopo la scacchiera: sposta la lanterna alla mano sul tuo lato per creare il passaggio.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
       }
     ],
     "related": [],
@@ -1732,7 +1769,87 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Sotto il negozio",
+        "steps": [
+          "Nel percorso successivo usa Lumos quando gli ambienti cambiano. Le lanterne si spostano con Accio o Wingardium Leviosa verso le mani delle statue.",
+          "Dal salone centrale completa entrambe le ali, biblioteca e atrio: ciascuna richiede due lanterne per aprire il proprio portone."
+        ]
+      },
+      {
+        "title": "Biblioteca · percorso sinistro",
+        "steps": [
+          "Dal portone chiuso prendi il ramo sinistro, dietro la statua. Raggiunto il balcone, voltati e torna verso la scala: la stanza cambia orientamento.",
+          "Sali, richiama la lanterna con Accio e attraversa la porta appena aperta. Mettila nella mano della statua.",
+          "Ripercorri la scala e attraversa l’ambiente. Nella stanza successiva sposta la lanterna a sinistra sulla mano: compare un passaggio.",
+          "Oltrepassalo, voltati e recupera la stessa lanterna attraverso la finestra. Mettila nella mano vicina e continua fino alla lanterna da riportare al portone della biblioteca."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-29.jpg",
+            "alt": "Biblioteca: recupera la lanterna attraverso la finestra dopo avere attraversato la stanza.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Biblioteca · percorso destro",
+        "steps": [
+          "Prendi ora il ramo destro, oltre la statua dorata. Nella stanza delle tre porte esplora i passaggi ancora aperti: quelli già conclusi scompaiono.",
+          "Nel corridoio che sembra ripetersi voltati quando cambia, accendi Lumos e cerca la porta. Nella sala dei manichini interagisci con la scatola e difenditi.",
+          "Conclusi i passaggi, porta la seconda lanterna al portone. Oltre la porta proteggiti dagli oggetti scagliati; poi torna al salone centrale."
+        ]
+      },
+      {
+        "title": "Atrio · percorso sinistro",
+        "steps": [
+          "Dal portone dell’atrio prendi il ramo sinistro. Nel corridoio voltati se la strada scompare; rompi le assi della porta che compare.",
+          "Nella stanza con più porte richiama la lanterna oltre il vuoto, a sinistra. Mettila nella mano della piattaforma su cui ti trovi.",
+          "Attraversa la porta appena aperta. A sinistra scegli la prima delle due porte, rompi la nuova barricata e sposta la lanterna nella mano accanto a te.",
+          "Torna indietro, gira a sinistra e usa la seconda porta. Richiama la lanterna lontana alla tua sinistra e mettila nella mano vicina.",
+          "Oltrepassa il nuovo passaggio ed elimina i manichini. Nel corridoio buio usa Lumos; attraversata la porta, voltati subito e segui il percorso fino alla lanterna da riportare all’atrio."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-52.jpg",
+            "alt": "Atrio, ramo sinistro: le due porte da percorrere in sequenza per trasferire le lanterne.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Atrio · camino e scacchiera",
+        "steps": [
+          "Prendi il ramo destro. Nella sala con il camino metti la lanterna nella mano e attraversa la porta. Alla scacchiera usa Revelio e cammina sulle caselle non rosse.",
+          "Il percorso riporta alla sala del camino dall’altro lato: richiama la lanterna oltre il vuoto e posala nella mano sul tuo lato. Si alza un passaggio.",
+          "Attraversalo, entra nella porta a destra e porta la nuova lanterna al portone dell’atrio. Supera lo scontro con oggetti e manichini, quindi torna al salone centrale."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-65.jpg",
+            "alt": "Atrio, ramo destro: Revelio evidenzia le caselle pericolose della scacchiera.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
+          },
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-minding-your-own-business-67.jpg",
+            "alt": "Dopo la scacchiera: sposta la lanterna alla mano sul tuo lato per creare il passaggio.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-minding-your-own-business-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Ritorno al negozio",
+        "steps": [
+          "Terminati i due percorsi, attraversa il portone centrale e completa lo scontro. Torna al negozio e segui il successivo obiettivo del diario."
+        ]
+      }
+    ]
   },
   {
     "id": "q-com-09",
@@ -1748,8 +1865,8 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Claire Beaumont a Upper Hogsfield.",
       "Raggiungi il primo accampamento segnalato ed elimina tutti i goblin.",
-      "Passa al secondo accampamento e completa anche quel combattimento: non basta ripulirne uno.",
-      "Torna da Claire per chiudere la missione."
+      "Passa al secondo accampamento ed elimina anche qui tutti i goblin.",
+      "Torna da Claire per completare la missione."
     ],
     "panels": [],
     "photos": [],
@@ -1783,7 +1900,7 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Dorothy Sprottle a Upper Hogsfield.",
       "Raggiungi le rovine indicate e preparati allo scontro: contro gli Inferi usa prima il fuoco.",
-      "Esamina quanto resta dopo il combattimento e recupera l’oggetto della missione.",
+      "Dopo il combattimento raccogli l’oggetto segnalato dalla missione.",
       "Torna da Claire Beaumont e riferisci l’esito."
     ],
     "panels": [
@@ -1946,7 +2063,7 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Grace Pinch-Smedley sul molo di Lower Hogsfield.",
       "Nuota nell’area evidenziata del lago e interagisci con i punti d’acqua spumosa per immergerti.",
-      "Controlla tutti e cinque i punti: l’astrolabio arriva con l’ultima ricerca richiesta.",
+      "Controlla tutti e cinque i punti: l’astrolabio si trova nell’ultimo punto che esamini.",
       "Torna sul molo e parla con Grace."
     ],
     "panels": [
@@ -2076,7 +2193,7 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Alexandra Rickett a Brocburrow e raggiungi la tana indicata.",
       "Schiva i colpi non parabili e aspetta la fine delle combinazioni prima di attaccare.",
-      "Usa la Magia Antica quando disponibile e scaglia gli oggetti dell’arena contro il troll.",
+      "Usa la Magia antica quando disponibile e scaglia gli oggetti dell’arena contro il troll.",
       "Dopo la vittoria torna da Alexandra."
     ],
     "panels": [],
@@ -2111,8 +2228,8 @@ export const SIDE_MISSIONS = [
     "steps": [
       "Parla con Althea Twiddle a Irondale e raggiungi la statua nella zona indicata.",
       "Usa Revelio per individuare i vasi e rompine venti con gli attacchi base.",
-      "Controlla anche bordi delle rovine e dislivelli: il contatore deve raggiungere venti.",
-      "Quando la statua si attiva, torna da Althea. Non serve vincere l’arena per chiudere questa missione."
+      "Cerca anche lungo le mura e sui livelli più bassi delle rovine: il contatore deve raggiungere venti.",
+      "Quando la statua si attiva, torna da Althea. Non serve vincere l’arena per completare questa missione."
     ],
     "panels": [],
     "photos": [],
@@ -2188,20 +2305,9 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Raccogli la pergamena sul tavolo nella tenda del Castello di Poidsear.",
-      "Raggiungi il Covo di Henrietta: l’ingresso scende lungo il fianco della scogliera, sotto la Prova di Merlino.",
-      "All’interno accendi il braciere della statua a sinistra, porta il cubo sul basamento e usa Incendio sul cubo del fuoco, Glacius su quello del ghiaccio.",
-      "Nella sala dell’ippogrifo accendi soltanto i bracieri segnati sulla mappa; spegni gli altri con Glacius.",
-      "Apri il forziere nel vano che compare dietro la statua."
+      "Raggiungi il Covo di Henrietta: l’ingresso scende lungo il fianco della scogliera, sotto la Prova di Merlino."
     ],
     "panels": [],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hippogriff-marks-the-spot-11.jpg",
-        "alt": "La mappa dell’Ippogrifo: riproduci la posizione dei quattro bracieri accesi, spegnendo gli altri.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-hippogriff-marks-the-spot-walkthrough/"
-      }
-    ],
     "related": [
       "q-com-27",
       "q-com-38"
@@ -2217,7 +2323,30 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Prima sala · fuoco e ghiaccio",
+        "steps": [
+          "All’interno accendi il braciere della statua a sinistra, porta il cubo sul basamento e usa Incendio sul cubo del fuoco, Glacius su quello del ghiaccio."
+        ]
+      },
+      {
+        "title": "La statua dell’ippogrifo",
+        "steps": [
+          "Nella sala dell’ippogrifo accendi soltanto i bracieri segnati sulla mappa; spegni gli altri con Glacius.",
+          "Apri il forziere nel vano che compare dietro la statua."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-hippogriff-marks-the-spot-11.jpg",
+            "alt": "La mappa dell’Ippogrifo: riproduci la posizione dei quattro bracieri accesi, spegnendo gli altri.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-hippogriff-marks-the-spot-walkthrough/"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "q-com-25",
@@ -2249,7 +2378,9 @@ export const SIDE_MISSIONS = [
       }
     ],
     "photos": [],
-    "related": [],
+    "related": [
+      "strumento-sacco"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_COM_25",
@@ -2280,27 +2411,9 @@ export const SIDE_MISSIONS = [
       "Wingardium Leviosa"
     ],
     "steps": [
-      "Nel sotterraneo del vecchio maniero apri il forziere con la mappa. Puoi scendere dalla porta con serratura III o usare la statua esterna accendendone il braciere.",
-      "Raggiungi la Tomba del Tradimento presso la cascata del passaggio verso la costa. Dal sarcofago prosegui a sinistra e brucia le ragnatele.",
-      "Porta tre falene alla porta con Lumos: due sono nella stanza a destra; per la terza libera e sposta la cassa nella stanza a sinistra.",
-      "Dopo gli Inferi, orientati guardando le piastrelle dall’ingresso: usa Flipendo sui due angoli inferiori e sulla casella centrale in alto.",
-      "Apri il forziere che compare."
+      "Nel sotterraneo del vecchio maniero apri il forziere con la mappa. Puoi scendere dalla porta con serratura III o usare la statua esterna accendendone il braciere."
     ],
     "panels": [],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-cursed-tomb-treasure-23.jpg",
-        "alt": "La mappa mostra le tre piastrelle da girare e la direzione delle frecce.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-cursed-tomb-treasure-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-cursed-tomb-treasure-19.jpg",
-        "alt": "La griglia finale vista dall’ingresso: usa Flipendo sui due angoli inferiori e sul centro in alto.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-cursed-tomb-treasure-walkthrough/"
-      }
-    ],
     "related": [],
     "sources": [
       {
@@ -2313,7 +2426,43 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Trovare la tomba",
+        "steps": [
+          "Raggiungi la Tomba del Tradimento presso la cascata del passaggio verso la costa. Dal sarcofago prosegui a sinistra e brucia le ragnatele."
+        ]
+      },
+      {
+        "title": "La porta delle falene",
+        "steps": [
+          "Porta tre falene alla porta con Lumos: due sono nella stanza a destra; per la terza libera e sposta la cassa nella stanza a sinistra."
+        ]
+      },
+      {
+        "title": "Le nove piastrelle",
+        "steps": [
+          "Sconfiggi gli Inferi. Guarda la griglia dall’ingresso della sala, con la fila più vicina a te in basso.",
+          "Usa Flipendo su tre piastrelle: l’angolo in basso a sinistra, l’angolo in basso a destra e il centro della fila in alto.",
+          "Apri il forziere che compare."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-cursed-tomb-treasure-23.jpg",
+            "alt": "La mappa mostra le tre piastrelle da girare e la direzione delle frecce.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-cursed-tomb-treasure-walkthrough/"
+          },
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-cursed-tomb-treasure-19.jpg",
+            "alt": "La griglia finale vista dall’ingresso: usa Flipendo sui due angoli inferiori e sul centro in alto.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-cursed-tomb-treasure-walkthrough/"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "q-com-27",
@@ -2333,11 +2482,7 @@ export const SIDE_MISSIONS = [
       "Arresto Momentum"
     ],
     "steps": [
-      "Parla con Agnes Coffey a Bainburgh ed entra nel Covo di Henrietta, sotto la Prova di Merlino sul promontorio.",
-      "Libera il cubo dalla statua a sinistra. Posiziona i due cubi sui simboli: Incendio su fuoco, Glacius su ghiaccio.",
-      "Supera i nemici e sali a sinistra. Usa Arresto Momentum sul tratto che ti risucchia prima di attraversarlo.",
-      "Nell’ultima sala prendi il cubo sul balcone sinistro e quello nella stanza segreta della parete destra, al piano basso.",
-      "Mettili sui basamenti: Levioso a sinistra, Incendio a destra. Cattura Rococò con il Sacco, poi usa la statua d’uscita e torna da Agnes."
+      "Parla con Agnes Coffey a Bainburgh ed entra nel Covo di Henrietta, sotto la Prova di Merlino sul promontorio."
     ],
     "panels": [
       {
@@ -2348,17 +2493,10 @@ export const SIDE_MISSIONS = [
         ]
       }
     ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-cubes-puzzle.jpg",
-        "alt": "Sala finale del nascondiglio: i due cubi vanno sui rispettivi piedistalli.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-rescuing-rococo-walkthrough/"
-      }
-    ],
     "related": [
       "q-com-28",
-      "q-com-38"
+      "q-com-38",
+      "strumento-sacco"
     ],
     "sources": [
       {
@@ -2371,7 +2509,37 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Prima sala · fuoco e ghiaccio",
+        "steps": [
+          "Accendi il braciere davanti alla statua a sinistra per liberare il cubo. Porta i due cubi sui rispettivi simboli: usa Incendio su quello del fuoco e Glacius su quello del ghiaccio."
+        ]
+      },
+      {
+        "title": "Il corridoio che risucchia",
+        "steps": [
+          "Supera i nemici e sali a sinistra. Usa Arresto Momentum sul tratto che ti risucchia prima di attraversarlo."
+        ]
+      },
+      {
+        "title": "Ultima sala · i due cubi",
+        "steps": [
+          "Nell’ultima sala prendi il cubo sul balcone sinistro e quello nella stanza segreta della parete destra, al piano basso.",
+          "Porta i cubi sui basamenti corrispondenti: usa Levioso su quello a sinistra e Incendio su quello a destra.",
+          "Oltre la porta cattura Rococò con il Sacco acciuffatutto. Usa la statua per uscire e torna da Agnes."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-cubes-puzzle.jpg",
+            "alt": "Sala finale del nascondiglio: i due cubi vanno sui rispettivi piedistalli.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-rescuing-rococo-walkthrough/"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "q-com-29",
@@ -2388,7 +2556,7 @@ export const SIDE_MISSIONS = [
       "Parla con Hyacinth Olivier a Cragcroft.",
       "Vai al Castello di Clagmar, a sud del villaggio, e sconfiggi Sylvanus Selwyn fra gli Ashwinder.",
       "Torna da Hyacinth per riscuotere e completare la missione.",
-      "Se avevi già sconfitto Selwyn esplorando, parla comunque con Hyacinth: l’uccisione da sola non chiude la commissione."
+      "Se avevi già sconfitto Selwyn esplorando, parla comunque con Hyacinth: l’uccisione da sola non completa la missione."
     ],
     "panels": [],
     "photos": [],
@@ -2423,9 +2591,7 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Nel Covo di Henrietta supera il primo enigma dei cubi e il corridoio che risucchia. Cerca la stanza nascosta dietro la parete sotto il balcone: la mappa musicale è sul tavolo.",
-      "Raggiungi le campane del Castello di Clagmar.",
-      "Guardandole di fronte, colpisci: destra in basso; sinistra al centro; sinistra seconda dall’alto; destra seconda dall’alto; sinistra al centro; sinistra in alto; destra in alto; destra seconda dall’alto.",
-      "Aspetta la fine della melodia e apri il forziere comparso a sinistra."
+      "Raggiungi le campane del Castello di Clagmar."
     ],
     "panels": [],
     "photos": [],
@@ -2448,7 +2614,31 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Gli otto colpi",
+        "steps": [
+          "Destra, in basso.",
+          "Sinistra, al centro.",
+          "Sinistra, seconda dall’alto.",
+          "Destra, seconda dall’alto.",
+          "Sinistra, al centro.",
+          "Sinistra, in alto.",
+          "Destra, in alto.",
+          "Destra, seconda dall’alto."
+        ],
+        "paragraphs": [
+          "Guarda le campane di fronte e colpiscile con attacchi base in quest’ordine."
+        ]
+      },
+      {
+        "title": "Il tesoro",
+        "steps": [
+          "Aspetta la fine della melodia e apri il forziere comparso a sinistra."
+        ]
+      }
+    ]
   },
   {
     "id": "q-evl-conv-02",
@@ -2463,12 +2653,11 @@ export const SIDE_MISSIONS = [
     ],
     "order": 59,
     "requirements": [
-      "Continuare la storia e attendere il messaggio di Sebastian"
+      "Continua la storia e attendi il messaggio di Sebastian"
     ],
     "steps": [
       "Raggiungi Sebastian nel punto segnato del castello.",
-      "Aspetta la fine del suo confronto con Ominis e parlagli.",
-      "Esaurisci il dialogo richiesto: questa tappa non contiene un dungeon."
+      "Aspetta la fine del suo confronto con Ominis, poi parlagli per completare la missione."
     ],
     "panels": [],
     "photos": [],
@@ -2503,11 +2692,7 @@ export const SIDE_MISSIONS = [
       "Reparo"
     ],
     "steps": [
-      "Incontra Sebastian fuori dalla sala comune di Serpeverde e raggiungi Ominis.",
-      "Accendi rapidamente i tre bracieri: due vicino alla porta e uno sul lato opposto. Confringo facilita il tiro a distanza.",
-      "Ripara il rilievo con Reparo e attendi che Ominis apra il passaggio.",
-      "Per ogni serratura a serpente copia i due simboli della grata da aprire: osserva la grata prima di azionare il meccanismo. Una serratura è oltre la grata socchiusa.",
-      "All’ultima porta parla con entrambi i compagni e scegli come affrontarla. Oltrepassala, recupera il libro, consegnalo a Sebastian ed esci dalla statua."
+      "Incontra Sebastian fuori dalla sala comune di Serpeverde e raggiungi Ominis."
     ],
     "panels": [
       {
@@ -2518,14 +2703,6 @@ export const SIDE_MISSIONS = [
           "Rifiutarlo permette comunque di completare la missione. La scelta su chi lo subisce cambia la scena, non il percorso successivo.",
           "Se rimandi, potrai chiederlo a Sebastian in seguito finché sarà disponibile. Una decisione successiva nella sua storia può chiudere questa possibilità."
         ]
-      }
-    ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-in-the-shadow-of-the-study-15.jpg",
-        "alt": "Una serratura a serpente: i due quadranti devono riprodurre i simboli del cancello corrispondente.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-in-the-shadow-of-the-study-walkthrough/"
       }
     ],
     "related": [
@@ -2550,7 +2727,37 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Aprire il passaggio",
+        "steps": [
+          "Accendi rapidamente i tre bracieri: due vicino alla porta e uno sul lato opposto. Confringo facilita il tiro a distanza.",
+          "Ripara il rilievo con Reparo e attendi che Ominis apra il passaggio."
+        ]
+      },
+      {
+        "title": "Le serrature a serpente",
+        "steps": [
+          "Prima di toccare una serratura, guarda i due simboli sulla grata che vuoi aprire.",
+          "Ruota i due quadranti della serratura per riprodurre quei simboli. Per raggiungere uno dei meccanismi devi passare sotto la grata socchiusa."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-in-the-shadow-of-the-study-15.jpg",
+            "alt": "Una serratura a serpente: i due quadranti devono riprodurre i simboli del cancello corrispondente.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-in-the-shadow-of-the-study-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "L’ultima porta",
+        "steps": [
+          "All’ultima porta parla con entrambi i compagni e scegli come affrontarla. Oltrepassala, recupera il libro, consegnalo a Sebastian ed esci dalla statua."
+        ]
+      }
+    ]
   },
   {
     "id": "q-evl-conv-04",
@@ -2606,11 +2813,7 @@ export const SIDE_MISSIONS = [
       "Incantesimo di fuoco"
     ],
     "steps": [
-      "Incontra Sebastian all’ingresso della catacomba di Feldcroft. Nella sala grande leggi la nota sul tavolo.",
-      "Apri gli scomparti con Accio e trasporta tre mucchi d’ossa all’arco con Wingardium Leviosa.",
-      "Per gli scomparti della seconda barricata tira le maniglie con i simboli corrispondenti incisi sul vano; porta altre tre pile d’ossa all’arco.",
-      "Oltre i ragni, esamina gli oggetti della missione e parla con Sebastian. Nel percorso di uscita completa il dialogo con Ominis.",
-      "Torna a Feldcroft, difendi il villaggio e parla con Solomon."
+      "Incontra Sebastian all’ingresso della catacomba di Feldcroft. Nella sala grande leggi la nota sul tavolo."
     ],
     "panels": [
       {
@@ -2620,20 +2823,6 @@ export const SIDE_MISSIONS = [
           "Sebastian offre di insegnarti Imperio: accetta per sbloccarlo o rifiuta per continuare senza. Non serve usare questa maledizione per risolvere la catacomba.",
           "Il confronto con Ominis può essere risolto anche senza lanciargli Imperio. Le risposte cambiano il dialogo immediato, non permettono di evitare gli eventi successivi a Feldcroft."
         ]
-      }
-    ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-in-the-shadow-of-time-21.jpg",
-        "alt": "Le maniglie sopra le nicchie: abbina i simboli per liberare i resti necessari alla barricata.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-in-the-shadow-of-time-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-in-the-shadow-of-time-24.jpg",
-        "alt": "L’altra serie di maniglie: osserva i simboli sulla nicchia prima di tirare.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-in-the-shadow-of-time-walkthrough/"
       }
     ],
     "related": [
@@ -2650,7 +2839,43 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "La prima barricata",
+        "steps": [
+          "Apri gli scomparti con Accio e trasporta tre mucchi d’ossa all’arco con Wingardium Leviosa."
+        ]
+      },
+      {
+        "title": "Le nicchie con i simboli",
+        "steps": [
+          "Guarda i simboli incisi su ciascun vano. Usa Accio sulle due maniglie con gli stessi simboli per aprirlo.",
+          "Porta tre mucchi d’ossa all’arco con Wingardium Leviosa per superare la seconda barricata."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-in-the-shadow-of-time-21.jpg",
+            "alt": "Le maniglie sopra le nicchie: abbina i simboli per liberare i resti necessari alla barricata.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-in-the-shadow-of-time-walkthrough/"
+          },
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-in-the-shadow-of-time-24.jpg",
+            "alt": "L’altra serie di maniglie: osserva i simboli sulla nicchia prima di tirare.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-in-the-shadow-of-time-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Uscire dalla catacomba",
+        "steps": [
+          "Oltre i ragni, esamina gli oggetti della missione e parla con Sebastian. Nel percorso di uscita completa il dialogo con Ominis.",
+          "Torna a Feldcroft, difendi il villaggio e parla con Solomon."
+        ]
+      }
+    ]
   },
   {
     "id": "q-evl-conv-05",
@@ -2665,11 +2890,11 @@ export const SIDE_MISSIONS = [
     ],
     "order": 63,
     "requirements": [
-      "Proseguire nella storia e negli incarichi di Sebastian"
+      "Prosegui nella storia e negli incarichi di Sebastian"
     ],
     "steps": [
       "Raggiungi il Sotterraneo quando compare la nuova richiesta di Sebastian.",
-      "Parlagli fino alla conclusione del dialogo. Non occorre cercare un altro oggetto nell’ambiente."
+      "Parla con Sebastian e completa il dialogo."
     ],
     "panels": [],
     "photos": [],
@@ -2752,7 +2977,7 @@ export const SIDE_MISSIONS = [
         "title": "Mostra le scelte e le conseguenze",
         "spoiler": true,
         "paragraphs": [
-          "Nel dialogo fuori dalla catacomba puoi farti insegnare Avada Kedavra: scegli la risposta favorevole al fatto che tutti dovrebbero conoscerla, poi accetta l’insegnamento.",
+          "Nel dialogo fuori dalla catacomba puoi farti insegnare Avada Kedavra: scegli la risposta secondo cui tutti dovrebbero conoscerla, poi accetta l’insegnamento.",
           "Se rifiuti puoi chiederla più avanti a Sebastian, purché rimanga disponibile. Prima della successiva decisione importante, leggi il relativo avviso."
         ]
       },
@@ -2808,7 +3033,7 @@ export const SIDE_MISSIONS = [
         "paragraphs": [
           "Denunciare Sebastian lo allontana: non potrai imparare da lui le maledizioni che avevi rifiutato. Quelle già imparate restano disponibili.",
           "Non denunciarlo mantiene la possibilità di incontrarlo e chiedergli gli insegnamenti mancanti. La conclusione della storia principale non cambia per questa scelta.",
-          "È una decisione con conseguenze persistenti per questa partita, non soltanto una diversa battuta."
+          "La scelta resta valida per il resto della partita."
         ]
       }
     ],
@@ -2844,12 +3069,12 @@ export const SIDE_MISSIONS = [
     ],
     "order": 67,
     "requirements": [
-      "Conclusione della storia principale e della linea di Sebastian"
+      "Conclusione della storia principale e delle missioni di Sebastian"
     ],
     "steps": [
       "Torna nel Sotterraneo quando la missione compare nel diario.",
       "Parla con il compagno presente: l’interlocutore dipende dalla scelta precedente.",
-      "Completa il dialogo finale. Non sono richiesti altri enigmi."
+      "Completa il dialogo finale per concludere le missioni di Sebastian."
     ],
     "panels": [],
     "photos": [],
@@ -2919,12 +3144,11 @@ export const SIDE_MISSIONS = [
     ],
     "order": 69,
     "requirements": [
-      "Proseguire nella linea di Natty"
+      "Prosegui nelle missioni di Natty"
     ],
     "steps": [
       "Raggiungi Natty fuori dall’aula di Divinazione quando ricevi la richiesta.",
-      "Aspetta il confronto con sua madre, poi parla con Natty.",
-      "La tappa termina con il dialogo; non occorre cercare un oggetto."
+      "Aspetta il confronto con sua madre, poi parla con Natty."
     ],
     "panels": [],
     "photos": [],
@@ -3002,11 +3226,11 @@ export const SIDE_MISSIONS = [
     ],
     "order": 71,
     "requirements": [
-      "Proseguire nella linea di Natty"
+      "Prosegui nelle missioni di Natty"
     ],
     "steps": [
       "Raggiungi Natty nella Sala Grande.",
-      "Parlale fino alla conclusione del dialogo: questa è una tappa di conversazione."
+      "Parla con Natty e completa il dialogo."
     ],
     "panels": [],
     "photos": [],
@@ -3037,11 +3261,11 @@ export const SIDE_MISSIONS = [
     ],
     "order": 72,
     "requirements": [
-      "Proseguire nella storia e nella linea di Natty"
+      "Prosegui nella storia e nelle missioni di Natty"
     ],
     "steps": [
       "Quando compare la nuova richiesta, incontra Natty nella Sala Grande.",
-      "Completa il dialogo; il prossimo incarico arriverà dopo la progressione richiesta dal gioco."
+      "Completa il dialogo, poi prosegui la storia e attendi il prossimo messaggio di Natty."
     ],
     "panels": [],
     "photos": [],
@@ -3151,11 +3375,11 @@ export const SIDE_MISSIONS = [
     ],
     "order": 75,
     "requirements": [
-      "Proseguire nella storia e nella linea di Poppy"
+      "Prosegui nella storia e nelle missioni di Poppy"
     ],
     "steps": [
       "Incontra Poppy ai Tre Manici di Scopa quando arriva il suo messaggio.",
-      "Completa il dialogo: non ci sono oggetti da cercare nella locanda."
+      "Completa il dialogo con Poppy."
     ],
     "panels": [],
     "photos": [],
@@ -3231,7 +3455,7 @@ export const SIDE_MISSIONS = [
     ],
     "order": 77,
     "requirements": [
-      "Proseguire nella linea di Poppy"
+      "Prosegui nelle missioni di Poppy"
     ],
     "steps": [
       "Seleziona la richiesta di Poppy nel diario e raggiungi il punto d’incontro.",
@@ -3307,27 +3531,9 @@ export const SIDE_MISSIONS = [
       "Incantesimo distruttivo"
     ],
     "steps": [
-      "Incontra Poppy presso la grotta vicino a Irondale. Distruggi i passaggi fragili e avanza fino alla porta con due meccanismi.",
-      "Apri i vani tirando con Accio le maniglie corrispondenti ai simboli. Porta una falena su ciascun meccanismo e colpiscili ripetutamente con Depulso.",
-      "Nella stanza successiva trasferisci una falena sul meccanismo sinistro e azionalo per alzare il ponte. Porta l’altra sul meccanismo destro in fondo.",
-      "Dal ponte aziona quello destro, poi usa subito Lumos sulla falena appena sollevata. Portala alla porta e aggiungi anche le altre due.",
-      "Supera l’acqua, immergiti nel punto indicato e raggiungi la pietra. Dopo il dialogo con Poppy portala al cerchio di pietre, inseriscila e riprendila."
+      "Incontra Poppy presso la grotta vicino a Irondale. Distruggi i passaggi fragili e avanza fino alla porta con due meccanismi."
     ],
     "panels": [],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-centaur-and-the-stone-6.jpg",
-        "alt": "Prima nicchia: le maniglie evidenziate aprono lo scomparto della falena.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-centaur-and-the-stone-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-centaur-and-the-stone-19.jpg",
-        "alt": "Colpisci questo meccanismo con Depulso per sollevare il piedistallo della terza falena, poi afferrala con Lumos.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-centaur-and-the-stone-walkthrough/"
-      }
-    ],
     "related": [],
     "sources": [
       {
@@ -3340,7 +3546,48 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Prima sala · le falene nei vani",
+        "steps": [
+          "Osserva i simboli sui vani e tira con Accio le maniglie corrispondenti per aprirli.",
+          "Con Lumos porta una falena su ciascuno dei due meccanismi. Colpiscili più volte con Depulso per aprire la porta."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-centaur-and-the-stone-6.jpg",
+            "alt": "Prima nicchia: le maniglie evidenziate aprono lo scomparto della falena.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-centaur-and-the-stone-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Seconda sala · ponte e terza falena",
+        "steps": [
+          "Recupera una falena dalla sala precedente e portala sul meccanismo a sinistra. Azionalo con Depulso per alzare il ponte.",
+          "Porta l’altra falena al meccanismo a destra, oltre il ponte.",
+          "Dal ponte colpisci quel meccanismo con Depulso: si solleva il piedistallo della terza falena. Richiamala subito con Lumos e portala alla porta.",
+          "Riprendi le due falene dai meccanismi e aggiungile alla porta."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-centaur-and-the-stone-19.jpg",
+            "alt": "Colpisci questo meccanismo con Depulso per sollevare il piedistallo della terza falena, poi afferrala con Lumos.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-centaur-and-the-stone-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "La pietra",
+        "steps": [
+          "Prosegui oltre l’acqua e immergiti nel punto segnato per raggiungere la pietra.",
+          "Dopo il dialogo con Poppy portala al cerchio di pietre. Inseriscila nel punto indicato e riprendila prima di andare via."
+        ]
+      }
+    ]
   },
   {
     "id": "q-ntr-conv-06",
@@ -3396,11 +3643,7 @@ export const SIDE_MISSIONS = [
       "Glacius"
     ],
     "steps": [
-      "Incontra Poppy e Dorran a sud-ovest di Brocburrow. Inserisci la pietra nel piedistallo.",
-      "Osserva i due simboli illuminati sulla porta: sposta con Accio i pilastri sui lati opposti dei simboli corrispondenti a terra, così che le ombre li raggiungano.",
-      "Nelle rovine brucia la barriera. Recupera il primo cubo dietro l’albero a sinistra; usa la cassa come gradino per raggiungere il secondo sulla balconata.",
-      "Metti i cubi sui basamenti: Incendio a sinistra, Glacius a destra.",
-      "Sconfiggi i bracconieri e raggiungi l’ultima porta per completare il salvataggio."
+      "Incontra Poppy e Dorran a sud-ovest di Brocburrow. Inserisci la pietra nel piedistallo."
     ],
     "panels": [
       {
@@ -3409,20 +3652,6 @@ export const SIDE_MISSIONS = [
         "paragraphs": [
           "L’ultima porta conduce al santuario dei Bolcini. Questa conclusione riguarda la ricerca di Poppy, non un nuovo animale da allevare nel proprio vivario."
         ]
-      }
-    ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-a-bird-in-the-hand-7.jpg",
-        "alt": "Ingresso delle rovine: porta la luce dalla parte opposta al simbolo da coprire con l’ombra.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-a-bird-in-the-hand-walkthrough/"
-      },
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-a-bird-in-the-hand-8.jpg",
-        "alt": "La seconda colonna completa l’allineamento delle ombre con i simboli della porta.",
-        "credit": "Foto di riferimento: PowerPyx",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-a-bird-in-the-hand-walkthrough/"
       }
     ],
     "related": [],
@@ -3441,7 +3670,43 @@ export const SIDE_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Ingresso · luci e ombre",
+        "steps": [
+          "Osserva i due simboli illuminati sulla porta e ritrovali nel cerchio disegnato a terra.",
+          "Sposta i pilastri con Accio sul lato opposto ai simboli da coprire: le loro ombre devono raggiungere quei due segni."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-a-bird-in-the-hand-7.jpg",
+            "alt": "Ingresso delle rovine: porta la luce dalla parte opposta al simbolo da coprire con l’ombra.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-a-bird-in-the-hand-walkthrough/"
+          },
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-a-bird-in-the-hand-8.jpg",
+            "alt": "La seconda colonna completa l’allineamento delle ombre con i simboli della porta.",
+            "credit": "Foto di riferimento: PowerPyx",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-a-bird-in-the-hand-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Dentro le rovine · i cubi",
+        "steps": [
+          "Nelle rovine brucia la barriera. Recupera il primo cubo dietro l’albero a sinistra; usa la cassa come gradino per raggiungere il secondo sulla balconata.",
+          "Metti i cubi sui basamenti: Incendio a sinistra, Glacius a destra."
+        ]
+      },
+      {
+        "title": "Il salvataggio",
+        "steps": [
+          "Sconfiggi i bracconieri e raggiungi l’ultima porta per completare il salvataggio."
+        ]
+      }
+    ]
   },
   {
     "id": "q-ntr-conv-07",
@@ -3460,7 +3725,7 @@ export const SIDE_MISSIONS = [
     ],
     "steps": [
       "Raggiungi Poppy nella Sala Grande quando compare l’ultimo messaggio.",
-      "Completa il dialogo finale: la linea personale di Poppy è conclusa."
+      "Completa il dialogo finale per concludere le missioni di Poppy."
     ],
     "panels": [],
     "photos": [],

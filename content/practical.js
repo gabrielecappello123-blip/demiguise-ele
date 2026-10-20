@@ -15,9 +15,9 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "La ricetta si ottiene nella prima visita a Hogsmeade.",
-      "Ingredienti per 1 dose: 1 Succo di Horklump, 1 Foglie di dittamo.",
-      "Usa un tavolo alchemico, scegli la ricetta e attendi 15 secondi. Raccogli la dose prima di prepararne un’altra sullo stesso fornello.",
-      "Tienine una scorta prima dei combattimenti: si usa con il comando di cura, distinto dalla ruota degli strumenti."
+      "Ingredienti per 1 dose: Succo di Horklump × 1, Foglie di dittamo × 1.",
+      "Usa un tavolo alchemico, scegli la ricetta e attendi 15 secondi. Raccogli la dose prima di preparare un’altra pozione sullo stesso fornello.",
+      "Portane una scorta prima di combattere. Si usa con il comando di cura, senza aprire la ruota degli strumenti."
     ],
     "panels": [],
     "photos": [],
@@ -54,16 +54,17 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "La ricetta si ottiene nella prima visita a Hogsmeade.",
-      "Ingredienti per 1 dose: 1 Uova di Ashwinder, 1 Pelo di Lupardo.",
-      "Usa un tavolo alchemico, scegli la ricetta e attendi 30 secondi. Raccogli la dose prima di prepararne un’altra sullo stesso fornello.",
-      "Bevila prima di esporti a un gruppo; il talento dedicato potenzia molto la protezione."
+      "Ingredienti per 1 dose: Uova di Ashwinder × 1, Pelo di Lupardo × 1.",
+      "Usa un tavolo alchemico, scegli la ricetta e attendi 30 secondi. Raccogli la dose prima di preparare un’altra pozione sullo stesso fornello.",
+      "Bevila prima di affrontare un gruppo di nemici. Con il talento Potenza della Pozione Edurus, diventi invulnerabile e rinvii i proiettili ai nemici finché dura l’effetto."
     ],
     "panels": [],
     "photos": [],
     "related": [
       "ingrediente-ashwinder",
       "ingrediente-lupardo",
-      "stanza-postazioni"
+      "stanza-postazioni",
+      "talenti-stanza"
     ],
     "sources": [
       {
@@ -73,6 +74,10 @@ export const PRACTICAL_GUIDES = [
       {
         "url": "https://www.gamesource.it/trucchi/hogwarts-legacy-come-preparare-ogni-pozione/",
         "title": "Ricette e ingredienti · GameSource"
+      },
+      {
+        "url": "https://hogwarts.th.gl/it/db/talents/talent_Talent_Sanc_EdurusPotion",
+        "title": "Potenza della Pozione Edurus · effetto e nome italiano"
       }
     ],
     "verified": "2026-10-20",
@@ -93,9 +98,9 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Acquista la ricetta da Pozioni di J. Pippin.",
-      "Ingredienti per 1 dose: 1 Succo di sanguisuga, 1 Zanna di ragno.",
-      "Usa un tavolo alchemico, scegli la ricetta e attendi 30 secondi. Raccogli la dose prima di prepararne un’altra sullo stesso fornello.",
-      "Usala prima di una sequenza offensiva; il tempo dell’effetto continua anche mentre ti riposizioni."
+      "Ingredienti per 1 dose: Succo di sanguisuga × 1, Zanna di ragno × 1.",
+      "Usa un tavolo alchemico, scegli la ricetta e attendi 30 secondi. Raccogli la dose prima di preparare un’altra pozione sullo stesso fornello.",
+      "Bevila subito prima di attaccare con gli incantesimi. L’effetto dura per un tempo limitato, anche se smetti di attaccare."
     ],
     "panels": [],
     "photos": [],
@@ -132,8 +137,8 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Acquista la ricetta da Pozioni di J. Pippin.",
-      "Ingredienti per 1 dose: 1 Cappelli di fungo saltellante, 1 Rametto di centinodia, 1 Caccole di troll.",
-      "Usa un tavolo alchemico, scegli la ricetta e attendi 60 secondi. Raccogli la dose prima di prepararne un’altra sullo stesso fornello.",
+      "Ingredienti per 1 dose: Cappelli di fungo saltellante × 1, Rametto di centinodia × 1, Caccole di troll × 1.",
+      "Usa un tavolo alchemico, scegli la ricetta e attendi 60 secondi. Raccogli la dose prima di preparare un’altra pozione sullo stesso fornello.",
       "È una pozione consumabile, diversa dall’incantesimo Disillusione. Se un incarico la richiede, usare Disillusione non basta."
     ],
     "panels": [],
@@ -162,7 +167,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Pozione Focalizzante",
     "section": "pratiche",
     "category": "pozioni",
-    "summary": "Accorcia il recupero degli incantesimi.",
+    "summary": "Riduce l’attesa prima di poter usare di nuovo gli incantesimi.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Ricette",
     "aliases": [
@@ -172,9 +177,9 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Acquista la ricetta da Pozioni di J. Pippin.",
-      "Ingredienti per 1 dose: 1 Mosche Crisopa, 1 Stelo di lunaria, 1 Lingua di Dugbog.",
-      "Usa un tavolo alchemico, scegli la ricetta e attendi 60 secondi. Raccogli la dose prima di prepararne un’altra sullo stesso fornello.",
-      "Sfruttala quando puoi lanciare più incantesimi in successione, non mentre stai solo aspettando."
+      "Ingredienti per 1 dose: Mosche Crisopa × 1, Stelo di lunaria × 1, Lingua di Dugbog × 1.",
+      "Usa un tavolo alchemico, scegli la ricetta e attendi 60 secondi. Raccogli la dose prima di preparare un’altra pozione sullo stesso fornello.",
+      "Bevila quando stai per lanciare più incantesimi in successione, così sfrutti la riduzione dei tempi di recupero."
     ],
     "panels": [],
     "photos": [],
@@ -212,9 +217,9 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Acquista la ricetta da Pozioni di J. Pippin.",
-      "Ingredienti per 1 dose: 1 Succo di sanguisuga, 1 Frutto di Grinzafico, 1 Fetore di morte.",
-      "Usa un tavolo alchemico, scegli la ricetta e attendi 90 secondi. Raccogli la dose prima di prepararne un’altra sullo stesso fornello.",
-      "Avvicinati ai nemici dopo averla bevuta; per l’incarico di Sharp devono essere colpiti dalla tempesta."
+      "Ingredienti per 1 dose: Succo di sanguisuga × 1, Frutto di Grinzafico × 1, Fetore di morte × 1.",
+      "Usa un tavolo alchemico, scegli la ricetta e attendi 90 secondi. Raccogli la dose prima di preparare un’altra pozione sullo stesso fornello.",
+      "Dopo averla bevuta avvicinati ai nemici: la tempesta deve raggiungerli. Nell’incarico di Sharp, berla lontano dai nemici non basta."
     ],
     "panels": [],
     "photos": [],
@@ -252,9 +257,9 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "La ricetta fa parte dei contenuti aggiunti con l’aggiornamento estivo gratuito.",
-      "Ingredienti per 1 dose: 1 Mosche Crisopa, 1 Stelo di lunaria.",
-      "Usa un tavolo alchemico, scegli la ricetta e attendi 60 secondi. Raccogli la dose prima di prepararne un’altra sullo stesso fornello.",
-      "Usala per esplorare. Non migliora automaticamente il bottino né risolve le serrature dei forzieri."
+      "Ingredienti per 1 dose: Mosche Crisopa × 1, Stelo di lunaria × 1.",
+      "Usa un tavolo alchemico, scegli la ricetta e attendi 60 secondi. Raccogli la dose prima di preparare un’altra pozione sullo stesso fornello.",
+      "Usala per individuare i forzieri mentre esplori. Non cambia la qualità del bottino e non apre le serrature."
     ],
     "panels": [],
     "photos": [],
@@ -285,7 +290,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Dittamo",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Foglie di dittamo: utile per Pozione Rigeneratrice.",
+    "summary": "Il raccolto serve a preparare la Pozione Rigeneratrice.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -294,9 +299,9 @@ export const PRACTICAL_GUIDES = [
     "order": 7,
     "requirements": [],
     "steps": [
-      "Compra i semi da La Rapa Magica a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso piccolo o più grande. Attendi 10 minuti: raccolto base 5 × Foglie di dittamo.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio La Rapa Magica a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso piccolo o più grande. Attendi 10 minuti. Raccolto base: Foglie di dittamo × 5.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -318,7 +323,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Centinodia",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Rametto di centinodia: utile per Pozione dell’Invisibilità.",
+    "summary": "Il raccolto serve a preparare la Pozione dell’Invisibilità.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -327,9 +332,9 @@ export const PRACTICAL_GUIDES = [
     "order": 8,
     "requirements": [],
     "steps": [
-      "Compra i semi da La Rapa Magica a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso piccolo o più grande. Attendi 10 minuti: raccolto base 5 × Rametto di centinodia.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio La Rapa Magica a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso piccolo o più grande. Attendi 10 minuti. Raccolto base: Rametto di centinodia × 5.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -351,7 +356,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Malva",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Foglie di malva: utile per attivare le Prove di Merlino.",
+    "summary": "Le foglie servono ad attivare le Prove di Merlino.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -360,9 +365,9 @@ export const PRACTICAL_GUIDES = [
     "order": 9,
     "requirements": [],
     "steps": [
-      "Compra i semi da La Rapa Magica a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso piccolo o più grande. Attendi 10 minuti: raccolto base 5 × Foglie di malva.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio La Rapa Magica a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso piccolo o più grande. Attendi 10 minuti. Raccolto base: Foglie di malva × 5.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -384,7 +389,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Lunaria",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Stelo di lunaria: utile per Pozione Focalizzante e Felix Felicis.",
+    "summary": "Il raccolto serve a preparare la Pozione Focalizzante e la Felix Felicis.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -393,9 +398,9 @@ export const PRACTICAL_GUIDES = [
     "order": 10,
     "requirements": [],
     "steps": [
-      "Compra i semi da La Rapa Magica a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso grande. Attendi 15 minuti: raccolto base 5 × Stelo di lunaria.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio La Rapa Magica a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso grande. Attendi 15 minuti. Raccolto base: Stelo di lunaria × 5.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -417,7 +422,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Grinzafico",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Frutto di Grinzafico: utile per Pozione del Tuono.",
+    "summary": "Il raccolto serve a preparare la Pozione del Tuono.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -426,9 +431,9 @@ export const PRACTICAL_GUIDES = [
     "order": 11,
     "requirements": [],
     "steps": [
-      "Compra i semi da La Rapa Magica a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso medio o più grande. Attendi 12 minuti: raccolto base 5 × Frutto di Grinzafico.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio La Rapa Magica a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso medio o più grande. Attendi 12 minuti. Raccolto base: Frutto di Grinzafico × 5.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -450,7 +455,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Mandragola",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Mandragola: utile per stordire e danneggiare un gruppo vicino.",
+    "summary": "Stordisce e danneggia i nemici vicini.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -459,9 +464,9 @@ export const PRACTICAL_GUIDES = [
     "order": 12,
     "requirements": [],
     "steps": [
-      "Compra i semi da Erbe Essenziali e Funghi Fatali a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso piccolo o più grande. Attendi 10 minuti: raccolto base 1 × Mandragola.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio Erbe Essenziali e Funghi Fatali a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso piccolo o più grande. Attendi 10 minuti. Raccolto base: Mandragola × 1.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -483,7 +488,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Cavolo Carnivoro Cinese",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Cavolo Carnivoro Cinese: utile per attaccare automaticamente i nemici vicini.",
+    "summary": "Attacca automaticamente i nemici vicini.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -492,9 +497,9 @@ export const PRACTICAL_GUIDES = [
     "order": 13,
     "requirements": [],
     "steps": [
-      "Compra i semi da Erbe Essenziali e Funghi Fatali a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso medio o più grande. Attendi 12 minuti: raccolto base 1 × Cavolo Carnivoro Cinese.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio Erbe Essenziali e Funghi Fatali a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso medio o più grande. Attendi 12 minuti. Raccolto base: Cavolo Carnivoro Cinese × 1.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -516,7 +521,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Tentacula Velenosa",
     "section": "pratiche",
     "category": "piante",
-    "summary": "Tentacula Velenosa: utile per colpire i nemici con attacchi a distanza.",
+    "summary": "Colpisce i nemici con attacchi a distanza.",
     "location": "Hogsmeade · Stanza delle Necessità",
     "group": "Coltivazione",
     "aliases": [
@@ -525,9 +530,9 @@ export const PRACTICAL_GUIDES = [
     "order": 14,
     "requirements": [],
     "steps": [
-      "Compra i semi da Erbe Essenziali e Funghi Fatali a Hogsmeade. Basta comprarli una volta per continuare a coltivare.",
-      "Usa un vaso grande. Attendi 15 minuti: raccolto base 1 × Tentacula Velenosa.",
-      "Raccogli il prodotto: la pianta ricomincia a crescere. Non devi consumare nuovi semi a ogni ciclo."
+      "Compra i semi nel negozio Erbe Essenziali e Funghi Fatali a Hogsmeade. Un solo acquisto basta per continuare a coltivarli.",
+      "Usa un vaso grande. Attendi 15 minuti. Raccolto base: Tentacula Velenosa × 1.",
+      "Raccogli il prodotto quando è pronto: la pianta ricomincia a crescere senza consumare altri semi."
     ],
     "panels": [],
     "photos": [],
@@ -549,16 +554,16 @@ export const PRACTICAL_GUIDES = [
     "title": "Uova di Ashwinder",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione Edurus.",
+    "summary": "Ingrediente per la Pozione Edurus.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
     "order": 15,
     "requirements": [],
     "steps": [
-      "Nidi rossi fra rocce e pendii nelle Highlands; cercali anche di notte, quando risaltano.",
+      "Cerca i nidi rossi tra le rocce e sui pendii delle Highlands. Di notte sono più facili da individuare.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -583,16 +588,16 @@ export const PRACTICAL_GUIDES = [
     "title": "Succo di Horklump",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione Rigeneratrice.",
+    "summary": "Ingrediente per la Pozione Rigeneratrice.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
     "order": 16,
     "requirements": [],
     "steps": [
-      "Raccogli gli Horklump vicino a grotte e zone rocciose. Le piccole formazioni violacee sono interattive.",
+      "Raccogli gli Horklump vicino alle grotte e nelle zone rocciose: cerca le piccole formazioni violacee.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -617,16 +622,16 @@ export const PRACTICAL_GUIDES = [
     "title": "Lingua di Dugbog",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione Focalizzante.",
+    "summary": "Ingrediente per la Pozione Focalizzante.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
     "order": 17,
     "requirements": [],
     "steps": [
-      "Sconfiggi un Dugbog nelle zone umide e raccogli il bottino lasciato.",
+      "Sconfiggi un Dugbog nelle zone umide e raccogli il materiale che lascia a terra.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -651,7 +656,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Mosche Crisopa",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione Focalizzante e Felix Felicis.",
+    "summary": "Ingrediente per la Pozione Focalizzante e Felix Felicis.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
@@ -660,7 +665,7 @@ export const PRACTICAL_GUIDES = [
     "steps": [
       "Raccoglile dagli arbusti luminosi delle Highlands; le luci si distinguono bene al buio.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -685,7 +690,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Cappelli di fungo saltellante",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione dell’Invisibilità.",
+    "summary": "Ingrediente per la Pozione dell’Invisibilità.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
@@ -694,7 +699,7 @@ export const PRACTICAL_GUIDES = [
     "steps": [
       "Raccogli i funghi rossi che si muovono nelle aree boscose. Non sono coltivabili nei vasi della stanza.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -719,7 +724,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Succo di sanguisuga",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione Maxima e Pozione del Tuono.",
+    "summary": "Ingrediente per la Pozione Maxima e la Pozione del Tuono.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
@@ -728,7 +733,7 @@ export const PRACTICAL_GUIDES = [
     "steps": [
       "Cerca le sanguisughe sulle rive e lungo i corsi d’acqua, poi raccoglile.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -753,7 +758,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Zanna di ragno",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione Maxima.",
+    "summary": "Ingrediente per la Pozione Maxima.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
@@ -762,7 +767,7 @@ export const PRACTICAL_GUIDES = [
     "steps": [
       "Sconfiggi i ragni e raccogli i materiali dal terreno dopo il combattimento.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -787,16 +792,16 @@ export const PRACTICAL_GUIDES = [
     "title": "Fetore di morte",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione del Tuono.",
+    "summary": "Ingrediente per la Pozione del Tuono.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
     "order": 22,
     "requirements": [],
     "steps": [
-      "Sconfiggi gli Inferi. Devi prima renderli vulnerabili con il fuoco, poi raccogliere il bottino.",
+      "Incendia gli Inferi per renderli vulnerabili, poi sconfiggili e raccogli il bottino.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -821,7 +826,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Caccole di troll",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione dell’Invisibilità.",
+    "summary": "Ingrediente per la Pozione dell’Invisibilità.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
@@ -830,7 +835,7 @@ export const PRACTICAL_GUIDES = [
     "steps": [
       "Sconfiggi un troll oppure compra il materiale da un venditore che lo offre.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -855,7 +860,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Pelo di Lupardo",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Ingrediente per Pozione Edurus.",
+    "summary": "Ingrediente per la Pozione Edurus.",
     "location": "Hogwarts e Highlands",
     "group": "Ingredienti",
     "aliases": [],
@@ -864,7 +869,7 @@ export const PRACTICAL_GUIDES = [
     "steps": [
       "Sconfiggi i Lupardi e raccogli il bottino. Non si ottiene spazzolando gli animali del vivario.",
       "Se ti serve subito, controlla gli ingredienti in vendita da Pozioni di J. Pippin.",
-      "Si consuma preparando la pozione; non occupa i posti riservati ai vestiti."
+      "L’ingrediente si consuma quando prepari la pozione. Non occupa i posti dell’inventario riservati all’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -897,8 +902,8 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Rompi con l’Incantesimo Base i cristalli azzurri che incontri nelle Highlands.",
-      "Nella stanza, Evanesco restituisce il materiale degli arredi rimossi. Puoi così cambiare disposizione senza comprarli di nuovo.",
-      "Un raffinatore di materiali produce altre Pietre di luna: raccoglile periodicamente."
+      "Nella Stanza delle Necessità, usa Evanesco sugli arredi da rimuovere: recuperi la Pietra di luna spesa per evocarli.",
+      "Il Raffinatore di sostanze produce altra Pietra di luna. Ricordati di raccoglierla."
     ],
     "panels": [],
     "photos": [],
@@ -927,16 +932,16 @@ export const PRACTICAL_GUIDES = [
     "order": 26,
     "requirements": [],
     "steps": [
-      "Si recupera durante L’astrolabio perduto, cercando nei punti con bolle nell’area del lago indicata dalla missione.",
+      "Durante L’astrolabio perduto, cerca nei punti con bolle nell’area del lago segnata dalla missione.",
       "È un oggetto missione, non un pezzo di equipaggiamento da vendere ai mercanti.",
-      "Non risulta un impiego successivo documentato che richieda di conservarlo. Non tenerlo pensando a un futuro potenziamento."
+      "Non è documentato alcun uso futuro che richieda di conservarlo, né un potenziamento ottenibile tenendolo."
     ],
     "panels": [
       {
         "title": "Mostra le scelte e le conseguenze",
         "paragraphs": [
-          "Puoi restituirlo, chiedere una ricompensa oppure trattenerlo. Chiedere un compenso dà 20 monete d’oro aggiuntive.",
-          "Trattenerlo irrita Grace e può cambiare un dialogo successivo. Non è uno sblocco per una nuova missione."
+          "Puoi restituirlo, chiedere una ricompensa oppure tenerlo. Se chiedi un compenso, ricevi 20 monete d’oro aggiuntive.",
+          "Tenerlo irrita Grace e può cambiare un dialogo successivo, ma non sblocca una nuova missione."
         ]
       }
     ],
@@ -962,7 +967,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Puffskein",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Pelo di Puffskein e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Pelo di Puffskein.",
     "location": "Regione sud di Hogwarts",
     "group": "Animali e materiali",
     "aliases": [
@@ -971,9 +976,9 @@ export const PRACTICAL_GUIDES = [
     "order": 27,
     "requirements": [],
     "steps": [
-      "Una tana si incontra lungo la strada fra Hogwarts e Hogsmeade. Avvicinati e usa il sacco: è un buon animale con cui iniziare.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Pelo di Puffskein quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Trovi una tana lungo la strada fra Hogwarts e Hogsmeade. Avvicinati e usa il Sacco acciuffatutto.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -999,7 +1004,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Jobberknoll",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Piuma di Jobberknoll e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Piuma di Jobberknoll.",
     "location": "Foresta Proibita",
     "group": "Animali e materiali",
     "aliases": [
@@ -1008,9 +1013,9 @@ export const PRACTICAL_GUIDES = [
     "order": 28,
     "requirements": [],
     "steps": [
-      "Cerca la tana nell’area del grande albero usata nella prima uscita con Tik. Blocca l’uccellino prima che si alzi in volo.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Piuma di Jobberknoll quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Torna alla tana presso il grande albero visitato durante la prima uscita con Tik. Ferma l’uccellino prima che si alzi in volo.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1036,7 +1041,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Mooncalf",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Pelo di Mooncalf e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Pelo di Mooncalf.",
     "location": "Regione sud di Hogwarts",
     "group": "Animali e materiali",
     "aliases": [
@@ -1045,9 +1050,9 @@ export const PRACTICAL_GUIDES = [
     "order": 29,
     "requirements": [],
     "steps": [
-      "Raggiungi la tana visitata con Tik. Se non ci sono animali, apri la mappa e aspetta la notte; di giorno non compaiono.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Pelo di Mooncalf quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Raggiungi la tana visitata con Tik. Se è giorno, apri la mappa e attendi la notte: i Mooncalf compaiono solo al buio.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1073,7 +1078,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Diricawl",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Piuma di Diricawl e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Piuma di Diricawl.",
     "location": "Valle di Hogwarts",
     "group": "Animali e materiali",
     "aliases": [
@@ -1082,9 +1087,9 @@ export const PRACTICAL_GUIDES = [
     "order": 30,
     "requirements": [],
     "steps": [
-      "Cerca la tana a nord di Keenbridge, sulle colline vicino alle montagne. Usa un incantesimo di controllo prima del sacco: il Diricawl scompare e ricompare per fuggire.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Piuma di Diricawl quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Cerca la tana a nord di Keenbridge, sulle colline vicino alle montagne. Fermalo con un incantesimo di controllo prima di usare il sacco: per fuggire, scompare e riappare poco lontano.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1114,7 +1119,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Fwooper",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Piuma di Fwooper e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Piuma di Fwooper.",
     "location": "Valle di Hogwarts",
     "group": "Animali e materiali",
     "aliases": [
@@ -1123,9 +1128,9 @@ export const PRACTICAL_GUIDES = [
     "order": 31,
     "requirements": [],
     "steps": [
-      "Da Keenbridge cerca la tana verso sud, poi avvicinati con Disillusione. Arresto Momentum aiuta prima di iniziare la cattura.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Piuma di Fwooper quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Cerca la tana a sud di Keenbridge. Avvicinati con Disillusione e usa Arresto Momentum per rallentare l’animale prima della cattura.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1155,7 +1160,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Rospo viola gigante",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Verruche di rospo e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Verruche di rospo.",
     "location": "Foresta Proibita",
     "group": "Animali e materiali",
     "aliases": [
@@ -1164,9 +1169,9 @@ export const PRACTICAL_GUIDES = [
     "order": 32,
     "requirements": [],
     "steps": [
-      "Cerca le tane indicate dalla zampa nelle aree umide della foresta. Avvicinati al rospo e tienilo nel raggio del sacco.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Verruche di rospo quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Nelle aree umide della Foresta Proibita cerca le tane segnate sulla mappa con una zampa. Avvicinati al rospo e resta vicino mentre usi il sacco.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1192,7 +1197,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Kneazle",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Pelo di Kneazle e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Pelo di Kneazle.",
     "location": "Valle di Hogwarts",
     "group": "Animali e materiali",
     "aliases": [
@@ -1201,9 +1206,9 @@ export const PRACTICAL_GUIDES = [
     "order": 33,
     "requirements": [],
     "steps": [
-      "Una tana si trova subito a sud di Brocburrow. Arriva senza correre fra gli animali; ferma quello scelto e usa il sacco.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Pelo di Kneazle quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Trovi una tana subito a sud di Brocburrow. Avvicinati senza correre, ferma l’animale scelto e usa il sacco.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1233,7 +1238,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Snaso",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Pelo di Snaso e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Pelo di Snaso.",
     "location": "Valle di Hogwarts",
     "group": "Animali e materiali",
     "aliases": [
@@ -1242,9 +1247,9 @@ export const PRACTICAL_GUIDES = [
     "order": 34,
     "requirements": [],
     "steps": [
-      "Da Keenbridge attraversa il fiume e cerca la tana sul fianco della scogliera. Disillusione ti permette di avvicinarti prima che inizino a scappare.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Pelo di Snaso quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Da Keenbridge attraversa il fiume e cerca la tana sul fianco della scogliera. Usa Disillusione per avvicinarti senza far scappare gli Snasi.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1274,7 +1279,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Ippogrifo",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Piuma di Ippogrifo e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Piuma di Ippogrifo.",
     "location": "Valle di Hogwarts",
     "group": "Animali e materiali",
     "aliases": [
@@ -1283,9 +1288,9 @@ export const PRACTICAL_GUIDES = [
     "order": 35,
     "requirements": [],
     "steps": [
-      "Da Keenbridge raggiungi la tana degli Snasi oltre il fiume, poi cerca la tana degli Ippogrifi più a sud. Usa Disillusione per arrivare vicino e un incantesimo di controllo prima del sacco: la cattura richiede più pressioni.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Piuma di Ippogrifo quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Da Keenbridge raggiungi la tana degli Snasi oltre il fiume, poi cerca quella degli Ippogrifi più a sud. Avvicinati con Disillusione e ferma l’animale prima di usare il sacco; premi il comando ogni volta che il gioco lo richiede.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1315,7 +1320,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Thestral",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Crine di Thestral e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Crine di Thestral.",
     "location": "Palude del Guado",
     "group": "Animali e materiali",
     "aliases": [
@@ -1324,9 +1329,9 @@ export const PRACTICAL_GUIDES = [
     "order": 36,
     "requirements": [],
     "steps": [
-      "Cerca la tana nella palude. Per la riproduzione controlla di catturare un maschio e una femmina, indicati accanto al nome.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Crine di Thestral quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "Cerca la tana nella Palude del Guado. Se vuoi far riprodurre i Thestral, cattura un maschio e una femmina: il simbolo accanto al nome ne indica il sesso.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1352,7 +1357,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Unicorno",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Crine di unicorno e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Crine di unicorno.",
     "location": "Foresta Proibita",
     "group": "Animali e materiali",
     "aliases": [
@@ -1361,9 +1366,9 @@ export const PRACTICAL_GUIDES = [
     "order": 37,
     "requirements": [],
     "steps": [
-      "La tana si trova nella Foresta Proibita, a ovest di Upper Hogsfield. Avvicinati nascosto e bloccalo prima di usare il sacco; può correre via molto rapidamente.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Crine di unicorno quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "La tana è nella Foresta Proibita, a ovest di Upper Hogsfield. Avvicinati senza farti vedere e ferma l’Unicorno prima di usare il sacco: fugge molto rapidamente.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [],
     "photos": [],
@@ -1393,7 +1398,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Graphorn",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Corno di Graphorn e indicazioni per la cattura.",
+    "summary": "Dove trovarlo e ottenere il materiale: Corno di Graphorn.",
     "location": "Costa di Clagmar",
     "group": "Animali e materiali",
     "aliases": [
@@ -1402,9 +1407,9 @@ export const PRACTICAL_GUIDES = [
     "order": 38,
     "requirements": [],
     "steps": [
-      "La tana è all’estremità meridionale della Costa di Clagmar. Diventa utile dopo lo sblocco avanzato legato alla storia.",
-      "Nel vivario, nutri e spazzola l’animale; raccogli Corno di Graphorn quando compare l’interazione.",
-      "I materiali ricompaiono dopo circa 25 minuti. Servono per il telaio; non sono equipaggiamento vendibile."
+      "La tana è all’estremità meridionale della Costa di Clagmar. La cattura si sblocca andando avanti nella storia: il pannello sotto indica quando.",
+      "Nel vivario nutri e spazzola l’animale. Raccogli il materiale quando compare il comando sullo schermo.",
+      "Dopo circa 25 minuti puoi raccogliere di nuovo il materiale. Usalo al telaio per migliorare l’equipaggiamento."
     ],
     "panels": [
       {
@@ -1438,7 +1443,7 @@ export const PRACTICAL_GUIDES = [
     "title": "Fenice",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Piuma di fenice e indicazioni per la cattura.",
+    "summary": "Come ottenere la Fenice e raccoglierne il materiale: Piuma di fenice.",
     "location": "Stanza delle Necessità",
     "group": "Animali e materiali",
     "aliases": [
@@ -1447,8 +1452,8 @@ export const PRACTICAL_GUIDES = [
     "order": 39,
     "requirements": [],
     "steps": [
-      "È una creatura ottenibile attraverso le missioni di Tik, senza una tana ripetibile nel mondo.",
-      "Nel vivario, nutrila e spazzolala per ottenere Piuma di fenice.",
+      "La ottieni attraverso le missioni di Tik. Non ha una tana dove tornare per catturarne altre.",
+      "Nel vivario nutrila e spazzolala, poi raccogli il materiale quando è pronto.",
       "Non puoi farla riprodurre: è l’eccezione fra le 13 specie ospitabili nel vivario."
     ],
     "panels": [
@@ -1490,10 +1495,10 @@ export const PRACTICAL_GUIDES = [
     "order": 40,
     "requirements": [],
     "steps": [
-      "Completa la missione di introduzione: da quel momento puoi raggiungerla dalla mappa di Hogwarts → Stanze segrete.",
-      "Lascia liberi i passaggi. Metti vicini tavolo di identificazione, telaio e postazioni che usi spesso.",
+      "Completa la missione La Stanza delle Necessità. Da quel momento puoi raggiungere la stanza dalla mappa di Hogwarts → Stanze segrete.",
+      "Lascia liberi i passaggi. Metti vicini il tavolo di identificazione, il telaio e le postazioni che usi più spesso.",
       "Inizia con Dittamo e un tavolo alchemico. Aggiungi un vaso grande quando ti serve Lunaria per gli incarichi.",
-      "Compra magiformule da Tomi e Pergamene; le decorazioni possono aspettare. Evoca soltanto le postazioni che riesci a rifornire."
+      "Compra le magiformule da Tomi e Pergamene. Dai la precedenza alle postazioni per cui hai già ingredienti o semi."
     ],
     "panels": [],
     "photos": [],
@@ -1529,9 +1534,9 @@ export const PRACTICAL_GUIDES = [
     "steps": [
       "Vaso piccolo: Dittamo, Centinodia, Malva e Mandragola.",
       "Vaso medio: anche Grinzafico e Cavolo Carnivoro Cinese.",
-      "Vaso grande: anche Lunaria e Tentacula Velenosa; accetta pure tutte le piante più piccole.",
-      "Compra la magiformula da Tomi e Pergamene, poi evoca il tavolo. I tavoli con più vasi occupano un solo posto nel limite dei tavoli.",
-      "Puoi collocare fino a 7 tavoli da coltivazione. Distribuiscili secondo i tuoi consumi, senza riempire la stanza di tavoli piccoli se ti servono piante grandi."
+      "Vaso grande: anche Lunaria e Tentacula Velenosa, oltre a tutte le piante adatte ai vasi più piccoli.",
+      "Compra la magiformula da Tomi e Pergamene, poi evoca il tavolo. Un tavolo con più vasi conta comunque come un solo tavolo.",
+      "Puoi collocare fino a 7 tavoli da coltivazione. Scegli la grandezza dei vasi in base alle piante che vuoi coltivare."
     ],
     "panels": [],
     "photos": [],
@@ -1558,25 +1563,25 @@ export const PRACTICAL_GUIDES = [
     "title": "Postazioni: pozioni e produzione automatica",
     "section": "pratiche",
     "category": "stanza",
-    "summary": "Che cosa produce ogni stazione e quando raccoglierlo.",
+    "summary": "Cosa produce ogni postazione e quando raccoglierlo.",
     "location": "Hogwarts e Highlands",
     "group": "stanza",
     "aliases": [],
     "order": 42,
     "requirements": [],
     "steps": [
-      "Tavoli alchemici: preparano le ricette scelte consumando ingredienti. Il modello a T ha tre fornelli; puoi evocare fino a 7 tavoli alchemici.",
+      "Tavoli alchemici: preparano le pozioni consumando gli ingredienti della ricetta. Il modello a T ha tre fornelli; puoi evocare fino a 7 tavoli alchemici.",
       "Pentola saltellante: una pozione casuale ogni 12 minuti. Raccoglila per liberare la postazione.",
       "Raffinatore di sostanze: 10 Pietre di luna ogni 10 minuti.",
-      "Postazione da taglio: produce periodicamente materiale vegetale casuale. Compostiera di sterco: produce fertilizzante.",
-      "Puoi evocare fino a 3 esemplari di ciascuna delle quattro postazioni automatiche. I limiti sono separati da quelli dei tavoli."
+      "Postazione da taglio: produce ingredienti vegetali casuali. Compostiera di sterco: produce fertilizzante.",
+      "Puoi evocare fino a 3 esemplari per ciascun tipo di postazione automatica. Questi limiti sono separati da quelli dei tavoli alchemici e da coltivazione."
     ],
     "panels": [
       {
         "title": "Una disposizione semplice",
         "paragraphs": [
-          "Un lato per le pozioni, uno per le piante, le postazioni automatiche lungo la parete. Tieni il centro libero per raccogliere velocemente.",
-          "Prima di spendere, confronta il prezzo della magiformula con quanto userai davvero quella risorsa. La produzione casuale non sostituisce una ricetta che ti serve subito."
+          "Raggruppa le pozioni su un lato e le piante sull’altro. Metti le postazioni automatiche lungo le pareti e lascia libero il centro per muoverti.",
+          "Prima di comprare una magiformula, valuta quanto userai ciò che produce. Una postazione con risultati casuali non garantisce la risorsa che ti serve subito."
         ]
       }
     ],
@@ -1615,7 +1620,7 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Compralo da un negozio di piante oppure producilo con una Compostiera di sterco nella Stanza delle Necessità.",
-      "Interagisci con il vaso e applicalo al ciclo di crescita. Controlla il raccolto previsto sul pannello del vaso.",
+      "Interagisci con il vaso e aggiungi il fertilizzante alla pianta in crescita. Il pannello del vaso mostra il raccolto previsto.",
       "Non è lo stesso del talento Fertilizzante: il talento riguarda i Cavoli Carnivori Cinesi lanciati in combattimento."
     ],
     "panels": [],
@@ -1645,10 +1650,10 @@ export const PRACTICAL_GUIDES = [
     "order": 44,
     "requirements": [],
     "steps": [
-      "Dopo L’elfo, il sacco e il telaio, entra nel vivario e libera gli animali dal sacco.",
+      "Completa L’elfo, il sacco e il telaio. Poi entra nel vivario e libera gli animali dal sacco.",
       "Ogni vivario ospita al massimo 12 animali di 4 specie diverse. Scegli specie utili ai materiali che ti mancano.",
-      "Nutri e spazzola ciascun animale. Una mangiatoia aiuta col cibo, ma la spazzola rimane necessaria.",
-      "Raccogli i materiali pronti; il ciclo di produzione è di circa 25 minuti. Se il limite è pieno, sposta un animale in un altro vivario o riprendilo nel sacco."
+      "Nutri e spazzola ciascun animale. La mangiatoia fornisce il cibo, ma devi comunque occuparti della spazzola.",
+      "Raccogli i materiali pronti: ricompaiono dopo circa 25 minuti. Se il vivario è pieno, sposta un animale in un altro ambiente o riprendilo nel sacco."
     ],
     "panels": [
       {
@@ -1660,9 +1665,9 @@ export const PRACTICAL_GUIDES = [
       {
         "title": "Riproduzione",
         "paragraphs": [
-          "Completa la missione dedicata di Tik e ottieni la magiformula del recinto. Libera nello stesso vivario un maschio e una femmina della stessa specie.",
-          "Interagisci con il recinto, scegli la specie e attendi 30 minuti di gioco. Verifica prima che resti spazio per il piccolo.",
-          "La Fenice non si riproduce. Le varianti di colore non producono materiali migliori."
+          "Completa la missione di Tik dedicata alla riproduzione e ottieni la magiformula del recinto. Libera nello stesso vivario un maschio e una femmina della stessa specie.",
+          "Interagisci con il recinto, scegli la specie e attendi 30 minuti mentre giochi. Prima di iniziare, assicurati che ci sia posto per il piccolo.",
+          "La Fenice non si riproduce. Le varianti di colore degli animali non producono materiali migliori."
         ]
       }
     ],
@@ -1689,17 +1694,17 @@ export const PRACTICAL_GUIDES = [
     "title": "Monete d’oro: guadagnare e spendere bene",
     "section": "pratiche",
     "category": "oggetti",
-    "summary": "Le entrate semplici e gli acquisti che durano.",
+    "summary": "Come ottenere monete e scegliere gli acquisti utili.",
     "location": "Hogwarts e Highlands",
     "group": "oggetti",
     "aliases": [],
     "order": 45,
     "requirements": [],
     "steps": [
-      "Vendi l’equipaggiamento superato ai mercanti: distruggerlo libera spazio ma non dà denaro.",
+      "Vendi ai mercanti l’equipaggiamento che non usi più. Distruggerlo libera spazio, ma non ti fa guadagnare monete.",
       "I forzieri con occhio contengono 500 monete: usa Disillusione fuori dalla loro visuale prima di avvicinarti.",
       "Semi e ricette sono acquisti permanenti. Pozioni e piante già pronte sono comode per un incarico urgente, ma si consumano.",
-      "Gli animali in più possono essere affidati alla Fiera delle Fiere per 120 monete ciascuno. Conserva prima le coppie e le specie che vuoi nel vivario."
+      "Puoi portare gli animali in più alla Fiera delle Fiere e ricevere 120 monete per ciascuno. Conserva quelli che vuoi tenere nel vivario, comprese le coppie per la riproduzione."
     ],
     "panels": [],
     "photos": [],
@@ -1733,10 +1738,10 @@ export const PRACTICAL_GUIDES = [
     "order": 46,
     "requirements": [],
     "steps": [
-      "Tieni almeno un incantesimo rosso, uno giallo e uno viola pronti: rompi ogni scudo con lo stesso colore.",
-      "All’avviso giallo usa Protego; all’avviso rosso schiva. Durante una serie di attacchi non contrattaccare troppo presto.",
-      "Concentrati su un bersaglio; alterna incantesimi e colpi base mentre attendi i recuperi.",
-      "Se sei circondato, allontanati. Usa una pianta, una pozione difensiva o Imperio se lo hai imparato per creare un’apertura."
+      "Prepara almeno un incantesimo rosso, uno giallo e uno viola. Per rompere uno scudo, colpiscilo con un incantesimo dello stesso colore.",
+      "Se il segnale è giallo, usa Protego; se è rosso, schiva. Quando il nemico attacca più volte di seguito, aspetta la fine della serie prima di contrattaccare.",
+      "Concentrati su un nemico alla volta. Alterna gli incantesimi ai colpi base mentre aspetti di poterli usare di nuovo.",
+      "Se sei circondato, allontanati. Usa una pianta, una pozione difensiva oppure Imperio, se lo hai imparato, per avere il tempo di reagire."
     ],
     "panels": [],
     "photos": [],
@@ -1770,17 +1775,17 @@ export const PRACTICAL_GUIDES = [
     "order": 47,
     "requirements": [],
     "steps": [
-      "Accio → Incendio: avvicina un nemico leggero e brucialo a corto raggio.",
-      "Glacius → Diffindo: congela e colpisci durante la vulnerabilità.",
+      "Accio → Incendio: attira un nemico leggero verso di te, poi colpiscilo con il fuoco a distanza ravvicinata.",
+      "Glacius → Diffindo: congela il nemico, poi colpiscilo con Diffindo mentre è più vulnerabile.",
       "Levioso → colpi base → Descendo: mantieni il bersaglio sospeso e poi schiantalo a terra.",
-      "Expelliarmus → Lancio Magia antica: con il talento dedicato, rimanda l’arma sottratta contro l’avversario."
+      "Expelliarmus → Lancio Magia antica: disarma il nemico e rilanciagli l’arma. Serve il talento Capacità con Lancio Magia antica."
     ],
     "panels": [
       {
         "title": "Preparare i set",
         "paragraphs": [
-          "Metti gli incantesimi di controllo sempre nello stesso tasto fra un set e l’altro: li ritrovi senza cercare.",
-          "Conoscenza magica I, II e III aggiungono set. Tieni una disposizione per combattere e una per esplorare."
+          "Un set è un gruppo di quattro incantesimi assegnati ai tasti. Mantieni gli incantesimi di controllo sullo stesso tasto quando passi da un set all’altro.",
+          "Conoscenza magica I, II e III aggiungono altri set. Puoi prepararne uno per combattere e uno per esplorare."
         ]
       }
     ],
@@ -1815,10 +1820,10 @@ export const PRACTICAL_GUIDES = [
     "order": 48,
     "requirements": [],
     "steps": [
-      "Inferi: prima Incendio o Confringo, poi danni normali. Finché non prendono fuoco resistono agli attacchi comuni.",
+      "Inferi: colpiscili prima con Incendio o Confringo. Quando prendono fuoco, puoi danneggiarli anche con gli altri attacchi.",
       "Dugbog: quando mostra la lingua, usa Levioso e poi Diffindo. Se carica verso di te, schiva lateralmente.",
-      "Troll: schiva gli attacchi rossi; quando lancia un masso, para e usa il comando di rilancio.",
-      "Ragni: il fuoco li mette in difficoltà; distruggi i piccoli gruppi prima che ti accerchino."
+      "Troll: schiva gli attacchi segnalati in rosso. Se lancia un masso, paralo con Protego e usa il comando che compare per rilanciarlo.",
+      "Ragni: usa il fuoco contro i gruppi e colpiscili prima che ti circondino."
     ],
     "panels": [
       {
@@ -1866,8 +1871,8 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Esci dalla visuale del forziere e attiva Disillusione.",
-      "Rientra lentamente e interagisci quando compare il comando. Se l’occhio ti ha visto trasformarti, allontanati e riprova.",
-      "Il contenuto è 500 monete d’oro. Non serve Alohomora."
+      "Torna vicino al forziere e aprilo quando compare il comando. Se l’occhio ti ha visto usare Disillusione, allontanati e riprova.",
+      "Ogni forziere contiene 500 monete d’oro. Non serve Alohomora."
     ],
     "panels": [],
     "photos": [],
@@ -1897,9 +1902,9 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Vicino a un punto d’interesse usa Revelio e raccogli la pagina che compare.",
-      "Pagina volante: attirala con Accio. Statua con globo: usa Levioso. Braciere: accendilo con Incendio o Confringo se è lontano.",
-      "Cornice vuota: Lumos mostra un luogo; trova la falena, accompagnala con Lumos e spegnilo davanti alla cornice.",
-      "Se senti una pagina Revelio ma non la vedi, controlla il piano superiore o inferiore e avvicinati al punto esatto."
+      "Pagina volante: attirala con Accio. Statua con globo: usa Levioso. Braciere: accendilo con Incendio; se è lontano, usa Confringo.",
+      "Cornice vuota: usa Lumos per vedere il luogo raffigurato. Trova lì la falena, accompagnala con Lumos e spegni la luce davanti alla cornice.",
+      "Se senti il richiamo di una pagina Revelio ma non la vedi, controlla anche il piano superiore o inferiore."
     ],
     "panels": [],
     "photos": [],
@@ -1922,17 +1927,17 @@ export const PRACTICAL_GUIDES = [
     "title": "Mappa, viaggio rapido e passaggio giorno/notte",
     "section": "pratiche",
     "category": "collezionabili",
-    "summary": "Orientarsi senza inseguire tutti i simboli insieme.",
+    "summary": "Scegliere la destinazione, viaggiare e aspettare la notte.",
     "location": "Hogwarts e Highlands",
     "group": "collezionabili",
     "aliases": [],
     "order": 51,
     "requirements": [],
     "steps": [
-      "Scegli prima la mappa corretta: Hogwarts, Hogsmeade o Mondo. Nel castello apri l’ala e poi il punto di viaggio rapido.",
+      "Scegli la mappa di Hogwarts, Hogsmeade o del Mondo. A Hogwarts seleziona prima l’ala del castello, poi il punto di viaggio rapido.",
       "Avvicinati a una Fiamma della Metropolvere per attivarla; una volta verde puoi selezionarla sulla mappa.",
-      "Usa Attendi sulla mappa per passare da giorno a notte. Se l’opzione non è disponibile, esci da combattimenti o situazioni di missione che la bloccano.",
-      "In volo usa Revelio per individuare punti d’interesse. Seleziona un obiettivo alla volta e seguilo; i contatori di zona aiutano a distinguere ciò che resta."
+      "Sulla mappa usa Attendi per passare dal giorno alla notte. Se il comando non è disponibile, termina il combattimento o la fase della missione in corso.",
+      "In volo usa Revelio per individuare i punti d’interesse. Seleziona una destinazione alla volta; i contatori della zona mostrano quali attività restano."
     ],
     "panels": [],
     "photos": [],
@@ -1966,9 +1971,9 @@ export const PRACTICAL_GUIDES = [
     "requirements": [],
     "steps": [
       "Apri Sfide dalla Guida pratica e controlla le ricompense segnalate come disponibili.",
-      "Riscatta manualmente il premio: alcune espansioni, come lo spazio inventario, non si applicano da sole.",
-      "Un aspetto cosmetico si usa da Cambia aspetto, non aggiunge un nuovo vestito all’inventario.",
-      "I contatori della mappa, delle sfide e delle collezioni misurano cose diverse: non interpretarli come un unico avanzamento."
+      "Riscatta il premio selezionandolo: alcuni miglioramenti, come i posti aggiuntivi nell’inventario, non si attivano finché non li ritiri.",
+      "Se il premio è un aspetto, lo trovi in Cambia aspetto. Non aggiunge un nuovo capo d’abbigliamento all’inventario.",
+      "Mappa, Sfide e Collezioni contano elementi diversi. Confronta sempre lo stesso elenco per capire cosa ti manca."
     ],
     "panels": [],
     "photos": [],
@@ -1997,7 +2002,7 @@ export const PRACTICAL_GUIDES = [
     "order": 53,
     "requirements": [],
     "steps": [
-      "Apri Impostazioni e rivedi sensibilità della visuale, vibrazione e assistenza alla mira. Cambia una voce alla volta e prova in un’area sicura.",
+      "Apri Impostazioni e regola sensibilità della visuale, vibrazione e assistenza alla mira. Cambia una voce alla volta e prova il risultato in un’area sicura.",
       "Regola sottotitoli e dimensione del testo dalle opzioni disponibili. Per i tasti, segui le icone mostrate dalla tua versione del gioco.",
       "Se un combattimento blocca la progressione, puoi cambiare difficoltà dalle impostazioni: le ricette e gli incantesimi già imparati rimangono.",
       "La modalità aracnofobia cambia l’aspetto dei ragni. Non elimina tutti i relativi incontri o obiettivi."

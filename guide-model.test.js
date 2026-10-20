@@ -49,3 +49,24 @@ test('moon access includes open locks, filters collected and keeps all counts in
  const entry=model.makeGuideEntries([{id:'x',title:'Una missione',location:'Hogwarts',group:'Biblioteca',section:'missioni',category:'principali'}])[0];
  assert.ok(entry.aliases.includes('Hogwarts'));assert.ok(entry.aliases.includes('Biblioteca'));
  });
+
+test('guide neighbours stay in the category, use narrative order and exclude other houses',()=>{
+ assert.equal(typeof model.guideNeighbours,'function');
+ const list=[
+  {id:'last',section:'missioni',category:'principali',order:9},
+  {id:'foreign',section:'missioni',category:'principali',order:2,house:'slytherin'},
+  {id:'middle',title:'Etichetta sicura',officialTitle:'Trama nascosta',section:'missioni',category:'principali',order:3},
+  {id:'other',section:'missioni',category:'secondarie',order:4},
+  {id:'first',section:'missioni',category:'principali',order:1}];
+ const next=model.guideNeighbours(list,list[2],'ele');assert.equal(next.previous.id,'first');assert.equal(next.next.id,'last');
+ assert.equal(model.guideNeighbours(list,list[4],'ele').previous,null);assert.equal(model.guideNeighbours(list,list[0],'ele').next,null);
+ const excluded=model.guideNeighbours(list,list[1],'ele');assert.equal(excluded.previous,null);assert.equal(excluded.next,null);
+ assert.deepEqual(list.map(g=>g.id),['last','foreign','middle','other','first']);
+});
+
+test('next guide follows the visible geographic catalogue while main missions remain chronological',()=>{
+ const list=[{id:'a',order:1,location:'Hogwarts'},{id:'b',order:2,location:'Hogsmeade'},{id:'c',order:3,location:'Hogwarts'}].map(g=>({...g,section:'missioni',category:'secondarie'}));
+ assert.equal(model.guideNeighbours(list,list[0],'ele').next.id,'c');
+ assert.equal(model.guideNeighbours(list,list[1],'ele').previous.id,'c');
+ const main=list.map(g=>({...g,category:'principali'}));assert.equal(model.guideNeighbours(main,main[0],'ele').next.id,'b');
+});

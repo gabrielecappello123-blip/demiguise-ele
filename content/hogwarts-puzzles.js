@@ -25,9 +25,9 @@ export const HOGWARTS_METHODS = [{
   requirements: [],
   steps: [
     'Conta i dieci simboli sull’arco da sinistra a destra: quello in basso a sinistra vale 0, l’ultimo in basso a destra vale 9.',
-    'Rivela i due triangoli sulla porta. Per ciascuno, i tre valori esterni devono dare il numero centrale.',
-    'Sottrai dal totale i due valori già noti. Sulla rotella ? imposta il simbolo del risultato superiore; su ?? quello inferiore.',
-    'Torna alla porta e aprila. Non servono incantesimi né il foglio con la legenda: puoi contare direttamente i simboli sull’arco.'
+    'Rivela i due triangoli sulla porta. In ciascuno, la somma dei tre valori esterni deve essere uguale al numero centrale.',
+    'Per ogni triangolo, sottrai dal totale i due valori già noti. Imposta la rotella ? sul simbolo del risultato del triangolo superiore; usa ?? per quello inferiore.',
+    'Torna alla porta e aprila. Per risolvere l’enigma non servono incantesimi né il foglio con la legenda: puoi contare i simboli sull’arco.'
   ],
   sources: [doorItalian, source('https://www.gamesradar.com/hogwarts-legacy-puzzle-doors-how-to-open/', 'GamesRadar · metodo e legenda')]
 }];
@@ -36,7 +36,7 @@ export const HOGWARTS_METHODS = [{
 const doorRows = [
   {
     id: 'aritmanzia-incantesimi', title: 'Porta vicino all’Aula di Incantesimi', group: 'Ala di Astronomia',
-    route: 'Dalla Metropolvere Aula di Incantesimi gira attorno all’angolo del corridoio: la porta è accanto all’aula.',
+    route: 'Dalla Metropolvere Aula di Incantesimi segui il corridoio e gira l’angolo: la porta è accanto all’aula.',
     answer: [2, 7], totals: [5, 12], image: 'Charms-Classroom-puzzle-door-in-Hogwarts-Legacy.jpg'
   },
   {
@@ -46,7 +46,7 @@ const doorRows = [
   },
   {
     id: 'aritmanzia-divinazione', title: 'Porta sotto l’Aula di Divinazione', group: 'Biblioteca',
-    route: 'Dalla Metropolvere Aula di Divinazione entra nella passerella di legno e prendi la prima svolta a destra. Cerca la porta vicino alla lavagna e alla scatola con la legenda.',
+    route: 'Dalla Metropolvere Aula di Divinazione imbocca la passerella di legno e prendi la prima svolta a destra. Cerca la porta vicino alla lavagna e alla scatola con la legenda.',
     answer: [4, 3], totals: [9, 4], image: 'Hogwarts_Legacy_Divination_Classroom_puzzle_open.jpg',
     related: ['aritmanzia-aula-sinistra', 'aritmanzia-aula-destra']
   },
@@ -93,7 +93,7 @@ const doorRows = [
   },
   {
     id: 'aritmanzia-docenti', title: 'Porta della Torre del Corpo Docente', group: 'Ala Sud',
-    route: 'Dalla Metropolvere Torre del Corpo Docente vai a sud e prendi la porta a destra, quella aperta durante la prima missione di Moon. Sali una rampa: la porta è in fondo al primo pianerottolo.',
+    route: 'Dalla Metropolvere Torre del Corpo Docente vai a sud. Entra dalla porta a destra, aperta durante la prima missione di Moon, e sali una rampa. Trovi l’enigma in fondo al pianerottolo.',
     answer: [0, 9], totals: [13, 14], image: 'Hogwarts_Legacy_Faculty_Tower_puzzle_open.jpg',
     requirements: ['Accesso alla Torre del Corpo Docente e Alohomora I.'],
     extra: source('https://www.gamepur.com/guides/how-to-solve-the-faculty-tower-door-puzzle-in-hogwarts-legacy', 'Gamepur · percorso nella Torre del Corpo Docente')
@@ -127,7 +127,7 @@ export const HOGWARTS_PUZZLES = [
       'Raggiungi il Ponte del Viadotto, vicino alla Metropolvere Cortile del Viadotto. Cerca i quattro bracieri sui parapetti e la piastra circolare a terra.',
       'Accendi tutti i bracieri. Poi interagisci con ciascuno per ruotare il numero sotto il suo simbolo.',
       'Imposta: triangolo senza cerchio = I; cerchi intrecciati = II; triangolo con cerchio = III; quadrato diviso = IV. Puoi confrontarli con la piastra a terra.',
-      'Quando la piastra si apre, scendi dalla scala e raccogli i forzieri sotto il ponte.'
+      'Quando la piastra si apre, scendi la scala e apri i forzieri sotto il ponte.'
     ],
     photos: [
       photo('https://www.uagna.it/wp-content/uploads/2023/02/hogwarts-legacy-ponte.jpg', 'Il Ponte del Viadotto con i bracieri sui parapetti.', 'Uagna', bridgeUrl),
@@ -144,7 +144,7 @@ export const HOGWARTS_PUZZLES = [
       'Parti dal Cortile della Torre dell’Orologio ed entra nella sala dei duelli. Guarda il simbolo sulla porta chiusa al piano terra.',
       'Quando il pendolo passa davanti allo stesso simbolo sulla barra, fermalo con Arresto Momentum o Glacius. Attraversa la porta prima che riparta.',
       'Apri la porta con serratura a sinistra del pendolo e sali. Cerca la seconda porta sulla prima balconata; la terza è al piano successivo, all’estremità opposta, scendendo pochi gradini.',
-      'La quarta porta è sul pianerottolo della scala verso la sommità. Per ogni porta ripeti il simbolo corrispondente, mirando al pendolo dalla balconata vicina.',
+      'La quarta porta è sul pianerottolo della scala verso la cima della torre. Per ciascuna porta, ferma il pendolo sul simbolo corrispondente mirando dalla balconata vicina.',
       'Entra in tutte e quattro le stanze: fermare il pendolo senza attraversare le porte non basta a completare il segreto.'
     ],
     photos: [
@@ -162,7 +162,7 @@ export const HOGWARTS_PUZZLES = [
       'Nell’ufficio prendi la porta laterale verso il balcone. Sali la scala esterna e apri la serratura III dello studio superiore.',
       'Raccogli la Chiave dell’Ammissione sul tavolo. Torna al corridoio delle statue, sotto l’ufficio.',
       'Raggiungi l’estremità opposta al grifone e interagisci con la porta dalla grande serratura. Si apre con la chiave; Alohomora da solo non funziona.',
-      'Entra e sali: raccogli i forzieri e usa Revelio nella stanza superiore.'
+      'Entra e sali le scale: apri i forzieri e usa Revelio nella stanza superiore.'
     ],
     panels: [{ title: 'Arrivare dall’esterno', paragraphs: ['Con la scopa puoi raggiungere il piccolo balcone della torre più alta. Atterra, sali i gradini e apri la serratura III: conduce allo stesso studio con la chiave. Se non riesci ad atterrare, usa il percorso interno quando disponibile.'] }],
     photos: [
@@ -178,21 +178,21 @@ export const HOGWARTS_PUZZLES = [
     requirements: ['Sala di Herodiana completata.', 'Alohomora I, Accio e Depulso.'],
     steps: [
       'Dalla Metropolvere Aula di Pozioni attraversa la porta, scendi la scala a chiocciola a sinistra e apri la serratura I in fondo. Usa Depulso sul pulsante della parete destra.',
-      'Nelle indicazioni, destra e sinistra restano quelle viste entrando. Accio tira; Depulso spinge. Mettiti sul lato giusto senza restare nella traiettoria dei blocchi.',
-      'Segui i tre percorsi sotto. Tra un forziere e il successivo colpisci il cubetto luminoso con l’attacco base: ripristina i blocchi, mantenendo aperti i forzieri.',
-      'Aperti tutti e tre, torna nel corridoio d’ingresso e raccogli il forziere della collezione.'
+      'Considera sempre destra e sinistra come le vedi dall’ingresso, guardando la sala. Accio tira i blocchi verso di te; Depulso li spinge lontano da te. Spostati prima di lanciare l’incantesimo e non restare sulla loro traiettoria.',
+      'Segui i tre percorsi qui sotto. Dopo ogni forziere, colpisci il cubetto luminoso con un attacco base: i blocchi tornano alla posizione iniziale e il forziere resta aperto.',
+      'Dopo aver aperto tutti e tre i forzieri, torna nel corridoio d’ingresso e apri quello della collezione.'
     ],
-    panels: [
+    chapters: [
       { title: '1 · Forziere a destra', steps: [
         'Tira verso l’ingresso il cubo sospeso sulla parete destra.',
         'Scendi. Spingi verso destra i due cubi centrali: formano la salita sotto il cubo sospeso.',
-        'Arrampicati sui blocchi e apri il forziere. Ripristina la stanza.'
+        'Arrampicati sui blocchi e apri il forziere. Poi colpisci il cubetto luminoso per rimettere i blocchi nella posizione iniziale.'
       ], photos: [clubPhoto('1-first-chest', 'Percorso di blocchi verso il primo forziere, sulla parete destra.', 1)] },
       { title: '2 · Forziere a sinistra', steps: [
         'Tira il cubo sospeso di destra verso sinistra, poi verso l’ingresso. Spingilo contro la parete sinistra e tiralo verso il pilastro del forziere.',
         'Tira verso l’ingresso il cubo centrale superiore: si unisce a quello inferiore, formando una colonna di due cubi.',
         'Spingi la colonna a sinistra, poi tirala verso il forziere. Sali sulla colonna, voltati e salta sul cubo sospeso.',
-        'Raggiungi il forziere e aprilo. Ripristina la stanza.'
+        'Raggiungi il forziere e aprilo. Poi colpisci il cubetto luminoso per rimettere i blocchi nella posizione iniziale.'
       ], photos: [clubPhoto('1-second-chest-pull-accio', 'Colonna e cubo sospeso per raggiungere il forziere sulla sinistra.', 1)] },
       { title: '3 · Forziere in fondo', steps: [
         'Spingi a sinistra il cubo a terra più vicino all’ingresso. Tiralo contro i due cubi sulla parete sinistra: ottieni una fila di tre.',
@@ -219,18 +219,18 @@ export const HOGWARTS_PUZZLES = [
     steps: [
       'Dalla Metropolvere Cortile della Torre Campanaria gira a sinistra, sali la prima rampa ed entra nella porta davanti. Prosegui nell’Aula di Storia della Magia.',
       'Apri la porta con serratura I in fondo all’aula. Nella stanza con decorazioni egizie, usa Depulso sul pulsante nell’angolo della parete destra.',
-      'In ogni sala considera l’ingresso alle spalle: destra, sinistra e fondo non cambiano quando giri la visuale. Spostati per tirare o spingere nella direzione indicata.',
-      'Segui i pannelli nell’ordine. Il cubetto luminoso ripristina la sala con l’attacco base; usalo se unisci blocchi sbagliati. Non azzerare tra le fasi, salvo indicazione.'
+      'In ogni sala, destra e sinistra sono quelle che vedi dall’ingresso; il fondo è la parete opposta. Questi riferimenti restano fissi anche quando ti giri. Spostati per tirare o spingere i blocchi nella direzione indicata.',
+      'Segui i passaggi nell’ordine. Se unisci i blocchi sbagliati, colpisci il cubetto luminoso con un attacco base per ricominciare la sala. Tra una fase e l’altra, lascia i blocchi dove sono, salvo diversa indicazione.'
     ],
-    panels: [
+    chapters: [
       { title: 'Prima sala · raggiungere il forziere', steps: [
-        'Tira il grande gruppo a T verso l’ingresso. Scendi a sinistra e tira il cubo singolo lungo la parete fino in fondo.',
+        'Tira il grande gruppo di cubi a forma di T verso l’ingresso. Scendi a sinistra e tira il cubo singolo lungo la parete fino in fondo.',
         'Tira i due cubi di destra al centro; spingili in fondo e poi a sinistra, unendoli al cubo singolo.',
         'Tira il gruppo di tre verso l’ingresso, lungo la parete sinistra.',
         'Sali sul blocco nero centrale, salta sui tre cubi e arrampicati al forziere sinistro. Aprendolo, la sala cambia disposizione.'
       ], photos: [clubPhoto('2-first-room-chest-step-seven', 'I tre cubi permettono di salire sul ripiano del primo forziere.', 2)] },
       { title: 'Prima sala · raggiungere l’uscita', steps: [
-        'Torna all’ingresso e tira di nuovo la T verso di te. Sotto la T trova un cubo alto e un gruppo basso di due.',
+        'Torna all’ingresso e tira di nuovo il gruppo a T verso di te. Sotto di esso individua il cubo in alto e il gruppo di due cubi più in basso.',
         'Porta il cubo alto contro la parete sinistra, poi in fondo. Tira anche i due cubi bassi in fondo; spingili nell’angolo sinistro per unirli al cubo alto.',
         'Porta i due cubi sulla destra al centro, poi in fondo e infine a sinistra: uniscili agli altri tre.',
         'Tira il gruppo di cinque verso l’ingresso, poi contro la parete destra.',
@@ -239,20 +239,20 @@ export const HOGWARTS_PUZZLES = [
       ], photos: [clubPhoto('2-first-room-exit-step-twelve', 'La T unita ai cinque cubi crea la salita verso la seconda sala.', 2)] },
       { title: 'Seconda sala · forziere a destra', steps: [
         'Spingi in fondo la colonna di tre cubi sulla sinistra.',
-        'Tira verso l’ingresso la grande piattaforma a U sulla destra e saltaci sopra.',
-        'Dalla U tira la colonna contro la parete destra. Salta sulla colonna e arrampicati al forziere.',
-        'Aprilo e torna sulla U. Non ripristinare i blocchi.'
+        'Tira verso l’ingresso la grande piattaforma a forma di U sulla destra e saltaci sopra.',
+        'Dalla piattaforma a U tira la colonna contro la parete destra. Salta sulla colonna e arrampicati fino al forziere.',
+        'Apri il forziere e torna sulla piattaforma a U. Lascia i blocchi in questa posizione.'
       ], photos: [clubPhoto('2-second-room-first-chest-4', 'Dalla piattaforma a U si salta sulla colonna sotto il forziere destro.', 2)] },
       { title: 'Seconda sala · forziere a sinistra', steps: [
         'Spingi la colonna di tre nell’angolo in fondo a destra.',
         'Tira fuori il grande gruppo nell’angolo in fondo a sinistra, verso l’ingresso; poi tiralo a destra finché si ferma contro il pilastro nero.',
         'Spingi la fila orizzontale di quattro contro la parete sinistra. Portala nell’angolo in fondo appena liberato.',
         'Tira la colonna da destra a sinistra: si unisce alla fila di quattro. Tira questi sette cubi verso l’ingresso.',
-        'Sali sulla nuova struttura e raggiungi il forziere sinistro. Aprilo senza ripristinare la stanza.'
+        'Sali sulla nuova struttura e raggiungi il forziere sinistro. Aprilo e lascia i blocchi in questa posizione.'
       ], photos: [clubPhoto('2-second-room-second-chest-7', 'I sette cubi uniti formano la salita al forziere sinistro.', 2)] },
       { title: 'Seconda sala · uscita e premio finale', steps: [
         'Spingi i sette cubi nell’angolo in fondo a sinistra. Dalla piattaforma a U tirali a destra: si uniscono al gruppo fermo contro il pilastro nero.',
-        'Torna sulla U. Per accorciare il salto, portati su un suo braccio e tira il tratto centrale con Accio: la piattaforma si avvicina al blocco nero.',
+        'Torna sulla piattaforma a U e mettiti su uno dei suoi bracci. Usa Accio sul tratto centrale: la piattaforma si avvicina al blocco nero e il salto diventa più corto.',
         'Salta sul blocco nero centrale, poi sui cubi uniti e sali fino all’uscita. Apri il forziere della collezione prima di andartene.'
       ], photos: [clubPhoto('2-second-room-third-chest-3', 'La struttura finale collega il blocco nero al ripiano dell’uscita.', 2)] }
     ],

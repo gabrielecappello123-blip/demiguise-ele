@@ -1,7 +1,7 @@
-import { createProfileSync } from './profile-sync.js?v=2.0.0';
-import { SECTIONS, GUIDES, MOONS, INTRO_MOONS, PUZZLE_METHODS } from './guide-data.js?v=2.0.0';
-import { searchGuide } from './search.js?v=1.2.0';
-import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuideEntries, knownTitleResults, filterMoons, countMoons } from './guide-model.js?v=2.0.0';
+import { createProfileSync } from './profile-sync.js?v=2.1.0';
+import { SECTIONS, GUIDES, MOONS, INTRO_MOONS, PUZZLE_METHODS } from './guide-data.js?v=2.1.0';
+import { searchGuide } from './search.js?v=2.1.0';
+import { STATUS_LABELS, guideRoute, parseRoute, forHouse, orderedCatalogue, guideNeighbours, guideStatus, makeGuideEntries, knownTitleResults, filterMoons, countMoons } from './guide-model.js?v=2.1.0';
 
 (() => {
   'use strict';
@@ -11,17 +11,59 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
   const isVerification = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(verification||'');
   const dataset = isVerification ? 'verify-'+verification.toLowerCase() : 'guide-v1';
   let entered=false, choosing=true, canReturn=false, desiredProfile=null, rememberedProfile=null;
-  const scrollPositions=new Map();let clickedNavigation=false;
+  const viewStates=new Map(), photoDimensions=new Map(), photoLoaders=new WeakMap();let renderedHash=null, navigationSession='', entryCount=0, cancelledView=null;
   let current, route, allScope=false, showOtherHouses=false, categoryPlace='', categoryStatus='', moonLevel=1, moonTodo=false, toastTimer;
   const searchInput=$('guideSearch');
   const sync=createProfileSync({dataset,onChange:render});
   current=sync.getState(); rememberedProfile=current.profile; choosing=!rememberedProfile;
   $('verificationNotice').hidden=!isVerification;
+  window.history.scrollRestoration='manual';
+
+  const hashKey=hash=>hash&&hash!=='#'?hash:'#/';
+  function viewSnapshot() {
+    return {query:searchInput.value,allScope,showOtherHouses,categoryPlace,categoryStatus,moonLevel,moonTodo,
+      scrollY:window.scrollY||0,openDetails:[...($(route?.kind+'View')?.querySelectorAll('details')||[])].map(n=>n.open)};
+  }
+  function historyState(hash,view) {
+    return {...window.history.state,guideNavigation:{session:navigationSession,profile:current.profile,hash,view}};
+  }
+  function rememberView(write=true) {
+    if(!entered||!renderedHash)return;
+    const view=viewSnapshot();viewStates.set(renderedHash,view);
+    if(write)window.history.replaceState(historyState(renderedHash,view),'',renderedHash);
+    return view;
+  }
+  function applyView(view) {
+    searchInput.value=view?.query||'';allScope=Boolean(view?.allScope);showOtherHouses=Boolean(view?.showOtherHouses);
+    categoryPlace=view?.categoryPlace||'';categoryStatus=view?.categoryStatus||'';
+    moonLevel=view?.moonLevel??((current.values?.get('demiguise:alohomora-level')||1)>=2?2:1);moonTodo=Boolean(view?.moonTodo);
+  }
+  function navigate(hash,{restore=false}={}) {
+    hash=hashKey(hash);if(hash===renderedHash)return;
+    rememberView();
+    const destination=parseRoute(hash,GUIDES);
+    const saved=restore||destination.kind==='category'||(destination.kind==='demiguise'&&!destination.target)?viewStates.get(hash):null;
+    applyView(saved);window.history.pushState(historyState(hash,saved),'',hash);renderRoute(true,saved);
+  }
+  function navigationClick(event,hash,options) {
+    if(event.button>0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();navigate(hash,options);
+  }
+  function historyChanged() {
+    const hash=hashKey(window.location.hash);if(hash===renderedHash)return;
+    rememberView(false);
+    const entry=window.history.state?.guideNavigation;
+    if(entered&&entry&&(entry.session!==navigationSession||entry.profile!==current.profile)) {
+      applyView();window.history.replaceState(historyState('#/',null),'','#/');renderRoute(true);return;
+    }
+    const saved=entry?.hash===hash?entry.view:viewStates.get(hash);
+    applyView(saved);renderRoute(true,saved);
+  }
 
   function el(tag,cls,text) { const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n; }
-  function link(title,href,cls='') {
+  function link(title,href,cls='',options) {
     const n=el('a',cls,title);n.href=href;
-    n.addEventListener('click',()=>{scrollPositions.set(window.location.hash||'#/',window.scrollY||0);clickedNavigation=true;clearSearch();if(window.location.hash===href)renderRoute(true);});return n;
+    n.addEventListener('click',event=>navigationClick(event,href,options));return n;
   }
   function external(title,url,cls='') {
     const n=el('a',cls,title);n.href=url;n.target='_blank';n.rel='noopener noreferrer';return n;
@@ -52,7 +94,7 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
     for(const [id,title] of options) {const o=el('option','',title);o.value=String(id);select.append(o);}
     select.value=String(value);select.addEventListener('change',()=>onChange(select.value));wrapper.append(select);return {wrapper,select};
   }
-  const objects=GUIDES.filter(g=>g.section==='pratiche'&&g.category==='oggetti'&&g.title.length>3).sort((a,b)=>b.title.length-a.title.length);
+  const objects=GUIDES.filter(g=>((g.section==='pratiche'&&g.category==='oggetti')||(g.section==='sblocchi'&&g.category==='incantesimi'))&&g.title.length>3).sort((a,b)=>b.title.length-a.title.length);
   function richText(parent,text,skipId) {
     // Only catalogue-owned exact names become links; no text is interpreted as HTML.
     let rest=String(text),count=0;
@@ -60,7 +102,8 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
       const low=rest.toLocaleLowerCase('it');let match=null;
       for(const object of objects) {
         if(object.id===skipId)continue;
-        const i=low.indexOf(object.title.toLocaleLowerCase('it'));
+        const name=object.title.toLocaleLowerCase('it');let i=low.indexOf(name);
+        while(i>=0&&(/[\p{L}\p{N}]/u.test(low[i-1]||'')||/[\p{L}\p{N}]/u.test(low[i+name.length]||'')))i=low.indexOf(name,i+1);
         if(i>=0&&(!match||i<match.i))match={i,object};
       }
       if(!match)break;
@@ -80,16 +123,19 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
     if(!photos?.length)return;
     const disclosure=details(photos.length===1?'Mostra immagine':'Mostra immagini','photo-disclosure');
     let loaded=false;
-    disclosure.addEventListener('toggle',()=>{
+    const load=()=>{
       if(!disclosure.open||loaded)return;loaded=true;
       for(const photo of photos) {
         const figure=el('figure','reference-photo'),img=el('img');img.alt=photo.alt||'Immagine di riferimento';img.loading='lazy';img.decoding='async';
+        const dimensions=photoDimensions.get(photo.src);if(dimensions){img.width=dimensions.width;img.height=dimensions.height;}
+        img.addEventListener('load',()=>{if(img.naturalWidth>0&&img.naturalHeight>0)photoDimensions.set(photo.src,{width:img.naturalWidth,height:img.naturalHeight});},{once:true});
         const caption=el('figcaption');caption.append(external('Foto di riferimento: '+(photo.credit||'Fonte').replace(/^Foto di riferimento:\s*/i,'').replace(/\.$/,''),photo.source||photo.src));
         img.addEventListener('error',()=>{img.hidden=true;const p=el('p','tiny','Immagine non disponibile qui. Apri la foto nella fonte.');figure.insertBefore(p,caption);},{once:true});
         const full=external('',photo.src);full.setAttribute('aria-label','Apri l’immagine a piena grandezza');full.append(img);
         figure.append(full,caption);disclosure.append(figure);img.src=photo.src;
       }
-    });parent.append(disclosure);
+    };
+    photoLoaders.set(disclosure,load);disclosure.addEventListener('toggle',load);parent.append(disclosure);
   }
   function addSources(parent,sources) {
     if(!sources?.length)return;const box=details('Fonti e verifica','source-disclosure'),ul=el('ul');
@@ -102,16 +148,33 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
     },'status-field');
     c.select.dataset.guideStatus=guide.id;c.select.disabled=!canEdit();return c.wrapper;
   }
+  function addChapters(parent,chapters,guideId) {
+    for(const chapter of chapters||[]) {
+      const section=el('section','guide-chapter');section.append(el('h2','chapter-title',chapter.title));
+      paragraphs(section,chapter.paragraphs,guideId);steps(section,chapter.steps,guideId);addPhotos(section,chapter.photos);parent.append(section);
+    }
+  }
+  function pagination(guide) {
+    const nav=el('nav','guide-pagination');nav.setAttribute('aria-label','Navigazione fra le schede');
+    const neighbours=guideNeighbours(GUIDES,guide,current.profile);
+    for(const [direction,label] of [['previous','← Precedente'],['next','Successiva →']]) {
+      const sibling=neighbours[direction],control=sibling?link('',guideRoute(sibling),'pagination-link'):el('span','pagination-link');
+      control.dataset.direction=direction;if(!sibling)control.setAttribute('aria-disabled','true');
+      control.append(el('span','pagination-label',label),el('span','pagination-title',sibling?.title||(direction==='previous'?'Prima scheda':'Ultima scheda')));nav.append(control);
+    }
+    nav.append(link('Torna all’elenco','#/'+guide.section+'/'+guide.category,'pagination-return',{restore:true}));return nav;
+  }
   function renderGuideBody(parent,guide,{compact=false}={}) {
     if(guide.location)parent.append(el('p','guide-location',guide.location));
     paragraphs(parent,[guide.summary],guide.id);
     if(guide.tracking&&!compact)parent.append(statusControl(guide));
     if(guide.requirements?.length){const box=el('div','requirements');box.append(el('strong','','Prima di iniziare'));paragraphs(box,guide.requirements,guide.id);parent.append(box);}
     steps(parent,guide.steps,guide.id);
+    addChapters(parent,guide.chapters,guide.id);
     if(guide.officialTitle){const d=details('Mostra il nome nel gioco · spoiler');d.append(el('p','',guide.officialTitle));parent.append(d);}
     for(const panel of guide.panels||[]) {
       const d=details(panel.title+(panel.spoiler?' · spoiler di trama':''));
-      paragraphs(d,panel.paragraphs,guide.id);steps(d,panel.steps,guide.id);addPhotos(d,panel.photos);parent.append(d);
+      paragraphs(d,panel.paragraphs,guide.id);steps(d,panel.steps,guide.id);addChapters(d,panel.chapters,guide.id);addPhotos(d,panel.photos);parent.append(d);
     }
     if(guide.methodId) {
       const method=PUZZLE_METHODS.find(m=>m.id===guide.methodId);
@@ -164,7 +227,8 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
     if(result.category&&!section?.categories.some(c=>c.id===result.category))return {kind:'section',section:result.section,scope:result.section};
     return result;
   }
-  function renderRoute(focus=false,restoreScroll=null) {
+  function renderRoute(focus=false,saved=null) {
+    renderedHash=hashKey(window.location.hash);const paintedHash=renderedHash;
     route=resolve();const section=SECTIONS.find(s=>s.id===route.section),category=section?.categories.find(c=>c.id===route.category);
     for(const kind of ['home','section','category','guide','demiguise'])$(kind+'View').hidden=route.kind!==kind;
     $('viewTitle').textContent=route.kind==='home'?'Esplora la guida':route.guide?.title||category?.title||section?.title||'Demiguise e Alohomora';
@@ -184,24 +248,41 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
     if(route.kind==='guide') {
       const box=$('guideView');box.replaceChildren();
       if(route.guide.house&&route.guide.house!==profiles[current.profile]?.image)box.append(el('p','info-strip','Questa missione appartiene a un’altra casata. Puoi consultarla senza cambiare il tuo profilo.'));
-      renderGuideBody(box,route.guide);
+      box.append(pagination(route.guide));renderGuideBody(box,route.guide);box.append(pagination(route.guide));
     }
-    if(route.kind==='demiguise')renderDemiguise();
+    if(route.kind==='demiguise') {
+      if(route.target&&!saved){moonLevel=2;moonTodo=false;}
+      renderDemiguise();
+    }
     renderSearch();render(current);
+    if(saved?.openDetails)$(route.kind+'View').querySelectorAll('details').forEach((node,index)=>{
+      if(saved.openDetails[index]!==undefined)node.open=saved.openDetails[index];
+      // Restore known image geometry before scrolling; native toggle/load can run later.
+      if(node.open)photoLoaders.get(node)?.();
+    });
     if(focus&&entered)requestAnimationFrame(()=>{
-      if(route.target){const n=$('moon-'+route.target);if(n){n.closest('details').open=true;n.scrollIntoView({block:'start'});n.focus({preventScroll:true});return;}}
-      $('viewTitle').focus({preventScroll:true});window.scrollTo({top:restoreScroll??0});
+      if(!entered||renderedHash!==paintedHash)return;
+      if(Number.isFinite(saved?.scrollY)) {
+        $('viewTitle').focus({preventScroll:true});window.scrollTo({top:saved.scrollY,behavior:'instant'});
+      } else if(route.kind==='home') {
+        $('viewTitle').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});
+      } else if(route.target&&$('moon-'+route.target)) {
+        const n=$('moon-'+route.target);n.closest('details').open=true;n.scrollIntoView({block:'start',behavior:'instant'});n.focus({preventScroll:true});
+      } else {
+        $('viewTitle').focus({preventScroll:true});$('viewTitle').scrollIntoView({block:'start',behavior:'instant'});
+      }
+      rememberView();
     });
   }
   function renderCategory(section,category) {
-    const guides=activeGuides().filter(g=>g.section===section.id&&g.category===category.id).sort((a,b)=>(a.order||0)-(b.order||0));
+    const guides=orderedCatalogue(GUIDES,section.id,category.id,current.profile,showOtherHouses);
     $('categoryIntro').textContent=category.summary;
     const controls=[],places=[...new Set(guides.map(g=>g.group||g.location).filter(Boolean))];
     if(places.length>1){if(!places.includes(categoryPlace))categoryPlace='';controls.push(selection('Luogo o percorso',[['','Tutti'],...places.map(x=>[x,x])],categoryPlace,v=>{categoryPlace=v;applyFilters();}).wrapper);}
     if(guides.some(g=>g.tracking))controls.push(selection('Progresso',[['','Tutti'],...Object.entries(STATUS_LABELS)],categoryStatus,v=>{categoryStatus=v;applyFilters();}).wrapper);
     if(GUIDES.some(g=>g.section===section.id&&g.category===category.id&&g.house)) {
-      const label=el('label','check-field'),input=el('input');input.type='checkbox';input.checked=showOtherHouses;
-      input.addEventListener('change',()=>{showOtherHouses=input.checked;renderRoute();});label.append(input,document.createTextNode('Mostra anche le altre casate'));controls.push(label);
+      const label=el('label','check-field'),input=el('input');input.type='checkbox';input.checked=showOtherHouses;input.dataset.houseFilter='true';
+      input.addEventListener('change',()=>{const focused=document.activeElement===input;showOtherHouses=input.checked;renderRoute();if(focused)$('categoryFilters').querySelector('[data-house-filter]').focus({preventScroll:true});});label.append(input,document.createTextNode('Mostra anche le altre casate'));controls.push(label);
     }
     $('categoryFilters').replaceChildren(...controls);
     const groups=new Map();for(const g of guides){const key=category.id==='principali'?'Percorso della storia':g.group||g.location||'Guide';if(!groups.has(key))groups.set(key,[]);groups.get(key).push(g);}
@@ -216,7 +297,6 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
   }
   function renderDemiguise() {
     const root=$('demiguiseView'),guide=GUIDES.find(g=>g.id==='demiguise');root.replaceChildren();
-    if(route.target){moonLevel=2;moonTodo=false;}
     const intro=el('div','demiguise-intro');renderGuideBody(intro,{...guide,tracking:true,photos:[],sources:[],related:[]});root.append(intro);
     const progress=el('div','progress-panel');progress.append(el('strong','','Lune nel mondo raccolte'));
     const count=el('span','moon-total');count.id='totalDone';progress.append(count);
@@ -254,9 +334,12 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
   }
   async function resetMoons() {
     if(!canEdit())return;const ids=[...MOONS,...INTRO_MOONS].map(m=>m.id),profile=current.profile;
-    if(!ids.some(id=>current.completed.has(id)))return toast('Non ci sono lune da azzerare');
+    const before=ids.filter(id=>current.completed.has(id)).length;
+    if(!before)return toast('Non ci sono lune da azzerare');
     if(!confirm('Togliere le spunte delle lune di '+profiles[profile].name+'? Consegne, livello di Alohomora, missioni e altro profilo rimangono invariati.'))return;
-    await Promise.all(ids.map(id=>sync.set(id,false)));if(current.profile===profile)toast('Spunte delle lune azzerate');
+    await Promise.all(ids.map(id=>sync.set(id,false)));const result=sync.getState();if(result.profile!==profile)return;
+    const remaining=ids.filter(id=>result.completed.has(id)).length;
+    toast(!remaining?'Spunte delle lune azzerate':remaining<before?'Azzeramento parziale: '+remaining+' lune ancora spuntate. Riprova.':'Azzeramento non riuscito. Le spunte sono rimaste invariate.');
   }
   function applyFilters() {
     if(!route||!current)return;
@@ -288,10 +371,24 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
   function statusText(state) {
     if(state.status==='storage-error')return 'Salvataggio sul telefono non disponibile. Le nuove modifiche non vengono applicate.';
     if(!state.profile)return 'Scegli Ele o Thom per usare la guida.';
-    if(state.status==='saved')return 'Salvato online · disponibile su entrambi i telefoni';
+    if(state.status==='saved'&&!state.pending)return 'Salvato online · disponibile su entrambi i telefoni';
     if(state.status==='syncing')return 'Sincronizzazione in corso…';
-    if(state.status==='offline'||state.status==='error')return state.pending?'Salvato sul telefono · modifiche da sincronizzare':'Collegamento non disponibile · visualizzi la copia di questo telefono';
+    if(state.status==='offline'||state.status==='error'||state.pending)return state.pending?'Salvato sul telefono · modifiche da sincronizzare':'Collegamento non disponibile · visualizzi la copia di questo telefono';
     return 'Caricamento dei progressi…';
+  }
+  function renderSync(state) {
+    const failed=['offline','error','storage-error'].includes(state.status);
+    const status=state.pending&&state.status==='saved'?'pending':state.status;
+    const text=statusText(state),label='Salvataggio: '+text;
+    // Updating identical live-region text repeatedly causes avoidable announcements.
+    for(const id of ['syncStatus','syncAlert']){const node=$(id);if(node&&node.textContent!==text)node.textContent=text;}
+    for(const id of ['syncIndicator','syncToggle','syncIcon','syncStatus','syncAlert'])if($(id))$(id).dataset.status=status;
+    if($('syncToggle')&&$('syncToggle').title!==label){$('syncToggle').setAttribute('aria-label',label);$('syncToggle').title=label;}
+    if($('syncIcon'))$('syncIcon').textContent=status==='saved'?'✓':failed?'!':status==='syncing'?'↻':'…';
+    $('retrySyncBtn').hidden=!failed;
+    if($('syncWarning'))$('syncWarning').hidden=!failed;
+    if($('syncAlert'))$('syncAlert').hidden=!failed;
+    if($('syncAlertRetry'))$('syncAlertRetry').hidden=!failed;
   }
   function render(state) {
     current=state;const showing=entered&&state.profile===desiredProfile&&Boolean(state.profile);
@@ -302,7 +399,7 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
     $('gateError').hidden=showing||state.status!=='storage-error';$('gateError').textContent=state.status==='storage-error'?'Il telefono non consente di salvare il profilo. Controlla la memoria del browser e riprova.':'';
     document.body.dataset.profile=showing?state.profile:choosing?'':rememberedProfile||'';
     const profile=profiles[state.profile];if(profile){$('profileName').textContent=profile.name+' · '+profile.house;$('houseEmblem').src='./assets/houses/'+profile.image+'.png';}
-    $('syncStatus').textContent=statusText(state);$('syncStatus').dataset.status=state.status;$('retrySyncBtn').hidden=!['offline','error','storage-error'].includes(state.status);
+    renderSync(state);
     const resume=forHouse(GUIDES,state.profile).filter(g=>g.tracking&&guideStatus(g.id,state)==='doing');
     $('resumeContent').replaceChildren(...(resume.length?resume.map(g=>card(g.title,'In corso · '+(g.location||g.summary),guideRoute(g))):[el('p','','Qui trovi le attività che segni «In corso».')]));
     document.querySelectorAll('[data-guide-status]').forEach(n=>{n.value=guideStatus(n.dataset.guideStatus,state);n.disabled=!canEdit();});
@@ -312,22 +409,36 @@ import { STATUS_LABELS, guideRoute, parseRoute, forHouse, guideStatus, makeGuide
     applyFilters();
   }
   async function enterProfile(profile) {
-    desiredProfile=profile;entered=true;canReturn=false;showOtherHouses=false;categoryStatus='';categoryPlace='';$('profileMenu').open=false;
+    desiredProfile=profile;entered=false;$('profileMenu').open=false;if($('syncIndicator'))$('syncIndicator').open=false;
     const action=sync.select(profile);current=sync.getState();
-    if(current.profile===profile){rememberedProfile=profile;moonLevel=(current.values?.get('demiguise:alohomora-level')||1)>=2?2:1;renderRoute(true);}else render(current);
+    if(current.profile===profile&&current.status!=='storage-error'){
+      entered=true;canReturn=false;cancelledView=null;viewStates.clear();navigationSession=Date.now()+':'+(++entryCount);
+      rememberedProfile=profile;applyView();window.history.replaceState(historyState('#/',null),'','#/');renderRoute(true);
+    }else render(current);
     await action;
   }
   $('homeCards').replaceChildren(...SECTIONS.map(s=>card(s.title,s.summary,'#/'+s.id,'section-card','',s.id)));
   document.querySelectorAll('.profile-choice[data-profile]').forEach(n=>{n.disabled=false;n.addEventListener('click',()=>enterProfile(n.dataset.profile));});
   $('continueBtn').addEventListener('click',()=>rememberedProfile&&enterProfile(rememberedProfile));
   $('chooseInsteadBtn').addEventListener('click',()=>{choosing=true;render(current);$('gateTitle').focus();});
-  $('changeProfileBtn').addEventListener('click',()=>{entered=false;choosing=true;canReturn=true;$('profileMenu').open=false;render(current);$('gateTitle').focus();window.scrollTo({top:0});});
-  $('cancelProfileChange').addEventListener('click',()=>{if(!current.profile)return;entered=true;desiredProfile=current.profile;canReturn=false;render(current);$('profileName').focus();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('profileMenu').open){$('profileMenu').open=false;$('profileName').focus();}});
-  document.addEventListener('click',e=>{if(!$('profileMenu').contains(e.target))$('profileMenu').open=false;});
-  searchInput.addEventListener('input',renderSearch);$('clearSearch').addEventListener('click',()=>{clearSearch();searchInput.focus();});
+  $('changeProfileBtn').addEventListener('click',()=>{cancelledView={hash:renderedHash,view:rememberView()};entered=false;choosing=true;canReturn=true;$('profileMenu').open=false;render(current);$('gateTitle').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});});
+  $('cancelProfileChange').addEventListener('click',()=>{if(!current.profile)return;entered=true;desiredProfile=current.profile;canReturn=false;
+    const saved=cancelledView;cancelledView=null;if(saved){applyView(saved.view);window.history.replaceState(historyState(saved.hash,saved.view),'',saved.hash);renderRoute(true,saved.view);}else render(current);
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape')return;
+    if($('profileMenu').open){$('profileMenu').open=false;$('profileName').focus({preventScroll:true});}
+    if($('syncIndicator')?.open){$('syncIndicator').open=false;$('syncToggle').focus({preventScroll:true});}
+  });
+  document.addEventListener('click',e=>{if(!$('profileMenu').contains(e.target))$('profileMenu').open=false;if($('syncIndicator')&&!$('syncIndicator').contains(e.target))$('syncIndicator').open=false;});
+  $('profileMenu').addEventListener('toggle',()=>{if($('profileMenu').open&&$('syncIndicator'))$('syncIndicator').open=false;});
+  if($('syncIndicator'))$('syncIndicator').addEventListener('toggle',()=>{if($('syncIndicator').open)$('profileMenu').open=false;});
+  searchInput.addEventListener('input',renderSearch);$('clearSearch').addEventListener('click',()=>{clearSearch();searchInput.focus({preventScroll:true});});
   $('searchAll').addEventListener('click',()=>{allScope=!allScope;renderSearch();});$('retrySyncBtn').addEventListener('click',()=>sync.retry());
-  window.addEventListener('hashchange',()=>{const restore=clickedNavigation?null:scrollPositions.get(window.location.hash||'#/');clickedNavigation=false;categoryPlace='';categoryStatus='';clearSearch();renderRoute(true,restore);});
+  if($('syncAlertRetry'))$('syncAlertRetry').addEventListener('click',()=>sync.retry());
+  document.querySelectorAll('.nav-link').forEach(n=>n.addEventListener('click',event=>navigationClick(event,'#/'+n.dataset.section)));
+  document.querySelectorAll('.brand').forEach(n=>n.addEventListener('click',event=>navigationClick(event,'#/')));
+  window.addEventListener('popstate',historyChanged);window.addEventListener('hashchange',historyChanged);
   window.addEventListener('focus',()=>{if(entered)return sync.refresh();});window.addEventListener('online',()=>{if(entered)return sync.retry();});
   document.addEventListener('visibilitychange',()=>{if(entered&&document.visibilityState==='visible')return sync.refresh();});
   window.addEventListener('storage',e=>{if(entered&&sync.isRelevantStorageKey(e.key))return sync.refresh();});

@@ -11,7 +11,7 @@ export const MAIN_MISSIONS = [
     "order": 1,
     "requirements": [],
     "steps": [
-      "Segui Fig, cura il personaggio quando richiesto e distruggi la barriera con gli attacchi base. Esamina il punto luminoso dietro le rovine.",
+      "Segui Fig, usa la pozione curativa quando richiesto e distruggi la barriera con gli attacchi base. Esamina il punto luminoso dietro le rovine.",
       "Nel luogo successivo usa Revelio davanti alla parete, poi interagisci con il simbolo rivelato.",
       "Alla statua, lancia Revelio e accendi Lumos. Spostati finché la statua e il suo riflesso sono allineati.",
       "Parati con Protego quando appare il segnale. Dopo il tutorial elimina i guardiani con attacchi base.",
@@ -61,7 +61,7 @@ export const MAIN_MISSIONS = [
     "steps": [
       "Esci dal dormitorio e parla con i tre compagni indicati nella sala comune.",
       "Incontra la professoressa Weasley all’uscita e seguila. Usa Revelio sul punto che ti mostra e raccogli la pagina.",
-      "Segui il tutorial della mappa e della Polvere Volante. Parla con Fig e scegli quale delle due prime lezioni seguire."
+      "Apri la mappa e segui il tutorial del viaggio rapido. Parla con Fig e scegli quale delle prime due lezioni seguire."
     ],
     "panels": [],
     "photos": [],
@@ -93,7 +93,7 @@ export const MAIN_MISSIONS = [
     ],
     "steps": [
       "Attiva la missione nel diario e segui il percorso dorato fino all’aula. Completa il tracciato per imparare Accio.",
-      "Nel campo all’aperto richiama una sfera con Accio e interrompilo prima del bordo: la sfera continua a muoversi per inerzia.",
+      "Nel campo all’aperto richiama una sfera con Accio e rilascia il comando prima del bordo: la sfera continua a muoversi per inerzia.",
       "Nel secondo turno aspetta che gli ostacoli liberino la traiettoria. Finisci la partita, poi parla con Ronen in aula."
     ],
     "panels": [
@@ -137,7 +137,7 @@ export const MAIN_MISSIONS = [
     "steps": [
       "Raggiungi l’aula di Difesa contro le Arti Oscure e avvia la lezione.",
       "Segui il tracciato di Levioso. Sul manichino prova l’attacco base, poi Levioso e ancora attacchi base.",
-      "Nel duello solleva Sebastian con Levioso, colpiscilo mentre è sospeso e usa Protego sui suoi attacchi. Al termine parlargli conclude la lezione."
+      "Nel duello solleva Sebastian con Levioso, colpiscilo mentre è sospeso e usa Protego sui suoi attacchi. Al termine parla con lui per concludere la lezione."
     ],
     "panels": [],
     "photos": [],
@@ -219,7 +219,7 @@ export const MAIN_MISSIONS = [
       "Incontra il compagno all’ingresso di Hogwarts e seguilo fino al villaggio.",
       "Visita i quattro negozi segnati: ritira le forniture gratuite e scegli la bacchetta da Olivander. Puoi visitarli nell’ordine che preferisci.",
       "Raggiungi il compagno in piazza. Nel combattimento schiva gli attacchi non parabili, usa gli oggetti lanciabili e la Magia antica quando richiesta.",
-      "Usa Revelio e ripara con Reparo tutti i sette punti evidenziati. Parla al negoziante indicato, poi segui il compagno ai Tre Manici di Scopa.",
+      "Usa Revelio e ripara con Reparo tutti i sette punti evidenziati. Parla con il negoziante indicato, poi segui il compagno ai Tre Manici di Scopa.",
       "Parlagli fuori dal locale e torna alla sala comune con il viaggio rapido."
     ],
     "panels": [
@@ -293,12 +293,7 @@ export const MAIN_MISSIONS = [
       "Incendio; livello 3."
     ],
     "steps": [
-      "Parla con Fig e Sebastian, poi incontra Sebastian di notte. Impara Disillusione e resta lontano dalla visuale dei prefetti.",
-      "In biblioteca aspetta la distrazione di Sebastian e prendi la chiave dal banco. Apri il cancello e scendi.",
-      "Distrai i sorveglianti colpendo oggetti lontani dal tuo percorso. Ripara l’armatura con Reparo e segui le tracce di Magia antica.",
-      "Dopo il portale colpisci la runa sopra ogni ingresso per far comparire il passaggio. Attraversa prima che sparisca.",
-      "Nella sala con piattaforme mobili raggiungi l’ultima porzione stabile, poi colpisci nuovamente la runa per completare il tragitto.",
-      "Elimina i guardiani e interagisci con il libro nella sala conclusiva."
+      "Parla con Fig e Sebastian, poi incontra Sebastian di notte. Impara Disillusione e resta lontano dalla visuale dei prefetti."
     ],
     "panels": [],
     "photos": [],
@@ -316,7 +311,25 @@ export const MAIN_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "La biblioteca",
+        "steps": [
+          "In biblioteca aspetta la distrazione di Sebastian e prendi la chiave dal banco. Apri il cancello e scendi.",
+          "Distrai i sorveglianti colpendo oggetti lontani dal tuo percorso. Ripara l’armatura con Reparo e segui le tracce di Magia antica."
+        ]
+      },
+      {
+        "title": "I passaggi oltre il portale",
+        "steps": [
+          "Colpisci la runa sopra l’ingresso di fronte a te: compare il ponte. Attraversalo e sconfiggi i guardiani nelle sale successive.",
+          "Nella sala delle piattaforme colpisci la runa per far comparire il percorso a destra. Avanza sulle piattaforme fino al punto in cui si interrompono.",
+          "Colpisci di nuovo la runa per cambiare la disposizione. Dal percorso centrale raggiungi l’ultima fila di piastrelle disponibile, poi colpisci ancora la runa per aprire il tratto finale.",
+          "Elimina i guardiani e interagisci con il libro nella sala conclusiva."
+        ]
+      }
+    ]
   },
   {
     "id": "main-fig-01b",
@@ -366,12 +379,14 @@ export const MAIN_MISSIONS = [
       "Avvia la lezione nelle serre e segui i comandi a schermo per estrarre e rinvasare la Mandragola.",
       "Parla con la professoressa Allium e pianta il Dittamo al banco indicato.",
       "Segui Leander nell’altra serra, raccogli un Cavolo Carnivoro Cinese e usalo sul manichino dalla ruota degli strumenti.",
-      "Torna da Allium. La crescita delle piante continua nel tempo: non serve fissare il vaso."
+      "Torna da Allium. Puoi dedicarti ad altro mentre il Dittamo cresce."
     ],
     "panels": [],
     "photos": [],
     "related": [
-      "pianta-dittamo"
+      "pianta-dittamo",
+      "pianta-mandragola",
+      "pianta-cavolo"
     ],
     "sources": [
       {
@@ -413,7 +428,10 @@ export const MAIN_MISSIONS = [
       }
     ],
     "photos": [],
-    "related": [],
+    "related": [
+      "pozione-rigeneratrice",
+      "pozione-edurus"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_ZZP_01",
@@ -445,7 +463,7 @@ export const MAIN_MISSIONS = [
     ],
     "steps": [
       "Apri la mappa del mondo e raggiungi Lower Hogsfield, a sud di Hogwarts.",
-      "Parla con Natsai sul segnalino. Esaurisci il dialogo per completare la missione; la successiva attività comincia vicino al lago."
+      "Parla con Natsai sul segnalino. La missione termina con il dialogo; la successiva attività comincia vicino al lago."
     ],
     "panels": [],
     "photos": [],
@@ -482,7 +500,9 @@ export const MAIN_MISSIONS = [
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "pianta-malva"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_MRT_01",
@@ -511,7 +531,7 @@ export const MAIN_MISSIONS = [
     "steps": [
       "Incontra Nick-Quasi-Senza-Testa vicino alle clessidre delle casate e seguilo alle cucine.",
       "Fai il solletico alla pera nel quadro per aprire la porta. In fondo a destra prendi l’arrosto avariato dal barile e torna da Nick.",
-      "Dopo lo spostamento parla al fantasma presso il campo di zucche. Colpisci le zucche che tremano e segui la testa fino a trovarla cinque volte.",
+      "Dopo lo spostamento parla con il fantasma presso il campo di zucche. Colpisci le zucche che tremano e segui la testa fino a trovarla cinque volte.",
       "Parla con Richard Cornacchia per proseguire con la missione comune alle quattro casate."
     ],
     "panels": [],
@@ -621,8 +641,8 @@ export const MAIN_MISSIONS = [
       "Tassorosso; Prove di Merlino."
     ],
     "steps": [
-      "Parla al ritratto indicato nella sala comune, poi raggiungi Helen a Upper Hogsfield.",
-      "Seguila durante la visita e completa il colloquio. Tornato all’aperto, raggiungi la grotta segnata sulla mappa.",
+      "Parla con il ritratto indicato nella sala comune, poi raggiungi Helen a Upper Hogsfield.",
+      "Seguila durante la visita e completa il colloquio. Dopo la visita, raggiungi la grotta segnata sulla mappa.",
       "Nella grotta sali sulla pedana centrale, usa Revelio e tira con Accio solo le maniglie evidenziate.",
       "Prendi la lettera nella stanza aperta, esci e completa la conversazione."
     ],
@@ -668,13 +688,13 @@ export const MAIN_MISSIONS = [
       "Per ogni cancello colpisci rapidamente le tre rune con attacchi base. Brucia le ragnatele e usa Accio sulle piattaforme e sui ganci per attraversare i vuoti.",
       "Al cancello finale due rune sono ai lati e la terza sotto il passaggio: scendi per individuarla prima di colpirle in sequenza.",
       "Attraversa il ponte e raccogli le pagine. Disarma i guardiani armati con Expelliarmus prima di attaccarli.",
-      "Esamina la Magia antica, attraversa il portale e parla al ritratto. Esci dalle scale per tornare al castello."
+      "Esamina la Magia antica, attraversa il portale e parla con il ritratto. Esci dalle scale per tornare al castello."
     ],
     "panels": [
       {
         "title": "Cosa si sblocca",
         "paragraphs": [
-          "Da questa missione puoi spendere i punti Talento. Aprire questa guida non assegna né spende punti nel gioco."
+          "Al termine sblocchi i Talenti e puoi spendere i punti disponibili per potenziare il personaggio."
         ],
         "spoiler": false
       }
@@ -687,7 +707,9 @@ export const MAIN_MISSIONS = [
         "source": "https://www.powerpyx.com/hogwarts-legacy-jackdaws-rest-walkthrough/"
       }
     ],
-    "related": [],
+    "related": [
+      "talenti-iniziare"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_FGM_02",
@@ -728,7 +750,10 @@ export const MAIN_MISSIONS = [
       }
     ],
     "photos": [],
-    "related": [],
+    "related": [
+      "scopa-e-volo",
+      "q-com-32"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_FLY_01",
@@ -756,7 +781,7 @@ export const MAIN_MISSIONS = [
     ],
     "steps": [
       "Incontra Sebastian vicino all’aula di Difesa contro le Arti Oscure e seguilo all’accesso nascosto.",
-      "Esplora la stanza e parlargli avvia l’apprendimento di Confringo.",
+      "Esplora la stanza, poi parla con Sebastian per imparare Confringo.",
       "Assegna Confringo a uno slot, mira ai candelabri sospesi e accendili. Parla ancora con Sebastian, esci e completa il dialogo successivo."
     ],
     "panels": [],
@@ -797,7 +822,9 @@ export const MAIN_MISSIONS = [
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "stanza-postazioni"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_SNC_01",
@@ -824,8 +851,8 @@ export const MAIN_MISSIONS = [
       "Il riposo di Cornacchia e ritorno di Fig."
     ],
     "steps": [
-      "Raggiungi l’ufficio del professor Fig e parlargli avvia la missione.",
-      "Raggiungi con lui la Sala delle Mappe e parla con il ritratto indicato. Le nuove istruzioni aprono la fase successiva."
+      "Raggiungi Fig nel suo ufficio e parlagli per iniziare la missione.",
+      "Raggiungi con lui la Sala delle Mappe e parla con il ritratto indicato."
     ],
     "panels": [],
     "photos": [],
@@ -856,12 +883,9 @@ export const MAIN_MISSIONS = [
       "La Sala delle Mappe."
     ],
     "steps": [
-      "Incontra Fig presso la torre. Libera l’accampamento, leggi gli indizi e sali al ritratto; torna in basso e attiva la traccia di Magia antica.",
-      "Nella prova attiva ogni traccia luminosa. Sulle piattaforme usa Accio sui ganci per tirarti verso di essi.",
-      "Alla prima piattaforma raggiungi la traccia sulla destra; dopo il portale torna sulla piattaforma e usa il gancio oltre l’arco.",
-      "Nella sala seguente tira la piattaforma alle scale, attiva la traccia e attraversa l’arco dal lato blu. Sposta la piattaforma al centro; rientra dal lato rosso e usala per raggiungere l’uscita.",
-      "Nell’ultima sala di piattaforme fermati a metà sulla sinistra. Avvicina l’altra piattaforma attraverso il portale, saltaci attraverso l’arco e aggancia l’uscita.",
-      "Sconfiggi i guardiani, esamina il Pensatoio e usa il portale di ritorno. Completa i dialoghi nella Sala delle Mappe."
+      "Incontra Fig presso la torre ed entra nell’accampamento. Nella tenda a sud dell’ingresso della torre, raccogli e leggi la lettera sul tavolo.",
+      "Sconfiggi i goblin che arrivano dopo la lettura: Fig può ora aprire la torre.",
+      "Sali fino al ritratto e parlagli. Torna al piano inferiore e attiva la traccia di Magia antica per entrare nella prova."
     ],
     "panels": [
       {
@@ -870,14 +894,6 @@ export const MAIN_MISSIONS = [
           "Porta incantesimi rossi, gialli e viola. Distruggi ogni sfera con un incantesimo dello stesso colore; schiva gli attacchi rossi e colpisci il guardiano quando è vulnerabile. Usa la Magia antica per infliggere danni e interromperlo."
         ],
         "spoiler": false
-      }
-    ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-percival-rackhams-trial-walkthrough-20-28.jpg",
-        "alt": "Le due piattaforme ai lati del portale nell’ultimo enigma.",
-        "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-percival-rackhams-trial-walkthrough/"
       }
     ],
     "related": [],
@@ -889,10 +905,67 @@ export const MAIN_MISSIONS = [
       {
         "url": "https://www.powerpyx.com/hogwarts-legacy-percival-rackhams-trial-walkthrough/",
         "title": "PowerPyx · soluzione verificata"
+      },
+      {
+        "url": "https://progameguides.com/hogwarts-legacy/hogwarts-legacy-percival-rackhams-trial-walkthrough-solutions/",
+        "title": "Pro Game Guides · portali e piattaforme"
+      },
+      {
+        "url": "https://progameguides.com/hogwarts-legacy/how-to-investigate-the-goblin-presence-in-hogwarts-legacy/",
+        "title": "Pro Game Guides · lettera necessaria per entrare nella torre"
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Ingresso e primi portali",
+        "steps": [
+          "Segui le tracce luminose e interagisci con ciascuna per attivare il portale vicino. Attraversa i primi archi e affronta i guardiani.",
+          "Per muovere una piattaforma, salici e lancia Accio sui ganci della stanza: la piattaforma si avvicina al gancio scelto."
+        ]
+      },
+      {
+        "title": "Prima piattaforma",
+        "steps": [
+          "Sali sulla piattaforma e usa i ganci per raggiungere la sporgenza a destra. Scendi e attiva la traccia luminosa.",
+          "Attraversa l’arco e poi torna indietro attraverso lo stesso portale. Risali sulla piattaforma e usa Accio sul gancio oltre l’arco per proseguire."
+        ]
+      },
+      {
+        "title": "La piattaforma sotto il ponte",
+        "steps": [
+          "Dalle scale richiama la piattaforma con Accio. Salici, raggiungi la traccia luminosa sospesa e interagisci per aprire il portale.",
+          "Attraversa il lato blu dell’arco, poi sposta la piattaforma al centro della sala, dove prima passava il ponte.",
+          "Attraversa ora il lato rosso. Sali sulle scale laterali e raggiungi il ponte superiore.",
+          "Dal ponte richiama la piattaforma, salici e usa il gancio sul lato dell’uscita per raggiungerla."
+        ]
+      },
+      {
+        "title": "Le due piattaforme",
+        "steps": [
+          "Sali sulla prima piattaforma e usa il gancio a sinistra. Fermati quando la piattaforma è allineata al portale.",
+          "Guarda attraverso l’arco e richiama con Accio la seconda piattaforma, fino ad avvicinarla alla tua.",
+          "Salta sulla seconda piattaforma passando attraverso il portale. Usa prima il gancio a sinistra, poi quello sulla parete dell’uscita.",
+          "Scendi sulla sporgenza e prosegui verso lo scontro finale."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-percival-rackhams-trial-walkthrough-20-28.jpg",
+            "alt": "Le due piattaforme ai lati del portale nell’ultimo enigma.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-percival-rackhams-trial-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Scontro e ritorno",
+        "steps": [
+          "Sconfiggi i guardiani e il nemico finale. Per le sfere colorate trovi le indicazioni nel pannello qui sotto.",
+          "Esamina il Pensatoio, attraversa il portale di ritorno e completa i dialoghi nella Sala delle Mappe."
+        ]
+      }
+    ]
   },
   {
     "id": "main-bea-01",
@@ -978,22 +1051,12 @@ export const MAIN_MISSIONS = [
     ],
     "steps": [
       "Parla con Sirona ai Tre Manici di Scopa, poi con Lodgok alla Testa di Porco. Seguilo alla tomba ed entra.",
-      "Porta le falene alle porte con Lumos; spegnilo davanti agli alloggiamenti. La prima è lungo il corridoio, la terza della sala successiva dietro la barriera da spingere con Depulso.",
-      "Brucia gli Inferi prima di usare gli altri attacchi. Nei meccanismi centrali inserisci una falena e usa Depulso per alzare la piattaforma.",
-      "Abbatti il peso appeso per aprire il pavimento. Nell’ultima sala alimenta con una falena il meccanismo centrale e colpiscilo con Depulso dalla pedana per salire.",
-      "Due falene sono al piano alto, una nell’alcova a destra della porta. Porta l’ultima sul pilastro secondario e richiamala dall’alto quando sale. Completa la porta, controlla la sala finale ed esci.",
-      "Parla con Lodgok, raggiungi l’accampamento indicato e recupera l’elmo dal baule sotto la tenda oltre la passerella. Riportaglielo."
+      "Per trasportare una falena accendi Lumos; spegnilo davanti all’alloggiamento. Contro gli Inferi usa prima il fuoco, poi gli altri attacchi."
     ],
     "panels": [],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-helm-of-urtkot-walkthrough-13.jpg",
-        "alt": "La piattaforma e il meccanismo con falena nell’ultima sala.",
-        "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-helm-of-urtkot-walkthrough/"
-      }
+    "related": [
+      "spell-depulso"
     ],
-    "related": [],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_GT01_01",
@@ -1002,10 +1065,57 @@ export const MAIN_MISSIONS = [
       {
         "url": "https://www.powerpyx.com/hogwarts-legacy-the-helm-of-urtkot-walkthrough/",
         "title": "PowerPyx · soluzione verificata"
+      },
+      {
+        "url": "https://progameguides.com/hogwarts-legacy/hogwarts-legacy-the-helm-of-urtkot-collectors-cave-walkthrough-solutions/",
+        "title": "Pro Game Guides · quattro porte con falene"
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Le prime due porte",
+        "steps": [
+          "Alla prima porta manca una sola falena: cercala lungo il corridoio laterale e accompagnala con Lumos.",
+          "Alla seconda porta porta le due falene già presenti nella sala. Per la terza abbatti con Depulso la barriera delle porte danneggiate e guarda nella stanza oltre il passaggio."
+        ]
+      },
+      {
+        "title": "Terza porta · la piattaforma mobile",
+        "steps": [
+          "Porta una falena al meccanismo centrale. Salta sulla piattaforma bassa e colpisci il meccanismo con Depulso per salire.",
+          "Raggiungi la falena sulla sporgenza e portala alla porta. Aggiungi quella rimasta al piano inferiore.",
+          "Riprendi infine la falena dal meccanismo centrale e usala per completare la porta.",
+          "Nella sala successiva colpisci il sostegno del peso sospeso: il peso sfonda il pavimento. Scendi nel foro e prosegui."
+        ]
+      },
+      {
+        "title": "Quarta porta · due livelli",
+        "steps": [
+          "Metti una delle due falene al piano inferiore nel meccanismo centrale. Porta l’altra sul piccolo piedistallo che può sollevarsi, sotto il lato sinistro della porta.",
+          "Sali sulla pedana mobile e usa Depulso sul meccanismo centrale per raggiungere il piano superiore.",
+          "Porta alla porta la falena vicina. L’altra falena in alto è dalla parte opposta della sala: attraversa usando la pedana e azionala di nuovo con Depulso quando serve.",
+          "Dall’alto colpisci ancora il meccanismo: si alza anche il piedistallo con la falena lasciata sotto. Avvicinati al bordo e richiamala con Lumos.",
+          "Porta questa terza falena alla porta. La falena nel meccanismo centrale può restare al suo posto."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-helm-of-urtkot-walkthrough-13.jpg",
+            "alt": "La piattaforma e il meccanismo con falena nell’ultima sala.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-helm-of-urtkot-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Recuperare l’elmo",
+        "steps": [
+          "Esamina il punto indicato nella sala finale, esci dalla tomba e parla con Lodgok.",
+          "Raggiungi l’accampamento segnato. Oltre la passerella, recupera l’elmo dal baule sotto la tenda e riportalo a Lodgok."
+        ]
+      }
+    ]
   },
   {
     "id": "main-evc-01",
@@ -1022,7 +1132,7 @@ export const MAIN_MISSIONS = [
     "steps": [
       "Incontra Sebastian a Feldcroft e completa i dialoghi dentro e fuori casa.",
       "Seguilo, sconfiggi i nemici e usa Revelio nelle rovine. Esamina fornello, attrezzi, armi, pozzo, pietre e dipinto indicati in blu.",
-      "Parla a Sebastian, distruggi le macerie vicino a lui e scendi nella cantina. Raccogli le pagine e libera il passaggio dietro i mobili.",
+      "Parla con Sebastian, distruggi le macerie vicino a lui e scendi nella cantina. Raccogli le pagine e libera il passaggio dietro i mobili.",
       "Usa il passaggio, esamina la nota presso il trittico e mostrala a Sebastian."
     ],
     "panels": [],
@@ -1056,13 +1166,17 @@ export const MAIN_MISSIONS = [
     "steps": [
       "Parla con Tik nella Stanza delle Necessità e seguilo. Assegna il Sacco acciuffatutto a uno slot.",
       "Avvicinati al Puffskein e usa il sacco completando i comandi a schermo. Per il Jobberknoll usa prima Levioso.",
-      "Al terzo habitat passa alla notte dalla mappa, poi cattura un Mooncalf. Parla a Tik dopo ogni salvataggio.",
-      "Torna nella stanza ed entra nel vivario. Dal menu degli animali libera le tre creature, nutrile e spazzolale, poi raccogli i materiali.",
+      "Alla terza tana passa alla notte dalla mappa, poi cattura un Mooncalf. Parla con Tik dopo ogni salvataggio.",
+      "Torna nella stanza ed entra nel vivario. Dal menu degli animali fai uscire le tre creature, nutrile e spazzolale, poi raccogli i materiali.",
       "Evoca il Telaio incantato. Applica una caratteristica e un miglioramento a un capo compatibile, poi riferisci a Tik."
     ],
     "panels": [],
     "photos": [],
-    "related": [],
+    "related": [
+      "strumento-sacco",
+      "vivario",
+      "equipaggiamento-telaio"
+    ],
     "sources": [
       {
         "url": "https://hogwarts.th.gl/it/db/quests/quest_SNC_02",
@@ -1123,22 +1237,9 @@ export const MAIN_MISSIONS = [
       "Wingardium Leviosa e Alohomora I."
     ],
     "steps": [
-      "Incontra Natsai fuori dal castello. Sali sul percorso a destra e usa Depulso sul meccanismo della piccola grata.",
-      "Sposta la cassa sotto il muro con Wingardium Leviosa; se è troppo bassa, sollevala con Levioso per raggiungere il bordo.",
-      "Rompi le assi del passaggio. Dal retro, attraverso la finestra, sposta con Accio la cassa che impedisce di entrare.",
-      "All’interno colpisci più volte il meccanismo con Depulso, poi tira subito il fermo con Accio per mantenere aperto il portone.",
-      "Prosegui verso il tetto: spingi la cassa dalla finestra e usala presso le scale interrotte. Apri con Alohomora le porte e supera i nemici.",
-      "Raggiungi il tetto e segui Natsai durante l’uscita."
+      "Incontra Natsai fuori dal Castello di Falbarton."
     ],
     "panels": [],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-high-keep-walkthrough-4.jpg",
-        "alt": "Il meccanismo da colpire con Depulso accanto alla prima grata.",
-        "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-the-high-keep-walkthrough/"
-      }
-    ],
     "related": [],
     "sources": [
       {
@@ -1151,7 +1252,38 @@ export const MAIN_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Salire sui bastioni",
+        "steps": [
+          "Prendi il percorso a destra. Usa Depulso sul meccanismo accanto alla piccola grata per aprirla.",
+          "Sposta la cassa sotto il muro con Wingardium Leviosa; se è troppo bassa, sollevala con Levioso per raggiungere il bordo."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-the-high-keep-walkthrough-4.jpg",
+            "alt": "Il meccanismo da colpire con Depulso accanto alla prima grata.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-the-high-keep-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Aprire il portone",
+        "steps": [
+          "Rompi le assi del passaggio. Dal retro, attraverso la finestra, sposta con Accio la cassa che impedisce di entrare.",
+          "All’interno colpisci più volte il meccanismo con Depulso, poi tira subito il fermo con Accio per mantenere aperto il portone."
+        ]
+      },
+      {
+        "title": "Raggiungere il tetto",
+        "steps": [
+          "Prosegui verso l’alto e spingi la cassa fuori dalla finestra con Depulso. Scendi e spostala in cima alle scale interrotte: usala come gradino per saltare oltre il vuoto.",
+          "Apri le porte con Alohomora, supera i nemici e raggiungi il tetto. Segui Natsai durante la fuga."
+        ]
+      }
+    ]
   },
   {
     "id": "main-prc-01-conv",
@@ -1199,38 +1331,15 @@ export const MAIN_MISSIONS = [
     ],
     "steps": [
       "Incontra Fig, entra dal muro usando la cassa e sconfiggi i nemici. Colpisci rapidamente le tre rune nella sala interna.",
-      "Raggiungi il ritratto, attiva la traccia luminosa e attraversa l’accesso alla prova.",
-      "Primo enigma: dal lato blu sposta la cassa tra le due balconate. Aggira l’arco senza attraversarlo: la cassa diventa un pilastro su cui salire.",
-      "Secondo: attiva la runa per girare l’arco; osserva il pilastro attraverso il portale e spostalo con Wingardium Leviosa per liberare il corridoio.",
-      "Terzo: colpisci la runa per girare l’arco; attraversalo verso la statua. Recupera la cassa a destra, riportala sulla piattaforma e aziona nuovamente la runa.",
-      "Quarto: elimina i due guardiani cambiando lato del portale. Segui poi i passaggi del ponte qui sotto.",
-      "Sconfiggi il guardiano, esamina il Pensatoio e torna alla Sala delle Mappe."
+      "Raggiungi il ritratto, attiva la traccia luminosa e attraversa l’accesso alla prova."
     ],
     "panels": [
-      {
-        "title": "Quarto enigma · il ponte rotante",
-        "steps": [
-          "Attraversa il portale dal lato blu. Colpisci la runa sulla parete con un colpo base: il ponte ruota.",
-          "Sali alla cassa; spingila attraverso il portale con Depulso. Riportala al punto iniziale con Wingardium Leviosa.",
-          "Attraversa di nuovo il portale: la cassa diventa un pilastro. Sali sul pilastro e sul ponte rotante.",
-          "Restando sul ponte, colpisci nuovamente la runa. Ora puoi passare dall’altra parte e continuare."
-        ],
-        "spoiler": false
-      },
       {
         "title": "Sfere e nemici invisibili",
         "paragraphs": [
           "Cambia lato del portale per vedere i nemici dell’altra versione della stanza. Contro il guardiano distruggi le sfere con incantesimi del colore corrispondente; schiva i segnali rossi e attacca nelle aperture."
         ],
         "spoiler": false
-      }
-    ],
-    "photos": [
-      {
-        "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-charles-rookwood-trial-walkthrough-11.jpg",
-        "alt": "Il portale blu e il pilastro del primo enigma.",
-        "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
-        "source": "https://www.powerpyx.com/hogwarts-legacy-charles-rookwoods-trial-walkthrough/"
       }
     ],
     "related": [],
@@ -1246,10 +1355,95 @@ export const MAIN_MISSIONS = [
       {
         "url": "https://www.gamerguides.com/hogwarts-legacy/guide/walkthrough/main-quests/hogwarts-legacy-charles-rookwood-trial-puzzles-chests",
         "title": "Gamer Guides · ponte rotante della quarta sala"
+      },
+      {
+        "url": "https://progameguides.com/hogwarts-legacy/hogwarts-legacy-charles-rookwoods-trial-walkthrough/",
+        "title": "Pro Game Guides · pilastri e ponte rotante"
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Prima sala · da cassa a pilastro",
+        "steps": [
+          "Sali le scale e attiva la traccia luminosa. Torna davanti al lato blu del portale.",
+          "Guardando attraverso l’arco, usa Wingardium Leviosa sul pilastro a destra: puoi spostarlo come una cassa. Posizionalo tra le due balconate.",
+          "Raggiungilo aggirando l’arco, senza attraversarlo. Ora è un pilastro: salici per raggiungere l’altra balconata."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-charles-rookwood-trial-walkthrough-12.jpg",
+            "alt": "Prima sala: il pilastro spostabile, visto attraverso il portale blu.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-charles-rookwoods-trial-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Seconda sala · il corridoio bloccato",
+        "steps": [
+          "Attiva la traccia luminosa e attraversa il portale dal lato blu. Colpisci la runa a sinistra del pilastro che blocca il passaggio: l’arco ruota.",
+          "Guarda il pilastro attraverso il portale. Quando appare il suo contorno, spostalo con Wingardium Leviosa verso l’arco per liberare il corridoio.",
+          "Attraversa il corridoio e sconfiggi i guardiani nella sala successiva."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-charles-rookwood-trial-walkthrough-16.jpg",
+            "alt": "Seconda sala: il contorno del pilastro da spostare per liberare il corridoio.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-charles-rookwoods-trial-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Terza sala · la piattaforma rotante",
+        "steps": [
+          "Attiva la traccia luminosa. Spostati a lato dell’arco e colpisci la runa che si trova dietro: la piattaforma ruota.",
+          "Attraversa il portale verso la statua. A destra, oltre il breve ponte, prendi la cassa con Wingardium Leviosa e portala sulla piattaforma centrale.",
+          "Colpisci ancora la runa per riportare la piattaforma nella posizione iniziale. Prosegui dall’altro lato fino alla prossima traccia luminosa."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-charles-rookwood-trial-walkthrough-22.jpg",
+            "alt": "Terza sala: porta la cassa sulla piattaforma centrale prima di azionare nuovamente la runa.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-charles-rookwoods-trial-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Quarta sala · il ponte rotante",
+        "steps": [
+          "Attiva la traccia e scendi verso il portale. Elimina i due guardiani: attraversa l’arco per rendere visibile quello nascosto.",
+          "Attraversa il portale dal lato blu. Colpisci la runa sulla parete con un attacco base per far ruotare il ponte.",
+          "Sali alla cassa e spingila attraverso l’arco con Depulso. Con Wingardium Leviosa riportala sul ripiano da cui l’hai spinta.",
+          "Attraversa di nuovo il portale: la cassa diventa un pilastro. Sali sul pilastro e poi sul ponte.",
+          "Restando sul ponte, colpisci nuovamente la runa sulla parete. Il ponte ruota e ti permette di raggiungere l’uscita."
+        ],
+        "photos": [
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-charles-rookwood-trial-walkthrough-25.jpg",
+            "alt": "Quarta sala: la runa sulla parete fa ruotare il ponte, anche quando sei sopra.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-charles-rookwoods-trial-walkthrough/"
+          },
+          {
+            "src": "https://www.powerpyx.com/wp-content/uploads/hogwarts-legacy-charles-rookwood-trial-walkthrough-27.jpg",
+            "alt": "Quarta sala: riporta la cassa sul ripiano in cima alle scale prima di attraversare il portale.",
+            "credit": "Foto di riferimento: PowerPyx. Interfaccia di un’altra piattaforma.",
+            "source": "https://www.powerpyx.com/hogwarts-legacy-charles-rookwoods-trial-walkthrough/"
+          }
+        ]
+      },
+      {
+        "title": "Scontro e ritorno",
+        "steps": [
+          "Segui il percorso fino all’arena. Attraversa il portale per rendere visibili tutti gli avversari, poi affronta il guardiano finale.",
+          "Esamina il Pensatoio e torna alla Sala delle Mappe."
+        ]
+      }
+    ]
   },
   {
     "id": "main-avm-02",
@@ -1265,7 +1459,7 @@ export const MAIN_MISSIONS = [
     ],
     "steps": [
       "Incontra Poppy e seguila. Nel campo abbandonato usa Revelio ed esamina gabbia, pelli, falò e metallo.",
-      "Parla a Poppy, raggiungi il campo occupato e supera i nemici. Ripara il ponte con Reparo ed entra nella tenda.",
+      "Parla con Poppy, raggiungi il campo occupato e supera i nemici. Ripara il ponte con Reparo ed entra nella tenda.",
       "Scendi dal passaggio sorvegliato, attraversa le stanze e risali la scala. Nella sala successiva apri la gabbia con Alohomora e raccogli l’oggetto richiesto.",
       "Scendi nell’arena, elimina gli avversari e tira con Accio il gancio indicato per concludere."
     ],
@@ -1301,7 +1495,7 @@ export const MAIN_MISSIONS = [
       "Incontra Sebastian di notte e scendi all’ingresso della miniera, superando i nemici.",
       "Usa Wingardium Leviosa sulla cassa per salire al bordo. Scivola lungo il percorso e ripara il ponte con Reparo.",
       "Nella caverna finale elimina i nemici e usa Revelio: brucia le ragnatele che nascondono due delle tre rune.",
-      "Colpisci le tre rune rapidamente, entra nella stanza e raccogli pagina e frammento. Parla a Sebastian, usa il passaggio e inserisci il frammento nel trittico."
+      "Colpisci le tre rune rapidamente, entra nella stanza e raccogli pagina e frammento. Parla con Sebastian, usa il passaggio e inserisci il frammento nel trittico."
     ],
     "panels": [],
     "photos": [],
@@ -1441,12 +1635,7 @@ export const MAIN_MISSIONS = [
       "Completa il piano per entrare nell’ufficio."
     ],
     "steps": [
-      "Pronuncia la parola d’ordine all’ingresso dell’ufficio, sali ed esamina il libro.",
-      "Nel villaggio resta dietro casse e muri. Passa quando i sorveglianti si voltano; sotto la ruota del mulino aspetta che il percorso sia libero.",
-      "Alla nuova pattuglia sali sulla scala e attraversa i tetti. Nella piazza aggira il banco centrale passando dietro i sorveglianti.",
-      "Quando la strada si chiude torna indietro, entra nella porta a sinistra e sali. Attraversa la stanza solo quando la guardia davanti alla porta si allontana.",
-      "Usa gli oggetti assegnati dalla prova e prosegui. Nei combattimenti alterna gli incantesimi disponibili; hanno ricariche molto rapide.",
-      "Raggiungi il punto finale, segui la figura indicata, esamina il Pensatoio e torna ai ritratti."
+      "Pronuncia la parola d’ordine all’ingresso dell’ufficio, sali ed esamina il libro."
     ],
     "panels": [],
     "photos": [],
@@ -1462,7 +1651,24 @@ export const MAIN_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "Il villaggio",
+        "steps": [
+          "Nel villaggio resta dietro casse e muri. Passa quando i sorveglianti si voltano; sotto la ruota del mulino aspetta che il percorso sia libero.",
+          "Alla nuova pattuglia sali sulla scala e attraversa i tetti. Nella piazza aggira il banco centrale passando dietro i sorveglianti.",
+          "Quando la strada si chiude torna indietro, entra nella porta a sinistra e sali. Attraversa la stanza solo quando la guardia davanti alla porta si allontana."
+        ]
+      },
+      {
+        "title": "Le sfide successive",
+        "steps": [
+          "Usa gli oggetti assegnati dalla prova e prosegui. Nei combattimenti alterna gli incantesimi disponibili; hanno ricariche molto rapide.",
+          "Raggiungi il punto finale, segui la figura indicata, esamina il Pensatoio e torna ai ritratti."
+        ]
+      }
+    ]
   },
   {
     "id": "main-evt-01",
@@ -1477,11 +1683,7 @@ export const MAIN_MISSIONS = [
       "Bombarda; accesso alla zona sud attraverso il passaggio minerario."
     ],
     "steps": [
-      "Incontra Sebastian sulla costa e sali lungo i tornanti. Supera i nemici ed entra nella galleria.",
-      "Brucia le ragnatele e distruggi con Bombarda le pareti fragili. Alla prima porta libera la runa a destra dalla ragnatela: colpisci le due vicine alla porta e quella alle tue spalle.",
-      "Dopo il combattimento con il troll ripara le scale con Reparo. Sposta la cassa contro la parete per raggiungere il piano superiore.",
-      "Segui le scale e rompi la parete che blocca la salita. Alla seconda porta una delle tre rune è dietro la parete fragile accanto all’ingresso.",
-      "Raccogli il frammento nella sala finale, torna attraverso il passaggio e inseriscilo nel trittico."
+      "Incontra Sebastian sulla costa e sali lungo i tornanti. Supera i nemici ed entra nella galleria."
     ],
     "panels": [],
     "photos": [],
@@ -1497,7 +1699,23 @@ export const MAIN_MISSIONS = [
       }
     ],
     "verified": "2026-10-20",
-    "tracking": true
+    "tracking": true,
+    "chapters": [
+      {
+        "title": "La prima porta a rune",
+        "steps": [
+          "Brucia le ragnatele e distruggi con Bombarda le pareti fragili. Alla prima porta libera la runa a destra dalla ragnatela: colpisci le due vicine alla porta e quella alle tue spalle."
+        ]
+      },
+      {
+        "title": "Dopo il troll",
+        "steps": [
+          "Dopo il combattimento con il troll ripara le scale con Reparo. Sposta la cassa contro la parete per raggiungere il piano superiore.",
+          "Segui le scale e rompi la parete che blocca la salita. Alla seconda porta una delle tre rune è dietro la parete fragile accanto all’ingresso.",
+          "Raccogli il frammento nella sala finale, torna attraverso il passaggio e inseriscilo nel trittico."
+        ]
+      }
+    ]
   },
   {
     "id": "main-gt03",
@@ -1515,7 +1733,7 @@ export const MAIN_MISSIONS = [
       "Raggiungi l’ingresso segnato della miniera e usa il carrello. Accendi le fornaci per alimentare gli impianti.",
       "Attraversa le piattaforme usando Accio sui ganci. Nell’area principale segui il percorso della missione: le stanze con serrature avanzate contengono deviazioni facoltative.",
       "Accendi la fornace presso l’ascensore e aziona la manovella per salire.",
-      "Sconfiggi gli avversari nell’area del macchinario e distruggi tutti e cinque i sostegni evidenziabili. Dopo la sequenza esci dalla miniera."
+      "Sconfiggi gli avversari nell’area del macchinario. Usa Revelio per individuare i cinque sostegni, poi distruggili. Dopo la sequenza esci dalla miniera."
     ],
     "panels": [],
     "photos": [],

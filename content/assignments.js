@@ -49,14 +49,17 @@ export const ASSIGNMENTS = [
     ],
     "steps": [
       "Parla con Hecat, poi raggiungi Lucan nella Torre dell’Orologio.",
-      "Vinci i primi due round di Bacchette incrociate e completa il primo allenamento con le combinazioni d’incantesimi.",
-      "Rompi gli scudi con incantesimi dello stesso colore; tra un incantesimo e l’altro usa gli attacchi base richiesti dal manichino.",
+      "Vinci i primi due round di Bacchette incrociate. Per rompere uno scudo usa un incantesimo del suo stesso colore.",
+      "Completa anche il primo allenamento al manichino: esegui le combinazioni mostrate, rispettando il numero di attacchi base.",
       "Torna da Hecat per imparare Incendio."
     ],
     "panels": [],
     "photos": [],
     "related": [
-      "spell-incendio"
+      "spell-incendio",
+      "q-zfc-01",
+      "q-zfc-02",
+      "q-zfp-01"
     ],
     "sources": [
       {
@@ -126,7 +129,10 @@ export const ASSIGNMENTS = [
     "panels": [],
     "photos": [],
     "related": [
-      "spell-depulso"
+      "spell-depulso",
+      "pozione-focalizzante",
+      "pozione-edurus",
+      "pozione-maxima"
     ],
     "sources": [
       {
@@ -161,7 +167,8 @@ export const ASSIGNMENTS = [
     "panels": [],
     "photos": [],
     "related": [
-      "spell-glacius"
+      "spell-glacius",
+      "scopa-e-volo"
     ],
     "sources": [
       {
@@ -196,7 +203,9 @@ export const ASSIGNMENTS = [
     "panels": [],
     "photos": [],
     "related": [
-      "spell-wingardium-leviosa"
+      "spell-wingardium-leviosa",
+      "pianta-tentacula",
+      "pianta-mandragola"
     ],
     "sources": [
       {
@@ -226,13 +235,15 @@ export const ASSIGNMENTS = [
     "steps": [
       "Compra o prepara una Pozione dell’Invisibilità e una Pozione del Tuono.",
       "Bevi la Pozione dell’Invisibilità: usare Disillusione non vale per questo obiettivo.",
-      "Usa la Pozione del Tuono vicino a nemici e lascia che la tempesta li colpisca.",
+      "Usa la Pozione del Tuono vicino ai nemici e lascia che la tempesta li colpisca.",
       "Torna nell’aula di Pozioni e parla con Sharp per imparare Diffindo."
     ],
     "panels": [],
     "photos": [],
     "related": [
-      "spell-diffindo"
+      "spell-diffindo",
+      "pozione-invisibilita",
+      "pozione-tuono"
     ],
     "sources": [
       {
@@ -260,15 +271,20 @@ export const ASSIGNMENTS = [
       "Primo incarico di Allium completato; un vaso grande."
     ],
     "steps": [
-      "Compra i semi di Lunaria e il progetto di un banco con vaso grande, se non li possiedi. Evoca il banco, pianta la Lunaria e raccoglila quando è pronta: comprarne solo lo stelo non conta.",
-      "Procurati Tentacula Velenosa, Cavolo Carnivoro Cinese e Mandragola.",
-      "Usa prima la Tentacula, poi il cavolo e subito la Mandragola, così sono attivi insieme. Non serve essere in combattimento.",
+      "Procurati i semi di Lunaria e il progetto di un banco con vaso grande. Evoca il banco, pianta la Lunaria e raccoglila quando è pronta: comprare lo stelo non completa l’obiettivo.",
+      "Procurati una Tentacula Velenosa, un Cavolo Carnivoro Cinese e una Mandragola.",
+      "Usa prima la Tentacula, poi il cavolo e subito la Mandragola, così i loro effetti si sovrappongono. Non serve essere in combattimento.",
       "Torna da Allium per imparare Flipendo."
     ],
     "panels": [],
     "photos": [],
     "related": [
-      "spell-flipendo"
+      "spell-flipendo",
+      "pianta-lunaria",
+      "pianta-tentacula",
+      "pianta-cavolo",
+      "pianta-mandragola",
+      "stanza-postazioni"
     ],
     "sources": [
       {
@@ -286,7 +302,7 @@ export const ASSIGNMENTS = [
   {
     "id": "assignment-zzo-01",
     "title": "Incarico della professoressa Onai",
-    "summary": "Raccogli il materiale e spingi un nemico in aria per imparare Descendo.",
+    "summary": "Raccogli Caccole di troll e usa Depulso su un nemico sospeso per imparare Descendo.",
     "section": "missioni",
     "category": "incarichi",
     "location": "Hogwarts e Highlands",
@@ -303,7 +319,9 @@ export const ASSIGNMENTS = [
     "panels": [],
     "photos": [],
     "related": [
-      "spell-descendo"
+      "spell-descendo",
+      "spell-depulso",
+      "spell-levioso"
     ],
     "sources": [
       {
@@ -338,7 +356,8 @@ export const ASSIGNMENTS = [
     "panels": [],
     "photos": [],
     "related": [
-      "spell-arresto-momentum"
+      "spell-arresto-momentum",
+      "scopa-e-volo"
     ],
     "sources": [
       {
@@ -366,14 +385,15 @@ export const ASSIGNMENTS = [
       "Sacco acciuffatutto; incarico ricevuto."
     ],
     "steps": [
-      "Raggiungi una tana di Rospo viola gigante e catturane uno con il Sacco acciuffatutto.",
+      "Raggiungi una tana indicata sulla mappa e cattura un Rospo viola gigante con il Sacco acciuffatutto.",
       "Raggiungi una tana di Diricawl e catturane uno. Usa Levioso per impedirgli di allontanarsi mentre inizi la cattura.",
       "Frequenta la lezione di Animali di giorno e parla con Howin per imparare Bombarda."
     ],
     "panels": [],
     "photos": [],
     "related": [
-      "spell-bombarda"
+      "spell-bombarda",
+      "strumento-sacco"
     ],
     "sources": [
       {
@@ -409,9 +429,16 @@ export const ASSIGNMENTS = [
       {
         "title": "Mostra le risposte al quiz",
         "paragraphs": [
-          "Bolcino d’Oro; Felix Felicis; i Doni della Morte; la Pluffa; falso. Anche sbagliando puoi raccogliere la pagina: le domande aggiuntive sono facoltative."
+          "Anche se sbagli puoi raccogliere la pagina. Le domande successive a queste cinque sono facoltative."
         ],
-        "spoiler": false
+        "spoiler": false,
+        "steps": [
+          "Bolcino d’Oro.",
+          "Felix Felicis.",
+          "I Doni della Morte.",
+          "La Pluffa.",
+          "Falso."
+        ]
       }
     ],
     "photos": [],

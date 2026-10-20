@@ -41,14 +41,14 @@ export const DEMIGUISE_GUIDE = {
   requirements:['Completa la missione principale «Il custode dalla luna storta».','Raccogli le lune di notte: nella mappa usa «Attendi» se è giorno.'],
   steps:[
     'Inizia dalla missione di Gladwin Moon: insegna Alohomora I e comprende tre statuette introduttive.',
-    'Dopo il tutorial cerca le 30 lune qui sotto. Sono 10 a Hogwarts, 9 a Hogsmeade e 11 nei villaggi.',
+    'Dopo la missione iniziale cerca le 30 lune qui sotto: 10 a Hogwarts, 9 a Hogsmeade e 11 nei villaggi.',
     'Porta 9 nuove lune a Moon per imparare Alohomora II; poi consegnane altre 13 per Alohomora III.',
     'Raccoglierle non basta: torna da Moon, presso la Torre del Corpo Docente, e completa il dialogo di consegna.'
   ],
   panels:[
-    {title:'Come funzionano i livelli',paragraphs:['Con Alohomora I puoi visitare le posizioni senza serratura o con serratura I. Con II puoi raggiungerle tutte: nessuna luna richiede III.','Le tre lune della missione iniziale sono separate dalle 30 nel mondo e dalle successive consegne da 9 e 13. Per potenziare tutto bastano 22 lune del mondo; ne restano 8 facoltative.']},
+    {title:'Come funzionano i livelli',paragraphs:['Con Alohomora I puoi visitare le posizioni senza serratura o con serratura I. Con II puoi raggiungerle tutte: nessuna luna richiede III.','Le tre lune della missione iniziale non rientrano nelle 30 del mondo né nelle consegne da 9 e 13. Per ottenere tutti i livelli di Alohomora bastano 22 lune del mondo; le altre 8 sono facoltative.']},
     {title:'Se non riesci a raccoglierla',paragraphs:['Controlla che sia notte e che la missione introduttiva sia conclusa. Avvicinati alla statuetta: Revelio aiuta a individuarla al buio.','Se è giorno, la statuetta può essere visibile ma non raccoglibile. Le fotografie servono a riconoscere la stanza; aspetto e comandi possono differire da Nintendo Switch 2.']},
-    {title:'Raccolta, consegna e missione sono cose diverse',paragraphs:['Spunta una luna quando l’hai presa nel gioco. Il livello di Alohomora va aggiornato solo quando Moon te lo insegna.','Le spunte della guida non leggono il salvataggio della Switch e non consegnano lune al personaggio: sei tu a confermare i progressi.']},
+    {title:'Raccolta, consegna e missione sono cose diverse',paragraphs:['Spunta una luna quando l’hai presa nel gioco. Il livello di Alohomora va aggiornato solo quando Moon te lo insegna.','La guida non legge il salvataggio della Switch: conferma tu le lune raccolte, quelle consegnate e il livello appreso.']},
     {title:'Come raggiungere i villaggi a sud',paragraphs:['Per arrivare a Marunweem, Bainburgh e Cragcroft, attraversa a piedi il passaggio della Caverna Costiera: non puoi sorvolare la montagna con la scopa. Segna una destinazione oltre la montagna e segui il percorso sulla mappa.']}
   ],
   photos:[],related:['main-gdw-01','q-dms-01'],sources:[POWER,PLAYER,ARAN]
@@ -56,7 +56,7 @@ export const DEMIGUISE_GUIDE = {
 
 export const INTRO_MOONS = [
   {id:'dm-intro-moon',title:'La prima luna con Gladwin Moon',location:'Hogwarts',group:'Missione introduttiva',lock:0,
-    steps:['Parla con Moon al segnalino della missione «Il custode dalla luna storta». Raccogli la luna che ti indica prima di seguirlo alla torre.'],photos:[],sources:[QUEST,ARAN],verified:'2026-10-20'},
+    steps:['Raggiungi il segnalino della missione «Il custode dalla luna storta» e parla con Moon. Raccogli la luna che ti indica, poi seguilo alla torre.'],photos:[],sources:[QUEST,ARAN],verified:'2026-10-20'},
   {id:'dm-intro-prefects',title:'Bagno dei prefetti',location:'Hogwarts',group:'Missione introduttiva',lock:1,
     steps:['Dopo aver imparato Alohomora, entra nella Torre del Corpo Docente. Usa Disillusione e sali seguendo l’obiettivo.','Nel bagno resta sul lato sinistro per evitare i prefetti; la luna è in fondo alla stanza.'],photos:[],sources:[QUEST],verified:'2026-10-20'},
   {id:'dm-intro-hospital',title:'Infermeria',location:'Hogwarts',group:'Missione introduttiva',lock:0,
@@ -65,7 +65,7 @@ export const INTRO_MOONS = [
 
 export const MOONS = [
   moon('dm-hw-fig','Studio del professor Fig','Hogwarts','Ala di Astronomia',0,[
-    'Dalla Metropolvere «Aula del professor Fig», entra nell’aula e sali alla porta del suo studio.',
+    'Dalla Metropolvere «Aula del professor Fig», entra nell’aula e sali le scale fino alla porta del suo studio.',
     'La statuetta è sul tavolino a sinistra del camino, in fondo alla stanza.'
   ],1,[PLAYER,PCG]),
   moon('dm-hw-muggle','Aula di Babbanologia','Hogwarts','Ala di Astronomia',1,[
@@ -78,7 +78,7 @@ export const MOONS = [
   ],3,[PUSH,PLAYER]),
   moon('b1','Aula di Divinazione','Hogwarts','Biblioteca',0,[
     'Dalla Metropolvere «Aula di Divinazione», sali la scala a chiocciola e poi quella a pioli che scende dall’alto.',
-    'Nell’aula cerca la scrivania della professoressa Onai: la luna è sopra il tavolo.'
+    'Nell’aula cerca la scrivania della professoressa Onai: la luna è appoggiata sopra.'
   ],7,[PUSH,PLAYER]),
   moon('dm-hw-library','Reparto Proibito','Hogwarts','Biblioteca',0,[
     'Dalla Biblioteca entra nel Reparto Proibito attraverso il cancello e scendi entrambi i piani.',
@@ -86,7 +86,7 @@ export const MOONS = [
   ],8,[WC,POWER]),
   moon('dm-hw-potions','Ripostiglio sotto l’Aula di Pozioni','Hogwarts','Biblioteca',2,[
     'Dalla Metropolvere «Aula di Pozioni», attraversa le doppie porte e scendi la scala a sinistra.',
-    'Apri la porta I in fondo, poi la porta II sulla sinistra del corridoio dei ritratti. Cerca la statuetta nel ripostiglio.'
+    'Apri la porta con serratura I in fondo alle scale. Nel corridoio dei ritratti apri la porta con serratura II sulla sinistra: la statuetta è nel ripostiglio.'
   ],9,[PANDA,PLAYER]),
   moon('dm-hw-north','Stanza sotto le mura','Hogwarts','Ala della Torre Campanaria',1,[
     'Dall’Uscita Nord di Hogwarts, voltati verso il castello e costeggia le mura a sinistra.',
@@ -110,18 +110,18 @@ export const MOONS = [
   ],11,[PANDA,PLAYER]),
   moon('dm-hm-tomes-house','Casa vicino a Tomi e Pergamene','Hogsmeade','Zona sud',2,[
     'Guardando l’ingresso di Tomi e Pergamene, vai a destra e imbocca il vicolo a sinistra.',
-    'Apri la casa con serratura II sul lato sinistro. Sali: la luna è sul cassettone vicino alla sfera di cristallo.'
+    'Apri la porta della casa sul lato sinistro, con serratura II. Sali le scale: la luna è sul cassettone vicino alla sfera di cristallo.'
   ],12,[PLAYER,PGGH]),
   moon('h2','Testa di Porco','Hogsmeade','Zona ovest',0,[
     'Entra nella locanda e raggiungi il retro passando oltre il bancone, sulla destra.',
     'La statuetta è sulle casse nel piccolo locale di servizio.'
   ],13,[PGGH,PANDA]),
   moon('dm-hm-pippin-house','Casa accanto a Pozioni di J. Pippin','Hogsmeade','Zona ovest',2,[
-    'Guardando il negozio di pozioni, apri la casa immediatamente a destra, con serratura II.',
+    'Mettiti di fronte al negozio di pozioni. Entra nella casa subito a destra, aprendo la porta con serratura II.',
     'Sali le scale: la statuetta è sul cassettone al piano superiore.'
   ],14,[PANDA,PGGH]),
   moon('h3','Tre Manici di Scopa','Hogsmeade','Zona centrale',1,[
-    'Entra nella locanda e sali tutte le rampe fino alla porta più alta, con serratura I.',
+    'Entra nella locanda e sali tutte le rampe fino all’ultimo piano. Apri la porta con serratura I.',
     'Nella stanza privata la luna è sul tavolino davanti al camino.'
   ],15,[PGGH,POWER]),
   moon('h4','Casa a est dei Tre Manici di Scopa','Hogsmeade','Zona centrale',1,[
@@ -134,26 +134,26 @@ export const MOONS = [
   ],17,[MULTI,PGGH]),
   moon('h7','Casa di fronte a Fiera delle Fiere','Hogsmeade','Zona nord',1,[
     'Lascia l’ingresso di Fiera delle Fiere alle spalle e attraversa la strada.',
-    'Apri la casa con serratura I: la statuetta è sulla mensola del camino.'
+    'Apri la porta con serratura I: la statuetta è sulla mensola del camino.'
   ],18,[PGGH,PCG],true),
   moon('h6','Casa dietro Mielandia','Hogsmeade','Zona nord-est',1,[
     'Guardando Mielandia, prendi i gradini a sinistra; poi gira a destra sulla strada in salita.',
-    'Apri la casetta più a destra, con serratura I. La luna è sul tavolino sotto un quadro, al piano terra.'
+    'Entra nella casetta più a destra, aprendo la porta con serratura I. La luna è sul tavolino sotto un quadro, al piano terra.'
   ],19,[PLAYER,PGGH]),
   moon('dm-world-pitt','Pitt-Upon-Ford · casa con carrozza','Pitt-Upon-Ford','Palude del Guado',0,[
     'Dalla Metropolvere scendi verso sud fino alla casa con la carrozza, prima del ponte.',
     'Sali all’ultimo piano: la luna è a terra, vicino allo specchio.'
   ],20,[PUSH,WC],true),
   moon('u1','Upper Hogsfield · casa vicino al pozzo','Upper Hogsfield','Valle di Hogsmeade',1,[
-    'Dalla Metropolvere segui la strada fino al pozzo. Apri la casa a ovest, riconoscibile dalla ruota accanto alla porta.',
+    'Dalla Metropolvere segui la strada fino al pozzo. Entra nella casa a ovest, riconoscibile dalla ruota accanto alla porta.',
     'La luna è sullo sgabello subito all’interno.'
   ],21,[GG,PGG],true),
   moon('dm-world-aranshire','Aranshire · casa accanto alla Metropolvere','Aranshire','Regione Sud di Hogwarts',1,[
-    'Dalla Metropolvere apri la casa immediatamente a sinistra, con serratura I, e sali le scale.',
+    'Dalla Metropolvere entra nella casa subito a sinistra, aprendo la porta con serratura I. Sali le scale.',
     'Cerca la statuetta a terra, ai piedi del letto.'
   ],22,[PUSH,G4],true),
   moon('dm-world-lower','Lower Hogsfield · casa all’ingresso','Lower Hogsfield','Regione Sud di Hogwarts',0,[
-    'Dalla Metropolvere entra nel villaggio e prendi la prima casa sulla destra, con il tetto arrotondato.',
+    'Dalla Metropolvere entra nel villaggio e raggiungi la prima casa sulla destra, con il tetto arrotondato.',
     'La luna è a terra, dietro la porta d’ingresso.'
   ],23,[PUSH,WC],true),
   moon('dm-world-brocburrow','Brocburrow · casa vicino al pozzo','Brocburrow','Valle di Hogwarts',1,[
@@ -166,14 +166,14 @@ export const MOONS = [
   ],25,[GG,PUSH],true),
   moon('dm-world-irondale','Irondale · casa di Althea Twiddle','Irondale','Regione di Feldcroft',0,[
     'Dalla Metropolvere raggiungi la casa vicina con Althea Twiddle all’esterno e il tetto di paglia a punta.',
-    'Dentro, gira dietro il bancone della cucina: la luna è a terra, accanto alla stufa.'
+    'Entra e passa dietro il bancone della cucina: la luna è a terra, accanto alla stufa.'
   ],27,[PCG,EVERY],true),
   moon('dm-world-feldcroft','Feldcroft · casa a est del pozzo','Feldcroft','Regione di Feldcroft',2,[
-    'Dal pozzo centrale vai a est alla casa con il bucato steso e apri la serratura II.',
+    'Dal pozzo centrale raggiungi la casa a est, con il bucato steso. Apri la porta con serratura II.',
     'La luna è sul davanzale a sinistra, al piano terra.'
   ],26,[GG,PGG],true),
   moon('dm-world-marunweem','Marunweem · casa vicino alla bacheca','Marunweem','Lago di Marunweem',1,[
-    'Dalla Metropolvere vai a nord, poi prendi la prima strada a destra. Apri la casa a sinistra vicino alla bacheca e ai calderoni impilati.',
+    'Dalla Metropolvere vai a nord, poi prendi la prima strada a destra. Entra nella casa a sinistra, vicino alla bacheca e ai calderoni impilati.',
     'La luna è a terra, dietro il bancone della cucina sulla sinistra.'
   ],28,[PGG,WC]),
   moon('dm-world-bainburgh','Bainburgh · casa a nord del villaggio','Bainburgh','Capo del Maniero',2,[
@@ -182,6 +182,6 @@ export const MOONS = [
   ],29,[GG,MULTI,GAMEWITH]),
   moon('dm-world-cragcroft','Cragcroft · casa del mercante','Cragcroft','Cragcroftshire',0,[
     'Dalla Metropolvere esci dal rudere e raggiungi il grande albero nel centro del villaggio.',
-    'Entra nella casa accanto alla bancarella di Bella Navarro e sali: la statuetta è sul comodino vicino al letto.'
+    'Entra nella casa accanto alla bancarella di Bella Navarro e sali le scale: la statuetta è sul comodino vicino al letto.'
   ],30,[PUSH,WC])
 ];

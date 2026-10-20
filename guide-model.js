@@ -17,6 +17,18 @@ export function forHouse(guides,profile,all=false) {
   const house=profile==='ele'?'gryffindor':'slytherin';
   return guides.filter(g=>all||!g.house||g.house===house);
 }
+export function orderedCatalogue(guides,section,category,profile,allHouses=false) {
+  const ordered=forHouse(guides,profile,allHouses).filter(g=>g.section===section&&g.category===category)
+    .sort((a,b)=>(a.order||0)-(b.order||0));
+  if(category==='principali')return ordered;
+  const groups=new Map();for(const guide of ordered){const key=guide.group||guide.location||'Guide';if(!groups.has(key))groups.set(key,[]);groups.get(key).push(guide);}
+  return [...groups.values()].flat();
+}
+export function guideNeighbours(guides,guide,profile) {
+  const catalogue=orderedCatalogue(guides,guide.section,guide.category,profile);
+  const index=catalogue.findIndex(g=>g.id===guide.id);
+  return {previous:index>0?catalogue[index-1]:null,next:index>=0?catalogue[index+1]||null:null};
+}
 export function guideStatus(id,state) {
   const key='status:'+id, values=state.values||new Map();
   if (values.has(key)) return Object.hasOwn(STATUS_LABELS,values.get(key))?values.get(key):'todo';

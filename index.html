@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#22262b">
-  <meta name="demiguise-release" content="2.0.0">
+  <meta name="demiguise-release" content="2.1.0">
   <meta name="description" content="La guida personale a Hogwarts Legacy: missioni, sblocchi e guide pratiche, con ricerca e progressi separati per Ele e Thom.">
   <title>Guida Completa Hogwarts Legacy</title>
-  <link rel="stylesheet" href="./styles.css?v=2.0.0">
+  <link rel="icon" type="image/png" sizes="64x64" href="./assets/hogwarts-crest.png">
+  <link rel="stylesheet" href="./styles.css?v=2.1.0">
 </head>
 <body data-profile="">
   <main class="shell">
@@ -42,12 +43,18 @@
           <img id="houseEmblem" class="brand-emblem" src="./assets/houses/slytherin.png" width="52" height="52" alt="">
           <span class="brand-title">Guida Completa <span>Hogwarts Legacy</span></span>
         </a>
-        <details id="profileMenu" class="profile-menu">
-          <summary id="profileName">Profilo</summary>
-          <div class="profile-dropdown"><button type="button" id="changeProfileBtn">Cambia profilo</button></div>
-        </details>
+        <div class="profile-tools">
+          <details id="syncIndicator" class="sync-indicator" data-status="loading">
+            <summary id="syncToggle" aria-label="Stato del salvataggio" title="Stato del salvataggio"><span id="syncIcon" aria-hidden="true">···</span></summary>
+            <div class="sync-popover"><p id="syncStatus">Caricamento dei progressi…</p><button type="button" class="retry-button" id="retrySyncBtn" hidden>Riprova</button></div>
+          </details>
+          <details id="profileMenu" class="profile-menu">
+            <summary id="profileName">Profilo</summary>
+            <div class="profile-dropdown"><button type="button" id="changeProfileBtn">Cambia profilo</button></div>
+          </details>
+        </div>
       </header>
-      <div class="sync-line"><p id="syncStatus" role="status" aria-live="polite"></p><button type="button" class="retry-button" id="retrySyncBtn" hidden>Riprova</button></div>
+      <aside id="syncWarning" class="sync-warning" hidden><p id="syncAlert" role="status" aria-live="polite" hidden></p><button type="button" class="retry-button" id="syncAlertRetry" hidden>Riprova</button></aside>
       <section id="searchPanel" class="search-panel" aria-label="Ricerca nella guida">
         <label id="searchLabel" for="guideSearch">Cerca nella guida</label>
         <div class="search-row"><input id="guideSearch" type="search" inputmode="search" maxlength="120" autocomplete="off" spellcheck="false" placeholder="Una missione, un luogo, un oggetto…" aria-describedby="searchMessage"><button id="clearSearch" type="button" aria-label="Cancella ricerca" hidden>✕</button></div>
@@ -73,13 +80,13 @@
       <section id="guideView" class="view" hidden></section>
       <section id="demiguiseView" class="view" hidden></section>
       <footer class="site-footer">
-        <details><summary>Come vengono salvati i progressi</summary><p>Le modifiche si sincronizzano tra i telefoni. Senza rete rimangono sul telefono fino alla riconnessione. Attendi «Salvato online» prima di cancellare i dati del browser.</p><p>I due profili sono condivisi, senza password: chi conosce il link può consultarli e modificarli. Gli aggiornamenti della guida conservano i progressi.</p></details>
-        <p class="fine">Guida indipendente, non affiliata agli autori del gioco. Emblemi delle casate: <a href="https://www.harrypotter.com/" target="_blank" rel="noopener noreferrer">HarryPotter.com</a>.</p>
+        <details><summary>Come vengono salvati i progressi</summary><p>Le modifiche si sincronizzano tra i telefoni. Senza rete rimangono sul telefono fino alla riconnessione. La piccola spunta accanto al profilo conferma il salvataggio online: toccala per leggere i dettagli. Attendi questa conferma prima di cancellare i dati del browser.</p><p>I due profili sono condivisi, senza password: chi conosce il link può consultarli e modificarli. Gli aggiornamenti della guida conservano i progressi.</p></details>
+        <p class="fine">Guida indipendente, non affiliata agli autori del gioco. Emblemi delle casate e stemma di Hogwarts: <a href="https://www.harrypotter.com/" target="_blank" rel="noopener noreferrer">HarryPotter.com</a>. Stemma di Hogwarts: MinaLima.</p>
       </footer>
     </div>
   </main>
   <dialog id="objectDialog" aria-labelledby="objectDialogTitle"><button id="closeObjectDialog" class="dialog-close" type="button" aria-label="Chiudi scheda oggetto">✕</button><div id="objectDialogContent"></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./app.js?v=2.0.0"></script>
+  <script type="module" src="./app.js?v=2.1.0"></script>
 </body>
 </html>

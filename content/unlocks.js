@@ -11,11 +11,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 0,
     "requirements": [
-      "Si impara: A lezione di Incantesimi"
+      "Si impara durante «A lezione di Incantesimi»."
     ],
     "steps": [
-      "Mira al bersaglio e trascinalo verso di te. Su una maniglia avvicini il supporto; sugli oggetti giusti, Wingardium Leviosa subentra dopo Accio se lo hai già imparato.",
-      "Accio seguito da Incendio porta il nemico nel raggio corto delle fiamme."
+      "Mira all’oggetto o al nemico per attirarlo verso di te. Se hai imparato Wingardium Leviosa, sugli oggetti che puoi spostare passa automaticamente a quell’incantesimo.",
+      "In combattimento usa Accio e poi Incendio: il nemico si troverà abbastanza vicino per essere colpito dalle fiamme."
     ],
     "panels": [],
     "photos": [],
@@ -42,10 +42,10 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 1,
     "requirements": [
-      "Si impara: Incarico del Professor Sharp 1"
+      "Si impara durante «Incarico del Professor Sharp 1»."
     ],
     "steps": [
-      "Mettiti dalla parte opposta alla direzione in cui vuoi spingere. Mira e lancia; per i cubi di un enigma controlla dove si fermeranno.",
+      "Posizionati dietro l’oggetto rispetto alla direzione in cui vuoi spingerlo. Mira e lancia Depulso; negli enigmi controlla prima dove finirà il cubo.",
       "In combattimento può far urtare un avversario contro ostacoli o altri nemici."
     ],
     "panels": [],
@@ -73,11 +73,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 2,
     "requirements": [
-      "Si impara: Incarico della Professoressa Onai"
+      "Si impara durante «Incarico della Professoressa Onai»."
     ],
     "steps": [
       "Solleva prima il nemico con Levioso, poi usa Descendo per sfruttare la caduta.",
-      "Può interrompere particolari attacchi: guarda la descrizione del nemico nelle Collezioni."
+      "Può anche interrompere alcuni attacchi. Per sapere quali, leggi la descrizione del nemico nelle Collezioni."
     ],
     "panels": [],
     "photos": [],
@@ -104,11 +104,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 3,
     "requirements": [
-      "Si impara: Incarico della Professoressa Allium 2"
+      "Si impara durante «Incarico della Professoressa Allium 2»."
     ],
     "steps": [
-      "Negli enigmi con cubi simbolici, colpisci la faccia corretta e cambia lato per cambiare asse di rotazione.",
-      "In combattimento solleva o sbilancia i bersagli leggeri; il recupero breve permette di usarlo spesso."
+      "Negli enigmi con cubi e simboli, usa Flipendo su una faccia del cubo. Spostati su un altro lato per farlo ruotare in una direzione diversa.",
+      "In combattimento solleva o sbilancia i nemici più leggeri. Puoi usarlo spesso perché si ricarica rapidamente."
     ],
     "panels": [],
     "photos": [],
@@ -135,11 +135,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 4,
     "requirements": [
-      "Si impara: Il custode dalla luna storta"
+      "Si impara durante «Il custode dalla luna storta»."
     ],
     "steps": [
-      "Interagisci con una serratura. Ruota lentamente i due comandi e ferma ciascuno nel punto in cui gli ingranaggi girano; tienili fermi insieme.",
-      "Le lune raccolte vanno consegnate a Gladwin Moon per imparare i livelli successivi. La raccolta da sola non aumenta Alohomora."
+      "Interagisci con la serratura. Ruota lentamente ciascuno dei due comandi finché i relativi ingranaggi si muovono. Mantieni entrambi in quella posizione.",
+      "Consegna le lune a Gladwin Moon per imparare i livelli successivi. Raccoglierle senza consegnarle non aumenta il livello di Alohomora."
     ],
     "panels": [],
     "photos": [],
@@ -167,11 +167,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 5,
     "requirements": [
-      "Si impara: I segreti del Reparto Proibito"
+      "Si impara durante «I segreti del Reparto Proibito»."
     ],
     "steps": [
-      "Attivala prima di entrare nel campo visivo di un nemico o di un forziere con occhio. Tieni distanza e passa dietro i bersagli.",
-      "Se vieni individuato, allontanati e interrompi la linea visiva: non basta restare immobile davanti al nemico."
+      "Attivala prima che un nemico o un forziere con occhio ti veda. Mantieni le distanze dai nemici e passa alle loro spalle.",
+      "Se ti individuano, allontanati e mettiti al riparo dalla loro vista. Restare immobile davanti al nemico non basta."
     ],
     "panels": [],
     "photos": [],
@@ -198,11 +198,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 6,
     "requirements": [
-      "Si impara: La strada verso Hogwarts"
+      "Si impara durante «La strada verso Hogwarts»."
     ],
     "steps": [
-      "Avvicinati alla falena o alle lucciole con Lumos attivo. Raggiungi il supporto e spegni la luce per lasciarle lì.",
-      "Cambiare incantesimo può spegnere Lumos: libera prima il percorso quando devi trasportare un gruppo."
+      "Accendi Lumos vicino alla falena e accompagnala alla cornice. Spegni la luce davanti alla cornice per lasciarla lì.",
+      "Nelle Prove di Merlino, accompagna le farfalle luminose fino alle pietre con cristalli, mantenendo Lumos acceso. Se si spegne durante il percorso, torna vicino agli insetti e riaccendilo."
     ],
     "panels": [],
     "photos": [],
@@ -213,6 +213,14 @@ export const UNLOCK_GUIDES = [
       {
         "url": "https://hogwarts.th.gl/it/db/spells/spell_Lumos",
         "title": "Dati di gioco in italiano · Lumos"
+      },
+      {
+        "url": "https://www.gamepur.com/guides/how-to-solve-the-merlin-trial-west-of-hogsmeade-in-hogwarts-legacy",
+        "title": "Lumos nelle Prove di Merlino · Gamepur"
+      },
+      {
+        "url": "https://guides4gamers.com/hogwarts-legacy/pois/moths/",
+        "title": "Lumos e cornici con falena · Guides4Gamers"
       }
     ],
     "verified": "2026-10-20",
@@ -229,11 +237,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 7,
     "requirements": [
-      "Si impara: Incarico del Professor Ronen"
+      "Si impara durante «Incarico del Professor Ronen»."
     ],
     "steps": [
-      "Mira ai frammenti evidenziati e completa il lancio senza allontanarti.",
-      "Se non succede nulla, controlla con Revelio: non ogni rovina dello scenario è un oggetto riparabile."
+      "Mira ai frammenti dell’oggetto e lancia Reparo. Aspetta che la ricostruzione sia completa prima di allontanarti.",
+      "Se non succede nulla, usa Revelio per controllare l’oggetto: non tutte le rovine dello scenario possono essere riparate."
     ],
     "panels": [],
     "photos": [],
@@ -260,11 +268,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 8,
     "requirements": [
-      "Si impara: La strada verso Hogwarts"
+      "Si impara durante «La strada verso Hogwarts»."
     ],
     "steps": [
-      "Usalo vicino all’oggetto sospetto; per una pagina Revelio avvicinati finché compare l’interazione.",
-      "Suona un richiamo quando una pagina è vicina. Altezza e pareti contano: controlla anche il piano sopra o sotto."
+      "Usalo vicino al punto che vuoi controllare. Se compare una pagina Revelio, avvicinati finché puoi raccoglierla.",
+      "Un suono segnala le pagine vicine. Se non le vedi, controlla oltre le pareti e ai piani sopra o sotto."
     ],
     "panels": [],
     "photos": [],
@@ -291,10 +299,10 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 9,
     "requirements": [
-      "Si impara: Incarico della Professoressa Allium 1"
+      "Si impara durante «Incarico della Professoressa Allium 1»."
     ],
     "steps": [
-      "Lancia sull’oggetto e usa i comandi mostrati per altezza, distanza e rotazione. Appoggialo con precisione prima di salirci.",
+      "Mira all’oggetto e lancia l’incantesimo. Usa i comandi mostrati per regolarne altezza, distanza e rotazione; appoggialo prima di salirci.",
       "Levioso solleva; Wingardium Leviosa permette anche di trasportare e orientare."
     ],
     "panels": [],
@@ -322,11 +330,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 10,
     "requirements": [
-      "Si impara: Incarico di Madama Kogawa 2"
+      "Si impara durante «Incarico di Madama Kogawa 2»."
     ],
     "steps": [
-      "Mira al meccanismo o al bersaglio e lancia quando si trova nella posizione utile.",
-      "Sul pendolo del castello serve il momento giusto: il simbolo allineato determina quale porta si apre."
+      "Mira al meccanismo o al nemico. Lancia l’incantesimo quando vuoi rallentarne il movimento.",
+      "Nell’enigma del pendolo, fermalo davanti al simbolo della porta che vuoi aprire."
     ],
     "panels": [],
     "photos": [],
@@ -347,16 +355,16 @@ export const UNLOCK_GUIDES = [
     "title": "Glacius",
     "section": "sblocchi",
     "category": "incantesimi",
-    "summary": "Congela e prepara un colpo più potente.",
+    "summary": "Congela il nemico e lo rende più vulnerabile al colpo successivo.",
     "location": "Hogwarts e Highlands",
     "group": "Controllo · giallo",
     "aliases": [],
     "order": 11,
     "requirements": [
-      "Si impara: Incarico di Madama Kogawa 1"
+      "Si impara durante «Incarico di Madama Kogawa 1»."
     ],
     "steps": [
-      "Congela il nemico e sfrutta subito l’apertura con un incantesimo di danno, per esempio Diffindo.",
+      "Congela il nemico, poi colpiscilo subito con un incantesimo che infligge danni, come Diffindo.",
       "Negli enigmi può spegnere il fuoco o fermare oggetti: mira al bersaglio preciso."
     ],
     "panels": [],
@@ -384,10 +392,10 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 12,
     "requirements": [
-      "Si impara: Lezione di Difesa contro le Arti Oscure"
+      "Si impara durante «Lezione di Difesa contro le Arti Oscure»."
     ],
     "steps": [
-      "Usalo per interrompere un avversario leggero o sollevare un oggetto previsto dall’enigma.",
+      "Usalo per interrompere un nemico leggero o sollevare gli oggetti previsti dall’enigma.",
       "Non permette di trascinare liberamente gli oggetti come Wingardium Leviosa."
     ],
     "panels": [],
@@ -415,11 +423,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 13,
     "requirements": [
-      "Si impara: I segreti del Reparto Proibito"
+      "Si impara durante «I segreti del Reparto Proibito»."
     ],
     "steps": [
-      "Con Disillusione attiva, avvicinati senza farti vedere e premi l’interazione che compare accanto al bersaglio.",
-      "I nemici più resistenti possono sopravvivere. Non si assegna a uno dei quattro slot di incantesimi."
+      "Attiva Disillusione e avvicinati al nemico senza farti vedere. Premi il comando che compare accanto al bersaglio.",
+      "I nemici più resistenti possono sopravvivere. Petrificus Totalus non va assegnato ai quattro tasti degli incantesimi."
     ],
     "panels": [],
     "photos": [],
@@ -446,11 +454,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 14,
     "requirements": [
-      "Si impara: Incarico della Professoressa Weasley"
+      "Si impara durante «Incarico della Professoressa Weasley»."
     ],
     "steps": [
-      "Lanciala su un nemico vulnerabile per toglierlo temporaneamente dallo scontro; colpirlo può far terminare l’effetto.",
-      "Con il talento dedicato il bersaglio diventa un oggetto esplosivo, utilizzabile con Lancio Magia antica."
+      "Usala su un nemico per trasformarlo e toglierlo temporaneamente dallo scontro. Colpirlo può interrompere la trasformazione; non funziona su tutti i nemici.",
+      "Con Perfezionamento Trasformazione, il nemico diventa un oggetto esplosivo da scagliare con Lancio Magia antica."
     ],
     "panels": [],
     "photos": [],
@@ -477,11 +485,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 15,
     "requirements": [
-      "Si impara: All’ombra del Sotterraneo"
+      "Si impara durante «All’ombra del Sotterraneo»."
     ],
     "steps": [
-      "Mira al bersaglio lontano. Funziona anche su ragnatele e bracieri raggiungibili solo da lontano.",
-      "Dopo l’impatto, il nemico incendiato resta esposto ad altre combinazioni."
+      "Mira al nemico o al braciere lontano e lancia Confringo. Puoi usarlo anche per bruciare le ragnatele.",
+      "Dopo averlo incendiato, continua a colpire il nemico con gli altri incantesimi."
     ],
     "panels": [],
     "photos": [],
@@ -508,11 +516,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 16,
     "requirements": [
-      "Si impara: Incarico del Professor Sharp 2"
+      "Si impara durante «Incarico del Professor Sharp 2»."
     ],
     "steps": [
-      "Apri prima lo scudo con il colore adatto; poi usa Diffindo quando il bersaglio è esposto.",
-      "Glacius prima di Diffindo è una combinazione semplice per concentrare il danno."
+      "Se il nemico ha uno scudo, rompilo con un incantesimo dello stesso colore. Poi colpiscilo con Diffindo.",
+      "Per infliggere più danni, congela prima il nemico con Glacius."
     ],
     "panels": [],
     "photos": [],
@@ -539,10 +547,10 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 17,
     "requirements": [
-      "Si impara: Incarico della Professoressa Hecat 2"
+      "Si impara durante «Incarico della Professoressa Hecat 2»."
     ],
     "steps": [
-      "Lancialo contro un avversario armato o mentre prepara un attacco interrompibile.",
+      "Usalo contro un nemico armato. Puoi anche interrompere alcuni attacchi mentre li sta preparando.",
       "Con Capacità con Lancio Magia antica puoi rilanciare l’arma sottratta al nemico."
     ],
     "panels": [],
@@ -570,11 +578,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 18,
     "requirements": [
-      "Si impara: Incarico della Professoressa Howin"
+      "Si impara durante «Incarico della Professoressa Howin»."
     ],
     "steps": [
-      "Mira a un nemico o all’ostacolo distruttibile. Mantieni una buona visuale prima del lancio.",
-      "È utile contro gruppi, soprattutto con il talento che amplia l’esplosione."
+      "Mira al nemico o all’ostacolo che puoi distruggere. Assicurati di vedere bene il bersaglio prima di lanciare.",
+      "È utile contro i gruppi di nemici. Perfezionamento Bombarda amplia l’esplosione."
     ],
     "panels": [],
     "photos": [],
@@ -601,7 +609,7 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 19,
     "requirements": [
-      "Si impara: Incarico della Professoressa Hecat 1"
+      "Si impara durante «Incarico della Professoressa Hecat 1»."
     ],
     "steps": [
       "Avvicinati al bersaglio, oppure attiralo con Accio, e lancia Incendio.",
@@ -632,10 +640,10 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 20,
     "requirements": [
-      "Si impara: La Stanza delle Necessità"
+      "Si impara durante «La Stanza delle Necessità»."
     ],
     "steps": [
-      "Apri il catalogo, scegli una magiformula già ottenuta e colloca l’oggetto dove la sagoma è valida.",
+      "Apri il catalogo e scegli una magiformula che possiedi. Posiziona l’oggetto dove il gioco permette di collocarlo.",
       "Il costo in Pietra di luna e il limite di oggetti compaiono prima di confermare."
     ],
     "panels": [],
@@ -663,10 +671,10 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 21,
     "requirements": [
-      "Si impara: Decorazione d’interni"
+      "Si impara durante «Decorazione d’interni»."
     ],
     "steps": [
-      "Mira all’arredo nella Stanza delle Necessità e usa le opzioni disponibili per posizione, stile, colore o dimensione.",
+      "Mira a un arredo della Stanza delle Necessità. Usa le opzioni disponibili per spostarlo o cambiarne stile, colore e dimensione.",
       "Le opzioni dipendono dall’oggetto; non cambia statistiche o qualità dell’equipaggiamento."
     ],
     "panels": [],
@@ -694,10 +702,10 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 22,
     "requirements": [
-      "Si impara: La Stanza delle Necessità"
+      "Si impara durante «La Stanza delle Necessità»."
     ],
     "steps": [
-      "Mira all’arredo che vuoi eliminare e lancia Evanesco. Recuperi il materiale di evocazione.",
+      "Mira all’arredo che vuoi rimuovere e lancia Evanesco: recuperi la Pietra di luna spesa per crearlo.",
       "Prima di rimuovere una postazione, raccogli ciò che ha prodotto."
     ],
     "panels": [],
@@ -725,11 +733,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 23,
     "requirements": [
-      "Si impara: Arrivo a Hogsmeade"
+      "Si impara durante «Arrivo a Hogsmeade»."
     ],
     "steps": [
-      "Cerca il comando di lancio su barili, macerie o altri oggetti. Seleziona il nemico prima di attivarlo.",
-      "È distinto dall’attacco Magia antica che consuma la barra; gli oggetti lanciabili sono limitati allo scenario."
+      "Scegli il nemico, poi usa il comando che compare su barili, macerie o altri oggetti per scagliarli contro di lui.",
+      "Questo lancio usa gli oggetti disponibili nello scenario. È diverso dall’attacco Magia antica che consuma un segmento della barra."
     ],
     "panels": [],
     "photos": [],
@@ -756,11 +764,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 24,
     "requirements": [
-      "Si impara: La strada verso Hogwarts"
+      "Si impara durante «La strada verso Hogwarts»."
     ],
     "steps": [
-      "Premi quando arriva l’attacco; tieni premuto dopo la parata per contrattaccare con Stupeficium.",
-      "L’avviso rosso indica un attacco da schivare. Il Protego perfetto richiede un tempismo più stretto."
+      "Premi il comando di Protego quando sta per arrivare l’attacco. Dopo la parata, tienilo premuto per contrattaccare con Stupeficium.",
+      "Se il segnale è rosso devi schivare. Per un Protego perfetto, premi il comando appena prima dell’impatto."
     ],
     "panels": [],
     "photos": [],
@@ -787,11 +795,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 25,
     "requirements": [
-      "Si impara: La strada verso Hogwarts"
+      "Si impara durante «La strada verso Hogwarts»."
     ],
     "steps": [
-      "Mira al nemico e concatena i colpi base; inseriscili mentre i tuoi incantesimi recuperano.",
-      "Da solo non rompe gli scudi colorati: aprili prima con il colore corrispondente."
+      "Mira al nemico e colpiscilo più volte. Usa i colpi base mentre aspetti che gli altri incantesimi siano di nuovo disponibili.",
+      "I colpi base non rompono gli scudi colorati: usa prima un incantesimo dello stesso colore dello scudo."
     ],
     "panels": [],
     "photos": [],
@@ -818,11 +826,11 @@ export const UNLOCK_GUIDES = [
     "aliases": [],
     "order": 26,
     "requirements": [
-      "Si impara: La strada verso Hogwarts"
+      "Si impara durante «La strada verso Hogwarts»."
     ],
     "steps": [
       "Dopo un Protego riuscito, tieni premuto il comando per lanciare Stupeficium verso il bersaglio selezionato.",
-      "Puoi dirigere il contrattacco a un nemico diverso da chi ti ha colpito; non occupa uno slot."
+      "Puoi colpire anche un nemico diverso da quello di cui hai parato l’attacco. Stupeficium non va assegnato ai quattro tasti degli incantesimi."
     ],
     "panels": [],
     "photos": [],
@@ -848,17 +856,19 @@ export const UNLOCK_GUIDES = [
     "group": "Arti Oscure",
     "aliases": [],
     "order": 27,
-    "requirements": [],
+    "requirements": [
+      "Puoi impararla durante «All’ombra dello studio», nel percorso di Sebastian."
+    ],
     "steps": [
-      "Applicala a un avversario resistente; continua a combattere mentre perde salute.",
-      "Impararla è facoltativo. La casata scelta non obbliga a usarla."
+      "Usala contro un nemico resistente: continuerà a perdere salute mentre lo affronti.",
+      "Imparare e usare questa maledizione è facoltativo, qualunque sia la tua casata."
     ],
     "panels": [
       {
         "title": "Come impararla · scelte di dialogo",
         "paragraphs": [
-          "Durante la relativa missione di Sebastian, scegli esplicitamente di imparare l’incantesimo. La guida della missione descrive le risposte e le conseguenze.",
-          "Se rifiuti, può esserci un’altra occasione parlando con Sebastian. Prima delle scelte definitive del suo percorso, leggi il relativo avviso: non è garantito poter recuperare l’incantesimo in seguito."
+          "Nel dialogo scegli di imparare l’incantesimo. Nella scheda completa trovi il collegamento alla missione, con le risposte disponibili e le loro conseguenze.",
+          "Se rifiuti, puoi avere un’altra occasione parlando con Sebastian. Prima delle decisioni definitive del suo percorso, controlla gli avvisi: alcune scelte impediscono di recuperare gli insegnamenti rifiutati."
         ]
       }
     ],
@@ -889,17 +899,19 @@ export const UNLOCK_GUIDES = [
     "group": "Arti Oscure",
     "aliases": [],
     "order": 28,
-    "requirements": [],
+    "requirements": [
+      "Puoi impararla durante «All’ombra del tempo», nel percorso di Sebastian."
+    ],
     "steps": [
-      "Scegli un avversario utile a distrarre il gruppo; sfrutta il tempo per curarti o cambiare posizione.",
-      "Impararla è facoltativo. La casata scelta non obbliga a usarla."
+      "Usala per far combattere un nemico dalla tua parte. Mentre distrae gli altri, puoi curarti o cambiare posizione.",
+      "Imparare e usare questa maledizione è facoltativo, qualunque sia la tua casata."
     ],
     "panels": [
       {
         "title": "Come impararla · scelte di dialogo",
         "paragraphs": [
-          "Durante la relativa missione di Sebastian, scegli esplicitamente di imparare l’incantesimo. La guida della missione descrive le risposte e le conseguenze.",
-          "Se rifiuti, può esserci un’altra occasione parlando con Sebastian. Prima delle scelte definitive del suo percorso, leggi il relativo avviso: non è garantito poter recuperare l’incantesimo in seguito."
+          "Nel dialogo scegli di imparare l’incantesimo. Nella scheda completa trovi il collegamento alla missione, con le risposte disponibili e le loro conseguenze.",
+          "Se rifiuti, puoi avere un’altra occasione parlando con Sebastian. Prima delle decisioni definitive del suo percorso, controlla gli avvisi: alcune scelte impediscono di recuperare gli insegnamenti rifiutati."
         ]
       }
     ],
@@ -925,22 +937,24 @@ export const UNLOCK_GUIDES = [
     "title": "Avada Kedavra",
     "section": "sblocchi",
     "category": "incantesimi",
-    "summary": "Maledizione letale con recupero lungo.",
+    "summary": "Elimina il bersaglio, ma richiede una lunga attesa prima di poterla riusare.",
     "location": "Hogwarts e Highlands",
     "group": "Arti Oscure",
     "aliases": [],
     "order": 29,
-    "requirements": [],
+    "requirements": [
+      "Puoi impararla durante «All’ombra della reliquia», nel percorso di Sebastian."
+    ],
     "steps": [
-      "Riservala a un bersaglio difficile e vulnerabile alla maledizione; alcuni scontri di trama fanno eccezione.",
-      "Impararla è facoltativo. La casata scelta non obbliga a usarla."
+      "Riservala ai nemici più difficili. Non funziona contro tutti i bersagli, in particolare in alcuni scontri della storia.",
+      "Imparare e usare questa maledizione è facoltativo, qualunque sia la tua casata."
     ],
     "panels": [
       {
         "title": "Come impararla · scelte di dialogo",
         "paragraphs": [
-          "Durante la relativa missione di Sebastian, scegli esplicitamente di imparare l’incantesimo. La guida della missione descrive le risposte e le conseguenze.",
-          "Se rifiuti, può esserci un’altra occasione parlando con Sebastian. Prima delle scelte definitive del suo percorso, leggi il relativo avviso: non è garantito poter recuperare l’incantesimo in seguito."
+          "Nel dialogo scegli di imparare l’incantesimo. Nella scheda completa trovi il collegamento alla missione, con le risposte disponibili e le loro conseguenze.",
+          "Se rifiuti, puoi avere un’altra occasione parlando con Sebastian. Prima delle decisioni definitive del suo percorso, controlla gli avvisi: alcune scelte impediscono di recuperare gli insegnamenti rifiutati."
         ]
       }
     ],
@@ -973,9 +987,9 @@ export const UNLOCK_GUIDES = [
     "order": 30,
     "requirements": [],
     "steps": [
-      "Quando l’indicatore è carico, usa il comando mostrato sul bersaglio per consumare un segmento e colpire con forza.",
+      "Quando la barra è carica, usa il comando che compare sul bersaglio. L’attacco consuma un segmento della barra.",
       "Raccogli le sfere lasciate durante i combattimenti. Alcuni talenti aiutano a ricaricare la barra.",
-      "Per aggiungere segmenti completa i Fulcri di Magia antica e riscatta le ricompense in Sfide → Esplorazione."
+      "Completa i Fulcri di Magia antica, poi riscatta le ricompense in Sfide → Esplorazione per aggiungere segmenti alla barra."
     ],
     "panels": [],
     "photos": [],
@@ -1003,8 +1017,8 @@ export const UNLOCK_GUIDES = [
     "order": 31,
     "requirements": [],
     "steps": [
-      "Assegnalo a uno slot, avvicinati all’animale e segui le pressioni mostrate sullo schermo.",
-      "Levioso o Arresto Momentum aiutano a fermare gli animali che scappano. Resta nel raggio del sacco."
+      "Assegna il sacco a uno dei tasti degli incantesimi. Avvicinati all’animale e premi il comando ogni volta che compare sullo schermo.",
+      "Usa Levioso o Arresto Momentum per rallentare la fuga dell’animale. Resta vicino mentre completi la cattura."
     ],
     "panels": [],
     "photos": [],
@@ -1037,8 +1051,8 @@ export const UNLOCK_GUIDES = [
     "order": 32,
     "requirements": [],
     "steps": [
-      "Assegna la spazzola a uno slot e usala sull’animale.",
-      "Dagli anche il cibo; quando entrambe le cure sono soddisfatte e il materiale è pronto, raccoglilo."
+      "Assegna la spazzola a uno dei tasti degli incantesimi e usala sull’animale.",
+      "Dagli anche da mangiare. Dopo entrambe le cure, raccogli il materiale quando è pronto."
     ],
     "panels": [],
     "photos": [],
@@ -1070,8 +1084,8 @@ export const UNLOCK_GUIDES = [
     "order": 33,
     "requirements": [],
     "steps": [
-      "Usalo su un animale del vivario; puoi sostituire questa operazione con una mangiatoia.",
-      "Il cibo da solo non basta a produrre materiali: serve anche la spazzola."
+      "Usalo sull’animale nel vivario oppure colloca una mangiatoia che fornisca il cibo.",
+      "Per ottenere materiali devi anche spazzolare l’animale."
     ],
     "panels": [],
     "photos": [],
@@ -1103,10 +1117,10 @@ export const UNLOCK_GUIDES = [
     "order": 34,
     "requirements": [],
     "steps": [
-      "Il menu si sblocca con Il riposo di Cornacchia. I punti partono dal livello 5 e vengono assegnati anche per i livelli già raggiunti.",
-      "Al livello massimo 40 puoi avere 36 punti per 48 talenti: scegli in base agli incantesimi e agli strumenti che usi.",
-      "Nel menu Talenti puoi recuperare singoli punti o azzerare la distribuzione: il costo è 200 monete d’oro per punto restituito.",
-      "Le fasce richiedono livello 5, 16 o 22. Le espansioni dell’inventario e della barra di Magia antica sono ricompense delle sfide, non acquisti con questi punti."
+      "Il menu si sblocca con Il riposo di Cornacchia. Ricevi un punto per ogni livello dal 5 in poi, compresi quelli già raggiunti prima dello sblocco.",
+      "Al livello massimo, il 40, hai 36 punti per 48 talenti. Scegli quelli che migliorano gli incantesimi e gli strumenti che usi di più.",
+      "Nel menu Talenti puoi recuperare un singolo punto o tutti i punti spesi. Ogni punto restituito costa 200 monete d’oro.",
+      "I talenti richiedono il livello 5, 16 o 22. I posti aggiuntivi nell’inventario e i segmenti di Magia antica si ottengono invece con le sfide."
     ],
     "panels": [],
     "photos": [],
@@ -1153,14 +1167,14 @@ export const UNLOCK_GUIDES = [
     "order": 35,
     "requirements": [],
     "steps": [
-      "Apri la fascia del tuo livello e confronta gli effetti prima di spendere un punto.",
-      "Il requisito dell’incantesimo resta necessario per i talenti che lo potenziano."
+      "Apri la fascia corrispondente al tuo livello e confronta gli effetti prima di spendere un punto.",
+      "Per scegliere un talento che potenzia un incantesimo, devi prima aver imparato quell’incantesimo."
     ],
     "panels": [
       {
         "title": "Livello 5",
         "paragraphs": [
-          "Maledizione del sangue — Il danno si distribuisce fra i bersagli maledetti.",
+          "Maledizione del sangue — Danneggiare un nemico maledetto ferisce anche gli altri nemici maledetti.",
           "Maledizione Schiantesimo — Stupeficium applica anche una maledizione.",
           "Maledizione Disarmante — Expelliarmus applica una maledizione.",
           "Maledizione Respingente — Flipendo applica una maledizione."
@@ -1261,8 +1275,8 @@ export const UNLOCK_GUIDES = [
     "order": 36,
     "requirements": [],
     "steps": [
-      "Apri la fascia del tuo livello e confronta gli effetti prima di spendere un punto.",
-      "Il requisito dell’incantesimo resta necessario per i talenti che lo potenziano."
+      "Apri la fascia corrispondente al tuo livello e confronta gli effetti prima di spendere un punto.",
+      "Per scegliere un talento che potenzia un incantesimo, devi prima aver imparato quell’incantesimo."
     ],
     "panels": [
       {
@@ -1271,20 +1285,20 @@ export const UNLOCK_GUIDES = [
           "Conoscenza magica I — Sblocca un set aggiuntivo di quattro incantesimi.",
           "Conoscenza magica II — Aggiunge un altro set di quattro incantesimi.",
           "Potenza della Pozione Rigeneratrice I — Ogni Pozione Rigeneratrice recupera più salute.",
-          "Assimilazione Protego — Le parate alimentano la barra di Magia antica.",
-          "Celere — Tenendo premuta la schivata, esegui un’evasione più lunga.",
-          "Perfezionamento Incantesimo Base — I colpi base accorciano il recupero degli incantesimi.",
-          "Capacità con Lancio Magia antica — Permette di scagliare le armi sottratte ai nemici."
+          "Assimilazione Protego — Le parate ricaricano la barra di Magia antica.",
+          "Celere — Tieni premuto il comando di schivata per spostarti più lontano.",
+          "Perfezionamento Incantesimo Base — I colpi base riducono l’attesa prima di poter usare di nuovo gli incantesimi.",
+          "Capacità con Lancio Magia antica — Permette di scagliare le armi tolte ai nemici."
         ]
       },
       {
         "title": "Livello 16",
         "paragraphs": [
-          "Capacità con Protego — Il Protego perfetto rimanda proiettili al mittente.",
+          "Capacità con Protego — Un Protego perfetto rimanda i proiettili verso chi li ha lanciati.",
           "Conoscenza magica III — Aggiunge l’ultimo set: quattro set complessivi.",
           "Potenza della Pozione Rigeneratrice II — Aumenta ancora la cura della Pozione Rigeneratrice.",
-          "Assimilazione dell’evasione — Schivare attacchi imparabili alimenta la Magia antica.",
-          "Assimilazione Incantesimo Base a mezz’aria — I colpi base sui nemici sospesi ricaricano più Magia antica.",
+          "Assimilazione dell’evasione — Schivare attacchi non parabili ricarica la barra di Magia antica.",
+          "Assimilazione Incantesimo Base a mezz’aria — Colpire con attacchi base i nemici sospesi ricarica di più la barra di Magia antica.",
           "Perfezionamento Revelio — Revelio copre una zona più ampia.",
           "Perfezionamento Stupeficium — Lo stordimento di Stupeficium dura di più."
         ]
@@ -1387,27 +1401,27 @@ export const UNLOCK_GUIDES = [
     "order": 37,
     "requirements": [],
     "steps": [
-      "Apri la fascia del tuo livello e confronta gli effetti prima di spendere un punto.",
-      "Il requisito dell’incantesimo resta necessario per i talenti che lo potenziano."
+      "Apri la fascia corrispondente al tuo livello e confronta gli effetti prima di spendere un punto.",
+      "Per scegliere un talento che potenzia un incantesimo, devi prima aver imparato quell’incantesimo."
     ],
     "panels": [
       {
         "title": "Livello 5",
         "paragraphs": [
           "Demiguise umano — Puoi scattare anche durante Disillusione.",
-          "Senso di segretezza I — Riduce la facilità con cui i nemici ti individuano."
+          "Senso di segretezza I — Rende più difficile per i nemici individuarti."
         ]
       },
       {
         "title": "Livello 16",
         "paragraphs": [
-          "Senso di segretezza II — Migliora ancora la tua furtività."
+          "Senso di segretezza II — Rende ancora più difficile per i nemici individuarti."
         ]
       },
       {
         "title": "Livello 22",
         "paragraphs": [
-          "Perfezionamento Petrificus Totalus — La pietrificazione può coinvolgere anche i nemici vicini."
+          "Perfezionamento Petrificus Totalus — Petrificus Totalus può colpire anche i nemici vicini al bersaglio."
         ]
       }
     ],
@@ -1457,31 +1471,31 @@ export const UNLOCK_GUIDES = [
     "order": 38,
     "requirements": [],
     "steps": [
-      "Apri la fascia del tuo livello e confronta gli effetti prima di spendere un punto.",
-      "Il requisito dell’incantesimo resta necessario per i talenti che lo potenziano."
+      "Apri la fascia corrispondente al tuo livello e confronta gli effetti prima di spendere un punto.",
+      "Per scegliere un talento che potenzia un incantesimo, devi prima aver imparato quell’incantesimo."
     ],
     "panels": [
       {
         "title": "Livello 5",
         "paragraphs": [
           "Fertilizzante — Ogni lancio produce un secondo cavolo senza consumarne un altro.",
-          "Potenza della Pozione Edurus — Edurus protegge completamente e riflette i proiettili.",
+          "Potenza della Pozione Edurus — Mentre la pozione è attiva, sei invulnerabile e rinvii i proiettili ai nemici.",
           "Potenza della Pozione dell’Invisibilità — L’invisibilità della pozione dura di più."
         ]
       },
       {
         "title": "Livello 16",
         "paragraphs": [
-          "Emicrania — La Mandragola fa più danni e blocca più a lungo.",
-          "Potenza della Pozione Maxima — Maxima potenzia ulteriormente i danni e la rottura degli scudi."
+          "Emicrania — La Mandragola infligge più danni e stordisce più a lungo.",
+          "Potenza della Pozione Maxima — Aumenta ulteriormente i danni e permette agli attacchi di rompere gli scudi."
         ]
       },
       {
         "title": "Livello 22",
         "paragraphs": [
-          "Potenza della Pozione Focalizzante — Usare tutti gli incantesimi del set equipaggiato prolunga la Focalizzante.",
-          "Potenza della Pozione del Tuono — La tempesta della pozione colpisce più forte e più lontano.",
-          "Nocivo — La Tentacula fa più danni e spezza gli scudi."
+          "Potenza della Pozione Focalizzante — Lancia tutti gli incantesimi del gruppo di quattro in uso per prolungare l’effetto della pozione.",
+          "Potenza della Pozione del Tuono — La tempesta infligge più danni e raggiunge nemici più lontani.",
+          "Nocivo — La Tentacula Velenosa infligge più danni e rompe gli scudi."
         ]
       }
     ],
@@ -1549,8 +1563,8 @@ export const UNLOCK_GUIDES = [
     "order": 39,
     "requirements": [],
     "steps": [
-      "Apri la fascia del tuo livello e confronta gli effetti prima di spendere un punto.",
-      "Il requisito dell’incantesimo resta necessario per i talenti che lo potenziano."
+      "Apri la fascia corrispondente al tuo livello e confronta gli effetti prima di spendere un punto.",
+      "Per scegliere un talento che potenzia un incantesimo, devi prima aver imparato quell’incantesimo."
     ],
     "panels": [
       {
@@ -1558,7 +1572,7 @@ export const UNLOCK_GUIDES = [
         "paragraphs": [
           "Perfezionamento Accio — Attira anche i nemici accanto al bersaglio.",
           "Perfezionamento Confringo — Dall’impatto partono dardi verso altri nemici.",
-          "Perfezionamento Depulso — Aggiunge una spinta ad area attorno al personaggio.",
+          "Perfezionamento Depulso — Respinge anche i nemici intorno al personaggio.",
           "Perfezionamento Diffindo — Il taglio attraversa il bersaglio e raggiunge chi sta dietro.",
           "Perfezionamento Incendio — Aggiunge un anello di fuoco intorno al personaggio.",
           "Perfezionamento Levioso — Solleva anche i nemici vicini al bersaglio."
@@ -1569,13 +1583,13 @@ export const UNLOCK_GUIDES = [
         "paragraphs": [
           "Perfezionamento Bombarda — Amplia l’area colpita dall’esplosione.",
           "Perfezionamento Descendo — L’impatto a terra danneggia anche i nemici vicini.",
-          "Perfezionamento Glacius — Colpire il bersaglio congelato produce schegge offensive."
+          "Perfezionamento Glacius — Colpire il nemico congelato genera schegge che danneggiano i nemici vicini."
         ]
       },
       {
         "title": "Livello 22",
         "paragraphs": [
-          "Perfezionamento Trasformazione — Trasforma i nemici in oggetti esplosivi lanciabili."
+          "Perfezionamento Trasformazione — Trasforma i nemici in oggetti esplosivi che puoi scagliare."
         ]
       }
     ],
@@ -1640,9 +1654,9 @@ export const UNLOCK_GUIDES = [
     "order": 40,
     "requirements": [],
     "steps": [
-      "Confronta Attacco e Difesa della nuova veste con quella indossata. Un oggetto più raro non è automaticamente migliore se ha statistiche più basse.",
-      "Identifica i pezzi sconosciuti al tavolo della Stanza delle Necessità prima di decidere.",
-      "Vendi i doppioni e l’equipaggiamento superato ai mercanti. L’aspetto già sbloccato rimane disponibile anche dopo la vendita.",
+      "Confronta Attacco e Difesa del nuovo oggetto con quelli del pezzo che indossi. Una rarità più alta non garantisce statistiche migliori.",
+      "Se un oggetto non è identificato, esaminalo al tavolo della Stanza delle Necessità prima di decidere se tenerlo.",
+      "Vendi ai mercanti i doppioni e i pezzi che non usi più. Il loro aspetto resta disponibile anche dopo la vendita.",
       "Nel menu Equipaggiamento usa Cambia aspetto per mantenere l’estetica desiderata senza rinunciare alle statistiche."
     ],
     "panels": [],
@@ -1676,10 +1690,10 @@ export const UNLOCK_GUIDES = [
     "order": 41,
     "requirements": [],
     "steps": [
-      "Sblocca il telaio con L’elfo, il sacco e il telaio; evocalo nella Stanza delle Necessità.",
-      "Seleziona un oggetto di rarità blu o superiore. I potenziamenti aggiungono statistiche secondarie, fino a tre miglioramenti per pezzo.",
-      "Le caratteristiche sono bonus separati: scegli una ricetta scoperta e paga i materiali indicati. Un nuovo bonus sostituisce quello precedente.",
-      "Il blu accetta caratteristiche di livello I, il viola fino al II, il leggendario fino al III. Il telaio non cambia la rarità né il livello base del pezzo."
+      "Completa L’elfo, il sacco e il telaio per sbloccare il telaio, poi evocalo nella Stanza delle Necessità.",
+      "Seleziona un oggetto blu o di rarità superiore. Puoi potenziarlo fino a tre volte, aumentando le statistiche aggiuntive mostrate dal telaio.",
+      "Le caratteristiche aggiungono bonus separati dai potenziamenti. Scegli una ricetta che possiedi e usa i materiali richiesti; il nuovo bonus sostituisce quello precedente.",
+      "Un oggetto blu accetta caratteristiche di livello I; uno viola, fino al II; uno leggendario, fino al III. Il telaio non cambia la rarità o il livello base dell’oggetto."
     ],
     "panels": [],
     "photos": [],
@@ -1714,8 +1728,8 @@ export const UNLOCK_GUIDES = [
     "steps": [
       "Completa le Prove di Merlino dopo la missione introduttiva.",
       "Apri Sfide → Esplorazione e riscatta ogni ricompensa sbloccata: lo spazio non aumenta finché non la ritiri.",
-      "I traguardi cumulativi sono 2, 8, 18, 32 e 52 prove; ognuno aggiunge 4 posti. Non servono tutte le 95 prove.",
-      "Prima di un sotterraneo vendi i pezzi inutili: pozioni, ingredienti e oggetti missione non occupano questi posti."
+      "Raggiungi in totale 2, 8, 18, 32 e 52 prove completate: ogni traguardo aggiunge 4 posti. Non servono tutte le 95 prove.",
+      "Prima di entrare in un sotterraneo, vendi i pezzi di equipaggiamento che non usi. Pozioni, ingredienti e oggetti missione non occupano questi posti."
     ],
     "panels": [],
     "photos": [],
@@ -1771,9 +1785,9 @@ export const UNLOCK_GUIDES = [
     "order": 43,
     "requirements": [],
     "steps": [
-      "Scopri le ricette nei forzieri degli accampamenti, nelle sfide e nelle missioni; poi applicale al telaio.",
-      "Una caratteristica di livello più alto richiede un vestito che la supporti. Cambiarla non rimborsa il materiale speso.",
-      "Scegli bonus coerenti con ciò che usi: un bonus a una pianta non potenzia tutti gli incantesimi."
+      "Trova le ricette nei forzieri degli accampamenti oppure ottienile dalle sfide e dalle missioni. Poi applica le caratteristiche al telaio.",
+      "Controlla il livello di caratteristica che il capo può accettare. Se sostituisci un bonus, non recuperi i materiali usati per quello precedente.",
+      "Scegli i bonus degli incantesimi o delle piante che usi più spesso. Un bonus specifico vale solo per ciò che indica la descrizione."
     ],
     "panels": [
       {
@@ -1935,8 +1949,8 @@ export const UNLOCK_GUIDES = [
     "steps": [
       "Completa la Lezione di volo, poi compra una scopa da Albie Weekes a Hogsmeade.",
       "Esci dalle zone in cui il volo è vietato, apri la ruota degli strumenti e usa il comando della scopa mostrato dal gioco.",
-      "Le prove a tempo di Imelda fanno avanzare le ricerche di Albie. Torna da lui dopo i suoi messaggi e acquista il potenziamento disponibile.",
-      "Ci sono tre potenziamenti. Cambiare modello cambia l’aspetto; i miglioramenti comprati valgono per le tue scope."
+      "Completa le prove a tempo di Imelda per aiutare Albie a migliorare la scopa. Dopo i suoi messaggi, torna in negozio e acquista il potenziamento disponibile.",
+      "Ci sono tre potenziamenti e valgono per tutte le tue scope. Scegli il modello che ti piace: cambiarlo modifica soltanto l’aspetto."
     ],
     "panels": [],
     "photos": [],

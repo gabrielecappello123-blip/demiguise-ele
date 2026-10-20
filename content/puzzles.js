@@ -15,7 +15,7 @@ export const PUZZLE_METHODS = [
       "Incendio o Confringo"
     ],
     "steps": [
-      "Individua i tre bracieri e libera prima vegetazione o ostacoli.",
+      "Individua i tre bracieri e rimuovi le piante o gli ostacoli che li coprono.",
       "Accendili rapidamente dal più alto al più basso: devono bruciare contemporaneamente. Confringo raggiunge quelli lontani.",
       "Se uno si spegne, ripeti la sequenza; non occorre altra Malva."
     ],
@@ -82,8 +82,8 @@ export const PUZZLE_METHODS = [
       "Flipendo"
     ],
     "steps": [
-      "Guarda il simbolo sul sostegno: quello del cubo sopra deve coincidere anche nell’orientamento.",
-      "Usa Flipendo sul cubo. Cambia lato per ruotarlo sull’altro asse; ripeti sui tre sostegni."
+      "Confronta il simbolo sul sostegno con quello sul cubo: devono essere uguali e orientati nello stesso verso.",
+      "Usa Flipendo sul cubo. Per ruotarlo in una direzione diversa, spostati su un altro lato e lancia di nuovo l’incantesimo. Ripeti sui tre sostegni."
     ],
     "tracking": false,
     "sources": [
@@ -116,7 +116,7 @@ export const PUZZLE_METHODS = [
     ],
     "steps": [
       "Trova le nove piccole sfere sui sostegni con Revelio.",
-      "Rompi ogni sfera con un attacco base. Non c’è un conto alla rovescia: esplora anche i livelli sopra e sotto."
+      "Rompi ogni sfera con un attacco base. Non c’è un limite di tempo: cerca anche più in alto e più in basso."
     ],
     "tracking": false,
     "sources": [
@@ -148,7 +148,7 @@ export const PUZZLE_METHODS = [
       "Lumos"
     ],
     "steps": [
-      "Avvicinati alle farfalle luminose e accendi Lumos. Cammina fino a una pietra con cristalli e aspetta che la occupino.",
+      "Avvicinati alle farfalle luminose e accendi Lumos. Accompagnale fino a una pietra con cristalli e aspetta che la raggiungano.",
       "Ripeti con gli altri due gruppi. Se una scalata interrompe Lumos, riaccendilo subito vicino alle farfalle."
     ],
     "tracking": false,
@@ -182,7 +182,7 @@ export const PUZZLE_METHODS = [
     ],
     "steps": [
       "Trova i gruppi di piccole sfere e le tre basi con gli incavi.",
-      "Tieni Accio su una sfera e accompagna il gruppo fino a una base. Ripeti per le altre due; rompi gli ostacoli lungo il tragitto."
+      "Mantieni Accio su una sfera e trascina l’intero gruppo fino a una base. Ripeti per le altre due basi, rompendo gli ostacoli lungo il tragitto."
     ],
     "tracking": false,
     "sources": [
@@ -214,7 +214,7 @@ export const PUZZLE_METHODS = [
       "Reparo"
     ],
     "steps": [
-      "Attiva il cerchio e osserva dove cadono le statue. Revelio evidenzia i pezzi.",
+      "Attiva la prova e osserva dove cadono le statue. Usa Revelio per individuare i frammenti.",
       "Usa Reparo su ogni gruppo di frammenti; controlla oltre i muri se la prova non termina."
     ],
     "tracking": false,
@@ -245,7 +245,7 @@ export const PUZZLE_METHODS = [
     "order": 8,
     "requirements": [],
     "steps": [
-      "Libera le piattaforme da casse, barili o pietre prima di partire.",
+      "Prima di saltare, rimuovi casse, barili o pietre dalle piattaforme.",
       "Salta su tutte senza toccare terreno o acqua. Se cadi, ricomincia dall’inizio; puoi risalire su una piattaforma già toccata."
     ],
     "tracking": false,
@@ -279,7 +279,7 @@ export const PUZZLE_METHODS = [
     ],
     "steps": [
       "Individua la grande sfera e la conca di pietra: controlla anche più in alto o in basso.",
-      "Libera la strada. Spingi con Depulso oppure accompagna la sfera con Wingardium Leviosa, poi lasciala assestare nella conca."
+      "Libera il percorso fino alla conca. Spingi la sfera con Depulso oppure guidala con Wingardium Leviosa, poi lasciala fermare nella conca."
     ],
     "tracking": false,
     "sources": [
@@ -322,7 +322,7 @@ export const PUZZLES = [
       "Completa la prima prova con Nora vicino a Lower Hogsfield: sblocca le altre prove nel mondo.",
       "Porta la Malva e usala sul cerchio di pietra. Poi leggi le indicazioni del luogo e apri il metodo di risoluzione.",
       "Segna manualmente solo le prove che hai concluso. La prima prova con Nora è inclusa nelle 95.",
-      "Per aumentare gli slot dell’equipaggiamento, ritira i premi in Sfide → Esplorazione dopo aver raggiunto i traguardi."
+      "Per avere più spazio per l’equipaggiamento, raggiungi i traguardi delle prove e ritira i premi in Sfide → Esplorazione."
     ],
     "related": [
       "main-mrt-01"
@@ -379,7 +379,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-north-ford-bog-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Pitt-upon-Ford: collina est. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Pitt-upon-Ford: collina est. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-ford-bog-merlin-trials/"
       },
@@ -428,7 +428,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/how-to-solve-hogwarts-legacy-north-ford-bog-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Palude settentrionale: stagno. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Palude settentrionale: stagno. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-ford-bog-merlin-trials/"
       },
@@ -477,7 +477,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-north-ford-bog-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Torre di San Bakar: cimitero. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Torre di San Bakar: cimitero. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-ford-bog-merlin-trials/"
       },
@@ -526,7 +526,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/where-to-find-hogwarts-legacy-north-ford-bog-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Palude orientale: sfera sulla collina. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Palude orientale: sfera sulla collina. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-ford-bog-merlin-trials/"
       },
@@ -558,7 +558,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalla Tomba di Cornacchia entra nella foresta verso est.",
-      "Trova i bracieri a nord, sud-est dietro l’albero e nord-ovest vicino allo stagno. Libera prima le ragnatele."
+      "Cerca i bracieri a nord, a sud-est dietro l’albero e a nord-ovest vicino allo stagno. Brucia prima le ragnatele che li coprono."
     ],
     "methodId": "merlin-bracieri",
     "tracking": true,
@@ -575,7 +575,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-forbidden-forest-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Cornacchia: bracieri nella foresta. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Cornacchia: bracieri nella foresta. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-forbidden-forest-merlin-trials/"
       },
@@ -607,7 +607,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Raggiungi la zona centrale della Foresta Proibita, presso la tana degli ippogrifi.",
-      "Cerca le farfalle a sud vicino alle gabbie, a est e a sud-ovest dietro le rocce da rompere."
+      "Cerca le farfalle a sud, vicino alle gabbie, e a est. Il gruppo a sud-ovest è dietro le rocce: rompile per raggiungerlo."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -624,7 +624,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-forbidden-forest-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Foresta centrale: farfalle e gabbie. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Foresta centrale: farfalle e gabbie. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-forbidden-forest-merlin-trials/"
       },
@@ -655,7 +655,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dall’Ingresso della Palude del Guado vai a ovest, alle rovine.",
-      "Libera le sommità dalle pietre; usa la cassa a sud per cominciare il giro delle piattaforme."
+      "Rimuovi le pietre dalle piattaforme. Sali sulla cassa a sud per cominciare il percorso."
     ],
     "methodId": "merlin-salti",
     "tracking": true,
@@ -672,7 +672,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/how-to-solve-all-hogwarts-legacy-forbidden-forest-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Ingresso della palude: rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Ingresso della palude: rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-forbidden-forest-merlin-trials/"
       },
@@ -721,7 +721,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-hogsmeade-valley-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Falbarton: farfalle a nord. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Falbarton: farfalle a nord. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogsmeade-valley-merlin-trials/"
       },
@@ -770,7 +770,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-hogsmeade-valley-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Falbarton: sfera a nord-ovest. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Falbarton: sfera a nord-ovest. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogsmeade-valley-merlin-trials/"
       },
@@ -819,7 +819,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/where-to-find-hogwarts-legacy-hogsmeade-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Valle orientale: cerchio con candele. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Valle orientale: cerchio con candele. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogsmeade-valley-merlin-trials/"
       },
@@ -868,7 +868,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/how-to-solve-hogwarts-legacy-hogsmeade-valley-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Upper Hogsfield: rocce a sud-ovest. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Upper Hogsfield: rocce a sud-ovest. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogsmeade-valley-merlin-trials/"
       },
@@ -917,7 +917,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/how-to-solve-all-hogwarts-legacy-hogsmeade-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Hogsmeade est: carretto e caverna. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Hogsmeade est: carretto e caverna. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogsmeade-valley-merlin-trials/"
       },
@@ -949,7 +949,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalle Rovine di Korrow vai a nord-est.",
-      "Bracieri a sud-ovest, a nord sulla salita e a nord-ovest nelle rovine; brucia prima le piante."
+      "Cerca i bracieri a sud-ovest, a nord sulla salita e a nord-ovest nelle rovine. Brucia prima le piante che li coprono."
     ],
     "methodId": "merlin-bracieri",
     "tracking": true,
@@ -966,7 +966,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-north-hogwarts-region-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Korrow: bracieri nelle rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Korrow: bracieri nelle rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-hogwarts-region-merlin-trials/"
       },
@@ -1015,7 +1015,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-north-hogwarts-region-merlin-trials-puzzles-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Korrow: statue lungo il torrente. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Korrow: statue lungo il torrente. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-hogwarts-region-merlin-trials/"
       },
@@ -1064,7 +1064,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/hogwarts-legacy-north-hogwarts-region-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Cornacchia: cubi alla cascata. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Cornacchia: cubi alla cascata. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-hogwarts-region-merlin-trials/"
       },
@@ -1113,7 +1113,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/how-to-find-hogwarts-legacy-north-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Ingresso della foresta: sfere oltre il fiume. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Ingresso della foresta: sfere oltre il fiume. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-hogwarts-region-merlin-trials/"
       },
@@ -1162,7 +1162,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/02/how-to-solve-hogwarts-legacy-north-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Collezionista: radura con tenda. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Collezionista: radura con tenda. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-north-hogwarts-region-merlin-trials/"
       },
@@ -1218,7 +1218,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-south-hogwarts-region-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Lower Hogsfield: prima prova con Nora. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Lower Hogsfield: prima prova con Nora. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1278,7 +1278,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Lower Hogsfield: piccoli gruppi di sfere. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Lower Hogsfield: piccoli gruppi di sfere. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1335,7 +1335,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Strada per Hogwarts: sfera in discesa. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Strada per Hogwarts: sfera in discesa. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1392,7 +1392,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-hogwarts-legacy-south-hogwarts-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Confine della valle: massi. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Confine della valle: massi. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1424,7 +1424,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Aranshire scendi a sud, sulla scogliera.",
-      "Basi a est, sud e nord-ovest; per quest’ultima cerca le sfere dietro il muretto a nord-est."
+      "Le basi sono a est, a sud e a nord-ovest. Le sfere per la base a nord-ovest si trovano dietro il muretto a nord-est."
     ],
     "methodId": "merlin-gruppi",
     "tracking": true,
@@ -1449,7 +1449,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-hogwarts-legacy-south-hogwarts-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Aranshire sud: sfere sulla scogliera. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Aranshire sud: sfere sulla scogliera. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1481,7 +1481,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Segui la ferrovia a sud di Aranshire, sul lato ovest della scogliera.",
-      "Cerca vicino al cerchio e sotto la parete ovest; riporta il gruppo più a nord alla pietra in alto a sud-est."
+      "Cerca le farfalle vicino al cerchio e sotto la parete ovest. Accompagna il gruppo più a nord fino alla pietra in alto, a sud-est."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -1506,7 +1506,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-15-hogwarts-legacy-south-hogwarts-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Aranshire: farfalle presso la ferrovia. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Aranshire: farfalle presso la ferrovia. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1563,7 +1563,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-find-hogwarts-legacy-south-hogwarts-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Aranshire: sfera sulla riva. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Aranshire: sfera sulla riva. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1620,7 +1620,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-find-all-hogwarts-legacy-south-hogwarts-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Stazione di Hogsmeade: bracieri. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Stazione di Hogsmeade: bracieri. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1676,7 +1676,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-find-all-15-hogwarts-legacy-south-hogwarts-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Stazione di Hogsmeade: pontile. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Stazione di Hogsmeade: pontile. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1733,7 +1733,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Stazione di Hogsmeade: scogliera nord. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Stazione di Hogsmeade: scogliera nord. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1765,7 +1765,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Aranshire raggiungi la riva del lago a nord-ovest.",
-      "Farfalle a est, nord-ovest e dietro la roccia a ovest."
+      "Cerca le farfalle a est, a nord-ovest e dietro la roccia a ovest."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -1790,7 +1790,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Aranshire nord-ovest: farfalle sul lago. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Aranshire nord-ovest: farfalle sul lago. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1822,7 +1822,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Raggiungi la collina a ovest del castello, vicino al campo da Quidditch.",
-      "Sfera sulla parete a nord-est; conca più in basso, verso nord."
+      "La sfera è sulla parete rocciosa a nord-est; la conca si trova più in basso, verso nord."
     ],
     "methodId": "merlin-sfera",
     "tracking": true,
@@ -1847,7 +1847,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-15-hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Hogwarts ovest: sfera sopra il campo. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Hogwarts ovest: sfera sopra il campo. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1879,7 +1879,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "A ovest del castello scendi al fiume, a sud-est del campo da Quidditch.",
-      "Controlla il ponte a sud-est, la sponda opposta e il tratto verso la cascata."
+      "Cerca le farfalle presso il ponte a sud-est, sulla sponda opposta e lungo il tratto verso la cascata."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -1904,7 +1904,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Hogwarts ovest: ponte sul fiume. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Hogwarts ovest: ponte sul fiume. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1961,7 +1961,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Hogwarts ovest: massi nel vallone. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Hogwarts ovest: massi nel vallone. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -1993,7 +1993,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Aranshire vai a sud-est, alle rovine vicine al margine della mappa.",
-      "La sfera è presso il pozzo a sud; liberale il percorso verso la conca a nord-est."
+      "La sfera è presso il pozzo a sud. Rimuovi gli ostacoli lungo il percorso fino alla conca a nord-est."
     ],
     "methodId": "merlin-sfera",
     "tracking": true,
@@ -2018,7 +2018,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-15-hogwarts-legacy-south-hogwarts-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Aranshire sud-est: pozzo nelle rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Aranshire sud-est: pozzo nelle rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-hogwarts-region-merlin-trials/"
       },
@@ -2049,7 +2049,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Brocburrow vai a est.",
-      "Le piattaforme sono a sud-est: comincia dall’estremità lontana e torna verso il cerchio."
+      "Le piattaforme sono a sud-est. Parti da quella più lontana dal cerchio e salta sulle altre tornando verso di esso."
     ],
     "methodId": "merlin-salti",
     "tracking": true,
@@ -2074,7 +2074,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-hogwarts-valley-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Brocburrow est: piattaforme. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Brocburrow est: piattaforme. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2106,7 +2106,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Brocburrow vai a ovest.",
-      "Sfera a sud sulla salita, conca a sud-est; rompi le rocce che bloccano la discesa."
+      "La sfera è sulla salita a sud; la conca è a sud-est. Rompi le rocce che bloccano la discesa."
     ],
     "methodId": "merlin-sfera",
     "tracking": true,
@@ -2131,7 +2131,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-hogwarts-valley-merlin-trials-puzzles-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Brocburrow ovest: sfera sulla salita. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Brocburrow ovest: sfera sulla salita. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2162,8 +2162,8 @@ export const PUZZLES = [
       "Lumos"
     ],
     "steps": [
-      "Cerca fuori Brocburrow, sul lato ovest.",
-      "Pietre a nord-est, nord-ovest e sud; farfalle a est, nord e ovest."
+      "Cerca il cerchio della prova fuori Brocburrow, sul lato ovest.",
+      "Le pietre con i cristalli sono a nord-est, a nord-ovest e a sud. Cerca le farfalle a est, a nord e a ovest."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -2188,7 +2188,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-hogwarts-valley-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Brocburrow: farfalle fuori dal borgo. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Brocburrow: farfalle fuori dal borgo. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2245,7 +2245,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-hogwarts-valley-merlin-trials-altars-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Valle centrale: bracieri al ponte. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Valle centrale: bracieri al ponte. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2302,7 +2302,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Lower Hogsfield sud: sfere sulla collina. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Lower Hogsfield sud: sfere sulla collina. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2359,7 +2359,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Valle ovest: sfere e tenda. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Valle ovest: sfere e tenda. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2391,7 +2391,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalla Metropolvere Valle di Hogwarts - Ovest raggiungi l’accampamento a est.",
-      "Cerca sotto la torre ovest, dietro il cancello a sud-ovest e sotto la roccia oltre la recinzione est."
+      "Cerca le sfere sotto la torre ovest, dietro il cancello a sud-ovest e sotto la roccia oltre la recinzione est."
     ],
     "methodId": "merlin-gruppi",
     "tracking": true,
@@ -2416,7 +2416,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-16-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Valle ovest: accampamento dei goblin. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Valle ovest: accampamento dei goblin. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2448,7 +2448,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "A nord di Keenbridge raggiungi le rovine sorvegliate, a sud-ovest dell’accampamento dei goblin.",
-      "Guarda intorno al cerchio, sopra le mura e dentro le rovine."
+      "Cerca le sfere intorno al cerchio, sopra le mura e dentro le rovine."
     ],
     "methodId": "merlin-sfere",
     "tracking": true,
@@ -2473,7 +2473,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Keenbridge nord: sfere nelle rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Keenbridge nord: sfere nelle rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2505,7 +2505,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Keenbridge segui il fiume a nord-ovest.",
-      "Due pietre sono a sud-ovest, una a nord. Cerca l’ultimo gruppo scendendo a est, tra gli alberi."
+      "Due pietre con cristalli sono a sud-ovest, una a nord. Per trovare l’ultimo gruppo di farfalle, scendi verso est e cerca tra gli alberi."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -2530,7 +2530,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-all-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Keenbridge nord-ovest: farfalle al fiume. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Keenbridge nord-ovest: farfalle al fiume. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2587,7 +2587,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-all-16-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Keenbridge: sfera oltre il ponte. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Keenbridge: sfera oltre il ponte. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2644,7 +2644,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Keenbridge nord-est: massi. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Keenbridge nord-est: massi. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2700,7 +2700,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Valle ovest: piattaforme alla cascata. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Valle ovest: piattaforme alla cascata. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2732,7 +2732,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Raggiungi l’accampamento a nord-ovest del punto di viaggio rapido settentrionale della Palude Marina.",
-      "Statue presso le scale sud, tra le tende nord e dietro le piante a ovest."
+      "Cerca le statue presso le scale a sud, tra le tende a nord e dietro le piante a ovest."
     ],
     "methodId": "merlin-statue",
     "tracking": true,
@@ -2757,7 +2757,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-16-hogwarts-legacy-hogwarts-valley-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Confine della palude: statue nel campo. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Confine della palude: statue nel campo. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2788,7 +2788,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dall’Occhio della Miniera vai a nord-ovest.",
-      "Comincia dalle piattaforme a ovest, sul lato sud; visita anche quella bassa laterale prima dell’ultima salita."
+      "Inizia dal lato sud delle piattaforme a ovest. Prima dell’ultima salita, salta anche sulla piattaforma bassa laterale."
     ],
     "methodId": "merlin-salti",
     "tracking": true,
@@ -2813,7 +2813,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-hogwarts-legacy-hogwarts-valley-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: L’Occhio della Miniera: piattaforme. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "L’Occhio della Miniera: piattaforme. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2845,7 +2845,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dall’Occhio della Miniera vai a ovest.",
-      "Sfera a nord del cerchio: accompagnala nella conca sottostante senza spingerla troppo lontano."
+      "La sfera è a nord del cerchio. Guidala nella conca sottostante senza spingerla troppo lontano."
     ],
     "methodId": "merlin-sfera",
     "tracking": true,
@@ -2870,7 +2870,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-hogwarts-legacy-hogwarts-valley-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: L’Occhio della Miniera: sfera. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "L’Occhio della Miniera: sfera. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2902,7 +2902,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Raggiungi i binari a sud dell’Occhio della Miniera.",
-      "Rompi i barili a nord-est. Accendi poi nord-ovest oltre il vuoto, sud-ovest oltre i binari, nord-est."
+      "Rompi i barili a nord-est. Accendi i bracieri in questo ordine: nord-ovest oltre il vuoto, sud-ovest oltre i binari, infine nord-est."
     ],
     "methodId": "merlin-bracieri",
     "tracking": true,
@@ -2927,7 +2927,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-16-hogwarts-legacy-hogwarts-valley-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Ferrovia della miniera: bracieri. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Ferrovia della miniera: bracieri. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-hogwarts-valley-merlin-trials/"
       },
@@ -2984,7 +2984,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-feldcroft-region-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Montagna settentrionale: accampamento. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Montagna settentrionale: accampamento. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3041,7 +3041,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-feldcroft-region-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Feldcroft Nord: cubi nel campo. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Feldcroft Nord: cubi nel campo. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3097,7 +3097,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-feldcroft-region-merlin-trials-puzzles-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Feldcroft Nord: salto dalle scale. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Feldcroft Nord: salto dalle scale. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3154,7 +3154,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Feldcroft Nord: massi sulla scogliera. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Feldcroft Nord: massi sulla scogliera. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3186,7 +3186,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dal Castello di Rookwood vai a nord, sulla riva.",
-      "Tre gruppi: sud-est del cerchio, sud-ovest sulla salita e ovest oltre l’acqua."
+      "Cerca i tre gruppi di sfere a sud-est del cerchio, a sud-ovest sulla salita e a ovest oltre l’acqua."
     ],
     "methodId": "merlin-sfere",
     "tracking": true,
@@ -3211,7 +3211,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-all-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Rookwood nord: sfere sull’acqua. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Rookwood nord: sfere sull’acqua. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3243,7 +3243,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Segui la costa a nord-ovest del Castello di Rookwood.",
-      "Bracieri a est, sud-est e sud-ovest: accendili dal più alto al più basso."
+      "I bracieri sono a est, a sud-est e a sud-ovest. Accendili dal più alto al più basso."
     ],
     "methodId": "merlin-bracieri",
     "tracking": true,
@@ -3268,7 +3268,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-all-16-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Rookwood nord-ovest: bracieri costieri. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Rookwood nord-ovest: bracieri costieri. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3324,7 +3324,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Rookwood nord-ovest: piattaforme in mare. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Rookwood nord-ovest: piattaforme in mare. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3356,7 +3356,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Feldcroft vai a nord, sul lato nord-est del Castello di Rookwood.",
-      "Statue a nord, nord-ovest e sulla roccia a nord-est."
+      "Cerca le statue a nord, a nord-ovest e sulla roccia a nord-est."
     ],
     "methodId": "merlin-statue",
     "tracking": true,
@@ -3381,7 +3381,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Feldcroft nord: statue tra le rocce. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Feldcroft nord: statue tra le rocce. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3438,7 +3438,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-16-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Feldcroft: sfere dietro il masso. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Feldcroft: sfere dietro il masso. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3495,7 +3495,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-16-hogwarts-legacy-feldcroft-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Feldcroft Sud: massi a nord-ovest. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Feldcroft Sud: massi a nord-ovest. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3552,7 +3552,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-hogwarts-legacy-feldcroft-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Feldcroft Sud: sfera sul precipizio. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Feldcroft Sud: sfera sul precipizio. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3584,7 +3584,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalla Catacomba di Feldcroft vai poco a nord.",
-      "Due massi a sud-ovest; gli altri a est, nord-est e nord-ovest presso la grande roccia."
+      "Due massi sono a sud-ovest. Gli altri sono a est, a nord-est e a nord-ovest, presso la grande roccia."
     ],
     "methodId": "merlin-massi",
     "tracking": true,
@@ -3609,7 +3609,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-hogwarts-legacy-feldcroft-region-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Catacomba di Feldcroft: massi. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Catacomba di Feldcroft: massi. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3666,7 +3666,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Catacomba di Feldcroft: farfalle. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Catacomba di Feldcroft: farfalle. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3723,7 +3723,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Irondale ovest: massi nel campo. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Irondale ovest: massi nel campo. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3755,7 +3755,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Irondale vai a ovest, al ponte di pietra.",
-      "Accendi prima il braciere a nord-est oltre il ponte, poi ovest e sud-est sulla roccia nel fiume."
+      "Accendi prima il braciere a nord-est, oltre il ponte. Prosegui con quello a ovest e infine con quello a sud-est, sulla roccia nel fiume."
     ],
     "methodId": "merlin-bracieri",
     "tracking": true,
@@ -3780,7 +3780,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/where-to-find-all-16-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Irondale: bracieri sul fiume. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Irondale: bracieri sul fiume. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3812,7 +3812,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Irondale vai a nord-ovest, allo spaventapasseri.",
-      "Sfere presso la casa a sud, la collina a nord-ovest e il muretto a est."
+      "Cerca le sfere presso la casa a sud, sulla collina a nord-ovest e vicino al muretto a est."
     ],
     "methodId": "merlin-sfere",
     "tracking": true,
@@ -3837,7 +3837,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-find-all-hogwarts-legacy-feldcroft-region-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Irondale: sfere allo spaventapasseri. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Irondale: sfere allo spaventapasseri. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-feldcroft-region-merlin-trials/"
       },
@@ -3869,7 +3869,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dal punto di viaggio rapido settentrionale della Palude Marina vai a sud-est, tra gli alberi spogli.",
-      "Cerca dietro l’albero caduto a sud-est e oltre l’acqua, presso gli alberi a nord-est e sud-ovest."
+      "Cerca le farfalle dietro l’albero caduto a sud-est e oltre l’acqua, presso gli alberi a nord-est e a sud-ovest."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -3886,7 +3886,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-south-sea-bog-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Palude Marina: albero caduto. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Palude Marina: albero caduto. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-sea-bog-merlin-trials/"
       },
@@ -3918,7 +3918,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalla Metropolvere Palude Marina - Est vai a sud-ovest, a sud dell’accampamento medio.",
-      "Sfere a sud-est, sotto il macchinario a nord-est e presso lo stagno a nord."
+      "Cerca le sfere a sud-est, sotto il macchinario a nord-est e presso lo stagno a nord."
     ],
     "methodId": "merlin-sfere",
     "tracking": true,
@@ -3935,7 +3935,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-hogwarts-legacy-south-sea-bog-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Palude Marina: stagno sotto il campo. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Palude Marina: stagno sotto il campo. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-south-sea-bog-merlin-trials/"
       },
@@ -3987,7 +3987,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-poidsear-coast-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Tomba del Tradimento: piattaforme. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Tomba del Tradimento: piattaforme. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4040,7 +4040,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-poidsear-coast-merlin-trials-puzzles-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Castello di Poidsear nord: bracieri. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Castello di Poidsear nord: bracieri. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4072,7 +4072,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dal Castello di Poidsear segui i binari a sud-ovest.",
-      "Farfalle a nord dei binari e nel bosco sud-est; una pietra è più in basso, nel vallone ovest."
+      "Cerca le farfalle a nord dei binari e nel bosco a sud-est. Una pietra con cristalli è più in basso, nel vallone a ovest."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -4093,7 +4093,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-poidsear-coast-merlin-trials-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Poidsear: farfalle lungo i binari. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Poidsear: farfalle lungo i binari. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4146,7 +4146,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/hogwarts-legacy-poidsear-coast-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Poidsear: massi sulla costa. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Poidsear: massi sulla costa. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4178,7 +4178,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dal Castello di Poidsear raggiungi le rovine a sud.",
-      "Cerca le sfere nei cespugli nord, sulla pedana col barile e presso le bare a nord-est."
+      "Cerca le sfere nei cespugli a nord, sulla pedana con il barile e presso le bare a nord-est."
     ],
     "methodId": "merlin-gruppi",
     "tracking": true,
@@ -4199,7 +4199,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-hogwarts-legacy-poidsear-coast-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Poidsear: piccoli gruppi nelle rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Poidsear: piccoli gruppi nelle rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4252,7 +4252,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-10-hogwarts-legacy-poidsear-coast-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Poidsear: cubi sulla scogliera. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Poidsear: cubi sulla scogliera. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4305,7 +4305,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-all-10-hogwarts-legacy-poidsear-coast-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Poidsear: sfera oltre il dirupo. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Poidsear: sfera oltre il dirupo. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4358,7 +4358,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-all-hogwarts-legacy-poidsear-coast-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Ponte di Marunweem: bandiera rossa. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Ponte di Marunweem: bandiera rossa. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4390,7 +4390,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dal Ponte di Marunweem vai a nord, presso il piccolo accampamento.",
-      "Statue vicino al cerchio, tra le pietre a sud-ovest e in alto sulla parete nord."
+      "Cerca le statue vicino al cerchio, tra le pietre a sud-ovest e in alto sulla parete nord."
     ],
     "methodId": "merlin-statue",
     "tracking": true,
@@ -4411,7 +4411,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-complete-all-hogwarts-legacy-poidsear-coast-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Ponte di Marunweem: statue in quota. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Ponte di Marunweem: statue in quota. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4443,7 +4443,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalla Caverna montana della fenice sali alle rovine a sud-ovest.",
-      "Farfalle sulle scale sud-ovest, sulla pedana nord-est e fuori dalle mura a sud-est."
+      "Cerca le farfalle sulle scale a sud-ovest, sulla pedana a nord-est e fuori dalle mura a sud-est."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -4464,7 +4464,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/03/how-to-solve-all-hogwarts-legacy-poidsear-coast-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Caverna della fenice: rovine in montagna. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Caverna della fenice: rovine in montagna. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-poidsear-coast-merlin-trials/"
       },
@@ -4496,7 +4496,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalla Miniera costiera vai a sud-est.",
-      "Cubi a nord-est, sud-est e sulla scogliera sud-ovest dietro il grande albero."
+      "Cerca i cubi a nord-est, a sud-est e sulla scogliera a sud-ovest, dietro il grande albero."
     ],
     "methodId": "merlin-cubi",
     "tracking": true,
@@ -4513,7 +4513,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-marunweem-lake-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Miniera costiera: cubi tra gli alberi. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Miniera costiera: cubi tra gli alberi. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-marunweem-lake-merlin-trials/"
       },
@@ -4546,7 +4546,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dalla Metropolvere Lago di Marunweem vai alle rovine a est.",
-      "Apri il cancello con Depulso sul meccanismo; porta la sfera sul ponte, verso la conca nord-est."
+      "Usa Depulso sul meccanismo per aprire il cancello. Porta la sfera sul ponte e guidala fino alla conca a nord-est."
     ],
     "methodId": "merlin-sfera",
     "tracking": true,
@@ -4563,7 +4563,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-marunweem-lake-merlin-trials-puzzles-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Lago di Marunweem: cancello e ponte. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Lago di Marunweem: cancello e ponte. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-marunweem-lake-merlin-trials/"
       },
@@ -4594,7 +4594,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Dal villaggio di Marunweem scendi alla riva ovest.",
-      "Comincia dalla piattaforma a sud-ovest; libera prima l’ultima dal barile."
+      "Prima di iniziare, rompi il barile sull’ultima piattaforma. Comincia il percorso da quella a sud-ovest."
     ],
     "methodId": "merlin-salti",
     "tracking": true,
@@ -4611,7 +4611,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-marunweem-lake-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Marunweem: piattaforme sulla riva. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Marunweem: piattaforme sulla riva. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-marunweem-lake-merlin-trials/"
       },
@@ -4660,7 +4660,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/how-to-solve-all-hogwarts-legacy-marunweem-lake-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Marunweem: farfalle sotto le rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Marunweem: farfalle sotto le rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-marunweem-lake-merlin-trials/"
       },
@@ -4692,7 +4692,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Da Capo del Maniero - Ovest vai a nord-est, sul lato nord-ovest del maniero in rovina.",
-      "Bracieri a nord-est, sulla parete ovest e sulle scale sud-ovest."
+      "Cerca i bracieri a nord-est, sulla parete ovest e sulle scale a sud-ovest."
     ],
     "methodId": "merlin-bracieri",
     "tracking": true,
@@ -4709,7 +4709,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-manor-cape-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Maniero: bracieri presso le rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Maniero: bracieri presso le rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-manor-cape-merlin-trials-guide/"
       },
@@ -4758,7 +4758,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-manor-cape-merlin-trials-altars-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Maniero ovest: cubi sulla riva. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Maniero ovest: cubi sulla riva. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-manor-cape-merlin-trials-guide/"
       },
@@ -4807,7 +4807,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/how-to-solve-hogwarts-legacy-manor-cape-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Maniero ovest: sfera sulla spiaggia. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Maniero ovest: sfera sulla spiaggia. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-manor-cape-merlin-trials-guide/"
       },
@@ -4839,7 +4839,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "Segui la costa a sud-est della spiaggia di Capo del Maniero - Ovest, fino al ponte.",
-      "Farfalle davanti al ponte, sotto di esso e nella cavità sotto l’albero morto a nord."
+      "Cerca le farfalle davanti al ponte, sotto il ponte e nella cavità sotto l’albero morto a nord."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -4856,7 +4856,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/how-to-solve-hogwarts-legacy-manor-cape-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Maniero: farfalle sotto il ponte. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Maniero: farfalle sotto il ponte. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-manor-cape-merlin-trials-guide/"
       },
@@ -4905,7 +4905,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/where-to-find-all-hogwarts-legacy-manor-cape-merlin-trials-altars-1024x576.jpg",
-        "alt": "Prova di Merlino: Henrietta: massi tra le rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Henrietta: massi tra le rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-manor-cape-merlin-trials-guide/"
       },
@@ -4954,7 +4954,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-cragcroftshire-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Cragcroftshire ovest: massi nelle rovine. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Cragcroftshire ovest: massi nelle rovine. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-cragcroftshire-merlin-trials/"
       },
@@ -5003,7 +5003,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-cragcroftshire-merlin-trials-altars-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Cragcroftshire nord: farfalle al falò. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Cragcroftshire nord: farfalle al falò. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-cragcroftshire-merlin-trials/"
       },
@@ -5052,7 +5052,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/where-to-find-all-hogwarts-legacy-cragcroftshire-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Cragcroft: bracieri dietro la casa. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Cragcroft: bracieri dietro la casa. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-cragcroftshire-merlin-trials/"
       },
@@ -5101,7 +5101,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/where-to-find-all-hogwarts-legacy-cragcroftshire-merlin-trials-altars-1024x576.jpg",
-        "alt": "Prova di Merlino: Cragcroftshire sud: sfere sulla spiaggia. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Cragcroftshire sud: sfere sulla spiaggia. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-cragcroftshire-merlin-trials/"
       },
@@ -5149,7 +5149,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/how-to-solve-all-hogwarts-legacy-cragcroftshire-merlin-trials-puzzles-1024x576.jpg",
-        "alt": "Prova di Merlino: Cragcroftshire sud-est: piattaforme in acqua. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Cragcroftshire sud-est: piattaforme in acqua. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-cragcroftshire-merlin-trials/"
       },
@@ -5182,7 +5182,7 @@ export const PUZZLES = [
     ],
     "steps": [
       "A nord del Castello di Clagmar raggiungi il grande albero con il montacarichi.",
-      "Raccogli le farfalle in basso. Abbassa il montacarichi con Depulso, riaccendi Lumos e risali con loro."
+      "Attira con Lumos le farfalle che si trovano in basso. Abbassa il montacarichi con Depulso, riaccendi Lumos e risali insieme alle farfalle."
     ],
     "methodId": "merlin-farfalle",
     "tracking": true,
@@ -5199,7 +5199,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-clagmar-coast-merlin-trials-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Clagmar nord: farfalle e montacarichi. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Clagmar nord: farfalle e montacarichi. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-clagmar-coast-merlin-trials/"
       },
@@ -5248,7 +5248,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-clagmar-coast-merlin-trials-altars-locations-1024x576.jpg",
-        "alt": "Prova di Merlino: Clagmar sud: statue sul mare. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Clagmar sud: statue sul mare. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-clagmar-coast-merlin-trials/"
       },
@@ -5297,7 +5297,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-clagmar-coast-merlin-trials-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Clagmar: massi presso lo scheletro. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Clagmar: massi presso lo scheletro. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-clagmar-coast-merlin-trials/"
       },
@@ -5346,7 +5346,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/hogwarts-legacy-clagmar-coast-merlin-trials-puzzles-solutions-1024x576.jpg",
-        "alt": "Prova di Merlino: Clagmar: sfere presso i covoni. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Clagmar: sfere presso i covoni. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-clagmar-coast-merlin-trials/"
       },
@@ -5395,7 +5395,7 @@ export const PUZZLES = [
     "photos": [
       {
         "src": "https://www.gameclubz.com/wp-content/uploads/2023/04/how-to-solve-all-hogwarts-legacy-clagmar-coast-merlin-trials-1024x576.jpg",
-        "alt": "Prova di Merlino: Castello di Clagmar: cubi a est. Veduta del luogo e degli elementi dell’enigma.",
+        "alt": "Castello di Clagmar: cubi a est. Luogo della Prova di Merlino e dettagli dell’enigma.",
         "credit": "GameClubz",
         "source": "https://www.gameclubz.com/hogwarts-legacy-clagmar-coast-merlin-trials/"
       },

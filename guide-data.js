@@ -1,12 +1,12 @@
-import { MAIN_MISSIONS } from './content/main-missions.js?v=2.0.0';
-import { ASSIGNMENTS } from './content/assignments.js?v=2.0.0';
-import { SIDE_MISSIONS } from './content/side-missions.js?v=2.0.0';
-import { PRACTICAL_GUIDES } from './content/practical.js?v=2.0.0';
-import { UNLOCK_GUIDES } from './content/unlocks.js?v=2.0.0';
-import { PUZZLES, PUZZLE_METHODS as MERLIN_METHODS } from './content/puzzles.js?v=2.0.0';
-import { HOGWARTS_PUZZLES, HOGWARTS_METHODS } from './content/hogwarts-puzzles.js?v=2.0.0';
-import { MOONS, INTRO_MOONS, DEMIGUISE_GUIDE } from './content/demiguise.js?v=2.0.0';
-import { guideRoute } from './guide-model.js?v=2.0.0';
+import { MAIN_MISSIONS } from './content/main-missions.js?v=2.1.0';
+import { ASSIGNMENTS } from './content/assignments.js?v=2.1.0';
+import { SIDE_MISSIONS } from './content/side-missions.js?v=2.1.0';
+import { PRACTICAL_GUIDES } from './content/practical.js?v=2.1.0';
+import { UNLOCK_GUIDES } from './content/unlocks.js?v=2.1.0';
+import { PUZZLES, PUZZLE_METHODS as MERLIN_METHODS } from './content/puzzles.js?v=2.1.0';
+import { HOGWARTS_PUZZLES, HOGWARTS_METHODS } from './content/hogwarts-puzzles.js?v=2.1.0';
+import { MOONS, INTRO_MOONS, DEMIGUISE_GUIDE } from './content/demiguise.js?v=2.1.0';
+import { guideRoute } from './guide-model.js?v=2.1.0';
 export { MOONS, INTRO_MOONS };
 export const PUZZLE_METHODS = [...MERLIN_METHODS, ...HOGWARTS_METHODS];
 
